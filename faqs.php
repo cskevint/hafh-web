@@ -9,18 +9,19 @@
 
     <?php include("includes/navigation.php");?>
 
-    <section class="container-fluid bg-light">
+    <section class="container-fluid bg-info">
         <div class="container p-5">
-            <h1 class="mb-5">Frequently Asked Questions</h1>
+            <div class="bg-light rounded-5 p-5">
+                <h1 class="mb-5">Frequently Asked Questions</h1>
 
-            <?php 
+                <?php 
                 include_once("lib/parsedown-1.7.4/Parsedown.php"); 
                 include_once("lib/parsedown-extra-0.8.1/ParsedownExtra.php");
                 $Parsedown = new ParsedownExtra();
                 $faqs = file_get_contents('faqs.md');
                 echo $Parsedown->text($faqs);
             ?>
-            
+            </div>
         </div>
     </section>
 
