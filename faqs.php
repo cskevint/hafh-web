@@ -15,7 +15,8 @@
 
             <?php 
                 include_once("lib/parsedown-1.7.4/Parsedown.php"); 
-                $Parsedown = new Parsedown();
+                include_once("lib/parsedown-extra-0.8.1/ParsedownExtra.php");
+                $Parsedown = new ParsedownExtra();
                 $faqs = file_get_contents('faqs.md');
                 echo $Parsedown->text($faqs);
             ?>
