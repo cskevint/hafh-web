@@ -6,7 +6,7 @@ Our family environment is well-suited to the mental wellness of your pet to prov
 
 ### What are your rates? {.mt-4}
 
-Please see the rates page here.
+Contact us!
 
 ### What vaccinations are required for my dog to stay with you? {.mt-4}
 
