@@ -26,8 +26,7 @@
     <section class="bg-light mb-0">
         <div class="container p-5">
             <h1 class="mb-5">Services</h1>
-            <div class="row">
-                <div class="col-1"></div>
+            <div class="row justify-content-md-center">
                 <div class="col-sm-5 mb-3 mb-sm-0">
                     <div class="card border-0 rounded-5">
                         <img src="/images/image2.jpg" class="card-img-top rounded-top-5" alt="...">
@@ -53,7 +52,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-1"></div>
             </div>
         </div>
     </section>

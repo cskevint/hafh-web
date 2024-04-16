@@ -18,6 +18,7 @@
                     <li><a href="/" class="text-primary">Home</a></li>
                     <li><a href="/faqs.php" class="text-primary">FAQs</a></li>
                     <li><a href="/gallery.php" class="text-primary">Gallery</a></li>
+                    <li><a href="/contactus.php" class="text-primary">Contact Us</a></li>
                     <li><a href="/aboutus.php" class="text-primary">About Us</a></li>
                 </ul>
             </div>
