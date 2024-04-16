@@ -1,0 +1,66 @@
+:root {
+    --bs-light: #fcf7f3;
+    --bs-light-rgb: 252, 247, 243;
+    --bs-dark: #230906;
+    --bs-dark-rgb: 35, 9, 6;
+    --bs-primary: #0279ad;
+    --bs-primary-rgb: 2, 121, 173;
+    --bs-secondary: #956230;
+    --bs-secondary-rgb: 149, 98, 48;
+    --bs-info: #efd6ba;
+    --bs-info-rgb: 239, 214, 186;
+    --bs-success: #e1b482;
+    --bs-success-rgb: 225, 180, 130;
+    --bs-warning: #aae4f7;
+    --bs-warning-rgb: 170, 228, 247;
+    --bs-danger: #350d09;
+    --bs-danger-rgb: 53, 13, 9;
+}
+
+.btn-primary {
+    --bs-primary-hover: #026e9c;
+    --bs-primary-disabled: #4ea2c6;
+
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--bs-primary);
+    --bs-btn-border-color: var(--bs-primary);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--bs-primary-hover);
+    --bs-btn-hover-border-color: var(--bs-primary-hover);
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: var(--bs-primary);
+    --bs-btn-active-border-color: var(--bs-primary);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: var(--bs-primary-disabled);
+    --bs-btn-disabled-border-color: var(--bs-primary-disabled);
+}
+
+/* index.php */
+
+.header-bg {
+    background: linear-gradient(180deg, var(--bs-info), var(--bs-light));
+}
+
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.25)), url("/images/hero.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.google-maps {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+.google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
