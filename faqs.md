@@ -46,6 +46,7 @@ We have a flexible cancelation policy of no fee incurred if 24-hour notice is gi
 We are flexible on booking, and can often receive same day requests. Text for each booking. 
 
 ### Insurance
+
 We guarantee if there is any issue with your dogs in our care, you have a money-back guarantee as well as payment for other issues.
 
 ### How do I pay?
