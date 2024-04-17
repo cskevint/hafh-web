@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!doctype html>
 <html lang="en" class="bg-info">
 
@@ -14,17 +15,18 @@
             <div class="bg-light rounded-5 p-5">
                 <h1 class="mb-5">Contact Us</h1>
 
+                <?php
+                    if (isset($_SESSION['notice'])) {
+                        echo '<div class="alert alert-info">' . $_SESSION['notice'] . '</div>';
+                        unset($_SESSION['notice']);
+                    }
+                ?>
+
                 <section class="bg-light">
                     <div class="container">
-                        <div class="row justify-content-md-center">
-                            <div class="col-12 col-lg-10 col-xl-8">
-                                <p class="text-secondary mb-5 text-center">Have questions about our dog boarding
-                                    services or ready to schedule your pet's stay? We're here to help! Contact us today
-                                    to learn more about how we can provide a comfortable and secure home-away-from-home
-                                    for your beloved canine companion.</p>
-                                <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
-                            </div>
-                        </div>
+                        <p class="text-secondary text-center">Have questions about our dog boarding services or
+                            ready to schedule your pet's stay? We're here to help!</p>
+                        <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
                     </div>
 
                     <div class="container">
@@ -32,13 +34,13 @@
                             <div class="col-12 col-lg-9">
                                 <div class="bg-white border rounded shadow-sm overflow-hidden">
 
-                                    <form action="#!">
+                                    <form action="/mail.php">
                                         <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
                                             <div class="col-12">
-                                                <label for="fullname" class="form-label">Name <span
+                                                <label for="name" class="form-label">Name <span
                                                         class="text-danger">*</span></label>
-                                                <input type="text" class="form-control" id="fullname" name="fullname"
-                                                    value="" required>
+                                                <input type="text" class="form-control" id="name" name="name" value=""
+                                                    required>
                                             </div>
                                             <div class="col-12 col-md-6">
                                                 <label for="email" class="form-label">Email <span

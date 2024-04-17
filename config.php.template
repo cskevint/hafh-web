@@ -1,0 +1,9 @@
+<?php
+$SMTP_FROM_EMAIL = "";
+$SMTP_FROM_NAME = "";
+$CONTACT_US_EMAIL = "";
+$CONTACT_US_NAME = "";
+$SMTP_USERNAME = "";
+$SMTP_PASSWORD = "";
+$SMTP_HOSTNAME = "";
+?>
