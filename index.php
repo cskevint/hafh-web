@@ -26,7 +26,7 @@ session_start();
                         <h1 class="display-5 fw-bold text-white">Safe, Loved, and Pampered</h1>
                         <p class="col-md-8 fs-4 text-white">Dog boarding and daycare reimagined: the ultimate comfort of
                             home for your dog.</p>
-                        <button type="button" class="btn btn-primary btn-lg">Book with us now!</button>
+                        <a class="btn btn-primary btn-lg" href="/contactus.php">Book with us now!</a>
                     </div>
                 </div>
             </div>
@@ -34,7 +34,11 @@ session_start();
     </div>
     <section class="bg-light mb-0">
         <div class="container p-5">
-            <h1 class="mb-5">Services</h1>
+            <h1 class="">Services</h1>
+            <p class="lead mb-5">Hound Away From Home is a home-based dog boarding and daycare service conveniently
+                located in the heart of the Peninsula. You'll love that a family is caring for your dog when you go on
+                vacation! Daily pictures, a large backyard, and other friendly playmates are just some of the perks of
+                your pup’s stay at Hound Away From Home.</p>
             <div class="row justify-content-md-center">
                 <div class="col-sm-5 mb-3 mb-sm-0">
                     <div class="card border-0 rounded-5">
@@ -64,15 +68,43 @@ session_start();
             </div>
         </div>
     </section>
+    <section class="container-fluid bg-info">
+        <div class="container p-5">
+            <h1 class="mb-5">Read our reviews!</h1>
+            <div class="row">
+                <div class="col-3 p-4 d-flex align-items-center justify-content-center">
+                    <a href="https://www.facebook.com/houndawayfromhome/"><img src="images/logo-facebook.png" class="img-fluid"/></a>
+                </div>
+                <div class="col-3 p-4 d-flex align-items-center justify-content-center">
+                    <a href="https://www.instagram.com/houndawayfromhomesm/"><img src="images/logo-instagram.png" class="img-fluid"/></a>
+                </div>
+                <div class="col-3 p-4 d-flex align-items-center justify-content-center">
+                    <a href="https://www.yelp.com/biz/hound-away-from-home-san-mateo"><img src="images/logo-yelp.png" class="img-fluid"/></a>
+                </div>
+                <div class="col-3 p-4 d-flex align-items-center justify-content-center">
+                    <a href="https://www.rover.com/members/leila-g-loving-family-at-home-full-time/"><img src="images/logo-rover.png" class="img-fluid"/></a>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="container-fluid bg-success">
         <div class="container p-5">
+            <h1 class="mb-5">Locations</h1>
             <div class="row">
                 <div class="col-2"></div>
-                <div class="col-8 google-maps">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12649.037382027613!2d-122.3207829!3d37.5725103!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f9e786d2c5a89%3A0x5f25f305b0b1a181!2sHound%20Away%20From%20Home!5e0!3m2!1sen!2sus!4v1713274048009!5m2!1sen!2sus"
-                        style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="col-8">
+                    <div class="google-maps">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12649.037382027613!2d-122.3207829!3d37.5725103!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f9e786d2c5a89%3A0x5f25f305b0b1a181!2sHound%20Away%20From%20Home!5e0!3m2!1sen!2sus!4v1713274048009!5m2!1sen!2sus"
+                            style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <p class="mt-5 lead">Now open in two San Mateo locations!</p>
+                    <ul>
+                        <li>Northern location @ <a href="https://maps.app.goo.gl/MHRQ2CakjJwrXeZR8"
+                                class="text-secondary">Tilton Ave & N Grant St</a></li>
+                        <li>Southern location @ 7th Ave & Humboldt St</li>
+                    </ul>
                 </div>
                 <div class="col-2"></div>
             </div>

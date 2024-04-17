@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-info" aria-label="Twelfth navbar example">
     <div class="container">
-        <a class="navbar-brand" href="/">Hound Away From Home <i class="bi bi-house-fill"></i></a>
+        <a class="navbar-brand" href="/"><i class="bi bi-house-fill"></i> Hound Away From Home</a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
             aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,16 +10,16 @@
         <div class="collapse navbar-collapse flex-row-reverse" id="navbar">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="faqs.php">FAQs</a>
+                    <a class="nav-link <?= basename($_SERVER['PHP_SELF']) == 'faqs.php' ? 'active':'' ?>" href="faqs.php">FAQs</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="gallery.php">Gallery</a>
+                    <a class="nav-link <?= basename($_SERVER['PHP_SELF']) == 'gallery.php' ? 'active':'' ?>" href="gallery.php">Gallery</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contactus.php">Contact Us</a>
+                    <a class="nav-link <?= basename($_SERVER['PHP_SELF']) == 'contactus.php' ? 'active':'' ?>" href="contactus.php">Contact Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="aboutus.php">About Us</a>
+                    <a class="nav-link <?= basename($_SERVER['PHP_SELF']) == 'aboutus.php' ? 'active':'' ?>" href="aboutus.php">About Us</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="https://www.facebook.com/houndawayfromhome/">

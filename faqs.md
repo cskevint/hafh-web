@@ -6,41 +6,47 @@ Our family environment is well-suited to the mental wellness of your pet to prov
 
 ### What are your rates? {.mt-4}
 
-Contact us!
+<a href="/contactus.php" class="text-secondary">Contact us!</a>
 
 ### What vaccinations are required for my dog to stay with you? {.mt-4}
 
-Our mandatory vaccinations are rabies, distemper, and Bordetella,  as well as flea/tick prevention and heartworm prevention. We also request you do flu vaccines, though not required in all instances.
+Our mandatory vaccinations are: 
+
+* rabies
+* distemper
+* Bordetella
+
+Flea/tick prevention and heartworm prevention is also a requirement. Flu vaccines may not not required in all instances.
 
 ### What is the typical daily schedule for a dog staying at your facility? {.mt-4}
 
-While not all days are the same, here is a typical day structure - though times can vary.
+While not all days are the same, here is a typical day schedme - though times can vary.
 
 * Breakfast before 7am and before new dogs start arriving. 
 * Playtime 8-9am
 * Rest 9-11am
-* Playtime 11-12
-* Rest 1-2
-* Play from 2-3
+* Playtime 11-12pm
+* Rest 12-2pm
+* Play from 2-3pm
 
-When our kids come home from school around 3, the dogs spend a lot of time snuggling and resting, waiting to be picked up from their daycares
+When our kids come home from school around 3pm, the dogs spend a lot of time snuggling and resting, waiting to be picked up from their daycares.
 
-### How do you handle medical emergencies? {.mt-4}
+### How do you handle emergencies? {.mt-4}
 
 If the emergency requires medical care, we would take the dog to the vet immediately. Close by, there are several 24-hour emergency vets within a 3-minute car ride. We then call the owner to let them the circumstances.
 If there is some sort of other emergency, a call to the owners would happen first.
 
 ### What do I need to bring with my dog for their stay? {.mt-4}
 
-You only need to bring the food and treats labeled with their name and instructions for each meal. No beds, bowls or toys necessary.
+You only need to bring the food and treats labeled with their name and instructions for each meal -- no beds, bowls or toys necessary.
 
 ### How do you handle dogs with special needs or behavior issues? {.mt-4}
 
-Each dog in our care receives individualized attention and care. Whether it’s a massage daily, extra cuddles, individual feeding time, and giving their medicine. Each dog receives exceptional top quality care. 
+Each dog at our home receives individualized attention and care. Whether it’s a massage daily, extra cuddles, individual feeding time, or giving their medicine.
 
 ### What is your cancellation policy? {.mt-4}
 
-We have a flexible cancelation policy of no fee incurred if 24-hour notice is given. For the Thanksgiving and Christmas time break, three-day notice is needed.
+We have a flexible cancelation policy of no fee incurred if 24-hour notice is given. For the Thanksgiving break and end of year holidays including Christmas and New Years, a three-day notice is required.
 
 ### How do I book a stay for my dog? {.mt-4}
 
