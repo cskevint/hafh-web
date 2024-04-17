@@ -1,3 +1,6 @@
+<?php
+require_once('includes/config.php');
+?>
 <footer class="container-fluid bg-info">
     <div class="container py-4">
         <div class="row gy-4 gx-5">
@@ -22,12 +25,14 @@
             <div class="col-lg-3 col-md-6">
                 <h5 class=" mb-3">Newsletter</h5>
                 <p class="small ">Join our newsletter!</p>
-                <form action="#">
+                <form method="post" action="newsletter-capture.php" id="newsletter-form">
                     <div class="input-group mb-3">
-                        <input class="form-control" type="text" placeholder="Recipient's username"
-                            aria-label="Recipient's username" aria-describedby="button-addon2">
-                        <button class="btn btn-primary" id="button-addon2" type="button"><i
-                                class="bi bi-send"></i></button>
+                        <input class="form-control" type="text" placeholder="Your email address"
+                            name="email" aria-label="Your email address">
+                        <button class="btn btn-primary btn-lg g-recaptcha" type="submit"
+                                                    data-sitekey="<?=$RECAPTCHA_SITE_KEY?>" 
+                                                    data-callback="onNewsletterSubmit"
+                                                    data-action="submit"><i class="bi bi-send"></i></button>    
                     </div>
                 </form>
             </div>
@@ -36,4 +41,13 @@
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+</script>
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<script>
+function onNewsletterSubmit(token) {
+    document.getElementById("newsletter-form").submit();
+}
+function onContactUsSubmit(token) {
+    document.getElementById("contact-us-form").submit();
+}
 </script>

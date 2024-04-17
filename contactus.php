@@ -37,7 +37,7 @@ require_once("includes/config.php");
                             <div class="col-12 col-lg-9">
                                 <div class="bg-white border rounded shadow-sm overflow-hidden">
 
-                                    <form method="post" action="/mail.php" id="contact-us-form">
+                                    <form method="post" action="/contactus-mail.php" id="contact-us-form">
                                         <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
                                             <div class="col-12">
                                                 <label for="name" class="form-label">Name <span
@@ -76,7 +76,7 @@ require_once("includes/config.php");
                                                 <div class="d-grid">
                                                     <button class="btn btn-primary btn-lg g-recaptcha" type="submit"
                                                         data-sitekey="<?=$RECAPTCHA_SITE_KEY?>" 
-                                                        data-callback="onSubmit"
+                                                        data-callback="onContactUsSubmit"
                                                         data-action="submit">Submit</button>
                                                 </div>
                                             </div>
@@ -93,12 +93,6 @@ require_once("includes/config.php");
     </section>
 
     <?php include("includes/footer.php");?>
-    <script src="https://www.google.com/recaptcha/api.js"></script>
-    <script>
-    function onSubmit(token) {
-        document.getElementById("contact-us-form").submit();
-    }
-    </script>
 </body>
 
 </html>

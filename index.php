@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <html lang="en" class="bg-info">
 
@@ -10,6 +13,12 @@
     <?php include("includes/navigation.php");?>
 
     <div class="header-bg">
+        <?php
+            if (isset($_SESSION['notice'])) {
+                echo '<div class="container px-5"><div class="alert alert-info text-center">' . $_SESSION['notice'] . '</div></div>';
+                unset($_SESSION['notice']);
+            }
+        ?>
         <main class="">
             <div class="container py-4">
                 <div class="p-5 border-0 rounded-5 hero-image">
