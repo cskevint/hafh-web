@@ -75,7 +75,7 @@ require_once("includes/config.php");
                                             <div class="col-12">
                                                 <div class="d-grid">
                                                     <button class="btn btn-primary btn-lg g-recaptcha" type="submit"
-                                                        data-sitekey="<?=$RECAPTCHA_SITE_KEY?>" 
+                                                        data-sitekey="<?=$RECAPTCHA_SITE_KEY?>"
                                                         data-callback="onContactUsSubmit"
                                                         data-action="submit">Submit</button>
                                                 </div>
@@ -93,6 +93,18 @@ require_once("includes/config.php");
     </section>
 
     <?php include("includes/footer.php");?>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script>
+    function onContactUsSubmit(token) {
+        var form = document.getElementById("contact-us-form");
+        if (form.checkValidity()) {
+            form.submit();
+        } else {
+            event.preventDefault()
+            event.stopPropagation()
+        }
+    }
+    </script>
 </body>
 
 </html>
