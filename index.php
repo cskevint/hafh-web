@@ -102,7 +102,7 @@ session_start();
                     <ul>
                         <li>Northern location @ <a href="https://maps.app.goo.gl/MHRQ2CakjJwrXeZR8"
                                 class="text-secondary">Tilton Ave & N Grant St</a></li>
-                        <li>Southern location @ 7th Ave & Humboldt St</li>
+                        <li>Southern location @ <a href="https://www.instagram.com/houndawayfromhomessm/" class="text-secondary">7th Ave & Humboldt St</a></li>
                     </ul>
                 </div>
             </div>

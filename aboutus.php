@@ -30,6 +30,7 @@
                                     She and her husband bought their house in 2009 and have turned into a comfortable
                                     doggy hotel (where people can visit too!). Selena has taken care of her dogs since
                                     her early childhood, and has taken care of other dogs professionally since 2012.</p>
+                                <p>Check out her <a href="https://www.instagram.com/houndawayfromhomesm/" class="text-secondary"><i class="bi bi-instagram mx-1"></i>Instagram</a>!</p>
                             </div>
                         </div>
                     </div>
@@ -49,6 +50,7 @@
                                     second location for Hound Away From Home. She has over a decade of experience caring
                                     for dogs. Working from home with her homeschooling teenage daughters, they provide
                                     round-the-clock companionship and personalized care for each dog.</p>
+                                <p>Check out her <a href="https://www.instagram.com/houndawayfromhomessm/" class="text-secondary"><i class="bi bi-instagram mx-1"></i>Instagram</a>!</p>
                             </div>
                         </div>
                     </div>

@@ -27,12 +27,11 @@ require_once('includes/config.php');
                 <p class="small ">Join our newsletter!</p>
                 <form method="post" action="newsletter-capture.php" id="newsletter-form">
                     <div class="input-group mb-3">
-                        <input class="form-control" type="text" placeholder="Your email address"
-                            name="email" aria-label="Your email address">
-                        <button class="btn btn-primary btn-lg g-recaptcha" type="submit"
-                                                    data-sitekey="<?=$RECAPTCHA_SITE_KEY?>" 
-                                                    data-callback="onNewsletterSubmit"
-                                                    data-action="submit"><i class="bi bi-send"></i></button>    
+                        <input class="form-control" type="text" placeholder="Your email address" name="email"
+                            aria-label="Your email address" required>
+                        <button class="btn btn-secondary btn-lg g-recaptcha" type="submit"
+                            data-sitekey="<?=$RECAPTCHA_SITE_KEY?>" data-callback="onNewsletterSubmit"
+                            data-action="submit"><i class="bi bi-send"></i></button>
                     </div>
                 </form>
             </div>
@@ -45,9 +44,22 @@ require_once('includes/config.php');
 <script src="https://www.google.com/recaptcha/api.js"></script>
 <script>
 function onNewsletterSubmit(token) {
-    document.getElementById("newsletter-form").submit();
+    var form = document.getElementById("newsletter-form");
+    if (form.checkValidity()) {
+        form.submit();
+    } else {
+        event.preventDefault()
+        event.stopPropagation()
+    }
 }
+
 function onContactUsSubmit(token) {
-    document.getElementById("contact-us-form").submit();
+    var form = document.getElementById("contact-us-form");
+    if (form.checkValidity()) {
+        form.submit();
+    } else {
+        event.preventDefault()
+        event.stopPropagation()
+    }
 }
 </script>
