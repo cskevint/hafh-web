@@ -14,8 +14,8 @@ require_once("includes/config.php");
     <?php include("includes/navigation.php");?>
 
     <section class="container-fluid bg-info">
-        <div class="container p-5">
-            <div class="bg-light rounded-5 p-5">
+        <div class="container p-lg-5 p-md-4 p-3">
+            <div class="bg-light rounded-5 p-lg-5 p-md-4 p-3">
                 <h1 class="mb-5">Contact Us</h1>
 
                 <?php
@@ -29,7 +29,7 @@ require_once("includes/config.php");
                     <div class="container">
                         <p class="text-secondary lead">Have questions about our dog boarding services or
                             ready to schedule your pet's stay? <b>We're here to help!</b></p>
-                        <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
+                        <hr class="w-75 mx-auto mb-3 mb-xl-5 border-dark-subtle">
                     </div>
 
                     <div class="container">

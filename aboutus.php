@@ -10,8 +10,8 @@
     <?php include("includes/navigation.php");?>
 
     <section class="container-fluid bg-info">
-        <div class="container p-5">
-            <div class="bg-light rounded-5 p-5">
+        <div class="container p-lg-5 p-md-4 p-3">
+            <div class="bg-light rounded-5 p-lg-5 p-md-4 p-3">
 
                 <h1 class="mb-5">About Us</h1>
 

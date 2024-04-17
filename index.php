@@ -33,13 +33,13 @@ session_start();
         </main>
     </div>
     <section class="bg-light mb-0">
-        <div class="container p-5">
-            <h1 class="">Services</h1>
-            <p class="lead mb-5">Hound Away From Home is a home-based dog boarding and daycare service conveniently
+        <div class="container p-lg-5 p-md-4 p-3">
+            <h1 class="mb-md-5 mb-sm-2">Services</h1>
+            <p class="lead">Hound Away From Home is a home-based dog boarding and daycare service conveniently
                 located in the heart of the Peninsula. You'll love that a family is caring for your dog when you go on
                 vacation! Daily pictures, a large backyard, and other friendly playmates are just some of the perks of
                 your pup’s stay at Hound Away From Home.</p>
-            <div class="row justify-content-md-center">
+            <div class="row mt-5 justify-content-md-center">
                 <div class="col-sm-5 mb-3 mb-sm-0">
                     <div class="card border-0 rounded-5">
                         <img src="/images/image2.jpg" class="card-img-top rounded-top-5" alt="...">
@@ -69,30 +69,29 @@ session_start();
         </div>
     </section>
     <section class="container-fluid bg-info">
-        <div class="container p-5">
-            <h1 class="mb-5">Read our reviews!</h1>
+        <div class="container p-lg-5 p-md-4 p-3">
+            <h1 class="mb-md-5 mb-sm-2">Read our reviews!</h1>
             <div class="row">
-                <div class="col-3 p-4 d-flex align-items-center justify-content-center">
+                <div class="col-lg-3 col-md-6 col-xs-12 px-4 py-3 d-flex align-items-center justify-content-center">
                     <a href="https://www.facebook.com/houndawayfromhome/"><img src="images/logo-facebook.png" class="img-fluid"/></a>
                 </div>
-                <div class="col-3 p-4 d-flex align-items-center justify-content-center">
+                <div class="col-lg-3 col-md-6 col-xs-12 px-4 py-3 d-flex align-items-center justify-content-center">
                     <a href="https://www.instagram.com/houndawayfromhomesm/"><img src="images/logo-instagram.png" class="img-fluid"/></a>
                 </div>
-                <div class="col-3 p-4 d-flex align-items-center justify-content-center">
+                <div class="col-lg-3 col-md-6 col-xs-12 px-4 py-3 d-flex align-items-center justify-content-center">
                     <a href="https://www.yelp.com/biz/hound-away-from-home-san-mateo"><img src="images/logo-yelp.png" class="img-fluid"/></a>
                 </div>
-                <div class="col-3 p-4 d-flex align-items-center justify-content-center">
+                <div class="col-lg-3 col-md-6 col-xs-12 px-4 py-3 d-flex align-items-center justify-content-center">
                     <a href="https://www.rover.com/members/leila-g-loving-family-at-home-full-time/"><img src="images/logo-rover.png" class="img-fluid"/></a>
                 </div>
             </div>
         </div>
     </section>
     <section class="container-fluid bg-success">
-        <div class="container p-5">
-            <h1 class="mb-5">Locations</h1>
-            <div class="row">
-                <div class="col-2"></div>
-                <div class="col-8">
+        <div class="container p-lg-5 p-md-4 p-3">
+            <h1 class="mb-md-5 mb-sm-2">Locations</h1>
+            <div class="row justify-content-md-center">
+                <div class="col-lg-8">
                     <div class="google-maps">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12649.037382027613!2d-122.3207829!3d37.5725103!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f9e786d2c5a89%3A0x5f25f305b0b1a181!2sHound%20Away%20From%20Home!5e0!3m2!1sen!2sus!4v1713274048009!5m2!1sen!2sus"
@@ -106,7 +105,6 @@ session_start();
                         <li>Southern location @ 7th Ave & Humboldt St</li>
                     </ul>
                 </div>
-                <div class="col-2"></div>
             </div>
         </div>
     </section>

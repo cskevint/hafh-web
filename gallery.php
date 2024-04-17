@@ -10,16 +10,15 @@
     <?php include("includes/navigation.php");?>
 
     <section class="container-fluid bg-info">
-        <div class="container p-5">
-            <div class="bg-light rounded-5 p-5">
-                <h1 class="mb-5">Gallery</h1>
-                <div class="row">
-                    <div class="col-3"></div>
-                    <div class="col-6">
+        <div class="container p-lg-5 p-md-4 p-0">
+            <div class="bg-light rounded-5 p-lg-5 p-md-4 p-2">
+                <h1 class="mb-lg-5 mb-md-3 mb-xs-2">Gallery</h1>
+                <div class="row justify-content-md-center">
+                    <div class="col-lg-6 col-md-12">
                         <blockquote class="instagram-media"
                             data-instgrm-permalink="https://www.instagram.com/houndawayfromhomesm/?utm_source=ig_embed&amp;utm_campaign=loading"
                             data-instgrm-version="14"
-                            style="min-height: 572px; background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+                            style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
                             <div style="padding:16px;"> <a
                                     href="https://www.instagram.com/houndawayfromhomesm/?utm_source=ig_embed&amp;utm_campaign=loading"
                                     style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;"
@@ -115,7 +114,6 @@
                         </blockquote>
                         <script async src="//www.instagram.com/embed.js"></script>
                     </div>
-                    <div class="col-3"></div>
                 </div>
             </div>
         </div>
