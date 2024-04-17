@@ -2,10 +2,10 @@
 
 session_start();
 
-require_once('config.php');
-require_once("lib/PHPMailer-6.9.1/src/PHPMailer.php");
-require_once("lib/PHPMailer-6.9.1/src/Exception.php");
-require_once("lib/PHPMailer-6.9.1/src/SMTP.php");
+require_once ("config.php");
+require_once ("lib/PHPMailer-6.9.1/src/PHPMailer.php");
+require_once ("lib/PHPMailer-6.9.1/src/Exception.php");
+require_once ("lib/PHPMailer-6.9.1/src/SMTP.php");
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
@@ -41,7 +41,11 @@ $mail->addAddress($CONTACT_US_EMAIL, $CONTACT_US_NAME);
 $mail->Subject = $subject;
 $mail->msgHTML($messageBody);
 
-if($mail->send()) {
+$captcha = $_POST['g-recaptcha-response'];
+$recaptchaUrl = "https://www.google.com/recaptcha/api/siteverify";
+$response = json_decode(file_get_contents($recaptchaUrl . "?secret=" . $RECAPTCHA_SECRET_KEY . "&response=" . $captcha . "&remoteip=" . $_SERVER['REMOTE_ADDR']), true);
+
+if ($response['success'] && $mail->send()) {
     $_SESSION['notice'] = "Successfully sent your note.";
 } else {
     $_SESSION['notice'] = 'There was an error sending your note. Please email us: <a href="mailto:selena@houndawayfromhome.com">selena@houndawayfromhome.com</a>';
