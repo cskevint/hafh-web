@@ -1,6 +1,6 @@
 <?php 
 session_start(); 
-require_once("config.php");
+require_once("includes/config.php");
 ?>
 <!doctype html>
 <html lang="en" class="bg-info">
@@ -27,8 +27,8 @@ require_once("config.php");
 
                 <section class="bg-light">
                     <div class="container">
-                        <p class="text-secondary text-center">Have questions about our dog boarding services or
-                            ready to schedule your pet's stay? We're here to help!</p>
+                        <p class="text-secondary">Have questions about our dog boarding services or
+                            ready to schedule your pet's stay? <b>We're here to help!</b></p>
                         <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
                     </div>
 
