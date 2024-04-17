@@ -17,6 +17,17 @@ $_GLOBALS["pageTitle"] = "Gallery";
             <div class="bg-light rounded-5 p-lg-5 p-md-4 p-2">
                 <h1 class="mb-lg-5 mb-md-3 mb-xs-2">Gallery</h1>
                 <div class="row justify-content-md-center">
+                    <div class="col-lg-4">
+                        <div class="p-2">
+                            <img src="images/gallery2.jpg" class="img-fluid"/>
+                        </div>
+                        <div class="p-2">
+                            <img src="images/gallery1.jpg" class="img-fluid"/>
+                        </div>
+                        <div class="p-2">
+                            <img src="images/gallery3.jpg" class="img-fluid"/>
+                        </div>
+                    </div>
                     <div class="col-lg-6 col-md-12">
                         <blockquote class="instagram-media"
                             data-instgrm-permalink="https://www.instagram.com/houndawayfromhomesm/?utm_source=ig_embed&amp;utm_campaign=loading"
