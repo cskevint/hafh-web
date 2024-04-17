@@ -1,6 +1,7 @@
 <?php 
 session_start(); 
 require_once("includes/config.php");
+$_GLOBALS["pageTitle"] = "Contact Us";
 ?>
 <!doctype html>
 <html lang="en" class="bg-info">

@@ -1,5 +1,6 @@
 <?php 
 session_start(); 
+$_GLOBALS["pageTitle"] = "Ebook";
 ?>
 <!doctype html>
 <html lang="en" class="bg-info">

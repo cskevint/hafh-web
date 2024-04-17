@@ -1,3 +1,6 @@
+<?php 
+$_GLOBALS["pageTitle"] = "About Us";
+?>
 <!doctype html>
 <html lang="en" class="bg-info">
 

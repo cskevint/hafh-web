@@ -1,3 +1,6 @@
+<?php 
+$_GLOBALS["pageTitle"] = "Gallery";
+?>
 <!doctype html>
 <html lang="en" class="bg-info">
 
