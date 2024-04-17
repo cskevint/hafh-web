@@ -27,7 +27,7 @@ require_once("includes/config.php");
 
                 <section class="bg-light">
                     <div class="container">
-                        <p class="text-secondary">Have questions about our dog boarding services or
+                        <p class="text-secondary lead">Have questions about our dog boarding services or
                             ready to schedule your pet's stay? <b>We're here to help!</b></p>
                         <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
                     </div>
