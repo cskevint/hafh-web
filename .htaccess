@@ -1,5 +1,7 @@
 ErrorDocument 404 /404.php
 Redirect 302 /about/ /aboutus.php
+Redirect 302 /questions/ /faqs.php
+Redirect 302 /contact-us/ /contactus.php
 
 <Files updatesite.php>
 FileETag None
