@@ -20,7 +20,7 @@ Flea/tick prevention and heartworm prevention is also a requirement. Flu vaccine
 
 ### What is the typical daily schedule for a dog staying at your facility? {.mt-4}
 
-While not all days are the same, here is a typical day schedme - though times can vary.
+While not all days are the same, here is a typical day schedule - though times can vary.
 
 * Breakfast before 7am and before new dogs start arriving. 
 * Playtime 8-9am
@@ -33,28 +33,29 @@ When our kids come home from school around 3pm, the dogs spend a lot of time snu
 
 ### How do you handle emergencies? {.mt-4}
 
-If the emergency requires medical care, we would take the dog to the vet immediately. Close by, there are several 24-hour emergency vets within a 3-minute car ride. We then call the owner to let them the circumstances.
-If there is some sort of other emergency, a call to the owners would happen first.
+If the emergency requires medical care, we would take the dog to the vet immediately. Close by, there are several 24-hour emergency vets within a 3-minute car ride. We then call the owner to let them the circumstances. If there is some sort of other emergency, a call to the owners would happen first.
 
 ### What do I need to bring with my dog for their stay? {.mt-4}
 
-You only need to bring the food and treats labeled with their name and instructions for each meal -- no beds, bowls or toys necessary.
+You only need to bring the food and treats labeled with their name and instructions for each meal -- no beds, bowls or toys are necessary.
 
 ### How do you handle dogs with special needs or behavior issues? {.mt-4}
 
-Each dog at our home receives individualized attention and care. Whether it’s a massage daily, extra cuddles, individual feeding time, or giving their medicine.
+Each dog at our home receives individualized attention and care. Whether it’s a massage daily, extra cuddles, individual feeding time, or giving them their medicine.
 
 ### What is your cancellation policy? {.mt-4}
 
-We have a flexible cancelation policy of no fee incurred if 24-hour notice is given. For the Thanksgiving break and end of year holidays including Christmas and New Years, a three-day notice is required.
+We have a flexible cancellation policy: there is no fee if a 24-hour notice is given. 
+
+For the Thanksgiving break and end of year holidays, including Christmas and New Years, a three-day notice is required.
 
 ### How do I book a stay for my dog? {.mt-4}
 
-We are flexible on booking, and can often receive same day requests. Text for each booking. 
+<a href="/contactus.php" class="text-secondary">Contact us</a> for an initial meet-n-greet. From then on, we are flexible on booking, and can often receive same day requests -- just text us!
 
 ### What happens if there is a medical issue? {.mt-4}
 
-We guarantee if there is any issue with your dogs in our care, you have a money-back guarantee as well as payment for other issues.
+If there is any issue with your dogs in our care, you have a money-back guarantee for the stay as well as payment for other issues.
 
 ### How do I pay? {.mt-4}
 
