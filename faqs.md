@@ -45,7 +45,7 @@ Each dog at our home receives individualized attention and care. Whether it’s 
 
 ### What is your cancellation policy? {.mt-4}
 
-We have a flexible cancellation policy: there is no fee if a 24-hour notice is given. 
+We have a flexible cancellation policy: there is no fee if at least a 24-hour notice is given.
 
 For the Thanksgiving break and end of year holidays, including Christmas and New Years, a three-day notice is required.
 
