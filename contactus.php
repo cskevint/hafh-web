@@ -70,7 +70,7 @@ $_GLOBALS["pageTitle"] = "Contact Us";
                                             <div class="col-12">
                                                 <label for="message" class="form-label">Message <span
                                                         class="text-danger">*</span></label>
-                                                <textarea class="form-control" id="message" name="message" rows="3"
+                                                <textarea class="form-control" id="message" name="message" rows="6"
                                                     required></textarea>
                                             </div>
                                             <div class="col-12">
