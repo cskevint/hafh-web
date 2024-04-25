@@ -39,7 +39,7 @@ $_GLOBALS["pageTitle"] = "Ebook";
                         <h5>Ready to Get Started?</h5>
                         <p>To receive a download link for the ebook, simply provide your email address below.</p>
 
-                        <form method="post" action="ebook-request.php" id="newsletter-form">
+                        <form method="post" action="ebook-request.php" id="ebook-form">
                             <div class="input-group mb-3">
                                 <input class="form-control" type="email" placeholder="Your email address" name="email"
                                     aria-label="Your email address" required autocomplete="off"> 

@@ -25,11 +25,12 @@
                 <form method="post" action="newsletter-capture.php" id="newsletter-form">
                     <div class="input-group mb-3">
                         <input class="form-control" type="email" placeholder="Your email address" name="email"
-                            aria-label="Your email address" required autocomplete="off"> 
+                            aria-label="Your email address" required autocomplete="off">
                         <button class="btn btn-secondary btn-lg" type="submit"><i class="bi bi-send"></i></button>
                     </div>
                 </form>
-                <p class="small">Or <a href="/ebook.php" class="text-secondary">download our free ebook!</a> <i class="bi bi-book-half text-secondary"></i></p>
+                <p class="small">Or <a href="/ebook.php" class="text-secondary">download our free ebook!</a> <i
+                        class="bi bi-book-half text-secondary"></i></p>
             </div>
         </div>
     </div>
