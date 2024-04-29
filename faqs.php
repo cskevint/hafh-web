@@ -1,4 +1,6 @@
 <?php
+session_start(); 
+require_once ("redirect.php");
 $_GLOBALS["pageTitle"] = "FAQs";
 ?>
 <!doctype html>

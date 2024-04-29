@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once ("redirect.php");
 ?>
 <!doctype html>
 <html lang="en" class="bg-info">

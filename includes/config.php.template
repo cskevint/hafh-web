@@ -1,4 +1,6 @@
 <?php
+$STAGE = "";
+$DEVELOPMENT_IPS = [];
 $SMTP_FROM_EMAIL = "";
 $SMTP_FROM_NAME = "";
 $CONTACT_US_EMAIL = "";

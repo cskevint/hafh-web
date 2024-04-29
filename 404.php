@@ -1,3 +1,8 @@
+<?php
+session_start();
+require_once ("redirect.php");
+$_GLOBALS["pageTitle"] = "Not found";
+?>
 <!doctype html>
 <html lang="en" class="bg-info">
 
