@@ -16,7 +16,7 @@ Our mandatory vaccinations are:
 * distemper
 * Bordetella
 
-Flea/tick prevention and heartworm prevention is also a requirement. Flu vaccines may not not required in all instances.
+Flea/tick prevention and heartworm prevention is also a requirement. Flu vaccines may not required in all instances.
 
 ### What is the typical daily schedule for a dog staying at your facility? {.mt-4}
 
