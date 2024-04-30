@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-info" aria-label="Twelfth navbar example">
+<nav class="navbar navbar-expand-lg bg-info" aria-label="Page navigation">
     <div class="container">
         <a class="navbar-brand" href="/">
             <i class="bi bi-house-fill"></i>
@@ -46,3 +46,13 @@
         </div>
     </div>
 </nav>
+<?php if ($GLOBALS['DEBUG']) { ?>
+    <div class="container bg-white sticky-top">
+        <div class="text-center d-block d-sm-none">xs</div>
+        <div class="text-center d-none d-sm-block d-md-none">sm</div>
+        <div class="text-center d-none d-md-block d-lg-none">md</div>
+        <div class="text-center d-none d-lg-block d-xl-none">lg</div>
+        <div class="text-center d-none d-xl-block">xl</div>
+    </div>
+<?php } ?>
+

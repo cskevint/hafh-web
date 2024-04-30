@@ -22,7 +22,7 @@ require_once ("redirect.php");
         ?>
         <main class="">
             <div class="container py-4">
-                <div class="p-5 border-0 rounded-5 hero-image">
+                <div class="p-sm-5 p-3 border-0 rounded-4 hero-image">
                     <div class="container-fluid py-5">
                         <h1 class="display-5 fw-bold text-white">Safe, Loved, and Pampered</h1>
                         <p class="col-md-8 fs-4 text-white">Dog boarding and daycare reimagined: the ultimate comfort of
@@ -39,7 +39,7 @@ require_once ("redirect.php");
             <p class="lead">Hound Away From Home is a home-based dog boarding and daycare service conveniently
                 located in the heart of the Peninsula. You'll love that a family is caring for your dog when you go on
                 vacation! Daily pictures, a large backyard, and other friendly playmates are just some of the perks of
-                your pup’s stay at Hound Away From Home.</p>
+                your pup’s stay at Hound Away From Home. <a class="text-primary" href="/faqs.php"><strong>Learn more...</strong></a></p>
             <div class="row mt-5 justify-content-md-center">
                 <div class="col-sm-5 mb-3 mb-sm-0">
                     <div class="card border-0 rounded-5">
@@ -69,7 +69,7 @@ require_once ("redirect.php");
             </div>
         </div>
     </section>
-    <section class="container-fluid bg-info">
+    <section class="container-fluid px-0 bg-info">
         <div class="container p-lg-5 p-md-4 p-3">
             <h1 class="mb-md-5 mb-sm-2">Read our reviews!</h1>
             <div class="row">

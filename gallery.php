@@ -14,10 +14,11 @@ $_GLOBALS["pageTitle"] = "Gallery";
 
     <?php include("includes/navigation.php");?>
 
-    <section class="container-fluid bg-info">
-        <div class="container p-lg-5 p-md-4 p-0">
-            <div class="bg-light rounded-5 p-lg-5 p-md-4 p-2">
-                <h1 class="mb-lg-5 mb-md-3 mb-xs-2">Gallery</h1>
+    <section class="container-fluid px-0 bg-info">
+        <div class="container p-lg-5 p-md-4 p-3 px-0">
+            <div class="bg-light rounded-5 p-lg-5 p-md-4 p-3">
+                <h1 class="mb-ms-5 mb-3"><?=$_GLOBALS["pageTitle"]?></h1>
+
                 <div class="row justify-content-md-center">
                     <div class="col-lg-4">
                         <div class="p-2">

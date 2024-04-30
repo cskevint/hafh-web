@@ -57,6 +57,16 @@
     --bs-btn-disabled-border-color: var(--bs-secondary-disabled);
 }
 
+@media (max-width:576px) {
+    .rounded-5 {
+        border-radius: 0px !important;
+    }
+}
+
+.redbox {
+    border: 1px solid red !important;
+}
+
 /* index.php */
 
 .header-bg {

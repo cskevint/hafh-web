@@ -14,8 +14,8 @@ $_GLOBALS["pageTitle"] = "Ebook";
 
     <?php include("includes/navigation.php");?>
 
-    <section class="container-fluid bg-info">
-        <div class="container p-lg-5 p-md-4 p-3">
+    <section class="container-fluid px-0 bg-info">
+        <div class="container p-lg-5 p-md-4 p-3 px-0">
             <div class="bg-light rounded-5 p-lg-5 p-md-4 p-3">
                 <?php
                     if (isset($_SESSION['notice'])) {
@@ -23,9 +23,10 @@ $_GLOBALS["pageTitle"] = "Ebook";
                         unset($_SESSION['notice']);
                     }
                 ?>
-                <h1 class="">Get our free ebook!</h1>
+                <h1 class="mb-ms-5 mb-3">Get our free ebook!</h1>
+
                 <div class="row justify-content-md-center">
-                    <div class="col-md-6 py-5">
+                    <div class="col-md-6 p-3">
                         <h3>Discover How to Run a Profitable Dog Boarding Business from Home!</h3>
 
                         <p>Ready to turn your love for dogs into a thriving business? Our free ebook will get you started!

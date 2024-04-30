@@ -15,10 +15,10 @@ $_GLOBALS["pageTitle"] = "Contact Us";
 
     <?php include("includes/navigation.php");?>
 
-    <section class="container-fluid bg-info">
-        <div class="container p-lg-5 p-md-4 p-3">
+    <section class="container-fluid px-0 bg-info">
+        <div class="container p-lg-5 p-md-4 p-3 px-0">
             <div class="bg-light rounded-5 p-lg-5 p-md-4 p-3">
-                <h1 class="mb-5">Contact Us</h1>
+                <h1 class="mb-ms-5 mb-3"><?=$_GLOBALS["pageTitle"]?></h1>
 
                 <?php
                     if (isset($_SESSION['notice'])) {
@@ -36,8 +36,8 @@ $_GLOBALS["pageTitle"] = "Contact Us";
 
                     <div class="container">
                         <div class="row justify-content-lg-center">
-                            <div class="col-12 col-lg-9">
-                                <div class="bg-white border rounded shadow-sm overflow-hidden">
+                            <div class="col-12 col-lg-9 px-0">
+                                <div class="bg-white border rounded shadow-sm overflow-hidden redblock">
 
                                     <form method="post" action="/contactus-mail.php" id="contact-us-form">
                                         <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
