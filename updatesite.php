@@ -1,5 +1,5 @@
 <?php
-session_start();g
+session_start();
 require_once ("includes/config.php");
 ?>
 <!doctype html>
@@ -13,7 +13,7 @@ require_once ("includes/config.php");
     <title>Under construction.</title>
 </head>
 
-<body>
+<body>g
     <div class="container p-5">
         <h1 class="text-center">Redirecting to homepage in 5 seconds...</h1>
         <p class="text-center">
