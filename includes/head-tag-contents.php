@@ -1,4 +1,5 @@
 <?php
+require_once ("config.php");
 $title = "Hound Away From Home".(isset($_GLOBALS["pageTitle"]) ? " - ".$_GLOBALS["pageTitle"] : "");
 ?>
 <meta charset="utf-8">
@@ -24,7 +25,7 @@ $title = "Hound Away From Home".(isset($_GLOBALS["pageTitle"]) ? " - ".$_GLOBALS
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
 
-<?php if(str_contains($_SERVER["SERVER_NAME"],"houndawayfromhome.com")) { ?>
+<?php if($GLOBALS['STAGE'] == "production" && !in_array($_SERVER['REMOTE_ADDR'], $GLOBALS['DEVELOPMENT_IPS'])) { ?>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FRD4XKQCPT"></script>
   <script>

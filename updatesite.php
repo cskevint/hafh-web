@@ -1,5 +1,5 @@
 <?php
-session_start();
+session_start();g
 require_once ("includes/config.php");
 ?>
 <!doctype html>
