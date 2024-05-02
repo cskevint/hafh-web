@@ -1,4 +1,4 @@
 .DS_Store
 .vscode
 includes/config.php
-*.csv
+admin/*.csv

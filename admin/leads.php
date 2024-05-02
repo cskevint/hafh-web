@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once ("includes/config.php");
+require_once ("../includes/config.php");
 
 if (!in_array($_SERVER['REMOTE_ADDR'], $GLOBALS['DEVELOPMENT_IPS'])) {
     header('Location: /404.php');
@@ -24,7 +24,7 @@ if (!in_array($_SERVER['REMOTE_ADDR'], $GLOBALS['DEVELOPMENT_IPS'])) {
             <div class="col">
                 <h2>Ebook</h2>
                 <?php
-                    $ebook_csv = file_get_contents("./".$GLOBALS['EBOOK_CSV'], true);
+                    $ebook_csv = file_get_contents("../".$GLOBALS['EBOOK_CSV'], true);
                     $ebook_emails = array_filter(array_unique(explode("\n", $ebook_csv)));
                     echo implode('<br/>', $ebook_emails);
                 ?>
@@ -32,7 +32,7 @@ if (!in_array($_SERVER['REMOTE_ADDR'], $GLOBALS['DEVELOPMENT_IPS'])) {
             <div class="col">
                 <h2>Newsletter</h2>
                 <?php
-                    $newsletter_csv = file_get_contents("./".$GLOBALS['NEWSLETTER_CSV'], true);
+                    $newsletter_csv = file_get_contents("../".$GLOBALS['NEWSLETTER_CSV'], true);
                     $newsletter_emails = array_filter(array_unique(explode("\n", $newsletter_csv)));
                     echo implode('<br/>', $newsletter_emails);
                 ?>
