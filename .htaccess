@@ -1,9 +1,11 @@
 ErrorDocument 404 /404.php
 RedirectMatch 404 /\.git
-RedirectMatch 404 /\.md
 Redirect 302 /about/ /aboutus.php
 Redirect 302 /questions/ /faqs.php
 Redirect 302 /contact-us/ /contactus.php
+RewriteEngine On
+RewriteCond %{HTTP_HOST}  !^www\.houndawayfromhome\.com$ [NC]
+RewriteRule ^(.*) https://www.houndawayfromhome.com/$1 [L,R]
 
 <Files updatesite.php>
 FileETag None
