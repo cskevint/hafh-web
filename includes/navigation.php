@@ -45,6 +45,12 @@
                         <span class="d-lg-none d-xl-none">Yelp</span>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.youtube.com/@HoundAwayFromHome">
+                        <i class="bi bi-youtube"></i>
+                        <span class="d-lg-none d-xl-none">YouTube</span>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
