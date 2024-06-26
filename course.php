@@ -28,9 +28,13 @@ $_GLOBALS["pageTitle"] = "Course";
                 <div class="row justify-content-md-center">
                     <div class="col-md-12 p-3">
 
-                        <iframe class="youtube-video" src="https://www.youtube.com/embed/h5XpsEWjJlk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe class="youtube-video" src="https://www.youtube.com/embed/h5XpsEWjJlk"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
 
-                        <p class="pt-3">Ready to turn your love for dogs into a thriving business? Our online course will tell you everything you need to know to run your own at-home dog boarding business!</p>
+                        <p class="pt-3">Ready to turn your love for dogs into a thriving business? Our online course
+                            will tell you everything you need to know to run your own at-home dog boarding business!</p>
 
                         <h5>Why Choose Dog Boarding?</h5>
                         <p>Escape the 9-to-5 grind and enjoy the freedom of being your own boss while caring for
@@ -39,7 +43,8 @@ $_GLOBALS["pageTitle"] = "Course";
                         </p>
 
                         <h5>Ready to Get Started?</h5>
-                        <p>Click the Enroll button below to navigate to the enrollment page on our elearning platform:</p>
+                        <p>Click the Enroll button below to navigate to the enrollment page on our elearning platform:
+                        </p>
 
                         <p class="text-center">
                             <a class="btn btn-primary btn-lg" href="http://www.google.com">Enroll now!</a>
