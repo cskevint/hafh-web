@@ -94,3 +94,8 @@
     width: 100% !important;
     height: 100% !important;
 }
+
+.youtube-video {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+}
