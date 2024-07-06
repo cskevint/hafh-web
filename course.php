@@ -12,7 +12,7 @@ $_GLOBALS["pageTitle"] = "Course";
 
 <body>
 
-    <?php include("includes/navigation.php");?>
+<?php include("includes/devserver.php");?>
 
     <section class="container-fluid px-0 bg-info">
         <div class="container p-lg-5 p-md-4 p-3 px-0">
@@ -55,7 +55,7 @@ $_GLOBALS["pageTitle"] = "Course";
         </div>
     </section>
 
-    <?php include("includes/footer.php");?>
+<?php include("includes/bootstrapjs.php");?>
 
 </body>
 

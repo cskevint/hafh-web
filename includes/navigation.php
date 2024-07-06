@@ -1,6 +1,4 @@
-<?php if ($GLOBALS['STAGE'] != "production") { ?>
-    <div class="bg-primary p-1 text-center text-white">DEVELOPMENT SERVER</div>
-<?php } ?>
+<?php include("devserver.php");?>
 <nav class="navbar navbar-expand-lg bg-info" aria-label="Page navigation">
     <div class="container">
         <a class="navbar-brand" href="/">
