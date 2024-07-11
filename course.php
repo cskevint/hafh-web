@@ -28,7 +28,7 @@ $_GLOBALS["pageTitle"] = "Course";
                 <div class="row justify-content-md-center">
                     <div class="col-md-12 p-3">
 
-                        <iframe class="youtube-video" src="https://www.youtube.com/embed/ktsm8l2iCEk"
+                        <iframe class="youtube-video" src="https://www.youtube.com/embed/mK9lg1l1KkU"
                             title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
