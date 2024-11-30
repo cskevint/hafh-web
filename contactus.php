@@ -69,10 +69,60 @@ $_GLOBALS["pageTitle"] = "Contact Us";
                                                 </div>
                                             </div>
                                             <div class="col-12">
-                                                <label for="message" class="form-label">Message <span
-                                                        class="text-danger">*</span></label>
-                                                <textarea class="form-control" id="message" name="message" rows="6"
-                                                    required></textarea>
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h6 class="card-title">Request a quote</h6>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="quote"
+                                                                id="quoteDaycare" value="daycare"
+                                                                onChange="onQuoteChange()">
+                                                            <label class="form-check-label" for="quoteDaycare">
+                                                                Daycare
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="quote"
+                                                                id="quoteBoarding" value="boarding"
+                                                                onChange="onQuoteChange()">
+                                                            <label class="form-check-label" for="quoteBoarding">
+                                                                Boarding
+                                                            </label>
+                                                        </div>
+                                                        <div class="input-group d-none my-3" id="boardingDates">
+                                                            <span class="input-group-text">From</span>
+                                                            <input class="form-control" type="date"
+                                                                name="boardingFrom" />
+                                                            <span class="input-group-text">to</span>
+                                                            <input class="form-control" type="date" name="boardingTo" />
+                                                        </div>
+                                                        <div class="input-group my-3">
+                                                            <span class="input-group-text">Type/breed</span>
+                                                            <input class="form-control" type="text" name="dogType" />
+                                                        </div>
+                                                        <div class="input-group my-3">
+                                                            <span class="input-group-text">Age</span>
+                                                            <input class="form-control" type="text" name="dogAge" />
+                                                        </div>
+                                                        <select class="form-select" name="dogState">
+                                                            <option selected>Choose one:</option>
+                                                            <option value="intact">Intact</option>
+                                                            <option value="neutered">Neutered</option>
+                                                        </select>
+                                                        <div class="form-check my-3">
+                                                            <input class="form-check-input" type="checkbox" value="yes"
+                                                                id="dogVaccinations" name="dogVaccinations">
+                                                            <label class="form-check-label" for="dogVaccinations">
+                                                                Vaccines completed within a year (prepare to show
+                                                                documentation).
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <label for="message" class="form-label">Message</label>
+                                                <textarea class="form-control" id="message" name="message"
+                                                    rows="6"></textarea>
                                             </div>
                                             <div class="col-12">
                                                 <div class="d-grid">
@@ -104,6 +154,15 @@ $_GLOBALS["pageTitle"] = "Contact Us";
         } else {
             event.preventDefault()
             event.stopPropagation()
+        }
+    }
+    function onQuoteChange() {
+        var form = document.getElementById("contact-us-form");
+        var quote = new FormData(form).get('quote');
+        if (quote == "boarding") {
+            document.getElementById('boardingDates').classList.remove('d-none');
+        } else {
+            document.getElementById('boardingDates').classList.add('d-none');
         }
     }
     </script>
