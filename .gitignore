@@ -2,3 +2,4 @@
 .vscode
 includes/config.php
 admin/*.csv
+.dh-diag
