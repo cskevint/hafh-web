@@ -13,11 +13,12 @@ if (strlen(trim($subscriberEmail)) > 0) {
     $messageBody = "<p>" . $subscriberEmail . "</p>";
 
     if (!str_contains($subscriberEmail,'serviseantilogin')) {
-      if (sendMail($fromEmail, $fromName, $subject, $messageBody)) {
-          $_SESSION['notice'] = "Your email address has been added.";
-      } else {
-          $_SESSION['notice'] = 'There was an error. Please email us: <a href="mailto:selena@houndawayfromhome.com">selena@houndawayfromhome.com</a>';
-      }
+      # Disable email sending for Newsletter.
+      # if (sendMail($fromEmail, $fromName, $subject, $messageBody)) {
+      $_SESSION['notice'] = "Your email address has been added.";
+      # } else {
+      #    $_SESSION['notice'] = 'There was an error. Please email us: <a href="mailto:selena@houndawayfromhome.com">selena@houndawayfromhome.com</a>';
+      #}
 
       file_put_contents($NEWSLETTER_CSV, $subscriberEmail . "\n", FILE_APPEND | LOCK_EX);   
     } else {
