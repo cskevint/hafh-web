@@ -1,11 +1,9 @@
-<?php if ($GLOBALS['STAGE'] != "production") { ?>
-    <div class="bg-primary p-1 text-center text-white">DEVELOPMENT SERVER</div>
-<?php } ?>
+<?php include("devserver.php");?>
 <nav class="navbar navbar-expand-lg bg-info" aria-label="Page navigation">
     <div class="container">
         <a class="navbar-brand" href="/">
-            <i class="bi bi-house-fill"></i>
-            <img src="/images/brand.png" class="img-fluid" style="max-height: 28px"/>
+            <img src="/images/logo-horizontal.png" class="img-fluid d-none d-sm-block" style="max-height:32px;"/>
+            <img src="/images/logo-horizontal-thin.png" class="img-fluid d-block d-sm-none" style="max-height:32px;"/>
         </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
