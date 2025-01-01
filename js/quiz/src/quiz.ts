@@ -14,7 +14,7 @@ export interface Quiz {
   questions: Question[];
 }
 
-const QuizData: Quiz = {
+export const QuizData: Quiz = {
   title: "Quiz",
   questions: [
     {
@@ -148,5 +148,3 @@ const QuizData: Quiz = {
     },
   ],
 };
-
-export { QuizData };
