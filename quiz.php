@@ -23,7 +23,7 @@ $_GLOBALS["pageTitle"] = "Quiz";
     </section>
 
     <?php include ("includes/footer.php"); ?>
-    <!-- <script type="module" crossorigin src="/js/quiz.js"></script> -->
+    <script type="module" crossorigin src="/js/quiz/dist/quiz.js"></script>
 </body>
 
 </html>
