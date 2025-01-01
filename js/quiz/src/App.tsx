@@ -1,26 +1,37 @@
-import { useState, useEffect } from "react";
-import QuizData from './quiz';
+import { useState } from "react";
+import { Quiz, Question, QuizData } from "./quiz";
 
-function Quiz({ quiz }) {
+interface QuizFormProps {
+  quiz: Quiz;
+}
+
+interface QuestionBoxProps {
+  question: Question;
+  onOptionChange: Function;
+}
+
+function QuizForm({ quiz }: QuizFormProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [quizSubmitted, setQuizSubmitted] = useState(false);
-  const [answerData, setAnswerData] = useState({});
+  const [answerData, setAnswerData] = useState(new Map<string, number>());
   const [quizResult, setQuizResult] = useState("");
 
-  const navigateQuestion = (delta) => {
+  const navigateQuestion = (delta: number) => {
     const index = currentIndex + delta;
     if (index >= 0 && index < quiz.questions.length) {
       setCurrentIndex(index);
     }
   };
 
+  const changeQuestionOption = (name:string, value:number) => {
+    answerData.set(name, value);
+    setAnswerData(answerData);
+  };
+
   const submitQuiz = () => {
     setQuizSubmitted(true);
-    if (Object.values(answerData).length === 0) {
-      setQuizResult("Maybe not");
-      return;
-    }
-    const score = Object.values(answerData).reduce((a,b) => { return a + b;});
+    let score = 0;
+    answerData.forEach(value => { score += value});
     if (score > 10) {
       setQuizResult("Match!");
     } else if (score > 5) {
@@ -40,14 +51,9 @@ function Quiz({ quiz }) {
         className="card"
         style={{ display: quizSubmitted ? "none" : "block" }}
       >
-        <Question
-          question={quiz.questions?.at(currentIndex) ?? {}}
-          onOptionChange={(name, value) => {
-            setAnswerData({
-              ...answerData,
-              [name]: value,
-            });
-          }}
+        <QuestionBox
+          question={quiz.questions[currentIndex]}
+          onOptionChange={changeQuestionOption}
         />
         <div className="navigation">
           <button
@@ -87,7 +93,7 @@ function Quiz({ quiz }) {
   );
 }
 
-function Question({ question, onOptionChange }) {
+function QuestionBox({ question, onOptionChange }: QuestionBoxProps) {
   return (
     <div
       className="rounded mb-4 py-1 px-4 bg-white question"
@@ -96,7 +102,7 @@ function Question({ question, onOptionChange }) {
       <div className="my-3 lead">
         <strong>{question.title}</strong>
       </div>
-      {question.options?.map((option, j) => {
+      {question.options.map((option) => {
         const optionId = `${question.name}-${option.value}`;
         return (
           <div className="form-check mb-3" key={optionId}>
@@ -106,7 +112,7 @@ function Question({ question, onOptionChange }) {
               type="radio"
               name={question.name}
               value={option.value}
-              required=""
+              required={false}
               onChange={() => {
                 onOptionChange(question.name, option.value);
               }}
@@ -122,7 +128,7 @@ function Question({ question, onOptionChange }) {
 }
 
 function App() {
-  return <Quiz quiz={QuizData} />;
+  return <QuizForm quiz={QuizData} />;
 }
 
 export default App;

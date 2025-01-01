@@ -1,4 +1,20 @@
-export default {
+export interface Option {
+  text: string;
+  value: number;
+}
+
+export interface Question {
+  title: string;
+  name: string;
+  options: Option[];
+}
+
+export interface Quiz {
+  title: string;
+  questions: Question[];
+}
+
+const QuizData: Quiz = {
   title: "Quiz",
   questions: [
     {
@@ -132,3 +148,5 @@ export default {
     },
   ],
 };
+
+export { QuizData };
