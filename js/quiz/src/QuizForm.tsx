@@ -66,7 +66,7 @@ function QuizForm({ quiz }: QuizFormProps) {
                 Previous
               </button>
               <button
-                className="btn btn-secondary"
+                className="btn btn-primary"
                 style={{
                   display:
                     currentIndex === quiz.questions?.length - 1
@@ -81,7 +81,7 @@ function QuizForm({ quiz }: QuizFormProps) {
                 Next
               </button>
               <button
-                className="btn btn-secondary"
+                className="btn btn-primary"
                 style={{
                   display:
                     currentIndex !== quiz.questions?.length - 1
