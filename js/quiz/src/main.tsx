@@ -1,10 +1,11 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import App from "./App.tsx";
 import "vite/modulepreload-polyfill";
+import QuizForm from "./components/QuizForm";
+import { QuizData } from "./model/quiz";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <App />
+    <QuizForm quiz={QuizData} />
   </StrictMode>
 );
