@@ -34,6 +34,9 @@ function QuizForm({ quiz }: QuizFormProps) {
     setQuizResult(scoreQuizAnswers(quiz, answerData));
   }
 
+  /**
+   * Resets the quiz back to the beginning.
+   */
   function startOver(): void {
     setCurrentIndex(0);
     setAnswerData(new Map<QuestionKey, AnswerValue>());

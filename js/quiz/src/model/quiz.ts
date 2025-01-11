@@ -200,7 +200,7 @@ export function scoreQuizAnswers(quiz: Quiz, answerData: AnswerData): string {
   ) {
     return "A home-based dog boarding may not be the right fit for you at this time.";
   } else if(answerData.get("pet_care") == "professional" || answerData.get("business") == "excited") {
-    return "This is definitely for you!";
+    return "This is definitely for you! Take the course!";
   }
   return "Check this out!";
 }
