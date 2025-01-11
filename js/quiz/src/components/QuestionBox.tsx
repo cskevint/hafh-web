@@ -11,7 +11,7 @@ function QuestionBox({ question, onOptionChange }: QuestionBoxProps) {
       className="rounded mb-4 py-1 px-4 bg-white question"
       style={{ display: "block" }}
     >
-      <div className="my-3 lead">
+      <div className="my-3 lead fs-5">
         <strong>{question.title}</strong>
       </div>
       {question.options.map((option) => {
@@ -29,7 +29,7 @@ function QuestionBox({ question, onOptionChange }: QuestionBoxProps) {
                 onOptionChange(question.name, option.value);
               }}
             />
-            <label className="form-check-label" htmlFor={optionId}>
+            <label className="form-check-label fs-5" htmlFor={optionId}>
               {option.text}
             </label>
           </div>
