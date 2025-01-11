@@ -1,16 +1,14 @@
-import { Question } from "../model/quiz";
+import { AnswerValue, Question } from "../model/quiz";
 
 interface QuestionBoxProps {
   question: Question;
+  answer?: AnswerValue;
   onOptionChange: Function;
 }
 
-function QuestionBox({ question, onOptionChange }: QuestionBoxProps) {
+function QuestionBox({ question, answer, onOptionChange }: QuestionBoxProps) {
   return (
-    <div
-      className="rounded mb-4 py-1 px-4 bg-white question"
-      style={{ display: "block" }}
-    >
+    <div className="rounded mb-4 py-1 px-4 bg-white question">
       <div className="my-3 lead fs-5">
         <strong>{question.title}</strong>
       </div>
@@ -23,7 +21,7 @@ function QuestionBox({ question, onOptionChange }: QuestionBoxProps) {
               id={optionId}
               type="radio"
               name={question.name}
-              value={option.value}
+              checked={answer === option.value}
               required={false}
               onChange={() => {
                 onOptionChange(question.name, option.value);

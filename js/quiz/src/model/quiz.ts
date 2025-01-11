@@ -1,11 +1,50 @@
+export type QuestionKey =
+  | "home"
+  | "work"
+  | "community"
+  | "dog_experience"
+  | "dog_ability"
+  | "business"
+  | "pet_care";
+
+export type AnswerValue =
+  // home:
+  | "own"
+  | "rent-lenient"
+  | "rent-strict"
+  // work:
+  | "work-from-home"
+  | "flexible-hours"
+  | "strict-hours"
+  // community:
+  | "integrated"
+  | "new"
+  | "disconnected"
+  // dog_experience:
+  | "5+"
+  | "1-5"
+  | "-1"
+  // dog_ability:
+  | "pets-good"
+  | "pets-not-sure"
+  | "no-pets"
+  // business:
+  | "excited"
+  | "interested"
+  | "less-commitment"
+  // pet_care:
+  | "professional"
+  | "volunteered"
+  | "no-experience";
+
 export interface Option {
   text: string;
-  value: number;
+  value: AnswerValue;
 }
 
 export interface Question {
   title: string;
-  name: string;
+  name: QuestionKey;
   options: Option[];
 }
 
@@ -23,15 +62,15 @@ export const QuizData: Quiz = {
       options: [
         {
           text: "Yes, I own my home.",
-          value: 2,
+          value: "own",
         },
         {
           text: "No, I rent and my landlord is lenient.",
-          value: 1,
+          value: "rent-lenient",
         },
         {
           text: "No, I rent and have a strict landlord.",
-          value: 0,
+          value: "rent-strict",
         },
       ],
     },
@@ -41,15 +80,15 @@ export const QuizData: Quiz = {
       options: [
         {
           text: "Yes, I work from home or have a very flexible schedule.",
-          value: 2,
+          value: "work-from-home",
         },
         {
           text: "I have a part-time job, which is quite flexible.",
-          value: 1,
+          value: "flexible-hours",
         },
         {
           text: "No, I work full-time with strict office hours.",
-          value: 0,
+          value: "strict-hours",
         },
       ],
     },
@@ -60,15 +99,15 @@ export const QuizData: Quiz = {
       options: [
         {
           text: "Yes, I've lived here for years and am very integrated into the community.",
-          value: 2,
+          value: "integrated",
         },
         {
           text: "I'm relatively new but getting to know it better.",
-          value: 1,
+          value: "new",
         },
         {
           text: "No, I just moved here or feel disconnected from my community.",
-          value: 0,
+          value: "disconnected",
         },
       ],
     },
@@ -78,15 +117,15 @@ export const QuizData: Quiz = {
       options: [
         {
           text: "Over 5 years.",
-          value: 2,
+          value: "5+",
         },
         {
           text: "1-5 years.",
-          value: 1,
+          value: "1-5",
         },
         {
           text: "Less than a year.",
-          value: 0,
+          value: "-1",
         },
       ],
     },
@@ -97,15 +136,15 @@ export const QuizData: Quiz = {
       options: [
         {
           text: "Yes, I have other pets, but they are good with dogs.",
-          value: 2,
+          value: "pets-good",
         },
         {
           text: "Yes, I have other pets, and I'm not sure how they'll react to more dogs.",
-          value: 1,
+          value: "pets-not-sure",
         },
         {
           text: "No, I don't own any other pets.",
-          value: 0,
+          value: "no-pets",
         },
       ],
     },
@@ -115,15 +154,15 @@ export const QuizData: Quiz = {
       options: [
         {
           text: "Yes, I am excited about starting and growing my own business.",
-          value: 2,
+          value: "excited",
         },
         {
           text: "I'm somewhat interested, but it seems daunting.",
-          value: 1,
+          value: "interested",
         },
         {
           text: "No, I prefer something with less commitment or that's already established.",
-          value: 0,
+          value: "less-commitment",
         },
       ],
     },
@@ -134,17 +173,34 @@ export const QuizData: Quiz = {
       options: [
         {
           text: "Yes, I have professional experience working with pets.",
-          value: 2,
+          value: "professional",
         },
         {
           text: "I've occasionally volunteered or helped friends with pet care.",
-          value: 1,
+          value: "volunteered",
         },
         {
           text: "No, I have no formal experience with pets.",
-          value: 0,
+          value: "no-experience",
         },
       ],
     },
   ],
 };
+
+export type AnswerData = Map<QuestionKey, AnswerValue>;
+
+export function scoreQuizAnswers(quiz: Quiz, answerData: AnswerData): string {
+  if (answerData.size != quiz.questions.length) {
+    return "";
+  }
+  if (
+    answerData.get("home") == "rent-strict" ||
+    answerData.get("work") == "strict-hours"
+  ) {
+    return "A home-based dog boarding may not be the right fit for you at this time.";
+  } else if(answerData.get("pet_care") == "professional" || answerData.get("business") == "excited") {
+    return "This is definitely for you!";
+  }
+  return "Check this out!";
+}

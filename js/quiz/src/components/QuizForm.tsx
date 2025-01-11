@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Quiz } from "../model/quiz";
+import { Quiz, QuestionKey, AnswerValue, scoreQuizAnswers } from "../model/quiz";
 import QuestionBox from "./QuestionBox";
 
 interface QuizFormProps {
@@ -8,51 +8,36 @@ interface QuizFormProps {
 
 function QuizForm({ quiz }: QuizFormProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [answerData, setAnswerData] = useState(new Map<string, number>());
+  const [answerData, setAnswerData] = useState(new Map<QuestionKey, AnswerValue>());
   const [quizResult, setQuizResult] = useState("");
 
-  const navigateQuestion = (delta: number) => {
+  /**
+   * Question navigation handler.
+   * @param delta Number of questions to move forward or backward.
+   */
+  function navigateQuestion(delta: number): void {
     const index = currentIndex + delta;
     if (index >= 0 && index < quiz.questions.length) {
       setCurrentIndex(index);
     }
-  };
+  }
 
-  const changeQuestionOption = (name: string, value: number) => {
+  /**
+   * Answer option selection handler, which submits the form after the last question.
+   * @param name Question name key.
+   * @param value Question answer value.
+   */
+  function changeQuestionOption(name: QuestionKey, value: AnswerValue) {
+    navigateQuestion(1);
     answerData.set(name, value);
     setAnswerData(answerData);
-    if (currentIndex === quiz.questions.length - 1) {
-      submitQuiz();
-    } else {
-      navigateQuestion(1);
-    }
-  };
+    setQuizResult(scoreQuizAnswers(quiz, answerData));
+  }
 
-  const submitQuiz = () => {
-    let score = 0;
-    answerData.forEach((value) => {
-      score += value;
-    });
-    if (score > 10) {
-      setQuizResult("Match!");
-    } else if (score > 5) {
-      setQuizResult("Something to consider");
-    } else {
-      setQuizResult("Maybe not");
-    }
-  };
-
-  const startOver = () => {
-    setAnswerData(new Map<string, number>());
+  function startOver(): void {
     setCurrentIndex(0);
-  };
-
-  function quizSubmitted(): boolean {
-    let totalQuestions = quiz.questions.length;
-    answerData.forEach(() => {
-      totalQuestions--;
-    });
-    return totalQuestions === 0;
+    setAnswerData(new Map<QuestionKey, AnswerValue>());
+    setQuizResult("");
   }
 
   return (
@@ -60,17 +45,31 @@ function QuizForm({ quiz }: QuizFormProps) {
       <h1>Take a quiz to see if dog boarding is right for you</h1>
       <div className="card">
         <div className="card-body">
-          <div style={{ display: !quizSubmitted() ? "none" : "block" }}>
-            <p>{quizResult}</p>
-            <button className="btn btn-primary" onClick={startOver}>
-              Start over
-            </button>
+          <div style={{ display: quizResult ? "block" : "none" }}>
+            <div className="rounded mb-4 py-1 px-4 bg-white">
+              <p className="fs-3">{quizResult}</p>
+              <div className="d-flex justify-content-center align-items-center">
+                <button className="btn btn-primary" onClick={startOver}>
+                  Start over
+                </button>
+              </div>
+            </div>
           </div>
-          <div style={{ display: quizSubmitted() ? "none" : "block" }}>
+          <div style={{ display: !quizResult ? "block" : "none" }}>
             <QuestionBox
               question={quiz.questions[currentIndex]}
+              answer={answerData.get(quiz.questions[currentIndex].name)}
               onOptionChange={changeQuestionOption}
             />
+            <div className="d-flex justify-content-center align-items-center">
+              <button
+                className="btn btn-primary"
+                onClick={() => navigateQuestion(-1)}
+                style={{ display: currentIndex === 0 ? "none" : "block" }}
+              >
+                Back
+              </button>
+            </div>
           </div>
         </div>
       </div>
