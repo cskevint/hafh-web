@@ -14,7 +14,7 @@ export default defineConfig({
     rollupOptions: {
         output: {
             // dir: '~/plugin/assets/',
-            entryFileNames: 'quiz.js',
+            // entryFileNames: 'quiz.js',
             // assetFileNames: 'plugin.css',
             // chunkFileNames: "chunk.js",
             // manualChunks: undefined,
