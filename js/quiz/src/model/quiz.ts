@@ -199,8 +199,11 @@ export function scoreQuizAnswers(quiz: Quiz, answerData: AnswerData): string {
     answerData.get("work") == "strict-hours"
   ) {
     return "A home-based dog boarding may not be the right fit for you at this time.";
-  } else if(answerData.get("pet_care") == "professional" || answerData.get("business") == "excited") {
+  } else if (
+    answerData.get("pet_care") == "professional" ||
+    answerData.get("business") == "excited"
+  ) {
     return "This is definitely for you! Take the course!";
   }
-  return "Check this out!";
+  return "It seems you have many of the elements to run your own dog boarding business from home. Check out this course!";
 }
