@@ -4,4 +4,3 @@ includes/config.php
 admin/*.csv
 .dh-diag
 js/quiz/node_modules
-js/quiz/dist
