@@ -1,0 +1,41 @@
+import { AnswerValue, Question } from "../model/quiz";
+
+interface QuestionBoxProps {
+  question: Question;
+  answer?: AnswerValue;
+  onOptionChange: Function;
+}
+
+function QuestionBox({ question, answer, onOptionChange }: QuestionBoxProps) {
+  return (
+    <div className="rounded mb-4 py-1 px-4 bg-white question">
+      <div className="my-3 lead fs-5">
+        <strong>{question.title}</strong>
+      </div>
+      {question.options.map((option) => {
+        const optionId = `${question.name}-${option.value}`;
+        return (
+          <div className="form-check mb-3 p-1 ps-4 answerOption" key={optionId}>
+            <input
+              className="form-check-input"
+              id={optionId}
+              type="radio"
+              name={question.name}
+              checked={answer === option.value}
+              required={false}
+              onClick={(event) => {
+                event.preventDefault();
+                onOptionChange(question.name, option.value);
+              }}
+            />
+            <label className="form-check-label fs-5" htmlFor={optionId}>
+              {option.text}
+            </label>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+export default QuestionBox;
