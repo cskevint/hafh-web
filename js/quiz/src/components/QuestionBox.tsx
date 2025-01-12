@@ -23,7 +23,7 @@ function QuestionBox({ question, answer, onOptionChange }: QuestionBoxProps) {
               name={question.name}
               checked={answer === option.value}
               required={false}
-              onChange={() => {
+              onClick={() => {
                 onOptionChange(question.name, option.value);
               }}
             />
