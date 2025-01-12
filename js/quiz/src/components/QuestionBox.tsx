@@ -15,7 +15,7 @@ function QuestionBox({ question, answer, onOptionChange }: QuestionBoxProps) {
       {question.options.map((option) => {
         const optionId = `${question.name}-${option.value}`;
         return (
-          <div className="form-check mb-3" key={optionId}>
+          <div className="form-check mb-3 p-1 ps-4 answerOption" key={optionId}>
             <input
               className="form-check-input"
               id={optionId}
@@ -23,7 +23,8 @@ function QuestionBox({ question, answer, onOptionChange }: QuestionBoxProps) {
               name={question.name}
               checked={answer === option.value}
               required={false}
-              onClick={() => {
+              onClick={(event) => {
+                event.preventDefault();
                 onOptionChange(question.name, option.value);
               }}
             />

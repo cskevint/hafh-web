@@ -35,10 +35,12 @@ function QuizForm({ quiz }: QuizFormProps) {
    * @param value Question answer value.
    */
   function changeQuestionOption(name: QuestionKey, value: AnswerValue) {
-    navigateQuestion(1);
-    answerData.set(name, value);
-    setAnswerData(answerData);
-    setQuizResult(scoreQuizAnswers(quiz, answerData));
+    setTimeout(() => {
+      navigateQuestion(1);
+      answerData.set(name, value);
+      setAnswerData(answerData);
+      setQuizResult(scoreQuizAnswers(quiz, answerData));
+    }, 500);
   }
 
   /**
