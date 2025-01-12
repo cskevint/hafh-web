@@ -1,5 +1,10 @@
 import { useState } from "react";
-import { Quiz, QuestionKey, AnswerValue, scoreQuizAnswers } from "../model/quiz";
+import {
+  Quiz,
+  QuestionKey,
+  AnswerValue,
+  scoreQuizAnswers,
+} from "../model/quiz";
 import QuestionBox from "./QuestionBox";
 
 interface QuizFormProps {
@@ -8,7 +13,9 @@ interface QuizFormProps {
 
 function QuizForm({ quiz }: QuizFormProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [answerData, setAnswerData] = useState(new Map<QuestionKey, AnswerValue>());
+  const [answerData, setAnswerData] = useState(
+    new Map<QuestionKey, AnswerValue>()
+  );
   const [quizResult, setQuizResult] = useState("");
 
   /**
@@ -45,10 +52,12 @@ function QuizForm({ quiz }: QuizFormProps) {
 
   return (
     <>
-      <h1>Take a quiz to see if dog boarding is right for you</h1>
+      <h1 className="mb-4">
+        Take a quiz to see if dog boarding is right for you:
+      </h1>
       <div className="card">
-        <div className="card-body">
-          <div style={{ display: quizResult ? "block" : "none" }}>
+        {quizResult && (
+          <div className="card-body">
             <div className="rounded mb-4 py-1 px-4 bg-white">
               <p className="fs-3">{quizResult}</p>
               <div className="d-flex justify-content-center align-items-center">
@@ -58,7 +67,9 @@ function QuizForm({ quiz }: QuizFormProps) {
               </div>
             </div>
           </div>
-          <div style={{ display: !quizResult ? "block" : "none" }}>
+        )}
+        {!quizResult && (
+          <div className="card-body">
             <QuestionBox
               question={quiz.questions[currentIndex]}
               answer={answerData.get(quiz.questions[currentIndex].name)}
@@ -74,7 +85,7 @@ function QuizForm({ quiz }: QuizFormProps) {
               </button>
             </div>
           </div>
-        </div>
+        )}
       </div>
     </>
   );
