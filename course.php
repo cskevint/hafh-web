@@ -200,7 +200,85 @@ function renderAccordionItem($accordion, $id, $title, $contents, $show)
         </div>
     </section>
 
+    <?php
+    $whoFor1 = <<<STR
+        This course is perfect for anyone who dreams of making money while staying home and doing what they love—caring for dogs. Whether you’re a stay-at-home parent, someone planning to transition into being home full-time, a remote worker, or a retiree looking to earn extra income while filling your days with dog cuddles, this course is for you. Above all, it’s for people who love dogs and have some prior experience with their care.
+        STR;
+    $whoFor2 = <<<STR
+        If you’ve ever wondered how to turn your love of dogs into a thriving business, this course addresses all the key challenges. From setting up your home for safety to attracting clients and ensuring a happy, healthy environment for the dogs, you’ll gain the tools and strategies needed to succeed. We understand the fears of dog fights or endless cleaning and provide practical solutions to make your experience enjoyable and stress-free.
+        STR;
+    ?>
     <section class="container-fluid bg-info">
+        <div class="container p-5">
+            <h2>Who is this course for</h2>
+            <p><?= $whoFor1 ?></p>
+            <p><?= $whoFor2 ?></p>
+        </div>
+    </section>
+
+    <?php
+    $whoNotFor1 = <<<STR
+        While this course is designed to help many people succeed in building an at-home dog boarding business, it’s not the right fit for everyone. If you don’t have prior experience with dogs—whether as a pet owner or caregiver—this might not be the right starting point for you. Caring for dogs requires understanding their behavior and needs, which isn’t fully covered in this course.
+        STR;
+    $whoNotFor2 = <<<STR
+        This business also requires a level of commitment to be present with the dogs in your care. If you’re someone who can’t dedicate time to being home or doesn’t have a support system to manage the business during your absences, this course may not work for you. Additionally, if you’re not comfortable with the responsibilities that come with dog care—like cleaning, managing occasional behavioral challenges, or spending quality time with the dogs—this may not be the right venture for you.
+        STR;
+    $whoNotFor3 = <<<STR
+        Lastly, if you think you can simply set up a space and leave the dogs on their own, this business likely isn’t a good fit. Successful dog boarding requires interaction, care, and a genuine love for dogs. However, if you’re ready to embrace the joys and occasional messiness of working with dogs and are willing to put in the time to create a safe and loving home environment, this course will provide you with all the tools you need to thrive.
+        STR;
+    ?>
+    <section class="container-fluid bg-light">
+        <div class="container p-5">
+            <h2>Who is this course not for</h2>
+            <p><?= $whoNotFor1 ?></p>
+            <p><?= $whoNotFor2 ?></p>
+            <p><?= $whoNotFor3 ?></p>
+        </div>
+    </section>
+
+    <section class="container-fluid bg-info">
+        <div class="container p-5">
+            <h3 class="text-center mb-4 pb-2 text-primary fw-bold">Frequently asked questions</h3>
+
+            <div class="row">
+                <?php
+                $questions = [
+                    ["Who is this course designed for?", "This course is for people who want to stay home more and love dogs. Whether you're a stay-at-home parent, remote worker, retiree, or simply looking for a fulfilling way to earn income, this course is for you."],
+                    ["Do I need to have business experience to take this course?", "No, you don’t need any prior business experience. This course will guide you step-by-step through everything you need to know."],
+                    ["Do I need to own my home to start a dog boarding business?", "No, but you’ll need permission from your landlord if you’re renting. If owning isn’t an option, you can still explore related opportunities like dog walking or in-home dog sitting for others."],
+                    ["How much time do I need to dedicate to running this type of business?", "A few hours a day are needed to play with, clean up after, and feed the dogs. Simply being present with them is essential but doesn’t require extra effort."],
+                    ["What upfront costs should I expect to get started?", "If you already own a dog, your upfront costs will likely be minimal—maybe a few additional gates, bowls, beds, or cleaning supplies."],
+                    ["Will this course teach me how to handle dog behavior issues?", "The course will help you assess whether a dog is a good fit to avoid behavior issues. It also teaches how to set up your home to minimize potential problems, but it doesn’t cover correcting existing behavioral issues."],
+                    ["Can I run this business if I have a full-time remote job?", "Yes, as long as you’re home and able to supervise and care for the dogs, this business is a great fit for remote workers."],
+                    ["How quickly can I start making money after completing the course?", "You can start getting clients even before finishing the course. The early sections focus on setting up your home and attracting clients, so you can begin earning quickly."],
+                    ["What if I live in a rural area—can I still succeed?", "Yes! While attracting daycare clients might be more challenging, many people are willing to travel for the unique experience of having their dogs cared for in a spacious, natural setting."],
+                    ["Will this course help me get clients?", "Absolutely. The course includes strategies and templates to help you effectively advertise and attract clients."],
+                    ["What tools or resources are included in the course?", "You’ll get business plan templates, income and expense tracking sheets, advertising templates, and more resources as the course grows."],
+                    ["Do I need any certifications or licenses to start a dog boarding business?", "Depending on your location, you may need a business permit. Be sure to check your local requirements."],
+                    ["What happens if I need to take a break or go on vacation?", "You can pause your business at any time or find someone to cover for you while you’re away."],
+                    ["How is this course delivered?", "The course is delivered through pre-recorded video lessons, so you can learn at your own pace."],
+                    ["What kind of support will I have during and after the course?", "You’ll have access to a supportive community where you can ask questions and connect with me directly."],
+                    ["Is there a money-back guarantee if I’m not satisfied?", "Yes, we offer a money-back guarantee if you’re not happy with the course."]
+                ];
+                foreach ($questions as $question) {
+                    $questionTitle = $question[0];
+                    $questionAnswer = $question[1];
+                    $questionHtml = <<<HTML
+                        <div class="col-md-6 col-lg-6 mb-4">
+                        <h6 class="mb-3 text-primary">
+                            <strong>$questionTitle</strong>
+                        </h6>
+                        <p>$questionAnswer</p>
+                    </div>
+                    HTML;
+                    echo $questionHtml;
+                }
+                ?>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid bg-light">
         <div class="container p-5">
             <h2>Ready to Get Started?</h2>
             <p>Click the Enroll button below to navigate to the enrollment page on our elearning platform:
