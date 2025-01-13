@@ -9,38 +9,6 @@ $enrollButton = <<<HTML
 </p>
 HTML;
 
-function renderAccordionItem($accordion, $id, $title, $contents, $show)
-{
-    $contentsHtml = "";
-    foreach ($contents as $item) {
-        $itemHtml = <<<HTML
-            <div class="card mb-1">
-                <div class="card-body p-1">
-                    $item
-                </div>
-            </div>
-        HTML;
-        $contentsHtml .= $itemHtml;
-    }
-    $showClass = $show ? "show" : "";
-    $ariaExpanded = $show ? "true" : "false";
-    $html = <<<HTML
-    <div class="card mb-1">
-        <div class="card-header" role="tab" id="$id">
-            <a class="link-primary link-underline-opacity-0" role="button" data-bs-toggle="collapse" 
-                data-parent="#$accordion" href="#$id-button"
-                aria-expanded="$ariaExpanded" aria-controls="$id-button">
-            <strong>$title</strong>
-            </a>
-        </div>
-        <div class="card-body collapse $showClass" id="$id-button" role="tabpanel" aria-labelledby="$id">
-            $contentsHtml
-        </div>
-    </div>
-    HTML;
-    return $html;
-}
-
 ?>
 <!doctype html>
 <html lang="en" class="bg-info">
@@ -95,6 +63,38 @@ function renderAccordionItem($accordion, $id, $title, $contents, $show)
                 at-home dog boarding business. Here's a sneak peek at what you'll learn:</p>
             <div id="courseOutline">
                 <?php
+                function renderAccordionItem($accordion, $id, $title, $contents, $show)
+                {
+                    $contentsHtml = "";
+                    foreach ($contents as $item) {
+                        $itemHtml = <<<HTML
+                        <div class="card mb-1">
+                            <div class="card-body p-1">
+                                $item
+                            </div>
+                        </div>
+                        HTML;
+                        $contentsHtml .= $itemHtml;
+                    }
+                    $showClass = $show ? "show" : "";
+                    $ariaExpanded = $show ? "true" : "false";
+                    $html = <<<HTML
+                    <div class="card mb-1">
+                        <div class="card-header" role="tab" id="$id">
+                            <a class="link-primary link-underline-opacity-0" role="button" data-bs-toggle="collapse" 
+                                data-parent="#$accordion" href="#$id-button"
+                                aria-expanded="$ariaExpanded" aria-controls="$id-button">
+                            <strong>$title</strong>
+                            </a>
+                        </div>
+                        <div class="card-body collapse $showClass" id="$id-button" role="tabpanel" aria-labelledby="$id">
+                            $contentsHtml
+                        </div>
+                    </div>
+                    HTML;
+                    return $html;
+                }
+
                 echo renderAccordionItem("courseOutline", "day1", "Day 1: Assessing Your Situation", [
                     "Lesson 1 - Introduction",
                     "Lesson 2 - Assessing Your Situation",
@@ -180,6 +180,74 @@ function renderAccordionItem($accordion, $id, $title, $contents, $show)
 
     <section class="container-fluid bg-light">
         <div class="container p-5">
+            <h2 class="mb-4">Testimonials</h2>
+            <p class="mb-3">
+                Hear from our students who have successfully launched their own dog boarding businesses
+                after taking our course.
+            </p>
+            <?php
+            $fiveStars = <<<HTML
+            <ul class="list-unstyled d-flex justify-content-center mb-0">
+                <li>
+                    <i class="bi bi-star-fill text-secondary"></i>
+                </li>
+                <li>
+                    <i class="bi bi-star-fill text-secondary"></i>
+                </li>
+                <li>
+                    <i class="bi bi-star-fill text-secondary"></i>
+                </li>
+                <li>
+                    <i class="bi bi-star-fill text-secondary"></i>
+                </li>
+                <li>
+                    <i class="bi bi-star-fill text-secondary"></i>
+                </li>
+            </ul>
+            HTML;
+            ?>
+            <div class="row text-center">
+                <div class="col-md-6 mb-5 mb-md-0">
+                    <div class="d-flex justify-content-center mb-4">
+                        <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"
+                            class="rounded-circle shadow-1-strong" width="150" height="150" />
+                    </div>
+                    <h5 class="mb-3">Leila Gates</h5>
+                    <h6 class="text-primary mb-3">Teacher</h6>
+                    <p class="px-xl-3">
+                        <i class="bi bi-quote pe-2"></i>Selena knows her stuff! With over a decade of experience in
+                        the business and a lifetime of loving dogs, she offers the tools you'll need to start a
+                        successful dog business. I’ve been working with her for over a year since before I got my first
+                        guest, to now where I have dozens of repeat clients. I'm grateful for her mentorship and highly
+                        recommend her course!
+                    </p>
+                    <?= $fiveStars ?>
+                </div>
+                <div class="col-md-6 mb-5 mb-md-0">
+                    <div class="d-flex justify-content-center mb-4">
+                        <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(2).webp"
+                            class="rounded-circle shadow-1-strong" width="150" height="150" />
+                    </div>
+                    <h5 class="mb-3">Sara Botero</h5>
+                    <h6 class="text-primary mb-3">UX Designer</h6>
+                    <p class="px-xl-3">
+                        <i class="bi bi-quote pe-2"></i>
+                        Honestly, I thought that doing the dog business would not require much knowledge, it could be
+                        intuitive, but when I started receiving information from Selena, I realized that I needed
+                        valuable information that only she had because of her experience. I felt taken by the hand and
+                        when we received the first dog (only 5 days after starting the course) everything made so much
+                        sense, when you do it, the experience that she has, becomes very evident, and you feel with the
+                        ability to solve the small challenges. Today I feel very happy, I have the size of a business
+                        that fits my family and that pays the rent.
+                    </p>
+                    <?= $fiveStars ?>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid bg-info">
+        <div class="container p-5">
             <h2>Meet your coach</h2>
             <div class="row">
                 <div class="col-7">
@@ -203,7 +271,7 @@ function renderAccordionItem($accordion, $id, $title, $contents, $show)
         </div>
     </section>
 
-    <section class="container-fluid bg-info">
+    <section class="container-fluid bg-light">
         <div class="container p-5">
             <h2>Who is this course for</h2>
             <?php
@@ -220,7 +288,7 @@ function renderAccordionItem($accordion, $id, $title, $contents, $show)
         </div>
     </section>
 
-    <section class="container-fluid bg-light">
+    <section class="container-fluid bg-info">
         <div class="container p-5">
             <h2>Who is this course not for</h2>
             <?php
@@ -238,7 +306,7 @@ function renderAccordionItem($accordion, $id, $title, $contents, $show)
         </div>
     </section>
 
-    <section class="container-fluid bg-info">
+    <section class="container-fluid bg-light">
         <div class="container p-5">
             <h3 class="text-center mb-4 pb-2 text-primary fw-bold">Frequently asked questions</h3>
 
@@ -280,7 +348,7 @@ function renderAccordionItem($accordion, $id, $title, $contents, $show)
         </div>
     </section>
 
-    <section class="container-fluid bg-light">
+    <section class="container-fluid bg-info">
         <div class="container p-5">
             <h2>Ready to Get Started?</h2>
             <p>Click the Enroll button below to navigate to the enrollment page on our elearning platform:
@@ -289,7 +357,7 @@ function renderAccordionItem($accordion, $id, $title, $contents, $show)
         </div>
     </section>
 
-    <section class="container-fluid bg-info">
+    <section class="container-fluid bg-light">
         <div class="container p-5">
             <h2>Disclaimer</h2>
             <?php
