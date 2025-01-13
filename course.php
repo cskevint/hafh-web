@@ -240,30 +240,31 @@ function renderAccordionItem($accordion, $id, $title, $contents, $show)
             <div class="row">
                 <?php
                 $questions = [
-                    ["Who is this course designed for?", "This course is for people who want to stay home more and love dogs. Whether you're a stay-at-home parent, remote worker, retiree, or simply looking for a fulfilling way to earn income, this course is for you."],
-                    ["Do I need to have business experience to take this course?", "No, you don’t need any prior business experience. This course will guide you step-by-step through everything you need to know."],
-                    ["Do I need to own my home to start a dog boarding business?", "No, but you’ll need permission from your landlord if you’re renting. If owning isn’t an option, you can still explore related opportunities like dog walking or in-home dog sitting for others."],
-                    ["How much time do I need to dedicate to running this type of business?", "A few hours a day are needed to play with, clean up after, and feed the dogs. Simply being present with them is essential but doesn’t require extra effort."],
-                    ["What upfront costs should I expect to get started?", "If you already own a dog, your upfront costs will likely be minimal—maybe a few additional gates, bowls, beds, or cleaning supplies."],
-                    ["Will this course teach me how to handle dog behavior issues?", "The course will help you assess whether a dog is a good fit to avoid behavior issues. It also teaches how to set up your home to minimize potential problems, but it doesn’t cover correcting existing behavioral issues."],
-                    ["Can I run this business if I have a full-time remote job?", "Yes, as long as you’re home and able to supervise and care for the dogs, this business is a great fit for remote workers."],
-                    ["How quickly can I start making money after completing the course?", "You can start getting clients even before finishing the course. The early sections focus on setting up your home and attracting clients, so you can begin earning quickly."],
-                    ["What if I live in a rural area—can I still succeed?", "Yes! While attracting daycare clients might be more challenging, many people are willing to travel for the unique experience of having their dogs cared for in a spacious, natural setting."],
-                    ["Will this course help me get clients?", "Absolutely. The course includes strategies and templates to help you effectively advertise and attract clients."],
-                    ["What tools or resources are included in the course?", "You’ll get business plan templates, income and expense tracking sheets, advertising templates, and more resources as the course grows."],
-                    ["Do I need any certifications or licenses to start a dog boarding business?", "Depending on your location, you may need a business permit. Be sure to check your local requirements."],
-                    ["What happens if I need to take a break or go on vacation?", "You can pause your business at any time or find someone to cover for you while you’re away."],
-                    ["How is this course delivered?", "The course is delivered through pre-recorded video lessons, so you can learn at your own pace."],
-                    ["What kind of support will I have during and after the course?", "You’ll have access to a supportive community where you can ask questions and connect with me directly."],
-                    ["Is there a money-back guarantee if I’m not satisfied?", "Yes, we offer a money-back guarantee if you’re not happy with the course."]
+                    ["person","Who is this course designed for?", "This course is for people who want to stay home more and love dogs. Whether you're a stay-at-home parent, remote worker, retiree, or simply looking for a fulfilling way to earn income, this course is for you."],
+                    ["cart-fill","Do I need to have business experience to take this course?", "No, you don’t need any prior business experience. This course will guide you step-by-step through everything you need to know."],
+                    ["house-door-fill","Do I need to own my home to start a dog boarding business?", "No, but you’ll need permission from your landlord if you’re renting. If owning isn’t an option, you can still explore related opportunities like dog walking or in-home dog sitting for others."],
+                    ["clock-fill","How much time do I need to dedicate to running this type of business?", "A few hours a day are needed to play with, clean up after, and feed the dogs. Simply being present with them is essential but doesn’t require extra effort."],
+                    ["tag-fill","What upfront costs should I expect to get started?", "If you already own a dog, your upfront costs will likely be minimal—maybe a few additional gates, bowls, beds, or cleaning supplies."],
+                    ["book-fill","Will this course teach me how to handle dog behavior issues?", "The course will help you assess whether a dog is a good fit to avoid behavior issues. It also teaches how to set up your home to minimize potential problems, but it doesn’t cover correcting existing behavioral issues."],
+                    ["display-fill","Can I run this business if I have a full-time remote job?", "Yes, as long as you’re home and able to supervise and care for the dogs, this business is a great fit for remote workers."],
+                    ["currency-dollar","How quickly can I start making money after completing the course?", "You can start getting clients even before finishing the course. The early sections focus on setting up your home and attracting clients, so you can begin earning quickly."],
+                    ["tree-fill","What if I live in a rural area—can I still succeed?", "Yes! While attracting daycare clients might be more challenging, many people are willing to travel for the unique experience of having their dogs cared for in a spacious, natural setting."],
+                    ["person-walking","Will this course help me get clients?", "Absolutely. The course includes strategies and templates to help you effectively advertise and attract clients."],
+                    ["tools","What tools or resources are included in the course?", "You’ll get business plan templates, income and expense tracking sheets, advertising templates, and more resources as the course grows."],
+                    ["receipt","Do I need any certifications or licenses to start a dog boarding business?", "Depending on your location, you may need a business permit. Be sure to check your local requirements."],
+                    ["airplane-fill","What happens if I need to take a break or go on vacation?", "You can pause your business at any time or find someone to cover for you while you’re away."],
+                    ["wifi","How is this course delivered?", "The course is delivered through pre-recorded video lessons, so you can learn at your own pace."],
+                    ["person","What kind of support will I have during and after the course?", "You’ll have access to a supportive community where you can ask questions and connect with me directly."],
+                    ["coin","Is there a money-back guarantee if I’m not satisfied?", "Yes, we offer a money-back guarantee if you’re not happy with the course."]
                 ];
                 foreach ($questions as $question) {
-                    $questionTitle = $question[0];
-                    $questionAnswer = $question[1];
+                    $icon = $question[0];
+                    $questionTitle = $question[1];
+                    $questionAnswer = $question[2];
                     echo <<<HTML
                         <div class="col-md-6 col-lg-6 mb-4">
                         <h6 class="mb-3 text-primary">
-                            <strong>$questionTitle</strong>
+                            <strong><i class="bi bi-$icon"></i> $questionTitle</strong>
                         </h6>
                         <p>$questionAnswer</p>
                     </div>
@@ -280,6 +281,30 @@ function renderAccordionItem($accordion, $id, $title, $contents, $show)
             <p>Click the Enroll button below to navigate to the enrollment page on our elearning platform:
             </p>
             <?= $enrollButton ?>
+        </div>
+    </section>
+
+    <section class="container-fluid bg-info">
+        <div class="container p-5">
+            <h2>Disclaimer</h2>
+            <?php
+            $disclaimers = [
+                ["Legal and Financial Disclaimer", "This course does not guarantee financial success or specific income levels. While the course provides strategies to help you attract clients, the amount of money you earn will depend on various factors, including your location, your home setup, and your prior experience. Results may vary based on individual effort and circumstances. Starting a dog boarding business involves inherent risks, as dogs are animals and cannot be fully controlled. The course will set you up for success, but it is your responsibility to avoid situations that could put you or the dogs in your care at risk."],
+                ["Licensing and Legal Requirements", "Participants are solely responsible for ensuring they comply with all local laws, permits, and regulations required to operate a dog boarding business in their area. While the course provides general guidance on city and county permitting, as well as information on filing taxes and setting up your business, it does not constitute legal advice. It is up to you to ensure all necessary legal and regulatory requirements are met."],
+                ["Health and Safety Disclaimer", "You are fully responsible for ensuring the safety of your home and the dogs in your care. While the course offers guidance on assessing dog behavior and creating a safe environment, the final decisions and responsibilities lie with you."],
+                ["Intellectual Property", "All course content, including templates, resources, and videos, is for personal use only. Redistribution, resale, or unauthorized sharing of the materials is strictly prohibited."],
+                ["Course Limitations", "This course covers the basics of starting and running a dog boarding business but does not include advanced training in dog behavior, medical care, or other specialized areas. If you wish to pursue further certifications, additional training may be required. All advice provided is based on personal experience and does not constitute professional certification in animal behavior or care."],
+                ["Refund Policy", "We stand behind the value of this course. However, if you are unable to secure clients or determine that this business is not the right fit for you, we offer a money-back guarantee. Specific details of the refund policy will be outlined at the time of purchase."]
+            ];
+            foreach ($disclaimers as $item) {
+                $title = $item[0];
+                $body = $item[1];
+                echo <<<HTML
+                    <strong class="text-primary">$title</strong>
+                    <p>$body</p>
+                HTML;
+            }
+            ?>
         </div>
     </section>
 
