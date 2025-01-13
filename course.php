@@ -81,7 +81,7 @@ HTML;
                     $html = <<<HTML
                     <div class="card mb-1">
                         <div class="card-header" role="tab" id="$id">
-                            <a class="link-primary link-underline-opacity-0" role="button" data-bs-toggle="collapse" 
+                            <a class="link-primary text-decoration-none" role="button" data-bs-toggle="collapse" 
                                 data-parent="#$accordion" href="#$id-button"
                                 aria-expanded="$ariaExpanded" aria-controls="$id-button">
                             <strong>$title</strong>
