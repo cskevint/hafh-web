@@ -16,7 +16,7 @@ function renderAccordionItem($accordion, $id, $title, $contents, $show)
         $itemHtml = <<<HTML
             <div class="card mb-1">
                 <div class="card-body p-2">
-                    <strong>$item</strong>
+                    $item
                 </div>
             </div>
         HTML;
@@ -25,17 +25,16 @@ function renderAccordionItem($accordion, $id, $title, $contents, $show)
     $collapsedClass = $show ? "" : "collapsed";
     $showClass = $show ? "show" : "";
     $html = <<<HTML
-    <div class="accordion-item">
-        <h2 class="accordion-header">
-            <button class="accordion-button $collapsedClass" type="button" data-bs-toggle="collapse"
-                data-bs-target="#$id" aria-expanded="$show" aria-controls="$id">
-                $title
-            </button>
-        </h2>
-        <div id="$id" class="accordion-collapse collapse $showClass" data-bs-parent="#$accordion">
-            <div class="accordion-body">
-                $contentsHtml
-            </div>
+    <div class="card mb-1">
+        <div class="card-header" role="tab" id="$id">
+            <a class="link-primary link-underline-opacity-0" role="button" data-bs-toggle="collapse" 
+                data-parent="#$accordion" href="#$id-button"
+                aria-expanded="false" aria-controls="$id-button">
+            <strong>$title</strong>
+            </a>
+        </div>
+        <div class="card-body collapse" id="$id-button" role="tabpanel" aria-labelledby="$id">
+            $contentsHtml
         </div>
     </div>
     HTML;
@@ -88,85 +87,85 @@ function renderAccordionItem($accordion, $id, $title, $contents, $show)
     <section class="container-fluid bg-info">
         <div class="container p-5">
             <h2 class="mb-3">Course Outline</h2>
-            <div class="accordion" id="courseOutline">
+            <div id="courseOutline">
                 <?php
                 echo renderAccordionItem("courseOutline", "day1", "Day 1: Assessing Your Situation", [
-                    "1. Introduction",
-                    "2. Assessing Your Situation",
-                    "3. Market Research",
-                    "4. Setting Realistic Goals",
-                    "5. Creating a Dream Personal Plan"
+                    "Lesson 1 - Introduction",
+                    "Lesson 2 - Assessing Your Situation",
+                    "Lesson 3 - Market Research",
+                    "Lesson 4 - Setting Realistic Goals",
+                    "Lesson 5 - Creating a Dream Personal Plan"
                 ], false);
 
                 echo renderAccordionItem("courseOutline", "day2", "Day 2: Transforming Your Home", [
-                    "1. Introduction",
-                    "2. Entryway",
-                    "3. Living Rooms",
-                    "4. Bedrooms",
-                    "5. Feeding Station",
-                    "6. Water Stations",
-                    "7. Cleaning",
-                    "8. Flooring",
-                    "9. Outside Area"
+                    "Lesson 1 - Introduction",
+                    "Lesson 2 - Entryway",
+                    "Lesson 3 - Living Rooms",
+                    "Lesson 4 - Bedrooms",
+                    "Lesson 5 - Feeding Station",
+                    "Lesson 6 - Water Stations",
+                    "Lesson 7 - Cleaning",
+                    "Lesson 8 - Flooring",
+                    "Lesson 9 - Outside Area"
                 ], false);
 
                 echo renderAccordionItem("courseOutline", "day3", "Day 3: Business Planning and Launching", [
-                    "1. Business Plan",
-                    "2. Understanding Your Local Markets",
-                    "3. Branding",
-                    "4. Launching on Different Platforms",
-                    "5. Announcing on Social Media",
-                    "6. Emailing Local Friends and Family"
+                    "Lesson 1 - Business Plan",
+                    "Lesson 2 - Understanding Your Local Markets",
+                    "Lesson 3 - Branding",
+                    "Lesson 4 - Launching on Different Platforms",
+                    "Lesson 5 - Announcing on Social Media",
+                    "Lesson 6 - Emailing Local Friends and Family"
                 ], false);
 
                 echo renderAccordionItem("courseOutline", "day4", "Day 4: Setting Up Your Business", [
-                    "1. Introduction",
-                    "2. Business Structure and Licensing",
-                    "3. Setting Up Payment Systems",
-                    "4. Insurance, Liability, Contracts and Policies",
-                    "5. Building Community Relationships",
-                    "6. Setting Up an Online Presence"
+                    "Lesson 1 - Introduction",
+                    "Lesson 2 - Business Structure and Licensing",
+                    "Lesson 3 - Setting Up Payment Systems",
+                    "Lesson 4 - Insurance, Liability, Contracts and Policies",
+                    "Lesson 5 - Building Community Relationships",
+                    "Lesson 6 - Setting Up an Online Presence"
                 ], false);
 
                 echo renderAccordionItem("courseOutline", "day5", "Day 5: Client Relations and Communication", [
-                    "1. Introduction",
-                    "2. New Client Onboarding",
-                    "3. Establishing Professional Communication",
-                    "4. Utilizing Social Media",
-                    "5. Building and Strengthening Client Relationships"
+                    "Lesson 1 - Introduction",
+                    "Lesson 2 - New Client Onboarding",
+                    "Lesson 3 - Establishing Professional Communication",
+                    "Lesson 4 - Utilizing Social Media",
+                    "Lesson 5 - Building and Strengthening Client Relationships"
                 ], false);
 
                 echo renderAccordionItem("courseOutline", "day6", "Day 6: Understanding Dog Behavior", [
-                    "1. Introduction",
-                    "2. The Meet and Greet",
-                    "3. Assessing and Welcoming Dogs",
-                    "4. Managing Group Dynamics and Socialization",
-                    "5. Behavioral Guidance and Training",
-                    "6. Understanding Dog Communication and Stress"
+                    "Lesson 1 - Introduction",
+                    "Lesson 2 - The Meet and Greet",
+                    "Lesson 3 - Assessing and Welcoming Dogs",
+                    "Lesson 4 - Managing Group Dynamics and Socialization",
+                    "Lesson 5 - Behavioral Guidance and Training",
+                    "Lesson 6 - Understanding Dog Communication and Stress"
                 ], false);
 
                 echo renderAccordionItem("courseOutline", "day7", "Day 7: Emergency and Special Situations", [
-                    "1. Introduction",
-                    "2. Handling Dog Behavior Issues",
-                    "3. Emergency Situations with Dogs",
-                    "4. Situational and Environmental Challenges",
-                    "5. Personal Emergencies and Backup Plans"
+                    "Lesson 1 - Introduction",
+                    "Lesson 2 - Handling Dog Behavior Issues",
+                    "Lesson 3 - Emergency Situations with Dogs",
+                    "Lesson 4 - Situational and Environmental Challenges",
+                    "Lesson 5 - Personal Emergencies and Backup Plans"
                 ], false);
 
                 echo renderAccordionItem("courseOutline", "day8", "Day 8: Scaling your Business", [
-                    "1. Introduction",
-                    "2. Expanding Service Offerings",
-                    "3. Creating Value-Added Packages",
-                    "4. Specialized and Premium Services",
-                    "5. Supplementary Revenue Streams"
+                    "Lesson 1 - Introduction",
+                    "Lesson 2 - Expanding Service Offerings",
+                    "Lesson 3 - Creating Value-Added Packages",
+                    "Lesson 4 - Specialized and Premium Services",
+                    "Lesson 5 - Supplementary Revenue Streams"
                 ], false);
 
                 echo renderAccordionItem("courseOutline", "day9", "Day 9: Financial Management", [
-                    "1. Introduction",
-                    "2. Organizing Financial Foundations",
-                    "3. Tax Considerations",
-                    "4. Budgeting and Planning",
-                    "5. Financial Operations"
+                    "Lesson 1 - Introduction",
+                    "Lesson 2 - Organizing Financial Foundations",
+                    "Lesson 3 - Tax Considerations",
+                    "Lesson 4 - Budgeting and Planning",
+                    "Lesson 5 - Financial Operations"
                 ], false);
                 ?>
             </div>
@@ -240,22 +239,22 @@ function renderAccordionItem($accordion, $id, $title, $contents, $show)
             <div class="row">
                 <?php
                 $questions = [
-                    ["person","Who is this course designed for?", "This course is for people who want to stay home more and love dogs. Whether you're a stay-at-home parent, remote worker, retiree, or simply looking for a fulfilling way to earn income, this course is for you."],
-                    ["cart-fill","Do I need to have business experience to take this course?", "No, you don’t need any prior business experience. This course will guide you step-by-step through everything you need to know."],
-                    ["house-door-fill","Do I need to own my home to start a dog boarding business?", "No, but you’ll need permission from your landlord if you’re renting. If owning isn’t an option, you can still explore related opportunities like dog walking or in-home dog sitting for others."],
-                    ["clock-fill","How much time do I need to dedicate to running this type of business?", "A few hours a day are needed to play with, clean up after, and feed the dogs. Simply being present with them is essential but doesn’t require extra effort."],
-                    ["tag-fill","What upfront costs should I expect to get started?", "If you already own a dog, your upfront costs will likely be minimal—maybe a few additional gates, bowls, beds, or cleaning supplies."],
-                    ["book-fill","Will this course teach me how to handle dog behavior issues?", "The course will help you assess whether a dog is a good fit to avoid behavior issues. It also teaches how to set up your home to minimize potential problems, but it doesn’t cover correcting existing behavioral issues."],
-                    ["display-fill","Can I run this business if I have a full-time remote job?", "Yes, as long as you’re home and able to supervise and care for the dogs, this business is a great fit for remote workers."],
-                    ["currency-dollar","How quickly can I start making money after completing the course?", "You can start getting clients even before finishing the course. The early sections focus on setting up your home and attracting clients, so you can begin earning quickly."],
-                    ["tree-fill","What if I live in a rural area—can I still succeed?", "Yes! While attracting daycare clients might be more challenging, many people are willing to travel for the unique experience of having their dogs cared for in a spacious, natural setting."],
-                    ["person-walking","Will this course help me get clients?", "Absolutely. The course includes strategies and templates to help you effectively advertise and attract clients."],
-                    ["tools","What tools or resources are included in the course?", "You’ll get business plan templates, income and expense tracking sheets, advertising templates, and more resources as the course grows."],
-                    ["receipt","Do I need any certifications or licenses to start a dog boarding business?", "Depending on your location, you may need a business permit. Be sure to check your local requirements."],
-                    ["airplane-fill","What happens if I need to take a break or go on vacation?", "You can pause your business at any time or find someone to cover for you while you’re away."],
-                    ["wifi","How is this course delivered?", "The course is delivered through pre-recorded video lessons, so you can learn at your own pace."],
-                    ["person","What kind of support will I have during and after the course?", "You’ll have access to a supportive community where you can ask questions and connect with me directly."],
-                    ["coin","Is there a money-back guarantee if I’m not satisfied?", "Yes, we offer a money-back guarantee if you’re not happy with the course."]
+                    ["person", "Who is this course designed for?", "This course is for people who want to stay home more and love dogs. Whether you're a stay-at-home parent, remote worker, retiree, or simply looking for a fulfilling way to earn income, this course is for you."],
+                    ["cart-fill", "Do I need to have business experience to take this course?", "No, you don’t need any prior business experience. This course will guide you step-by-step through everything you need to know."],
+                    ["house-door-fill", "Do I need to own my home to start a dog boarding business?", "No, but you’ll need permission from your landlord if you’re renting. If owning isn’t an option, you can still explore related opportunities like dog walking or in-home dog sitting for others."],
+                    ["clock-fill", "How much time do I need to dedicate to running this type of business?", "A few hours a day are needed to play with, clean up after, and feed the dogs. Simply being present with them is essential but doesn’t require extra effort."],
+                    ["tag-fill", "What upfront costs should I expect to get started?", "If you already own a dog, your upfront costs will likely be minimal—maybe a few additional gates, bowls, beds, or cleaning supplies."],
+                    ["book-fill", "Will this course teach me how to handle dog behavior issues?", "The course will help you assess whether a dog is a good fit to avoid behavior issues. It also teaches how to set up your home to minimize potential problems, but it doesn’t cover correcting existing behavioral issues."],
+                    ["display-fill", "Can I run this business if I have a full-time remote job?", "Yes, as long as you’re home and able to supervise and care for the dogs, this business is a great fit for remote workers."],
+                    ["currency-dollar", "How quickly can I start making money after completing the course?", "You can start getting clients even before finishing the course. The early sections focus on setting up your home and attracting clients, so you can begin earning quickly."],
+                    ["tree-fill", "What if I live in a rural area—can I still succeed?", "Yes! While attracting daycare clients might be more challenging, many people are willing to travel for the unique experience of having their dogs cared for in a spacious, natural setting."],
+                    ["person-walking", "Will this course help me get clients?", "Absolutely. The course includes strategies and templates to help you effectively advertise and attract clients."],
+                    ["tools", "What tools or resources are included in the course?", "You’ll get business plan templates, income and expense tracking sheets, advertising templates, and more resources as the course grows."],
+                    ["receipt", "Do I need any certifications or licenses to start a dog boarding business?", "Depending on your location, you may need a business permit. Be sure to check your local requirements."],
+                    ["airplane-fill", "What happens if I need to take a break or go on vacation?", "You can pause your business at any time or find someone to cover for you while you’re away."],
+                    ["wifi", "How is this course delivered?", "The course is delivered through pre-recorded video lessons, so you can learn at your own pace."],
+                    ["person", "What kind of support will I have during and after the course?", "You’ll have access to a supportive community where you can ask questions and connect with me directly."],
+                    ["coin", "Is there a money-back guarantee if I’m not satisfied?", "Yes, we offer a money-back guarantee if you’re not happy with the course."]
                 ];
                 foreach ($questions as $question) {
                     $icon = $question[0];
