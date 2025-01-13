@@ -15,25 +15,25 @@ function renderAccordionItem($accordion, $id, $title, $contents, $show)
     foreach ($contents as $item) {
         $itemHtml = <<<HTML
             <div class="card mb-1">
-                <div class="card-body p-2">
+                <div class="card-body p-1">
                     $item
                 </div>
             </div>
         HTML;
         $contentsHtml .= $itemHtml;
     }
-    $collapsedClass = $show ? "" : "collapsed";
     $showClass = $show ? "show" : "";
+    $ariaExpanded = $show ? "true" : "false";
     $html = <<<HTML
     <div class="card mb-1">
         <div class="card-header" role="tab" id="$id">
             <a class="link-primary link-underline-opacity-0" role="button" data-bs-toggle="collapse" 
                 data-parent="#$accordion" href="#$id-button"
-                aria-expanded="false" aria-controls="$id-button">
+                aria-expanded="$ariaExpanded" aria-controls="$id-button">
             <strong>$title</strong>
             </a>
         </div>
-        <div class="card-body collapse" id="$id-button" role="tabpanel" aria-labelledby="$id">
+        <div class="card-body collapse $showClass" id="$id-button" role="tabpanel" aria-labelledby="$id">
             $contentsHtml
         </div>
     </div>
@@ -87,6 +87,12 @@ function renderAccordionItem($accordion, $id, $title, $contents, $show)
     <section class="container-fluid bg-info">
         <div class="container p-5">
             <h2 class="mb-3">Course Outline</h2>
+            <!-- <div class="accordion-option d-flex justify-content-between align-items-center">
+                <h2 class="mb-3">Course Outline</h2>
+                <a href="javascript:void(0)" class="toggle-accordion active" accordion-id="#courseOutline"></a>
+            </div> -->
+            <p>Our comprehensive course covers everything you need to know to start and run a successful
+                at-home dog boarding business. Here's a sneak peek at what you'll learn:</p>
             <div id="courseOutline">
                 <?php
                 echo renderAccordionItem("courseOutline", "day1", "Day 1: Assessing Your Situation", [
