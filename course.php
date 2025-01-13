@@ -173,25 +173,23 @@ function renderAccordionItem($accordion, $id, $title, $contents, $show)
         </div>
     </section>
 
-    <?php
-    $coach1 = <<<STR
-        Hi, I’m Selena Trotter, and I’ve been running a successful at-home dog boarding business since 2012. It all started one summer during a break from my high school teaching career when I began looking after dogs. What began as a side hustle quickly became a fulfilling, full-time business that allowed me to stay home -all while earning a great income. Since then, I’ve cared for over 1,000 dogs, creating a safe, loving, and happy environment.
-        STR;
-    $coach2 = <<<STR
-        Running this business has given me the freedom to raise my kids at home and involve them in the work, teaching them responsibility and the value of caring for others. Over the years, I’ve learned the ins and outs of managing a successful dog boarding business, from handling unique challenges to enjoying the incredible rewards. 
-        STR;
-    $coach3 = <<<STR
-        With my background in teaching and executive coaching, I bring a wealth of experience in guiding others to success. My practical, supportive approach is designed to help you achieve financial independence, time flexibility, and a deep sense of fulfillment. Whether you’re looking to supplement your income or create a full-time career, I’m here to share everything to help you get started, avoid pitfalls, and find joy in building a business centered around the love of dogs.
-        STR;
-    ?>
     <section class="container-fluid bg-light">
         <div class="container p-5">
             <h2>Meet your coach</h2>
             <div class="row">
                 <div class="col-7">
-                    <p><?= $coach1 ?></p>
-                    <p><?= $coach2 ?></p>
-                    <p><?= $coach3 ?></p>
+                    <?php
+                    $coachLines = [
+                        "Hi, I’m Selena Trotter, and I’ve been running a successful at-home dog boarding business since 2012. It all started one summer during a break from my high school teaching career when I began looking after dogs. What began as a side hustle quickly became a fulfilling, full-time business that allowed me to stay home -all while earning a great income. Since then, I’ve cared for over 1,000 dogs, creating a safe, loving, and happy environment.",
+                        "Running this business has given me the freedom to raise my kids at home and involve them in the work, teaching them responsibility and the value of caring for others. Over the years, I’ve learned the ins and outs of managing a successful dog boarding business, from handling unique challenges to enjoying the incredible rewards.",
+                        "With my background in teaching and executive coaching, I bring a wealth of experience in guiding others to success. My practical, supportive approach is designed to help you achieve financial independence, time flexibility, and a deep sense of fulfillment. Whether you’re looking to supplement your income or create a full-time career, I’m here to share everything to help you get started, avoid pitfalls, and find joy in building a business centered around the love of dogs."
+                    ];
+                    foreach ($coachLines as $paragraph) {
+                        echo <<<HTML
+                            <p>$paragraph</p>
+                        HTML;
+                    }
+                    ?>
                 </div>
                 <div class="col-5">
                     <img src="images/image-selena-alone.jpg" class="img-thumbnail" />
@@ -200,39 +198,38 @@ function renderAccordionItem($accordion, $id, $title, $contents, $show)
         </div>
     </section>
 
-    <?php
-    $whoFor1 = <<<STR
-        This course is perfect for anyone who dreams of making money while staying home and doing what they love—caring for dogs. Whether you’re a stay-at-home parent, someone planning to transition into being home full-time, a remote worker, or a retiree looking to earn extra income while filling your days with dog cuddles, this course is for you. Above all, it’s for people who love dogs and have some prior experience with their care.
-        STR;
-    $whoFor2 = <<<STR
-        If you’ve ever wondered how to turn your love of dogs into a thriving business, this course addresses all the key challenges. From setting up your home for safety to attracting clients and ensuring a happy, healthy environment for the dogs, you’ll gain the tools and strategies needed to succeed. We understand the fears of dog fights or endless cleaning and provide practical solutions to make your experience enjoyable and stress-free.
-        STR;
-    ?>
     <section class="container-fluid bg-info">
         <div class="container p-5">
             <h2>Who is this course for</h2>
-            <p><?= $whoFor1 ?></p>
-            <p><?= $whoFor2 ?></p>
+            <?php
+            $whoForLines = [
+                "This course is perfect for anyone who dreams of making money while staying home and doing what they love—caring for dogs. Whether you’re a stay-at-home parent, someone planning to transition into being home full-time, a remote worker, or a retiree looking to earn extra income while filling your days with dog cuddles, this course is for you. Above all, it’s for people who love dogs and have some prior experience with their care.",
+                "If you’ve ever wondered how to turn your love of dogs into a thriving business, this course addresses all the key challenges. From setting up your home for safety to attracting clients and ensuring a happy, healthy environment for the dogs, you’ll gain the tools and strategies needed to succeed. We understand the fears of dog fights or endless cleaning and provide practical solutions to make your experience enjoyable and stress-free."
+            ];
+            foreach ($whoForLines as $paragraph) {
+                echo <<<HTML
+                    <p>$paragraph</p>
+                HTML;
+            }
+            ?>
         </div>
     </section>
 
-    <?php
-    $whoNotFor1 = <<<STR
-        While this course is designed to help many people succeed in building an at-home dog boarding business, it’s not the right fit for everyone. If you don’t have prior experience with dogs—whether as a pet owner or caregiver—this might not be the right starting point for you. Caring for dogs requires understanding their behavior and needs, which isn’t fully covered in this course.
-        STR;
-    $whoNotFor2 = <<<STR
-        This business also requires a level of commitment to be present with the dogs in your care. If you’re someone who can’t dedicate time to being home or doesn’t have a support system to manage the business during your absences, this course may not work for you. Additionally, if you’re not comfortable with the responsibilities that come with dog care—like cleaning, managing occasional behavioral challenges, or spending quality time with the dogs—this may not be the right venture for you.
-        STR;
-    $whoNotFor3 = <<<STR
-        Lastly, if you think you can simply set up a space and leave the dogs on their own, this business likely isn’t a good fit. Successful dog boarding requires interaction, care, and a genuine love for dogs. However, if you’re ready to embrace the joys and occasional messiness of working with dogs and are willing to put in the time to create a safe and loving home environment, this course will provide you with all the tools you need to thrive.
-        STR;
-    ?>
     <section class="container-fluid bg-light">
         <div class="container p-5">
             <h2>Who is this course not for</h2>
-            <p><?= $whoNotFor1 ?></p>
-            <p><?= $whoNotFor2 ?></p>
-            <p><?= $whoNotFor3 ?></p>
+            <?php
+            $whoNotForLines = [
+                "While this course is designed to help many people succeed in building an at-home dog boarding business, it’s not the right fit for everyone. If you don’t have prior experience with dogs—whether as a pet owner or caregiver—this might not be the right starting point for you. Caring for dogs requires understanding their behavior and needs, which isn’t fully covered in this course.",
+                "This business also requires a level of commitment to be present with the dogs in your care. If you’re someone who can’t dedicate time to being home or doesn’t have a support system to manage the business during your absences, this course may not work for you. Additionally, if you’re not comfortable with the responsibilities that come with dog care—like cleaning, managing occasional behavioral challenges, or spending quality time with the dogs—this may not be the right venture for you.",
+                "Lastly, if you think you can simply set up a space and leave the dogs on their own, this business likely isn’t a good fit. Successful dog boarding requires interaction, care, and a genuine love for dogs. However, if you’re ready to embrace the joys and occasional messiness of working with dogs and are willing to put in the time to create a safe and loving home environment, this course will provide you with all the tools you need to thrive."
+            ];
+            foreach ($whoNotForLines as $paragraph) {
+                echo <<<HTML
+                    <p>$paragraph</p>
+                HTML;
+            }
+            ?>
         </div>
     </section>
 
@@ -263,7 +260,7 @@ function renderAccordionItem($accordion, $id, $title, $contents, $show)
                 foreach ($questions as $question) {
                     $questionTitle = $question[0];
                     $questionAnswer = $question[1];
-                    $questionHtml = <<<HTML
+                    echo <<<HTML
                         <div class="col-md-6 col-lg-6 mb-4">
                         <h6 class="mb-3 text-primary">
                             <strong>$questionTitle</strong>
@@ -271,7 +268,6 @@ function renderAccordionItem($accordion, $id, $title, $contents, $show)
                         <p>$questionAnswer</p>
                     </div>
                     HTML;
-                    echo $questionHtml;
                 }
                 ?>
             </div>
