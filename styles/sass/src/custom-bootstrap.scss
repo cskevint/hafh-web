@@ -1,0 +1,13 @@
+// Override variables here.
+// From: https://github.com/twbs/bootstrap/blob/main/scss/_variables.scss
+$primary: #0279ad;
+$secondary: #956230;
+$success: #e1b482;
+$info: #efd6ba;
+$warning: #aae4f7;
+$danger: #350d09;
+$light: #fcf7f3;
+$dark: #230906;
+
+// Import Bootstrap components
+@import "../node_modules/bootstrap/scss/bootstrap";
