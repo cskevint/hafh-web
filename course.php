@@ -110,9 +110,9 @@ HTML;
                     "Lesson 4 - Bedrooms",
                     "Lesson 5 - Feeding Station",
                     "Lesson 6 - Water Stations",
-                    "Lesson 7 - Cleaning",
-                    "Lesson 8 - Flooring",
-                    "Lesson 9 - Outside Area"
+                    "Lesson 7 - Outside Area",
+                    "Lesson 8 - Cleaning",
+                    "Lesson 9 - Flooring"
                 ], false);
 
                 echo renderAccordionItem("courseOutline", "day3", "Day 3: Business Planning and Launching", [
