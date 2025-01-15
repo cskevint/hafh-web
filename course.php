@@ -5,9 +5,11 @@ $_GLOBALS["pageTitle"] = "Course";
 
 $enrollButton = <<<HTML
 <p class="text-center">
-    <a class="btn btn-primary btn-lg" href="http://www.google.com">Enroll now!</a>
+    <a class="btn btn-primary btn-lg" href="http://www.google.com" role="button">Enroll now!</a>
 </p>
 HTML;
+
+$pageContainerClasses = "container p-lg-5 p-md-4 p-3";
 
 ?>
 <!doctype html>
@@ -31,20 +33,26 @@ HTML;
     </section>
 
     <section class="container-fluid bg-info">
-        <div class="container px-5 py-3">
+        <div class="<?=$pageContainerClasses?>">
             <h1 class="mb-3">Take our at-home dog boarding business course!</h1>
 
-            <div class="row justify-content-md-center">
-                <div class="col-md-12">
+            <p class="mt-3">Ready to turn your love for dogs into a thriving business? Our online course
+                        will tell you everything you need to know to run your own at-home dog boarding business!</p>
 
+
+            <div class="row">
+                <div class="col-md-8">
                     <iframe class="youtube-video" src="https://www.youtube.com/embed/mK9lg1l1KkU"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
-
-                    <p class="mt-3">Ready to turn your love for dogs into a thriving business? Our online course
-                        will tell you everything you need to know to run your own at-home dog boarding business!</p>
-
+                </div>
+                <div class="col-md-4 text-center">
+                    <h3 class="text-primary fw-bold">Pre-launch Sale!</h3>
+                    <p>Join our exclusive pre-launch sale! Join now to get <u>lifetime access</u> and take advantage of
+                        75% off, early access to the course, free access to our dogboarders community with questions
+                        answered daily, and more!<br/>
+                        <u>Offer Expires Soon!</u></p>
                     <?= $enrollButton ?>
                 </div>
             </div>
@@ -52,7 +60,7 @@ HTML;
     </section>
 
     <section class="container-fluid bg-light">
-        <div class="container p-5">
+        <div class="<?=$pageContainerClasses?>">
             <h2>Why Choose Dog Boarding?</h2>
             <p>Escape the 9-to-5 grind and enjoy the freedom of being your own boss while caring for
                 adorable pups. Whether you're a stay-at-home parent or an aspiring entrepreneur, dog
@@ -62,7 +70,7 @@ HTML;
     </section>
 
     <section class="container-fluid bg-info">
-        <div class="container p-5">
+        <div class="<?=$pageContainerClasses?>">
             <h2 class="mb-3">Course Outline</h2>
             <!-- <div class="accordion-option d-flex justify-content-between align-items-center">
                 <h2 class="mb-3">Course Outline</h2>
@@ -72,7 +80,7 @@ HTML;
                 at-home dog boarding business. Here's a sneak peek at what you'll learn:</p>
             <div id="courseOutline">
                 <?php
-                function renderAccordionItem($accordion, $id, $title, $contents, $show)
+                function renderAccordionItem($accordion, $id, $title, $contents, $show): string
                 {
                     $contentsHtml = "";
                     foreach ($contents as $items) {
@@ -189,7 +197,7 @@ HTML;
     </section>
 
     <section class="container-fluid bg-light">
-        <div class="container p-5">
+        <div class="<?=$pageContainerClasses?>">
             <h2 class="mb-4">Testimonials</h2>
             <p class="mb-3">
                 Hear from our students who have successfully launched their own dog boarding businesses
@@ -257,7 +265,7 @@ HTML;
     </section>
 
     <section class="container-fluid bg-info">
-        <div class="container p-5">
+        <div class="<?=$pageContainerClasses?>">
             <h2>Meet your coach</h2>
             <div class="row">
                 <div class="col-md-7">
@@ -282,7 +290,7 @@ HTML;
     </section>
 
     <section class="container-fluid bg-light">
-        <div class="container p-5">
+        <div class="<?=$pageContainerClasses?>">
             <h2>Who is this course for</h2>
             <?php
             $whoForLines = [
@@ -299,7 +307,7 @@ HTML;
     </section>
 
     <section class="container-fluid bg-info">
-        <div class="container p-5">
+        <div class="<?=$pageContainerClasses?>">
             <h2>Who is this course not for</h2>
             <?php
             $whoNotForLines = [
@@ -317,7 +325,7 @@ HTML;
     </section>
 
     <section class="container-fluid bg-light">
-        <div class="container p-5">
+        <div class="<?=$pageContainerClasses?>">
             <h3 class="text-center mb-4 pb-2 text-primary fw-bold">Frequently asked questions</h3>
 
             <div class="row">
@@ -359,7 +367,7 @@ HTML;
     </section>
 
     <section class="container-fluid bg-info">
-        <div class="container p-5">
+        <div class="<?=$pageContainerClasses?>">
             <h2>Ready to Get Started?</h2>
             <p>Click the Enroll button below to navigate to the enrollment page on our elearning platform:
             </p>
@@ -368,7 +376,7 @@ HTML;
     </section>
 
     <section class="container-fluid bg-light">
-        <div class="container p-5">
+        <div class="<?=$pageContainerClasses?>">
             <h2>Disclaimer</h2>
             <?php
             $disclaimers = [
