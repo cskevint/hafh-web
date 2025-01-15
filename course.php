@@ -38,7 +38,7 @@ HTML;
         </div>
     </section>
 
-    <section class="container-fluid <?=alternatingBgClass()?>">
+    <section class="container-fluid header-bg">
         <div class="<?=$pageContainerClasses?>">
             <h1 class="mb-3">Take our at-home dog boarding business course!</h1>
             <p class="mt-3">Ready to turn your love for dogs into a thriving business? Our online course
