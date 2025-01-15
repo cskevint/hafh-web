@@ -20,9 +20,18 @@ HTML;
 <body>
 
     <?php include("includes/devserver.php"); ?>
+    <?php include("includes/debug.php"); ?>
 
     <section class="container-fluid bg-info">
-        <div class="container p-5">
+        <div class="container p-2 d-flex justify-content-center">
+            <a href="/">
+                <img src="images/logo-horizontal.png" alt="Hound Away From Home" style="max-height:32px;" />
+            </a>
+        </div>
+    </section>
+
+    <section class="container-fluid bg-info">
+        <div class="container px-5 py-3">
             <h1 class="mb-3">Take our at-home dog boarding business course!</h1>
 
             <div class="row justify-content-md-center">
@@ -66,11 +75,12 @@ HTML;
                 function renderAccordionItem($accordion, $id, $title, $contents, $show)
                 {
                     $contentsHtml = "";
-                    foreach ($contents as $item) {
+                    foreach ($contents as $items) {
                         $itemHtml = <<<HTML
                         <div class="card mb-1">
                             <div class="card-body p-1">
-                                $item
+                                <p class="mx-1 m-0 fw-bold">$items[0]</>
+                                <p class="mx-1 my-1 fw-light fs-6">$items[1]</p>
                             </div>
                         </div>
                         HTML;
@@ -96,82 +106,82 @@ HTML;
                 }
 
                 echo renderAccordionItem("courseOutline", "day1", "Day 1: Assessing Your Situation", [
-                    "Lesson 1 - Introduction",
-                    "Lesson 2 - Assessing Your Situation",
-                    "Lesson 3 - Market Research",
-                    "Lesson 4 - Setting Realistic Goals",
-                    "Lesson 5 - Creating a Dream Personal Plan"
+                    ["Lesson 1 - Introduction", "Welcome to the course! This session will set the foundation for starting your dog-sitting business. Learn what to expect and how to build confidence in your ability to succeed."],
+                    ["Lesson 2 - Assessing Your Situation", "Analyze your home, time, family dynamics, and community resources to understand how they align with your dog-sitting goals."],
+                    ["Lesson 3 - Market Research", "Explore your local market to determine demand, competitive pricing, and the types of services offered. Then, learn how to stand out and provide value to your customers."],
+                    ["Lesson 4 - Setting Realistic Goals", "Define your ability to care for a number of dogs, your income expectations, and your personal priorities. Balance your business ambitions with your lifestyle and family needs."],
+                    ["Lesson 5 - Creating a Dream Personal Plan", "Combine all of this information into a personal plan that combines business goals, financial needs, and the life you want to create for yourself and your family."],
                 ], false);
 
                 echo renderAccordionItem("courseOutline", "day2", "Day 2: Transforming Your Home", [
-                    "Lesson 1 - Introduction",
-                    "Lesson 2 - Entryway",
-                    "Lesson 3 - Living Rooms",
-                    "Lesson 4 - Bedrooms",
-                    "Lesson 5 - Feeding Station",
-                    "Lesson 6 - Water Stations",
-                    "Lesson 7 - Outside Area",
-                    "Lesson 8 - Cleaning",
-                    "Lesson 9 - Flooring"
+                    ["Lesson 1 - Introduction", ""],
+                    ["Lesson 2 - Entryway", ""],
+                    ["Lesson 3 - Living Rooms", ""],
+                    ["Lesson 4 - Bedrooms", ""],
+                    ["Lesson 5 - Feeding Station", ""],
+                    ["Lesson 6 - Water Stations", ""],
+                    ["Lesson 7 - Outside Area", ""],
+                    ["Lesson 8 - Flooring", ""],
+                    ["Lesson 9 - Cleaning", ""],
                 ], false);
 
                 echo renderAccordionItem("courseOutline", "day3", "Day 3: Business Planning and Launching", [
-                    "Lesson 1 - Business Plan",
-                    "Lesson 2 - Understanding Your Local Markets",
-                    "Lesson 3 - Branding",
-                    "Lesson 4 - Launching on Different Platforms",
-                    "Lesson 5 - Announcing on Social Media",
-                    "Lesson 6 - Emailing Local Friends and Family"
+                    ["Lesson 1 - Business Plan", ""],
+                    ["Lesson 2 - Understanding Your Local Markets", ""],
+                    ["Lesson 3 - Branding", ""],
+                    ["Lesson 4 - Launching on Different Platforms", ""],
+                    ["Lesson 5 - Announcing on Social Media", ""],
+                    ["Lesson 6 - Emailing Local Friends and Family", ""],
                 ], false);
 
                 echo renderAccordionItem("courseOutline", "day4", "Day 4: Setting Up Your Business", [
-                    "Lesson 1 - Introduction",
-                    "Lesson 2 - Business Structure and Licensing",
-                    "Lesson 3 - Setting Up Payment Systems",
-                    "Lesson 4 - Insurance, Liability, Contracts and Policies",
-                    "Lesson 5 - Building Community Relationships",
-                    "Lesson 6 - Setting Up an Online Presence"
+                    ["Lesson 1 - Introduction", ""],
+                    ["Lesson 2 - Business Structure and Licensing", ""],
+                    ["Lesson 3 - Setting Up Payment Systems", ""],
+                    ["Lesson 4 - Insurance, Liability, Contracts and Policies", ""],
+                    ["Lesson 5 - Building Community Relationships", ""],
+                    ["Lesson 6 - Setting Up an Online Presence", ""],
                 ], false);
 
                 echo renderAccordionItem("courseOutline", "day5", "Day 5: Client Relations and Communication", [
-                    "Lesson 1 - Introduction",
-                    "Lesson 2 - New Client Onboarding",
-                    "Lesson 3 - Establishing Professional Communication",
-                    "Lesson 4 - Utilizing Social Media",
-                    "Lesson 5 - Building and Strengthening Client Relationships"
+                    ["Lesson 1 - Introduction", ""],
+                    ["Lesson 2 - New Client Onboarding", ""],
+                    ["Lesson 3 - Establishing Professional Communication", ""],
+                    ["Lesson 4 - Utilizing Social Media", ""],
+                    ["Lesson 5 - Building and Strengthening Client Relationships", ""],
                 ], false);
 
                 echo renderAccordionItem("courseOutline", "day6", "Day 6: Understanding Dog Behavior", [
-                    "Lesson 1 - Introduction",
-                    "Lesson 2 - The Meet and Greet",
-                    "Lesson 3 - Assessing and Welcoming Dogs",
-                    "Lesson 4 - Managing Group Dynamics and Socialization",
-                    "Lesson 5 - Behavioral Guidance and Training",
-                    "Lesson 6 - Understanding Dog Communication and Stress"
+                    ["Lesson 1 - Introduction", ""],
+                    ["Lesson 2 - The Meet and Greet", ""],
+                    ["Lesson 3 - Assessing and Welcoming Dogs", ""],
+                    ["Lesson 4 - Managing Group Dynamics and Socialization", ""],
+                    ["Lesson 5 - Behavioral Guidance and Training", ""],
+                    ["Lesson 6 - Understanding Dog Communication and Stress", ""],
                 ], false);
 
                 echo renderAccordionItem("courseOutline", "day7", "Day 7: Emergency and Special Situations", [
-                    "Lesson 1 - Introduction",
-                    "Lesson 2 - Handling Dog Behavior Issues",
-                    "Lesson 3 - Emergency Situations with Dogs",
-                    "Lesson 4 - Situational and Environmental Challenges",
-                    "Lesson 5 - Personal Emergencies and Backup Plans"
+                    ["Lesson 1 - Introduction", ""],
+                    ["Lesson 2 - Handling Dog Behavior Issues", ""],
+                    ["Lesson 3 - Emergency Situations with Dogs", ""],
+                    ["Lesson 4 - Situational and Environmental Challenges", ""],
+                    ["Lesson 5 - Personal Emergencies and Backup Plans", ""],
                 ], false);
 
                 echo renderAccordionItem("courseOutline", "day8", "Day 8: Scaling your Business", [
-                    "Lesson 1 - Introduction",
-                    "Lesson 2 - Expanding Service Offerings",
-                    "Lesson 3 - Creating Value-Added Packages",
-                    "Lesson 4 - Specialized and Premium Services",
-                    "Lesson 5 - Supplementary Revenue Streams"
+                    ["Lesson 1 - Introduction", ""],
+                    ["Lesson 2 - Expanding Service Offerings", ""],
+                    ["Lesson 3 - Creating Value-Added Packages", ""],
+                    ["Lesson 4 - Specialized and Premium Services", ""],
+                    ["Lesson 5 - Supplementary Revenue Streams", ""],
                 ], false);
 
                 echo renderAccordionItem("courseOutline", "day9", "Day 9: Financial Management", [
-                    "Lesson 1 - Introduction",
-                    "Lesson 2 - Organizing Financial Foundations",
-                    "Lesson 3 - Tax Considerations",
-                    "Lesson 4 - Budgeting and Planning",
-                    "Lesson 5 - Financial Operations"
+                    ["Lesson 1 - Introduction", ""],
+                    ["Lesson 2 - Organizing Financial Foundations", ""],
+                    ["Lesson 3 - Tax Considerations", ""],
+                    ["Lesson 4 - Budgeting and Planning", ""],
+                    ["Lesson 5 - Financial Operations", ""],
                 ], false);
                 ?>
             </div>
@@ -250,7 +260,7 @@ HTML;
         <div class="container p-5">
             <h2>Meet your coach</h2>
             <div class="row">
-                <div class="col-7">
+                <div class="col-md-7">
                     <?php
                     $coachLines = [
                         "Hi, I’m Selena Trotter, and I’ve been running a successful at-home dog boarding business since 2012. It all started one summer during a break from my high school teaching career when I began looking after dogs. What began as a side hustle quickly became a fulfilling, full-time business that allowed me to stay home -all while earning a great income. Since then, I’ve cared for over 1,000 dogs, creating a safe, loving, and happy environment.",
@@ -264,7 +274,7 @@ HTML;
                     }
                     ?>
                 </div>
-                <div class="col-5">
+                <div class="col-md-5 py-2 order-md-first order-lg-last">
                     <img src="images/image-selena-alone.jpg" class="img-thumbnail" />
                 </div>
             </div>
