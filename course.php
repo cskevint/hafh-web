@@ -3,13 +3,19 @@ session_start();
 require_once("redirect.php");
 $_GLOBALS["pageTitle"] = "Course";
 
+$bgCounter = 0;
+function alternatingBgClass() {
+    $GLOBALS['bgCounter']++;
+    return $GLOBALS['bgCounter'] % 2 == 0 ? "bg-light" : "bg-info";
+}
+
+$pageContainerClasses = "container p-lg-5 p-md-4 p-3";
+
 $enrollButton = <<<HTML
 <p class="text-center">
     <a class="btn btn-primary btn-lg" href="http://www.google.com" role="button">Enroll now!</a>
 </p>
 HTML;
-
-$pageContainerClasses = "container p-lg-5 p-md-4 p-3";
 
 ?>
 <!doctype html>
@@ -24,7 +30,7 @@ $pageContainerClasses = "container p-lg-5 p-md-4 p-3";
     <?php include("includes/devserver.php"); ?>
     <?php include("includes/debug.php"); ?>
 
-    <section class="container-fluid bg-info">
+    <section class="container-fluid <?=alternatingBgClass()?>">
         <div class="container p-2 d-flex justify-content-center">
             <a href="/">
                 <img src="images/logo-horizontal.png" alt="Hound Away From Home" style="max-height:32px;" />
@@ -32,7 +38,7 @@ $pageContainerClasses = "container p-lg-5 p-md-4 p-3";
         </div>
     </section>
 
-    <section class="container-fluid bg-info">
+    <section class="container-fluid <?=alternatingBgClass()?>">
         <div class="<?=$pageContainerClasses?>">
             <h1 class="mb-3">Take our at-home dog boarding business course!</h1>
             <p class="mt-3">Ready to turn your love for dogs into a thriving business? Our online course
@@ -56,7 +62,7 @@ $pageContainerClasses = "container p-lg-5 p-md-4 p-3";
         </div>
     </section>
 
-    <section class="container-fluid bg-light">
+    <section class="container-fluid <?=alternatingBgClass()?>">
         <div class="<?=$pageContainerClasses?>">
             <h2>Why Choose Dog Boarding?</h2>
             <p>Escape the 9-to-5 grind and enjoy the freedom of being your own boss while caring for
@@ -66,7 +72,7 @@ $pageContainerClasses = "container p-lg-5 p-md-4 p-3";
         </div>
     </section>
 
-    <section class="container-fluid bg-info">
+    <section class="container-fluid <?=alternatingBgClass()?>">
         <div class="<?=$pageContainerClasses?>">
             <h2 class="mb-3">Course Outline</h2>
             <!-- <div class="accordion-option d-flex justify-content-between align-items-center">
@@ -193,7 +199,7 @@ $pageContainerClasses = "container p-lg-5 p-md-4 p-3";
         </div>
     </section>
 
-    <section class="container-fluid bg-light">
+    <section class="container-fluid <?=alternatingBgClass()?>">
         <div class="<?=$pageContainerClasses?>">
             <h2 class="mb-4">Testimonials</h2>
             <p class="mb-3">
@@ -261,7 +267,7 @@ $pageContainerClasses = "container p-lg-5 p-md-4 p-3";
         </div>
     </section>
 
-    <section class="container-fluid bg-info">
+    <section class="container-fluid <?=alternatingBgClass()?>">
         <div class="<?=$pageContainerClasses?>">
             <h2>Meet your coach</h2>
             <div class="row">
@@ -286,7 +292,7 @@ $pageContainerClasses = "container p-lg-5 p-md-4 p-3";
         </div>
     </section>
 
-    <section class="container-fluid bg-light">
+    <section class="container-fluid <?=alternatingBgClass()?>">
         <div class="<?=$pageContainerClasses?>">
             <h2>Who is this course for</h2>
             <?php
@@ -303,7 +309,7 @@ $pageContainerClasses = "container p-lg-5 p-md-4 p-3";
         </div>
     </section>
 
-    <section class="container-fluid bg-info">
+    <section class="container-fluid <?=alternatingBgClass()?>">
         <div class="<?=$pageContainerClasses?>">
             <h2>Who is this course not for</h2>
             <?php
@@ -321,7 +327,7 @@ $pageContainerClasses = "container p-lg-5 p-md-4 p-3";
         </div>
     </section>
 
-    <section class="container-fluid bg-light">
+    <section class="container-fluid <?=alternatingBgClass()?>">
         <div class="<?=$pageContainerClasses?>">
             <h3 class="text-center mb-4 pb-2 text-primary fw-bold">Frequently asked questions</h3>
 
@@ -363,7 +369,7 @@ $pageContainerClasses = "container p-lg-5 p-md-4 p-3";
         </div>
     </section>
 
-    <section class="container-fluid bg-info">
+    <section class="container-fluid <?=alternatingBgClass()?>">
         <div class="<?=$pageContainerClasses?>">
             <h2>Ready to Get Started?</h2>
             <p>Click the Enroll button below to navigate to the enrollment page on our elearning platform:
@@ -372,7 +378,7 @@ $pageContainerClasses = "container p-lg-5 p-md-4 p-3";
         </div>
     </section>
 
-    <section class="container-fluid bg-light">
+    <section class="container-fluid <?=alternatingBgClass()?>">
         <div class="<?=$pageContainerClasses?>">
             <h2>Disclaimer</h2>
             <?php
