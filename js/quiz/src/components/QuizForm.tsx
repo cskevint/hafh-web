@@ -6,6 +6,7 @@ import {
   scoreQuizAnswers,
 } from "../model/quiz";
 import QuestionBox from "./QuestionBox";
+import ResultsBox from "./ResultsBox";
 
 interface QuizFormProps {
   quiz: Quiz;
@@ -16,7 +17,7 @@ function QuizForm({ quiz }: QuizFormProps) {
   const [answerData, setAnswerData] = useState(
     new Map<QuestionKey, AnswerValue>()
   );
-  const [quizResult, setQuizResult] = useState("");
+  const [quizResult, setQuizResult] = useState("learn-more");
 
   /**
    * Question navigation handler.
@@ -61,7 +62,7 @@ function QuizForm({ quiz }: QuizFormProps) {
         {quizResult && (
           <div className="card-body">
             <div className="rounded mb-4 py-1 px-4 bg-white">
-              <p className="fs-3">{quizResult}</p>
+              <ResultsBox result={quizResult}/>
               <div className="d-flex justify-content-center align-items-center">
                 <button className="btn btn-primary" onClick={startOver}>
                   Start over
