@@ -51,6 +51,7 @@ function QuizForm({ quiz }: QuizFormProps) {
     setCurrentIndex(0);
     setAnswerData(new Map<QuestionKey, AnswerValue>());
     setQuizResult("");
+    window.scrollTo(0, 0);
   }
 
   return (
