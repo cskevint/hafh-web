@@ -17,7 +17,7 @@ function QuizForm({ quiz }: QuizFormProps) {
   const [answerData, setAnswerData] = useState(
     new Map<QuestionKey, AnswerValue>()
   );
-  const [quizResult, setQuizResult] = useState("learn-more");
+  const [quizResult, setQuizResult] = useState("");
 
   /**
    * Question navigation handler.
