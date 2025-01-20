@@ -11,8 +11,8 @@ $title = "Hound Away From Home".(isset($_GLOBALS["pageTitle"]) ? " - ".$_GLOBALS
 <meta property="og:title" content="<?=$title?>">
 <meta property="og:image" content="/images/image-eli.jpg">
 
-<link rel="stylesheet" href="styles/sass/dist/hafh-bootstrap.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" type="text/css" href="/styles/sass/dist/hafh-bootstrap.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
 <link rel="stylesheet" type="text/css" href="/styles/main.css?v=<?=time()?>" />
 
 <link rel="icon" href="favicon.ico">
