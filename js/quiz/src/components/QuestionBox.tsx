@@ -6,7 +6,7 @@ interface QuestionBoxProps {
   onOptionChange: Function;
 }
 
-function QuestionBox({ question, answer, onOptionChange }: QuestionBoxProps) {
+export default function QuestionBox({ question, answer, onOptionChange }: QuestionBoxProps) {
   return (
     <div className="rounded mb-4 py-1 px-4 bg-white question">
       <div className="my-3 lead fs-5">
@@ -37,5 +37,3 @@ function QuestionBox({ question, answer, onOptionChange }: QuestionBoxProps) {
     </div>
   );
 }
-
-export default QuestionBox;

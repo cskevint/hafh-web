@@ -1,4 +1,4 @@
-function ResultsBox({ result }: { result: string }) {
+export default function ResultsBox({ result }: { result: string }) {
   const success = (
     <div>
       <h3>Congratulations!</h3>
@@ -169,5 +169,3 @@ function ResultsBox({ result }: { result: string }) {
     return learnMore;
   }
 }
-
-export default ResultsBox;

@@ -12,7 +12,7 @@ interface QuizFormProps {
   quiz: Quiz;
 }
 
-function QuizForm({ quiz }: QuizFormProps) {
+export default function QuizForm({ quiz }: QuizFormProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answerData, setAnswerData] = useState(
     new Map<QuestionKey, AnswerValue>()
@@ -96,5 +96,3 @@ function QuizForm({ quiz }: QuizFormProps) {
     </>
   );
 }
-
-export default QuizForm;
