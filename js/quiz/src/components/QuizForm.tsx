@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import {
   Quiz,
   QuestionKey,
@@ -51,8 +51,9 @@ export default function QuizForm({ quiz }: QuizFormProps) {
     setCurrentIndex(0);
     setAnswerData(new Map<QuestionKey, AnswerValue>());
     setQuizResult("");
-    useEffect(() => {
-      window.scrollTo(0, 0);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
     });
   }
 
@@ -65,7 +66,7 @@ export default function QuizForm({ quiz }: QuizFormProps) {
         {quizResult && (
           <div className="card-body">
             <div className="rounded mb-4 py-1 px-4 bg-white">
-              <ResultsBox result={quizResult}/>
+              <ResultsBox result={quizResult} />
               <div className="d-flex justify-content-center align-items-center">
                 <button className="btn btn-primary" onClick={startOver}>
                   Start over
