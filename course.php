@@ -274,11 +274,14 @@ HTML;
                         <i class="bi bi-quote pe-2"></i>
                         Honestly, I thought that doing the dog business would not require much knowledge, it could be
                         intuitive, but when I started receiving information from Selena, I realized that I needed
-                        valuable information that only she had because of her experience. I felt taken by the hand and
-                        when we received the first dog (only 5 days after starting the course) everything made so much
-                        sense, when you do it, the experience that she has, becomes very evident, and you feel with the
-                        ability to solve the small challenges. Today I feel very happy, I have the size of a business
-                        that fits my family and that pays the rent.
+                        valuable information that only she had because of her experience. <span
+                            class="read-more hidden"><a href="javascript:void(0)"
+                                class="read-more-link text-decoration-none">More...</a><span class="read-more-content">I
+                                felt taken by the hand and when we received the first dog
+                                (only 5 days after starting the course) everything made so much sense, when you do it,
+                                the experience that she has, becomes very evident, and you feel with the ability to
+                                solve the small challenges. Today I feel very happy, I have the size of a business that
+                                fits my family and that pays the rent.</span></span>
                     </p>
                     <?= $fiveStars ?>
                 </div>
@@ -422,7 +425,15 @@ HTML;
     </section>
 
     <?php include("includes/bootstrapjs.php"); ?>
-
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll(".read-more").forEach(function (readMoreElem) {
+                readMoreElem.querySelector(".read-more-link").addEventListener("click", function (event) {
+                    readMoreElem.classList.remove("hidden");
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

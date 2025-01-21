@@ -94,3 +94,15 @@
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
 }
+
+.read-more.hidden .read-more-link {
+    display: inline-block;
+}
+
+.read-more .read-more-link {
+    display: none;
+}
+
+.read-more.hidden .read-more-content {
+    display: none;
+}
