@@ -4,7 +4,8 @@ require_once("redirect.php");
 $_GLOBALS["pageTitle"] = "Course";
 
 $bgCounter = 0;
-function alternatingBgClass() {
+function alternatingBgClass()
+{
     $GLOBALS['bgCounter']++;
     return $GLOBALS['bgCounter'] % 2 == 0 ? "bg-light" : "bg-info";
 }
@@ -30,7 +31,7 @@ HTML;
     <?php include("includes/devserver.php"); ?>
     <?php include("includes/debug.php"); ?>
 
-    <section class="container-fluid <?=alternatingBgClass()?>">
+    <section class="container-fluid <?= alternatingBgClass() ?>">
         <div class="container p-2 d-flex justify-content-center">
             <a href="/">
                 <img src="images/logo-horizontal.png" alt="Hound Away From Home" style="max-height:32px;" />
@@ -39,10 +40,10 @@ HTML;
     </section>
 
     <section class="container-fluid header-bg">
-        <div class="<?=$pageContainerClasses?>">
-            <h1 class="mb-3">Take our at-home dog boarding business course!</h1>
+        <div class="<?= $pageContainerClasses ?>">
+            <h1 class="mb-3">Turn your love for dogs into a profitable, flexible career!</h1>
             <p class="mt-3">Ready to turn your love for dogs into a thriving business? Our online course
-                        will tell you everything you need to know to run your own at-home dog boarding business!</p>
+                will tell you everything you need to know to run your own at-home dog boarding business!</p>
             <div class="row">
                 <div class="col-md-8">
                     <iframe class="youtube-video" src="https://www.youtube.com/embed/mK9lg1l1KkU"
@@ -54,16 +55,17 @@ HTML;
                     <h3 class="text-primary fw-bold">Pre-launch Sale!</h3>
                     <p>Join our exclusive pre-launch sale! Join now to get <u>lifetime access</u> and take advantage of
                         75% off, early access to the course, free access to our dogboarders community with questions
-                        answered daily, and more!<br/>
-                        <u>Offer Expires Soon!</u></p>
+                        answered daily, and more!<br />
+                        <u>Offer Expires Soon!</u>
+                    </p>
                     <?= $enrollButton ?>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="container-fluid <?=alternatingBgClass()?>">
-        <div class="<?=$pageContainerClasses?>">
+    <section class="container-fluid <?= alternatingBgClass() ?>">
+        <div class="<?= $pageContainerClasses ?>">
             <h2>Why Choose Dog Boarding?</h2>
             <p>Escape the 9-to-5 grind and enjoy the freedom of being your own boss while caring for
                 adorable pups. Whether you're a stay-at-home parent or an aspiring entrepreneur, dog
@@ -72,8 +74,8 @@ HTML;
         </div>
     </section>
 
-    <section class="container-fluid <?=alternatingBgClass()?>">
-        <div class="<?=$pageContainerClasses?>">
+    <section class="container-fluid <?= alternatingBgClass() ?>">
+        <div class="<?= $pageContainerClasses ?>">
             <h2 class="mb-3">Course Outline</h2>
             <!-- <div class="accordion-option d-flex justify-content-between align-items-center">
                 <h2 class="mb-3">Course Outline</h2>
@@ -199,8 +201,8 @@ HTML;
         </div>
     </section>
 
-    <section class="container-fluid <?=alternatingBgClass()?>">
-        <div class="<?=$pageContainerClasses?>">
+    <section class="container-fluid <?= alternatingBgClass() ?>">
+        <div class="<?= $pageContainerClasses ?>">
             <h2 class="mb-4">Testimonials</h2>
             <p class="mb-3">
                 Hear from our students who have successfully launched their own dog boarding businesses
@@ -267,8 +269,8 @@ HTML;
         </div>
     </section>
 
-    <section class="container-fluid <?=alternatingBgClass()?>">
-        <div class="<?=$pageContainerClasses?>">
+    <section class="container-fluid <?= alternatingBgClass() ?>">
+        <div class="<?= $pageContainerClasses ?>">
             <h2>Meet your coach</h2>
             <div class="row">
                 <div class="col-md-7">
@@ -292,8 +294,8 @@ HTML;
         </div>
     </section>
 
-    <section class="container-fluid <?=alternatingBgClass()?>">
-        <div class="<?=$pageContainerClasses?>">
+    <section class="container-fluid <?= alternatingBgClass() ?>">
+        <div class="<?= $pageContainerClasses ?>">
             <h2>Who is this course for</h2>
             <?php
             $whoForLines = [
@@ -309,8 +311,8 @@ HTML;
         </div>
     </section>
 
-    <section class="container-fluid <?=alternatingBgClass()?>">
-        <div class="<?=$pageContainerClasses?>">
+    <section class="container-fluid <?= alternatingBgClass() ?>">
+        <div class="<?= $pageContainerClasses ?>">
             <h2>Who is this course not for</h2>
             <?php
             $whoNotForLines = [
@@ -327,8 +329,8 @@ HTML;
         </div>
     </section>
 
-    <section class="container-fluid <?=alternatingBgClass()?>">
-        <div class="<?=$pageContainerClasses?>">
+    <section class="container-fluid <?= alternatingBgClass() ?>">
+        <div class="<?= $pageContainerClasses ?>">
             <h3 class="text-center mb-4 pb-2 text-primary fw-bold">Frequently asked questions</h3>
 
             <div class="row">
@@ -369,8 +371,8 @@ HTML;
         </div>
     </section>
 
-    <section class="container-fluid <?=alternatingBgClass()?>">
-        <div class="<?=$pageContainerClasses?>">
+    <section class="container-fluid <?= alternatingBgClass() ?>">
+        <div class="<?= $pageContainerClasses ?>">
             <h2>Ready to Get Started?</h2>
             <p>Click the Enroll button below to navigate to the enrollment page on our elearning platform:
             </p>
@@ -378,8 +380,8 @@ HTML;
         </div>
     </section>
 
-    <section class="container-fluid <?=alternatingBgClass()?>">
-        <div class="<?=$pageContainerClasses?>">
+    <section class="container-fluid <?= alternatingBgClass() ?>">
+        <div class="<?= $pageContainerClasses ?>">
             <h2>Disclaimer</h2>
             <?php
             $disclaimers = [
