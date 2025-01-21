@@ -75,6 +75,60 @@ HTML;
     </section>
 
     <section class="container-fluid <?= alternatingBgClass() ?>">
+        <?php
+        $whatYoullLearn = [
+            [
+                "Setting Up for Success",
+                [
+                    "Learn how to evaluate your space, resources, and legal steps for starting a dog boarding business.",
+                    "Create a safe, welcoming environment for dogs while maintaining your home's comfort.",
+                    "Access worksheets, sample spreadsheets, and contracts to help plan and organize your business."
+                ]
+            ],
+            [
+                "Running and Growing Your Business",
+                [
+                    "Develop a business plan, branding strategies, and methods for attracting clients.",
+                    "Master client relations and ensure a peaceful environment for dogs in your care.",
+                    "Utilize customizable flyers, contracts, and tools to streamline business operations and scaling."
+                ]
+            ],
+            [
+                "Handling Challenges and Special Situations",
+                [
+                    "Gain insights into dog behavior and how to manage emergencies and special care situations.",
+                    "Learn techniques to maintain safety and wellbeing for dogs in your care.",
+                    "Access practical templates and protocols to handle special situations with confidence."
+                ]
+            ]
+        ];
+        ?>
+        <div class="<?= $pageContainerClasses ?>">
+            <h2 class="mb-5">What you'll learn in this course</h2>
+            <?php
+            foreach ($whatYoullLearn as $item) {
+                $title = $item[0];
+                $contents = $item[1];
+                $contentsHtml = "";
+                foreach ($contents as $content) {
+                    $contentsHtml .= "<li>$content</li>\n";
+                }
+                echo <<<HTML
+                <div class="row mb-5">
+                    <div class="col-lg-8">
+                        <h3 class="text-secondary">$title</h3>
+                        <ul>$contentsHtml</ul>
+                    </div>
+                    <div class="col-lg-4 d-flex align-items-center justify-content-center" style="background-color:gray;">
+                        <span>Animated GIF of Lesson Video</span>
+                    </div>
+                </div>
+                HTML;
+            }
+            ?>
+    </section>
+
+    <section class="container-fluid <?= alternatingBgClass() ?>">
         <div class="<?= $pageContainerClasses ?>">
             <div class="accordion-option d-flex justify-content-between align-items-center">
                 <h2 class="mb-3">Course Outline</h2>
