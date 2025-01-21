@@ -405,6 +405,28 @@ HTML;
 
     <section class="container-fluid <?= alternatingBgClass() ?>">
         <div class="<?= $pageContainerClasses ?>">
+            <h2>Limited Time <span class="text-primary">Pre-Launch Bonuses</span></h2>
+            <h5 class="text-secondary mb-4">Amazing Bonuses!</h5>
+            <div class="row mb-4">
+                <div class="col-md-8">
+                    <p><b>Free Community Access</b>: your questions answered daily so you never have to second
+                        guess or waste time!</p>
+                    <p><b>Customized Course</b>: The course will be built around your specific needs as an early
+                        adopter. This is something that late adopters will not get to experience with the finished
+                        course!</p>
+                    <p><b>Early Access to Coaching Program</b>: All of our early adopters will have first
+                        dibs on our limited spaces within our 1:1 coaching programs.</p>
+                </div>
+                <div class="col-lg-4 d-flex align-items-center justify-content-center" style="background-color:gray;">
+                    <span>Animated GIF of Lesson Video</span>
+                </div>
+            </div>
+            <?= $enrollButton ?>
+        </div>
+    </section>
+
+    <section class="container-fluid <?= alternatingBgClass() ?>">
+        <div class="<?= $pageContainerClasses ?>">
             <h3 class="text-center mb-4 pb-2 text-primary fw-bold">Frequently asked questions</h3>
 
             <div class="row">
@@ -442,15 +464,6 @@ HTML;
                 }
                 ?>
             </div>
-        </div>
-    </section>
-
-    <section class="container-fluid <?= alternatingBgClass() ?>">
-        <div class="<?= $pageContainerClasses ?>">
-            <h2>Ready to Get Started?</h2>
-            <p>Click the Enroll button below to navigate to the enrollment page on our elearning platform:
-            </p>
-            <?= $enrollButton ?>
         </div>
     </section>
 
