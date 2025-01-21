@@ -144,74 +144,74 @@ HTML;
                 ], false);
 
                 echo renderAccordionItem("courseOutline", "day2", "Day 2: Transforming Your Home", [
-                    ["Lesson 1 - Introduction", ""],
-                    ["Lesson 2 - Entryway", ""],
-                    ["Lesson 3 - Living Rooms", ""],
-                    ["Lesson 4 - Bedrooms", ""],
-                    ["Lesson 5 - Feeding Station", ""],
-                    ["Lesson 6 - Water Stations", ""],
-                    ["Lesson 7 - Outside Area", ""],
-                    ["Lesson 8 - Flooring", ""],
-                    ["Lesson 9 - Cleaning", ""],
+                    ["Lesson 1 - Introduction", "Discover how to prepare your home to create a safe, functional, and inviting environment for dogs and their owners."],
+                    ["Lesson 2 - Entryway", "Design a secure and welcoming entryway with double layers of separation, organized storage, and safety features like cameras and secure locks."],
+                    ["Lesson 3 - Living Rooms", "Learn how to dog-proof your living spaces while maintaining a clean and beautiful environment. This guide will also provide tips for minimalism, clutter control, and photo-ready spaces."],
+                    ["Lesson 4 - Bedrooms", "Set up cozy and clean sleeping areas for dogs, including protected linens, easy-to-clean surfaces, and plenty of comfortable dog beds."],
+                    ["Lesson 5 - Feeding Station", "Create an organized and hygienic feeding area with secure food storage, durable bowls, and attention to special dietary needs."],
+                    ["Lesson 6 - Water Stations", "Ensure access to clean and fresh water with multiple, easy-to-clean water stations that are safe and accessible."],
+                    ["Lesson 7 - Outside Area", "Transform your backyard into a dog-friendly oasis with secure fencing, shaded areas, cleanup stations, and space for play and exercise."],
+                    ["Lesson 8 - Flooring", "Master cleaning strategies for all surfaces in your home, using eco-friendly methods and tools to maintain a fresh and inviting space."],
+                    ["Lesson 9 - Cleaning", "Understand the impact of dogs on different flooring types and how to maintain, clean, and protect your home’s surfaces."],
                 ], false);
 
                 echo renderAccordionItem("courseOutline", "day3", "Day 3: Business Planning and Launching", [
-                    ["Lesson 1 - Business Plan", ""],
-                    ["Lesson 2 - Understanding Your Local Markets", ""],
-                    ["Lesson 3 - Branding", ""],
-                    ["Lesson 4 - Launching on Different Platforms", ""],
-                    ["Lesson 5 - Announcing on Social Media", ""],
-                    ["Lesson 6 - Emailing Local Friends and Family", ""],
+                    ["Lesson 1 - Creating your Business Plan", "Learn the core elements of a business plan, including budgeting, expenses, marketing strategies, and revenue forecasting."],
+                    ["Lesson 2 - Understanding Your Local Markets", "Gain insights into how to advertise to your immediate community and connect with potential customers effectively."],
+                    ["Lesson 3 - Branding", "Develop a memorable brand for your dog sitting business, including a name, logo, and unique selling points."],
+                    ["Lesson 4 - Launching on Different Platforms", "Get step-by-step guidance on setting up accounts on platforms like Rover and other dog-sitting websites to increase visibility."],
+                    ["Lesson 5 - Announcing on Social Media", "Learn how to create engaging social media content, target your audience, and grow your presence on key platforms."],
+                    ["Lesson 6 - Emailing Local Friends and Family", "Write professional yet friendly emails to your personal network, letting them know about your new business and asking for referrals."],
                 ], false);
 
                 echo renderAccordionItem("courseOutline", "day4", "Day 4: Setting Up Your Business", [
-                    ["Lesson 1 - Introduction", ""],
-                    ["Lesson 2 - Business Structure and Licensing", ""],
-                    ["Lesson 3 - Setting Up Payment Systems", ""],
-                    ["Lesson 4 - Insurance, Liability, Contracts and Policies", ""],
-                    ["Lesson 5 - Building Community Relationships", ""],
-                    ["Lesson 6 - Setting Up an Online Presence", ""],
+                    ["Lesson 1 - Introduction", "Learn the essential legal, financial, and operational steps to establish a successful home-based dog-sitting business, ensuring compliance, proper tax management, and a solid foundation for long-term success."],
+                    ["Lesson 2 - Business Structure and Licensing", "Learn to choose the right business structure, register your business, obtain necessary permits, and comply with local zoning and HOA regulations for a legal home-based dog-sitting business."],
+                    ["Lesson 3 - Setting Up Payment Systems", "Learn how to accept client payments securely and conveniently, whether through cash, checks, mobile payment apps, or dedicated invoicing software."],
+                    ["Lesson 4 - Insurance, Liability, Contracts and Policies", "Protect your business with insurance, clear client contracts, and strategic pricing to manage risks, build trust, and ensure steady income."],
+                    ["Lesson 5 - Building Community Relationships", "Foster positive relationships with neighbors by setting boundaries, managing noise, and addressing concerns to ensure smooth business operations within the community."],
+                    ["Lesson 6 - Setting Up an Online Presence", "Create a professional website and complete your Google Business setup to showcase services, build credibility, and attract local clients."],
                 ], false);
 
                 echo renderAccordionItem("courseOutline", "day5", "Day 5: Client Relations and Communication", [
-                    ["Lesson 1 - Introduction", ""],
-                    ["Lesson 2 - New Client Onboarding", ""],
-                    ["Lesson 3 - Establishing Professional Communication", ""],
-                    ["Lesson 4 - Utilizing Social Media", ""],
-                    ["Lesson 5 - Building and Strengthening Client Relationships", ""],
+                    ["Lesson 1 - Introduction", "Learn how to streamline client onboarding, establish professional communication, leverage social media for engagement, and build strong, loyal client relationships through personalized care and consistent, thoughtful interaction."],
+                    ["Lesson 2 - New Client Onboarding", "Streamline onboarding with clear communication, key detail collection, policy discussions, and automated reminders to build trust and ensure a smooth start."],
+                    ["Lesson 3 - Establishing Professional Communication", "Build trust and credibility with clear, consistent messaging, prompt responses, and a professional yet friendly tone."],
+                    ["Lesson 4 - Utilizing Social Media", "Use platforms like Facebook, Instagram, and TikTok to showcase your services, share engaging content, and connect personally with potential clients."],
+                    ["Lesson 5 - Building and Strengthening Client Relationships", "Foster loyalty and referrals by forming genuine connections, providing personalized care, and maintaining thoughtful communication with clients."],
                 ], false);
 
                 echo renderAccordionItem("courseOutline", "day6", "Day 6: Understanding Dog Behavior", [
-                    ["Lesson 1 - Introduction", ""],
-                    ["Lesson 2 - The Meet and Greet", ""],
-                    ["Lesson 3 - Assessing and Welcoming Dogs", ""],
-                    ["Lesson 4 - Managing Group Dynamics and Socialization", ""],
-                    ["Lesson 5 - Behavioral Guidance and Training", ""],
-                    ["Lesson 6 - Understanding Dog Communication and Stress", ""],
+                    ["Lesson 1 - Introduction", "Learn to assess temperament, manage group dynamics, use positive reinforcement, decode communication, and manage stress to create a supportive and safe environment for dogs."],
+                    ["Lesson 2 - The Meet and Greet", "Learn how to assess a dog’s temperament, energy level, and compatibility with other dogs and your home environment during an initial interaction. Understand the questions to ask and behaviors to observe."],
+                    ["Lesson 3 - Assessing and Welcoming Dogs", "Learn how to evaluate a dog’s temperament and energy during initial interactions, assess compatibility with other dogs, and identify appropriate engagement for varying energy levels."],
+                    ["Lesson 4 - Managing Group Dynamics and Socialization", "Master techniques for safe socialization, managing group play, preventing conflicts, and selecting appropriate toys that promote healthy behaviors and cooperation."],
+                    ["Lesson 5 - Behavioral Guidance and Training", "Focus on using positive reinforcement to correct undesirable behaviors, build trust, and manage separation anxiety, fostering a safe and supportive environment."],
+                    ["Lesson 6 - Understanding Dog Communication and Stress", "Decode dog body language to recognize emotional states, manage stress with calming techniques, control excessive barking, and identify early signs of illness or discomfort for proper care."],
                 ], false);
 
                 echo renderAccordionItem("courseOutline", "day7", "Day 7: Emergency and Special Situations", [
-                    ["Lesson 1 - Introduction", ""],
-                    ["Lesson 2 - Handling Dog Behavior Issues", ""],
-                    ["Lesson 3 - Emergency Situations with Dogs", ""],
-                    ["Lesson 4 - Situational and Environmental Challenges", ""],
-                    ["Lesson 5 - Personal Emergencies and Backup Plans", ""],
+                    ["Lesson 1 - Introduction", "Learn to manage dog behavior issues, handle emergencies like lost pets and medical crises, prepare for environmental challenges, and create backup plans for personal emergencies to ensure safety, communication, and business continuity."],
+                    ["Lesson 2 - Handling Dog Behavior Issues", "Learn safe intervention techniques for challenging behaviors, manage accidents and health issues, and use calming strategies to address separation anxiety while ensuring safety and clear communication with owners."],
+                    ["Lesson 3 - Emergency Situations with Dogs", "Develop strategies for preventing and managing emergencies, including lost pets, medical issues, and illness outbreaks, with first aid, quarantine procedures, and effective owner communication."],
+                    ["Lesson 4 - Situational and Environmental Challenges", "Prepare for emergencies with an evacuation plan, emergency kit, and communication strategies, while ensuring dog safety during crises and severe weather, and establishing protocols for unreachable owners."],
+                    ["Lesson 5 - Personal Emergencies and Backup Plans", "Prepare for personal emergencies by setting up backup caregivers, organizing dog care records, and maintaining a contact list and communication plan to ensure business continuity."],
                 ], false);
 
                 echo renderAccordionItem("courseOutline", "day8", "Day 8: Scaling your Business", [
-                    ["Lesson 1 - Introduction", ""],
-                    ["Lesson 2 - Expanding Service Offerings", ""],
-                    ["Lesson 3 - Creating Value-Added Packages", ""],
-                    ["Lesson 4 - Specialized and Premium Services", ""],
-                    ["Lesson 5 - Supplementary Revenue Streams", ""],
+                    ["Lesson 1 - Introduction", "Learn to expand your business by adding new services, creating value-added packages, offering specialized care, and introducing supplementary revenue streams to enhance client satisfaction, trust, and loyalty while boosting revenue."],
+                    ["Lesson 2 - Expanding Service Offerings", "Grow your business by adding services like dog walking, grooming, training, and enrichment activities to meet diverse client needs, boost satisfaction, and create new revenue streams."],
+                    ["Lesson 3 - Creating Value-Added Packages", "Boost engagement and revenue by offering subscription services, hosting events, and forming partnerships with local businesses to create joint services and referral opportunities."],
+                    ["Lesson 4 - Specialized and Premium Services", "Enhance your business with specialized care for senior or special needs dogs, fitness programs, premium health coaching, and compassionate services like pet loss support to build trust and loyalty."],
+                    ["Lesson 5 - Supplementary Revenue Streams", "Grow your business by offering homemade dog meals, pet products, professional photography, and pet transportation services, providing added convenience and value for clients."],
                 ], false);
 
                 echo renderAccordionItem("courseOutline", "day9", "Day 9: Financial Management", [
-                    ["Lesson 1 - Introduction", ""],
-                    ["Lesson 2 - Organizing Financial Foundations", ""],
-                    ["Lesson 3 - Tax Considerations", ""],
-                    ["Lesson 4 - Budgeting and Planning", ""],
-                    ["Lesson 5 - Financial Operations", ""],
+                    ["Lesson 1 - Introduction", "Learn to streamline finances with effective tools for tracking income, expenses, and client records, manage taxes and budgeting, plan for growth, and simplify operations with invoicing, payroll, and bookkeeping tools."],
+                    ["Lesson 2 - Organizing Financial Foundations", "Streamline finances with a booking tracker, detailed income and expense spreadsheets, and organized client and pet records for efficient operations and emergency preparedness"],
+                    ["Lesson 3 - Tax Considerations", "Learn how to manage taxes for a home-based business, including deductible expenses, quarterly payments, and maintaining accurate financial records to avoid surprises at tax time."],
+                    ["Lesson 4 - Budgeting and Planning", "Effectively manage finances by creating a budget, building an emergency fund, planning for growth, and preparing for the future with an exit strategy and proper recordkeeping."],
+                    ["Lesson 5 - Financial Operations", "Simplify financial management with invoicing, payment processing, bookkeeping tools like QuickBooks, and payroll basics to manage hiring and team expenses efficiently."],
                 ], false);
                 ?>
             </div>
