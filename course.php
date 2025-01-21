@@ -211,7 +211,7 @@ HTML;
 
                 echo renderAccordionItem("courseOutline", "day3", "Day 3: Business Planning and Launching", [
                     ["Lesson 1 - Creating your Business Plan", "Learn the core elements of a business plan, including budgeting, expenses, marketing strategies, and revenue forecasting."],
-                    ["Lesson 2 - Understanding Your Local Markets", "Gain insights into how to advertise to your immediate community and connect with potential customers effectively."],
+                    ["Lesson 2 - Financial plan and outlook", "Learn how to craft a detailed business plan for your home-based dog-care business, covering market analysis, financial planning, and growth strategies to position yourself for success."],
                     ["Lesson 3 - Branding", "Develop a memorable brand for your dog sitting business, including a name, logo, and unique selling points."],
                     ["Lesson 4 - Launching on Different Platforms", "Get step-by-step guidance on setting up accounts on platforms like Rover and other dog-sitting websites to increase visibility."],
                     ["Lesson 5 - Announcing on Social Media", "Learn how to create engaging social media content, target your audience, and grow your presence on key platforms."],
