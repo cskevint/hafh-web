@@ -76,11 +76,28 @@ HTML;
 
     <section class="container-fluid <?= alternatingBgClass() ?>">
         <div class="<?= $pageContainerClasses ?>">
-            <h2 class="mb-3">Course Outline</h2>
-            <!-- <div class="accordion-option d-flex justify-content-between align-items-center">
+            <div class="accordion-option d-flex justify-content-between align-items-center">
                 <h2 class="mb-3">Course Outline</h2>
-                <a href="javascript:void(0)" class="toggle-accordion active" accordion-id="#courseOutline"></a>
-            </div> -->
+                <a href="javascript:void(0)" class="toggle-accordion" accordion-id="#courseOutline"></a>
+            </div>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    document.querySelector(".toggle-accordion").addEventListener("click", function (event) {
+                        var accordionId = event.target.getAttribute("accordion-id");
+                        var accordionElem = document.querySelector(accordionId);
+                        accordionElem.querySelectorAll(".collapse").forEach(function (collapseElem) {
+                            if (event.target.classList.contains("active")) {
+                                collapseElem.classList.remove("show");
+                                collapseElem.parentElement.querySelector(".link-primary").setAttribute("aria-expanded", "false");
+                            } else {
+                                collapseElem.classList.add("show");
+                                collapseElem.parentElement.querySelector(".link-primary").setAttribute("aria-expanded", "true");
+                            }
+                        });
+                        event.target.classList.toggle("active");
+                    });
+                });
+            </script>
             <p>Our comprehensive course covers everything you need to know to start and run a successful
                 at-home dog boarding business. Here's a sneak peek at what you'll learn:</p>
             <div id="courseOutline">

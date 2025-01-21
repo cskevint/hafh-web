@@ -54,7 +54,6 @@
 
 /* course.php */
 
-/*
 .accordion-option .toggle-accordion:before {
     content: "Expand All";
 }
@@ -62,7 +61,6 @@
 .accordion-option .toggle-accordion.active:before {
     content: "Collapse All";
 }
-*/
 
 #courseOutline .card .card-header a {
     display: block;
