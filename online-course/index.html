@@ -568,15 +568,21 @@
             var accordionId = event.target.getAttribute("accordion-id");
             var accordionElem = document.querySelector(accordionId);
             accordionElem.querySelectorAll(".collapse").forEach(function (collapseElem) {
+              var accordionButton = collapseElem.parentElement.querySelector(".accordion-button");
               if (event.target.classList.contains("active")) {
                 collapseElem.classList.remove("show");
-                collapseElem.parentElement.querySelector(".accordion-button").setAttribute("aria-expanded", "false");
+                accordionButton.classList.add("collapsed");
+                accordionButton.setAttribute("aria-expanded", "false");
               } else {
                 collapseElem.classList.add("show");
-                collapseElem.parentElement.querySelector(".accordion-button").setAttribute("aria-expanded", "true");
+                accordionButton.classList.remove("collapsed");
+                accordionButton.setAttribute("aria-expanded", "true");
               }
             });
             event.target.classList.toggle("active");
+            document.getElementById("courseOutline").scrollIntoView({
+              behavior: "smooth"
+            });
           });
         });
       </script>
