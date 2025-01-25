@@ -59,20 +59,10 @@ img {
     height: 100%;
 }
 
-.container {
-    width: 1280px;
-}
-
 .container-fluid.banner-section {
     background: linear-gradient(154.16deg, #FFFBF9 16.31%, #FFE6D2 89.83%);
     padding-top: 30px;
     padding-bottom: 50px;
-}
-
-.header-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .flowerimage img {
@@ -405,11 +395,11 @@ section.learn-course .col-md-7 {
     right: 39px;
     top: 0;
 }*/
-.col-md-7.second {
+.second {
     position: relative;
 }
 
-.col-md-7.second:before {
+.second:before {
     position: absolute;
     content: '';
     width: 50px;
@@ -563,6 +553,34 @@ section.course-outline {
 }
 
 
+#courseOutline .card {
+    border-radius: 0;
+    border-bottom: 0;
+}
+
+#courseOutline .card .card-header {
+    border-bottom-width: 0;
+}
+
+#courseOutline .card .card-header:has(.accordion-button:not(.collapsed)) {
+    background-color: rgba(238, 250, 255, 0.5) !important;
+    border-bottom-width: 1px;
+}
+
+#courseOutline .card:first-child, #courseOutline .card:first-child .card-header {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+#courseOutline .card:last-child, #courseOutline .card:last-child .card-header {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+#courseOutline .card:last-child .card-header {
+    border-bottom-width: 1px;
+}
+
 button.accordion-button {
     font-family: "Lato", serif;
     font-size: 18px;
@@ -572,17 +590,6 @@ button.accordion-button {
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #393332 !important;
-    !i;
-    !;
-    background: #fff !important;
-    !i;
-    !;
-}
-
-div#accordionFlushExample {
-    border: 1px solid #EBE6E6;
-    border-radius: 20px;
-    overflow: hidden;
 }
 
 .accordion-body {
@@ -611,11 +618,6 @@ div#accordionFlushExample {
     color: #6D6463;
     padding-bottom: 15px;
     border-bottom: 1px solid #DFE5E8;
-}
-
-.accordion-button.collapsed {
-    background-color: #f8f9fa;
-    /* Background color when collapsed */
 }
 
 .accordion-button:focus {
@@ -666,6 +668,14 @@ button.accordion-button.collapsed:after {
 ul.list-unstyled.d-flex.justify-content-right.text-warning.mb-0 {
     justify-content: right;
     margin-top: 8px;
+}
+
+.accordion-option .toggle-accordion:before {
+    content: "Expand All";
+}
+
+.accordion-option .toggle-accordion.active:before {
+    content: "Collapse All";
 }
 
 section.testimonial-section {
@@ -1021,18 +1031,6 @@ section.disclaimer p {
     padding: 24px 32px;
     border-radius: 16px;
     margin-bottom: 20px;
-}
-
-.show-all .course-btn.btns {
-    display: none;
-}
-
-.hide-acc {
-    display: none;
-}
-
-.show-all .hide-acc {
-    display: block;
 }
 
 @media (min-width:767px) {

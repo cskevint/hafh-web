@@ -4,20 +4,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- MDB CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/mdb-ui-kit/css/mdb.min.css" rel="stylesheet">
 
-  <!-- Bootstrap CSS (if you're using Bootstrap, make sure it's there as well) -->
-  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"> -->
-
-  <!-- MDB JS -->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mdb-ui-kit/js/mdb.min.js"></script>
-
-  <!-- Bootstrap JS (needed for carousel to function properly) -->
-  <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://www.houndawayfromhome.com/styles/sass/dist/hafh-bootstrap.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
   <script src="js/custom.js"></script>
   <link rel="stylesheet" href="css/style.css">
 
@@ -31,9 +21,65 @@
 
 <body>
 
+  <div class="container my-5">
+    <h2>HAFH Bootstrap Theme Colors</h2>
+    <div class="row">
+      <div class="col">
+        <div class="p-1 bg-primary text-white">.bg-primary</div>
+      </div>
+      <div class="col">
+        <div class="p-1 bg-secondary text-white">.bg-secondary</div>
+      </div>
+      <div class="col">
+        <div class="p-1 bg-success text-white">.bg-success</div>
+      </div>
+      <div class="col">
+        <div class="p-1 bg-danger text-white">.bg-danger</div>
+      </div>
+      <div class="col">
+        <div class="p-1 bg-warning text-dark">.bg-warning</div>
+      </div>
+      <div class="col">
+        <div class="p-1 bg-info text-white">.bg-info</div>
+      </div>
+      <div class="col">
+        <div class="p-1 bg-light text-dark">.bg-light</div>
+      </div>
+      <div class="col">
+        <div class="p-1 bg-dark text-white">.bg-dark</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="p-1 text-primary">.text-primary</div>
+      </div>
+      <div class="col">
+        <div class="p-1 text-secondary">.text-secondary</div>
+      </div>
+      <div class="col">
+        <div class="p-1 text-success">.text-success</div>
+      </div>
+      <div class="col">
+        <div class="p-1 text-danger">.text-danger</div>
+      </div>
+      <div class="col">
+        <div class="p-1 text-warning">.text-warning</div>
+      </div>
+      <div class="col">
+        <div class="p-1 text-info">.text-info</div>
+      </div>
+      <div class="col">
+        <div class="p-1 text-light bg-dark">.text-light</div>
+      </div>
+      <div class="col">
+        <div class="p-1 text-dark">.text-dark</div>
+      </div>
+    </div>
+  </div>
+
   <div class="container-fluid banner-section">
     <div class="container">
-      <div class="header-section">
+      <div class="d-flex justify-content-between align-items-center">
         <div class="logo">
           <img src="images/headerlogo.png">
         </div>
@@ -53,7 +99,7 @@
           <div class="col-md-6">
             <div class="banner-left-section">
 
-              <h5 class="title">Turn your love for dogs into a <span style="color: #D3A572;">profitable</span>, flexible
+              <h5 class="title">Turn your love for dogs into a <span class="text-success">profitable</span>, flexible
                 career!</h5>
               <div class="btn-content-desc">
                 <button type="button" class="btn">Enroll Now</button>
@@ -116,10 +162,10 @@
           <div class="pre-launch-content">
             <h2>Pre-launch Sale!</h2>
             <p>Includes</p>
-            <h3>75% Off<span> Lifetime Access</span>
-              <h3>Early Access<span> to the Course</span>
-                <h3>Free DogBoarders<span> Community Access</span>
-                  <h3>Daily Answers<span> to Your Questions</span>
+            <h3>75% Off<span> Lifetime Access</span></h3>
+            <h3>Early Access<span> to the Course</span></h3>
+            <h3>Free DogBoarders<span> Community Access</span></h3>
+            <h3>Daily Answers<span> to Your Questions</span></h3>
           </div>
         </div>
         <div class="col-md-4">
@@ -222,25 +268,24 @@
         <button type="button" class="btn">Enroll & Learn Today</button><img class="arrow-vector course"
           src="images/vectorleft.png">
       </div>
-
+    </div>
   </section>
 
-
-  <section class="course-outline">
+  <section  class="course-outline container-fluid">
     <div class="container">
       <h2 class="-outline-course-heading">Course Outline</h2>
       <p class="outline-course-desc">Our comprehensive course covers everything you need to know to start
         and run a successful at-<br>home dog boarding business. Here's a sneak peek at what you'll learn:</p>
-      <div class="accordion accordion-flush" id="accordionFlushExample">
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+      <div id="courseOutline">
+        <div class="card">
+          <div class="card-header p-3 bg-white" role="tab" id="day1">
+            <button class="accordion-button collapsed" role="button" data-bs-toggle="collapse"
+              data-parent="#courseOutline" href="#day1-button" aria-expanded="false" aria-controls="day1-button">
               Day 1: Assessing Your Situation
             </button>
-          </h2>
-          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">
+          </div>
+          <div class="card-body collapse p-0" id="day1-button" role="tabpanel" aria-labelledby="day1">
+            <div class="accordion-body p-3">
               <h4>Lesson 1 - Introduction</h4>
               <p>Welcome to the course! This session will set the foundation for starting your dog-sitting business.
                 Learn what to expect and how to build confidence in your ability to succeed.</p>
@@ -259,15 +304,15 @@
             </div>
           </div>
         </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+        <div class="card">
+          <div class="card-header p-3 bg-white" role="tab" id="day2">
+            <button class="accordion-button collapsed" role="button" data-bs-toggle="collapse"
+              data-parent="#courseOutline" href="#day2-button" aria-expanded="false" aria-controls="day2-button">
               Day 2: Transforming Your Home
             </button>
-          </h2>
-          <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">
+          </div>
+          <div class="card-body collapse p-0" id="day2-button" role="tabpanel" aria-labelledby="day2">
+            <div class="accordion-body p-3">
               <h4>Lesson 1 - Introduction</h4>
               <p>Discover how to prepare your home to create a safe, functional, and inviting environment for dogs and
                 their owners.</p>
@@ -298,15 +343,15 @@
             </div>
           </div>
         </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+        <div class="card">
+          <div class="card-header p-3 bg-white" role="tab" id="day3">
+            <button class="accordion-button collapsed" role="button" data-bs-toggle="collapse"
+              data-parent="#courseOutline" href="#day3-button" aria-expanded="false" aria-controls="day3-button">
               Day 3: Business Planning and Launching
             </button>
-          </h2>
-          <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">
+          </div>
+          <div class="card-body collapse p-0" id="day3-button" role="tabpanel" aria-labelledby="day3">
+            <div class="accordion-body p-3">
               <h4>Lesson 1 - Creating your Business Plan</h4>
               <p>Discover how to prepare your home to create a safe, functional, and inviting environment for dogs and
                 their owners.</p>
@@ -328,16 +373,15 @@
             </div>
           </div>
         </div>
-
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#flush-collapseFourth" aria-expanded="false" aria-controls="flush-collapseThree">
+        <div class="card">
+          <div class="card-header p-3 bg-white" role="tab" id="day4">
+            <button class="accordion-button collapsed" role="button" data-bs-toggle="collapse"
+              data-parent="#courseOutline" href="#day4-button" aria-expanded="false" aria-controls="day4-button">
               Day 4: Setting Up Your Business
             </button>
-          </h2>
-          <div id="flush-collapseFourth" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">
+          </div>
+          <div class="card-body collapse p-0" id="day4-button" role="tabpanel" aria-labelledby="day4">
+            <div class="accordion-body p-3">
               <h4>Lesson 1 - Introduction</h4>
               <p>Learn the essential legal, financial, and operational steps to establish a successful home-based
                 dog-sitting business, ensuring compliance, proper tax management, and a solid foundation for long-term
@@ -360,16 +404,15 @@
             </div>
           </div>
         </div>
-
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseThree">
+        <div class="card">
+          <div class="card-header p-3 bg-white" role="tab" id="day5">
+            <button class="accordion-button collapsed" role="button" data-bs-toggle="collapse"
+              data-parent="#courseOutline" href="#day5-button" aria-expanded="false" aria-controls="day5-button">
               Day 5: Client Relations and Communication
             </button>
-          </h2>
-          <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">
+          </div>
+          <div class="card-body collapse p-0" id="day5-button" role="tabpanel" aria-labelledby="day5">
+            <div class="accordion-body p-3">
               <h4>Lesson 1 - Introduction</h4>
               <p>Learn how to streamline client onboarding, establish professional communication, leverage social media
                 for engagement, and build strong, loyal client relationships through personalized care and consistent,
@@ -389,16 +432,15 @@
             </div>
           </div>
         </div>
-
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseThree">
+        <div class="card">
+          <div class="card-header p-3 bg-white" role="tab" id="day6">
+            <button class="accordion-button collapsed" role="button" data-bs-toggle="collapse"
+              data-parent="#courseOutline" href="#day6-button" aria-expanded="false" aria-controls="day6-button">
               Day 6: Understanding Dog Behavior
             </button>
-          </h2>
-          <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">
+          </div>
+          <div class="card-body collapse p-0" id="day6-button" role="tabpanel" aria-labelledby="day6">
+            <div class="accordion-body p-3">
 
               <h4>Lesson 1 - Introduction</h4>
               <p>Learn to assess temperament, manage group dynamics, use positive reinforcement, decode communication,
@@ -422,16 +464,15 @@
             </div>
           </div>
         </div>
-
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseThree">
+        <div class="card">
+          <div class="card-header p-3 bg-white" role="tab" id="day7">
+            <button class="accordion-button collapsed" role="button" data-bs-toggle="collapse"
+              data-parent="#courseOutline" href="#day7-button" aria-expanded="false" aria-controls="day7-button">
               Day 7: Emergency and Special Situations
             </button>
-          </h2>
-          <div id="flush-collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">
+          </div>
+          <div class="card-body collapse p-0" id="day7-button" role="tabpanel" aria-labelledby="day7">
+            <div class="accordion-body p-3">
 
               <h4>Lesson 1 - Introduction</h4>
               <p>Learn to manage dog behavior issues, handle emergencies like lost pets and medical crises, prepare for
@@ -455,16 +496,15 @@
             </div>
           </div>
         </div>
-
-        <div class="accordion-item hide-acc">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseThree">
+        <div class="card">
+          <div class="card-header p-3 bg-white" role="tab" id="day8">
+            <button class="accordion-button collapsed" role="button" data-bs-toggle="collapse"
+              data-parent="#courseOutline" href="#day8-button" aria-expanded="false" aria-controls="day8-button">
               Day 8: Scaling your Business
             </button>
-          </h2>
-          <div id="flush-collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">
+          </div>
+          <div class="card-body collapse p-0" id="day8-button" role="tabpanel" aria-labelledby="day8">
+            <div class="accordion-body p-3">
 
               <h4>Lesson 1 - Introduction</h4>
               <p>Learn to expand your business by adding new services, creating value-added packages, offering
@@ -486,16 +526,15 @@
             </div>
           </div>
         </div>
-
-        <div class="accordion-item hide-acc">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseThree">
+        <div class="card">
+          <div class="card-header p-3 bg-white" role="tab" id="day9">
+            <button class="accordion-button collapsed" role="button" data-bs-toggle="collapse"
+              data-parent="#courseOutline" href="#day9-button" aria-expanded="false" aria-controls="day9-button">
               Day 9: Financial Management
             </button>
-          </h2>
-          <div id="flush-collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">
+          </div>
+          <div class="card-body collapse p-0" id="day9-button" role="tabpanel" aria-labelledby="day9">
+            <div class="accordion-body p-3">
 
               <h4>Lesson 1 - Introduction</h4>
               <p>Learn to streamline finances with effective tools for tracking income, expenses, and client records,
@@ -517,12 +556,30 @@
             </div>
           </div>
         </div>
-
       </div>
-
-      <div class="course-btn btns "> 
-        <button type="button" class="btn expand">Expand All</button>
+      <div class="accordion-option p-3 text-center">
+        <div class="course-btn btns ">
+          <button type="button" class="btn expand toggle-accordion" accordion-id="#courseOutline"></button>
+        </div>
       </div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          document.querySelector(".toggle-accordion").addEventListener("click", function (event) {
+            var accordionId = event.target.getAttribute("accordion-id");
+            var accordionElem = document.querySelector(accordionId);
+            accordionElem.querySelectorAll(".collapse").forEach(function (collapseElem) {
+              if (event.target.classList.contains("active")) {
+                collapseElem.classList.remove("show");
+                collapseElem.parentElement.querySelector(".link-primary").setAttribute("aria-expanded", "false");
+              } else {
+                collapseElem.classList.add("show");
+                collapseElem.parentElement.querySelector(".link-primary").setAttribute("aria-expanded", "true");
+              }
+            });
+            event.target.classList.toggle("active");
+          });
+        });
+      </script>
     </div>
   </section>
 
@@ -900,15 +957,6 @@
     </div>
   </section>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
-  <script>
-    $(document).ready(function () {
-      $(".expand").click(function () {
-        $(".course-outline").addClass("show-all");
-      });
-    });
-  </script>
 </body>
 
 </html>
