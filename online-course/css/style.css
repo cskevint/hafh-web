@@ -555,7 +555,7 @@ section.course-outline {
 
 #courseOutline .card {
     border-radius: 0;
-    border-bottom: 0;
+    border-bottom-width: 0;
 }
 
 #courseOutline .card .card-header {
@@ -572,12 +572,21 @@ section.course-outline {
     border-top-right-radius: 20px;
 }
 
-#courseOutline .card:last-child, #courseOutline .card:last-child .card-header {
+#courseOutline .card:last-child, 
+#courseOutline .card:last-child .card-header,
+#courseOutline .card:last-child .card-body,
+#courseOutline .card:last-child .card-body .accordion-body  {
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }
 
-#courseOutline .card:last-child .card-header {
+#courseOutline .card:last-child .card-header:has(.accordion-button:not(.collapsed)) {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+#courseOutline .card:last-child,
+#courseOutline .card:last-child .card-body {
     border-bottom-width: 1px;
 }
 

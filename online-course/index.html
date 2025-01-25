@@ -570,10 +570,10 @@
             accordionElem.querySelectorAll(".collapse").forEach(function (collapseElem) {
               if (event.target.classList.contains("active")) {
                 collapseElem.classList.remove("show");
-                collapseElem.parentElement.querySelector(".link-primary").setAttribute("aria-expanded", "false");
+                collapseElem.parentElement.querySelector(".accordion-button").setAttribute("aria-expanded", "false");
               } else {
                 collapseElem.classList.add("show");
-                collapseElem.parentElement.querySelector(".link-primary").setAttribute("aria-expanded", "true");
+                collapseElem.parentElement.querySelector(".accordion-button").setAttribute("aria-expanded", "true");
               }
             });
             event.target.classList.toggle("active");
