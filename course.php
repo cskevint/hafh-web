@@ -229,7 +229,7 @@ HTML;
 
                 echo renderAccordionItem("courseOutline", "day5", "Day 5: Client Relations and Communication", [
                     ["Lesson 1 - Introduction", "Learn how to streamline client onboarding, establish professional communication, leverage social media for engagement, and build strong, loyal client relationships through personalized care and consistent, thoughtful interaction."],
-                    ["Lesson 2 - New Client Onboarding", "Streamline onboarding with clear communication, key detail collection, policy discussions, and automated reminders to build trust and ensure a smooth start."],
+                    ["Lesson 2 - New Client Interest", "Streamline new client interest with clear communication, policy discussions, and automated reminders to build trust and ensure a smooth start."],
                     ["Lesson 3 - Establishing Professional Communication", "Build trust and credibility with clear, consistent messaging, prompt responses, and a professional yet friendly tone."],
                     ["Lesson 4 - Utilizing Social Media", "Use platforms like Facebook, Instagram, and TikTok to showcase your services, share engaging content, and connect personally with potential clients."],
                     ["Lesson 5 - Building and Strengthening Client Relationships", "Foster loyalty and referrals by forming genuine connections, providing personalized care, and maintaining thoughtful communication with clients."],
