@@ -212,7 +212,7 @@ HTML;
                 echo renderAccordionItem("courseOutline", "day3", "Day 3: Business Planning and Launching", [
                     ["Lesson 1 - Creating your Business Plan", "Learn the core elements of a business plan, including budgeting, expenses, marketing strategies, and revenue forecasting."],
                     ["Lesson 2 - Financial plan and outlook", "Learn how to craft a detailed business plan for your home-based dog-care business, covering market analysis, financial planning, and growth strategies to position yourself for success."],
-                    ["Lesson 3 - Branding", "Develop a memorable brand for your dog sitting business, including a name, logo, and unique selling points."],
+                    ["Lesson 3 - Branding", "Learn how to create a compelling brand for your dog boarding business that reflects your core values, attracts ideal clients, and sets the tone for an unforgettable experience for dogs and their owners."],
                     ["Lesson 4 - Launching on Different Platforms", "Get step-by-step guidance on setting up accounts on platforms like Rover and other dog-sitting websites to increase visibility."],
                     ["Lesson 5 - Announcing on Social Media", "Learn how to create engaging social media content, target your audience, and grow your presence on key platforms."],
                     ["Lesson 6 - Emailing Local Friends and Family", "Write professional yet friendly emails to your personal network, letting them know about your new business and asking for referrals."],
@@ -229,7 +229,7 @@ HTML;
 
                 echo renderAccordionItem("courseOutline", "day5", "Day 5: Client Relations and Communication", [
                     ["Lesson 1 - Introduction", "Learn how to streamline client onboarding, establish professional communication, leverage social media for engagement, and build strong, loyal client relationships through personalized care and consistent, thoughtful interaction."],
-                    ["Lesson 2 - New Client Onboarding", "Streamline onboarding with clear communication, key detail collection, policy discussions, and automated reminders to build trust and ensure a smooth start."],
+                    ["Lesson 2 - New Client Interest", "Streamline new client interest with clear communication, policy discussions, and automated reminders to build trust and ensure a smooth start."],
                     ["Lesson 3 - Establishing Professional Communication", "Build trust and credibility with clear, consistent messaging, prompt responses, and a professional yet friendly tone."],
                     ["Lesson 4 - Utilizing Social Media", "Use platforms like Facebook, Instagram, and TikTok to showcase your services, share engaging content, and connect personally with potential clients."],
                     ["Lesson 5 - Building and Strengthening Client Relationships", "Foster loyalty and referrals by forming genuine connections, providing personalized care, and maintaining thoughtful communication with clients."],
