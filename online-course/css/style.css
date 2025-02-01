@@ -82,7 +82,6 @@ button.btn {
     font-size: 18px;
     font-weight: 500;
     line-height: 21.19px;
-    text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     border: 1px solid #350D09;
@@ -111,7 +110,6 @@ h5.title {
     font-weight: 500;
     font-size: 56px;
     line-height: 65.91px;
-    text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #350D09;
@@ -127,7 +125,6 @@ h5.title {
     width: 160px;
     line-height: 10px;
     height: 53px;
-    text-align: center;
     background: #AD733A;
     color: #fff;
     border: 1px solid #AD733A;
@@ -174,7 +171,6 @@ img.banervideoimg {
     font-weight: 500;
     font-size: 32px;
     line-height: 37.66px;
-    text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #350D09;
@@ -185,7 +181,6 @@ img.banervideoimg {
     font-weight: 400;
     font-size: 18px;
     line-height: 28px;
-    text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #564E4D;
@@ -227,7 +222,6 @@ section.pre-launch-sale:before {
     font-size: 40px;
     font-weight: 600;
     line-height: 49.52px;
-    text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #fff;
@@ -310,7 +304,6 @@ h2.why-choose-heaading {
     font-weight: 500;
     font-size: 40px;
     line-height: 47.08px;
-    text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #350D09;
@@ -322,7 +315,6 @@ p.why-choose-desc {
     font-weight: 400;
     font-size: 18px;
     line-height: 28px;
-    text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #6D6463;
@@ -331,7 +323,6 @@ p.why-choose-desc {
 
 .box-section img {
     width: 100px;
-    text-align: center;
 }
 
 .box-section:hover {
@@ -340,7 +331,6 @@ p.why-choose-desc {
 }
 
 .box-section {
-    text-align: center;
     border: 1px solid #F5EBEA;
     border-radius: 20px;
     padding: 40px;
@@ -353,15 +343,10 @@ p.why-choose-desc {
     font-weight: 500;
     font-size: 22px;
     line-height: 28px;
-    text-align: center;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #350D09;
     padding-top: 26px;
-}
-
-.course-btn {
-    text-align: center;
 }
 
 /*3rd why choose section*/
@@ -423,7 +408,6 @@ h2.learn-course-heading {
     font-weight: 500;
     font-size: 40px;
     line-height: 47.08px;
-    text-align: center;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #350D09;
@@ -435,7 +419,6 @@ h3.learn-course-title {
     font-size: 28px;
     font-weight: bold;
     line-height: 32px;
-    text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #350D09;
@@ -447,7 +430,6 @@ ul.learn-course-description li {
     font-weight: 400;
     font-size: 18px;
     line-height: 28px;
-    text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #6D6463;
@@ -513,7 +495,6 @@ h2.-outline-course-heading {
     font-size: 40px;
     font-weight: 500;
     line-height: 47.08px;
-    text-align: center;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #350D09;
@@ -525,12 +506,10 @@ p.outline-course-desc {
     font-size: 18px;
     font-weight: 400;
     line-height: 28px;
-    text-align: center;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #6D6463;
     padding-bottom: 50px;
-    text-align: center;
     width: 60%;
     margin: 0 auto;
 }
@@ -583,7 +562,6 @@ button.accordion-button {
     font-size: 18px;
     font-weight: 400;
     line-height: 28px;
-    text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #393332 !important;
@@ -598,7 +576,6 @@ button.accordion-button {
     font-size: 16px;
     font-weight: 600;
     line-height: 28px;
-    text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #393332;
@@ -609,7 +586,6 @@ button.accordion-button {
     font-size: 16px;
     font-weight: 400;
     line-height: 26px;
-    text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #6D6463;
@@ -693,7 +669,6 @@ h2.testimonial-heading {
     font-size: 40px;
     font-weight: 500;
     line-height: 47.08px;
-    text-align: center;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #fff;
@@ -758,7 +733,6 @@ p.testimonial-desc {
     font-size: 18px;
     font-weight: 400;
     line-height: 28px;
-    text-align: center;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #fff;
@@ -796,7 +770,6 @@ h2.meet-coach-heading {
     font-size: 40px;
     font-weight: 500;
     line-height: 47.08px;
-    text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #350D09;
@@ -808,7 +781,6 @@ p.meet-coach-desc {
     font-size: 18px;
     font-weight: 400;
     line-height: 28px;
-    text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #6D6463;
@@ -820,7 +792,6 @@ p.meet-coach-desc {
     font-size: 18px;
     font-weight: 400;
     line-height: 28px;
-    text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #6D6463;
@@ -859,7 +830,6 @@ h2.who-course-heading {
     font-size: 28px;
     font-weight: 600;
     line-height: 32px;
-    text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #350D09;
@@ -871,7 +841,6 @@ section.who-course-section ul li {
     font-size: 18px;
     font-weight: 400;
     line-height: 28px;
-    text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #6D6463;
@@ -908,7 +877,6 @@ section.limited-time-section h3 {
     font-size: 48px;
     font-weight: 500;
     line-height: 56.5px;
-    text-align: center;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #350D09;
@@ -919,7 +887,6 @@ section.limited-time-section p {
     font-size: 18px;
     font-weight: 400;
     line-height: 28px;
-    text-align: center;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #564E4D;
@@ -948,7 +915,6 @@ h2.frequently-asked-heading {
     font-size: 40px;
     font-weight: 500;
     line-height: 47.08px;
-    text-align: center;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #350D09;
@@ -960,7 +926,6 @@ section.frequently-asked-section h3 {
     font-size: 18px;
     font-weight: 400;
     line-height: 28px;
-    text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #350D09;
@@ -971,7 +936,6 @@ section.frequently-asked-section p {
     font-size: 18px;
     font-weight: 400;
     line-height: 28px;
-    text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #564E4D;
@@ -994,7 +958,6 @@ section.disclaimer h2 {
     font-size: 40px;
     font-weight: 500;
     line-height: 47.08px;
-    text-align: center;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #fff;
@@ -1008,7 +971,6 @@ section.disclaimer h4 {
     font-style: italic;
     font-weight: 500;
     line-height: 28px;
-    text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #fff;
@@ -1020,7 +982,6 @@ section.disclaimer p {
     font-style: italic;
     font-weight: 400;
     line-height: 28px;
-    text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #fff;
@@ -1046,7 +1007,7 @@ section.disclaimer p {
 
     .pre-launch-content h2 {
         font-size: 30px;
-        line-height: 40x;
+        line-height: 40px;
         padding-bottom: 0px;
     }
 
@@ -1191,7 +1152,6 @@ section.disclaimer p {
 
     .box-section img {
         width: 70px;
-        text-align: center;
     }
 
     .box-section {
