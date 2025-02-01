@@ -8,7 +8,6 @@
   <link href="https://www.houndawayfromhome.com/styles/sass/dist/hafh-bootstrap.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <script src="js/custom.js"></script>
   <link rel="stylesheet" href="css/style.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,6 +19,69 @@
 </head>
 
 <body>
+  <div class="container-fluid bg-dark sticky-top redbox">
+    <div class="text-light text-center d-block d-sm-none">xs</div>
+    <div class="text-light text-center d-none d-sm-block d-md-none">sm</div>
+    <div class="text-light text-center d-none d-md-block d-lg-none">md</div>
+    <div class="text-light text-center d-none d-lg-block d-xl-none">lg</div>
+    <div class="text-light text-center d-none d-xl-block">xl</div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="bg-primary text-white">.bg-primary</div>
+      </div>
+      <div class="col">
+        <div class="bg-secondary text-white">.bg-secondary</div>
+      </div>
+      <div class="col">
+        <div class="bg-success text-white">.bg-success</div>
+      </div>
+      <div class="col">
+        <div class="bg-danger text-white">.bg-danger</div>
+      </div>
+      <div class="col">
+        <div class="bg-warning text-dark">.bg-warning</div>
+      </div>
+      <div class="col">
+        <div class="bg-info text-white">.bg-info</div>
+      </div>
+      <div class="col">
+        <div class="bg-light text-dark">.bg-light</div>
+      </div>
+      <div class="col">
+        <div class="bg-dark text-white">.bg-dark</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="text-primary">.text-primary</div>
+      </div>
+      <div class="col">
+        <div class="text-secondary">.text-secondary</div>
+      </div>
+      <div class="col">
+        <div class="text-success">.text-success</div>
+      </div>
+      <div class="col">
+        <div class="text-danger">.text-danger</div>
+      </div>
+      <div class="col">
+        <div class="text-warning">.text-warning</div>
+      </div>
+      <div class="col">
+        <div class="text-info">.text-info</div>
+      </div>
+      <div class="col">
+        <div class="text-light bg-dark">.text-light</div>
+      </div>
+      <div class="col">
+        <div class="text-dark">.text-dark</div>
+      </div>
+    </div>
+  </div>
+
   <div class="container-fluid banner-section">
     <div class="container">
       <div class="d-flex justify-content-between align-items-center">
@@ -30,7 +92,9 @@
           <img src="images/flower.png">
         </div>
         <div class="login-btn">
-          <button type="button" class="btn">Sign Up</button>
+          <button type="button" class="btn text-nowrap btn-outline-dark rounded-5 p-3">
+            Sign Up
+          </button>
         </div>
       </div>
     </div>
@@ -39,85 +103,92 @@
     <section class="banner">
       <div class="container">
         <div class="row">
-          <div class="col-md-6">
-            <div class="banner-left-section">
-
-              <h5 class="title">Turn your love for dogs into a <span class="text-success">profitable</span>, flexible
-                career!</h5>
-              <div class="btn-content-desc">
-                <button type="button" class="btn">Enroll Now</button>
-                <p class="desc">Ready to turn your love for dogs into a thriving business? Our online course
+          <div class="col-md-6 col-xl-8">
+            <h1 class="text-center text-md-start">Turn your love for dogs into a <span
+                class="text-success">profitable</span>, flexible
+              career!</h1>
+            <div class="row">
+              <div class="col-xs-12 col-md-3 text-center d-flex align-items-center justify-content-center">
+                <button type="button" class="btn btn-secondary text-nowrap rounded-5 p-3">Enroll Now</button>
+              </div>
+              <div class="col-xs-12 col-md-9">
+                <p class="p-3">Ready to turn your love for dogs into a thriving business? Our online course
                   will tell you everything you need to know to run your own at-home dog boarding business!</p>
               </div>
-              <img class="arrow-vector" src="images/arrowvector.png">
-
             </div>
+            <img class="arrow-vector d-none d-md-block" style="width: 140px;" src="images/arrowvector.png">
           </div>
-          <div class="col-md-6">
-            <!-- <div class="banner-right-section">
-                                          <img class="banervideoimg" src="images/bannervideoimg.png">
-                                          <div class="play-icon">
-                                            <img src="images/playicon.png">
-                                          </div>
-                                      </div> -->
-            <div class="banner-right-section">
-              <!-- The image that is displayed initially -->
-              <img class="banervideoimg" src="images/bannervideoimg.png" id="banner-image">
+          <script>
+            function playVideo() {
+              var video = document.getElementById("banner-video");
+              var image = document.getElementById("banner-image");
+              var playIcon = document.querySelector(".play-icon");
 
-              <!-- Play icon -->
-              <div class="play-icon" onclick="playVideo()">
-                <img src="images/playicon.png">
-              </div>
+              // Hide the image and play icon
+              image.style.display = "none";
+              playIcon.style.display = "none";
 
-              <!-- Hidden iframe that will replace the image -->
-              <iframe id="banner-video" class="banner-video"
-                src="https://www.youtube.com/embed/D0UnqGm_miA?enablejsapi=1" frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
-                style="display:none; width:100%; height:100%;"></iframe>
+              // Show the video and start playing it
+              video.style.display = "block";
+              video.play();
+            }
+          </script>
+          <div style="position:relative;" class="col-md-6 col-xl-4 d-flex align-items-center justify-content-center">
+            <!-- The image that is displayed initially -->
+            <img id="banner-image" style="width: 550px;height: auto;" src="images/bannervideoimg.png" />
+
+            <!-- Play icon -->
+            <div class="play-icon" onclick="playVideo()">
+              <img src="images/playicon.png" />
             </div>
 
-            <div class="customer-section">
-              <div class="enrolled">
-                <h4>200+</h4>
-                <p>Already Enrolled</p>
-              </div>
-              <div class="enrolled two">
-                <h4>100+</h4>
-                <p>Happy Customs</p>
-              </div>
-              <div class="enrolled">
-                <h4>4.7</h4>
-                <p>Based on 150 Reviews</p>
-              </div>
-            </div>
+            <!-- Hidden iframe that will replace the image -->
+            <iframe id="banner-video" class="banner-video" src="https://www.youtube.com/embed/D0UnqGm_miA?enablejsapi=1"
+              frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen style="display:none; width:100%; height:100%;"></iframe>
           </div>
+
+          <!-- <div class="customer-section">
+            <div class="enrolled">
+              <h4>200+</h4>
+              <p>Already Enrolled</p>
+            </div>
+            <div class="enrolled two">
+              <h4>100+</h4>
+              <p>Happy Customers</p>
+            </div>
+            <div class="enrolled">
+              <h4>4.7</h4>
+              <p>Based on 150 Reviews</p>
+            </div>
+          </div> -->
         </div>
       </div>
     </section>
-  </div>
+  </div> <!-- End of Banner Section -->
 
-  <section class="pre-launch-sale">
+  <div class="pre-launch-sale">
     <div class="container">
       <div class="row">
-        <div class="col-md-4">
-          <div class="pre-launch-image"><img src="images/prelaunch.png"></div>
+        <div class="col-lg-3 d-flex align-items-center justify-content-center">
+            <img style="width: 259px; height: 201px;" class="" src="images/prelaunch.png">
         </div>
-        <div class="col-md-4">
-          <div class="pre-launch-content">
+        <div class="col-lg-5">
+          <div class="bg-secondary shadow rounded-5 text-light p-5">
             <h2>Pre-launch Sale!</h2>
-            <p>Includes</p>
-            <h3>75% Off<span> Lifetime Access</span></h3>
-            <h3>Early Access<span> to the Course</span></h3>
-            <h3>Free DogBoarders<span> Community Access</span></h3>
-            <h3>Daily Answers<span> to Your Questions</span></h3>
+            <p class="fs-4">Includes:</p>
+            <p class="fs-4"><strong>75% Off </strong>Lifetime Access</p>
+            <p class="fs-4"><strong>Early Access </strong>to the Course</p>
+            <p class="fs-4"><strong>Free DogBoarders </strong>Community Access</p>
+            <p class="fs-4"><strong>Daily Answers </strong>to Your Questions</p>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="prelaunch-btn"> <button type="button" class="btn">Grab Your Discount</button></div>
+        <div class="col-lg-4 d-flex align-items-center justify-content-end">
+          <img style="width:118px;height:108px" src="images/flower.png">
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
   <section class="why-choose">
     <div class="container">
@@ -209,8 +280,8 @@
         </div>
       </div>
       <div class="course-btn btns btn-hightlight text-center">
-        <button type="button" class="btn">Enroll & Learn Today</button><img class="arrow-vector course"
-          src="images/vectorleft.png">
+        <button type="button" class="btn">Enroll & Learn Today</button>
+        <img class="arrow-vector course" src="images/vectorleft.png">
       </div>
     </div>
   </section>
