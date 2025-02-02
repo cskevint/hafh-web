@@ -58,7 +58,7 @@ $score = scoreQuizAnswers();
 
 ?>
 <!doctype html>
-<html lang="en" class="bg-light">
+<html lang="en" class="bg-secondary">
 
 <head>
     <?php include("includes/head-tag-contents.php"); ?>
