@@ -1,12 +1,11 @@
 <?php
-
 session_start();
 
 require_once "redirect.php";
 require_once "includes/utility.php";
 require_once "includes/quiz-data.php";
 
-$_GLOBALS["pageTitle"] = "Take a quiz";
+$_GLOBALS["pageTitle"] = "Take a quiz!";
 
 $quiz = $DOG_BOARDING_QUIZ;
 $currentQuestionId = $_REQUEST["question"] ?? 0;
@@ -15,11 +14,6 @@ $currentQuestion = $quiz["questions"][$currentQuestionId] ?? null;
 if ($currentQuestionId == 0) {
     unset($_SESSION["quiz"]);
 }
-if (!in_array($currentQuestionId, ["EMAIL", "DONE"]) && $currentQuestionId >= count($quiz["questions"])) {
-    header("Location: 404.php");
-    exit();
-}
-
 if (isset($_REQUEST["previousQuestion"]) && isset($_REQUEST["previousAnswer"])) {
     $_SESSION["quiz"][$_REQUEST["previousQuestion"]] = $_REQUEST["previousAnswer"];
 }
@@ -37,10 +31,22 @@ function getNextQuestionId()
 function getRenderState(): string
 {
     global $currentQuestionId, $quiz;
+    $totalQuestions = count($quiz["questions"]);
+    if (
+        !in_array($currentQuestionId, ["EMAIL", "DONE"]) &&
+        ($currentQuestionId < 0 || $currentQuestionId >= $totalQuestions)
+    ) {
+        header("Location: 404.php");
+        exit();
+    }
+    if ($currentQuestionId == "DONE" && count($_SESSION['quiz']) < $totalQuestions) {
+        header("Location: " . setUrlParam(getCurrentUrl(), [], true));
+        exit();
+    }
     if ($currentQuestionId == "EMAIL") {
         return "email";
     }
-    if (!isset($_SESSION['quiz']) || count($_SESSION['quiz']) != count($quiz['questions'])) {
+    if (!isset($_SESSION['quiz']) || count($_SESSION['quiz']) != $totalQuestions) {
         return "unfinished";
     }
     if (
@@ -116,7 +122,7 @@ $renderState = getRenderState();
 
                         <?php } ?>
 
-                        <di class="<?= $renderState == "email" ? "" : "d-none" ?> text-center">
+                        <div class="<?= $renderState == "email" ? "" : "d-none" ?> text-center">
 
                             <h3 class="py-2 text-muted">To get your results, provide your name and email:</h3>
                             <div class="row mb-5">
@@ -142,7 +148,6 @@ $renderState = getRenderState();
                             </div>
 
                         </div>
-
 
                         <div class="<?= $renderState == "success" ? "" : "d-none" ?>">
 
@@ -173,6 +178,7 @@ $renderState = getRenderState();
                                     course now and get an exclusive discount for a limited time! </a> </p>
                             <p>The time to build a business you love and control your income is <b> right now</b>.
                                 You’ve got this! &#128588; &#128062; </p>
+
                         </div>
 
                         <div class="<?= $renderState == "consider" ? "" : "d-none" ?>">
@@ -199,6 +205,7 @@ $renderState = getRenderState();
                             <p><a href="/course" class="link-primary text-decoration-none"> &#128073; Join now and
                                     transform your passion into a business in just 9 days! </a> </p>
                             <p>You’re closer than ever—let’s make it happen together! &#128054; &#128188; </p>
+
                         </div>
 
                         <div class="<?= $renderState == "learn-more" ? "" : "d-none" ?>">
