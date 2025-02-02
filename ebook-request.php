@@ -12,6 +12,10 @@ $hubspot = \HubSpot\Factory::createWithAccessToken($HUBSPOT_API_TOKEN);
 
 function contactExists($hubspot, $subscriberEmail)
 {
+    global $HUBSPOT_API_TOKEN;
+    if ($HUBSPOT_API_TOKEN == "") {
+        return true;
+    }
     $filter = new \HubSpot\Client\Crm\Contacts\Model\Filter();
     $filter
         ->setOperator('EQ')
@@ -31,6 +35,10 @@ function contactExists($hubspot, $subscriberEmail)
 
 function addContact($hubspot, $subscriberName, $subscriberEmail)
 {
+    global $HUBSPOT_API_TOKEN;
+    if ($HUBSPOT_API_TOKEN == "") {
+        return "";
+    }
     $contactInput = new \HubSpot\Client\Crm\Contacts\Model\SimplePublicObjectInput();
     $contactInput->setProperties([
         'email' => $subscriberEmail,
@@ -43,20 +51,27 @@ if (strlen(trim($subscriberEmail)) > 0) {
     $fromEmail = "k@doopr.com";
     $fromName = "E-book Request";
     $subject = "[HAFH] E-book Request";
-    $messageBody = "<p>" . $subscriberEmail . "</p>";
+    $messageBody = "<p>{$subscriberEmail}</p>";
 
-    if (sendMail($fromEmail, $fromName, $subject, $messageBody)) {
-        $_SESSION['notice'] = "Your e-book download link is on its way.";
-    } else {
-        $_SESSION['notice'] = 'There was an error. Please email us: <a href="mailto:selena@houndawayfromhome.com">selena@houndawayfromhome.com</a>';
+    if ($_REQUEST['redirect'] != "quiz") {
+        if (sendMail($fromEmail, $fromName, $subject, $messageBody)) {
+            $_SESSION['notice'] = "Your e-book download link is on its way.";
+        } else {
+            $_SESSION['notice'] = 'There was an error. Please email us: <a href="mailto:selena@houndawayfromhome.com">selena@houndawayfromhome.com</a>';
+        }
+
+        file_put_contents($EBOOK_CSV, $subscriberEmail . "\n", FILE_APPEND | LOCK_EX);
     }
 
-    file_put_contents($EBOOK_CSV, $subscriberEmail . "\n", FILE_APPEND | LOCK_EX);
-
-    if(!contactExists($hubspot, $subscriberEmail)){
+    if (!contactExists($hubspot, $subscriberEmail)) {
         $response = addContact($hubspot, $subscriberName, $subscriberEmail);
-    }    
+    }
 }
-header('Location: ' . $_SERVER['HTTP_REFERER']);
+
+$redirectTo = $_SERVER['HTTP_REFERER'];
+if ($_REQUEST['redirect'] == "quiz") {
+    $redirectTo = setUrlParam($redirectTo, ['question' => 'DONE']);
+}
+header("Location: {$redirectTo}");
 
 ?>

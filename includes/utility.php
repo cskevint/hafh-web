@@ -34,4 +34,27 @@ function validateCaptcha($captcha)
     $response = json_decode(file_get_contents($recaptchaUrl . "?secret=" . $GLOBALS['RECAPTCHA_SECRET_KEY'] . "&response=" . $captcha . "&remoteip=" . $_SERVER['REMOTE_ADDR']), true);
     return $response['success'];
 }
+
+function getCurrentUrl()
+{
+    if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
+        $url = "https://";
+    else
+        $url = "http://";
+    $url .= $_SERVER['HTTP_HOST'];
+    $url .= $_SERVER['REQUEST_URI'];
+    return $url;
+}
+
+function setUrlParam($url, $params, $replace = false)
+{
+    $parsedUrl = parse_url($url);
+    parse_str($parsedUrl['query'] ?? '', $queryParams);
+    $queryParams = $replace ? $params : array_merge($queryParams, $params);
+    $queryString = http_build_query($queryParams);
+    $queryString = $queryString ? "?$queryString" : '';
+    $port = isset($parsedUrl['port']) ? ":{$parsedUrl['port']}" : '';
+    return "{$parsedUrl['scheme']}://{$parsedUrl['host']}{$port}{$parsedUrl['path']}$queryString";
+}
+
 ?>
