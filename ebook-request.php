@@ -4,6 +4,7 @@ session_start();
 
 require_once ("includes/utility.php");
 
+$subscriberName = $_REQUEST['name'];
 $subscriberEmail = $_REQUEST['email'];
 
 if (strlen(trim($subscriberEmail)) > 0) {
