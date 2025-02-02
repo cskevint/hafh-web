@@ -3,7 +3,7 @@
 session_start();
 
 include_once "vendor/autoload.php";
-require_once("includes/utility.php");
+require_once "includes/utility.php";
 
 $subscriberName = $_REQUEST['name'];
 $subscriberEmail = $_REQUEST['email'];
