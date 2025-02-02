@@ -15,7 +15,7 @@ $currentQuestion = $quiz["questions"][$currentQuestionId] ?? null;
 if ($currentQuestionId == 0) {
     unset($_SESSION["quiz"]);
 }
-if ($currentQuestionId != "DONE" && $currentQuestionId >= count($quiz["questions"])) {
+if (!in_array($currentQuestionId, ["EMAIL", "DONE"]) && $currentQuestionId >= count($quiz["questions"])) {
     header("Location: 404.php");
     exit();
 }
@@ -28,15 +28,18 @@ function getNextQuestionId()
 {
     global $currentQuestionId, $quiz, $currentQuestion;
     if ($currentQuestionId == count($quiz["questions"]) - 1) {
-        return "DONE";
+        return "EMAIL";
     } else if ($currentQuestion != null) {
         return $currentQuestionId + 1;
     }
 }
 
-function scoreQuizAnswers(): string
+function getRenderState(): string
 {
-    global $quiz;
+    global $currentQuestionId, $quiz;
+    if ($currentQuestionId == "EMAIL") {
+        return "email";
+    }
     if (!isset($_SESSION['quiz']) || count($_SESSION['quiz']) != count($quiz['questions'])) {
         return "unfinished";
     }
@@ -54,7 +57,7 @@ function scoreQuizAnswers(): string
     return "consider";
 }
 
-$score = scoreQuizAnswers();
+$renderState = getRenderState();
 
 ?>
 <!doctype html>
@@ -70,13 +73,20 @@ $score = scoreQuizAnswers();
     <?php include "includes/debug.php"; ?>
 
     <section class="container-fluid bg-primary">
-        <div class="container p-2">
+        <div class="<?= $currentQuestionId == 0 ? "" : "d-none" ?> container p-2">
             <div class="d-flex justify-content-center">
                 <a href="/">
                     <img src="images/logo-transparent.png" alt="Hound Away From Home" style="max-height:200px;" />
                 </a>
             </div>
             <p class="text-center text-white p-2">Is dog-boarding right for you? Take a quiz to find out!</p>
+        </div>
+        <div class="<?= $currentQuestionId != 0 ? "" : "d-none" ?> container p-2">
+            <div class="d-flex justify-content-center">
+                <a href="/">
+                    <img src="images/logo-transparent.png" alt="Hound Away From Home" style="max-height:100px;" />
+                </a>
+            </div>
         </div>
     </section>
 
@@ -85,7 +95,7 @@ $score = scoreQuizAnswers();
             <div class="card">
                 <div class="card-body">
                     <div class="rounded mb-4 py-md-1 px-md-4 bg-white">
-                        <?php if ($score == "unfinished" && $currentQuestion) { ?>
+                        <?php if ($renderState == "unfinished" && $currentQuestion) { ?>
 
                             <h2 class="my-3 lead fs-1 fw-bold text-center">
                                 <?= $currentQuestion["title"] ?>
@@ -103,9 +113,38 @@ $score = scoreQuizAnswers();
                                     </div>
                                 <?php } ?>
                             </div>
+
                         <?php } ?>
 
-                        <div class="<?= $score == "success" ? "" : "d-none" ?>">
+                        <di class="<?= $renderState == "email" ? "" : "d-none" ?> text-center">
+
+                            <h3 class="py-2 text-muted">To get your results, provide your name and email:</h3>
+                            <div class="row mb-5">
+                                <div class="col-md-3"></div>
+                                <div class="col-md-6">
+                                    <form method="post" action="ebook-request.php?redirect=quiz" id="ebook-form">
+                                        <div class="input-group input-group-lg mb-3">
+                                            <input class="form-control" type="text" placeholder="Your name" name="name"
+                                                aria-label="Your name" required />
+                                        </div>
+                                        <div class="input-group input-group-lg mb-3">
+                                            <input class="form-control" type="email" placeholder="Your email address"
+                                                name="email" aria-label="Your email address" required />
+                                        </div>
+                                        <div class="d-grid gap-2">
+                                            <button type="submit" class="btn btn-lg btn-primary">
+                                                Get my results!
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-3"></div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="<?= $renderState == "success" ? "" : "d-none" ?>">
 
                             <h3>Congratulations!</h3>
                             <p>You’re ready to turn your love for dogs into unlimited earnings! &#128062; &#128188;
@@ -136,7 +175,7 @@ $score = scoreQuizAnswers();
                                 You’ve got this! &#128588; &#128062; </p>
                         </div>
 
-                        <div class="<?= $score == "consider" ? "" : "d-none" ?>">
+                        <div class="<?= $renderState == "consider" ? "" : "d-none" ?>">
 
                             <h3>You’re Almost There!</h3>
                             <p>Just one step away from being ready to succeed! &#128062; &#10024;</p>
@@ -162,7 +201,7 @@ $score = scoreQuizAnswers();
                             <p>You’re closer than ever—let’s make it happen together! &#128054; &#128188; </p>
                         </div>
 
-                        <div class="<?= $score == "learn-more" ? "" : "d-none" ?>">
+                        <div class="<?= $renderState == "learn-more" ? "" : "d-none" ?>">
 
                             <h3>Not Ready Yet?</h3>
                             <p>That’s Okay—We’ll Get You There! &#128062; &#128640;</p>
