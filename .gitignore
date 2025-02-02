@@ -5,3 +5,6 @@ admin/*.csv
 .dh-diag
 js/quiz/node_modules
 styles/sass/node_modules
+composer.phar
+composer.lock
+vendor/

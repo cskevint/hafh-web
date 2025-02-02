@@ -1,36 +1,36 @@
 <?php
-session_start(); 
-require_once ("redirect.php");
+session_start();
+include_once "vendor/autoload.php";
+require_once "redirect.php";
+
 $_GLOBALS["pageTitle"] = "FAQs";
 ?>
 <!doctype html>
 <html lang="en" class="bg-info">
 
 <head>
-    <?php include("includes/head-tag-contents.php");?>
+    <?php include("includes/head-tag-contents.php"); ?>
 </head>
 
 <body>
 
-    <?php include("includes/navigation.php");?>
+    <?php include("includes/navigation.php"); ?>
 
     <section class="container-fluid px-0 bg-info">
         <div class="container p-lg-5 p-md-4 p-3 px-0">
             <div class="bg-light rounded-5 p-lg-5 p-md-4 p-3">
                 <h1 class="mb-ms-5 mb-3">Frequently Asked Questions</h1>
 
-                <?php 
-                include_once("lib/parsedown-1.7.4/Parsedown.php"); 
-                include_once("lib/parsedown-extra-0.8.1/ParsedownExtra.php");
+                <?php
                 $Parsedown = new ParsedownExtra();
                 $faqs = file_get_contents('faqs.md');
                 echo $Parsedown->text($faqs);
-            ?>
+                ?>
             </div>
         </div>
     </section>
 
-    <?php include("includes/footer.php");?>
+    <?php include("includes/footer.php"); ?>
 
 </body>
 
