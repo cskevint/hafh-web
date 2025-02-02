@@ -70,7 +70,7 @@ if (strlen(trim($subscriberEmail)) > 0) {
 
 $redirectTo = $_SERVER['HTTP_REFERER'];
 if ($_REQUEST['redirect'] == "quiz") {
-    $redirectTo = setUrlParam($redirectTo, ['question' => 'DONE'], true);
+    $redirectTo = setUrlParam($redirectTo, ['question' => 'DONE']);
 }
 header("Location: {$redirectTo}");
 
