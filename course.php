@@ -37,16 +37,16 @@ HTML;
                 <img src="images/logo-horizontal.png" alt="Hound Away From Home" style="max-height:32px;" />
             </a>
         </div>
-        <?php
-            if (isset($_SESSION['notice'])) {
-                echo '<div class="alert alert-info">' . $_SESSION['notice'] . '</div>';
-                unset($_SESSION['notice']);
-            }
-        ?>
     </section>
 
     <section class="container-fluid header-bg">
         <div class="<?= $pageContainerClasses ?>">
+            <?php
+                if (isset($_SESSION['notice'])) {
+                    echo '<div class="alert alert-info">' . $_SESSION['notice'] . '</div>';
+                    unset($_SESSION['notice']);
+                }
+            ?>
             <h1 class="mb-3">Turn your love for dogs into a profitable, flexible career!</h1>
             <p class="mt-3">Ready to turn your love for dogs into a thriving business? Our online course
                 will tell you everything you need to know to run your own at-home dog boarding business!</p>
