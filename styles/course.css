@@ -121,7 +121,7 @@ h5.title {
     padding-top: 24px;
 }
 
-.btn-content-desc button.btn {
+.btn-content-desc a.btn {
     width: 160px;
     line-height: 10px;
     height: 53px;

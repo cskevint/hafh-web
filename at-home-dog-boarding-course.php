@@ -19,7 +19,6 @@ $_GLOBALS["pageTitle"] = "At-home Dog Boarding Course";
 
 <body>
 
-    <?php include "includes/devserver.php"; ?>
     <?php include "includes/debug.php"; ?>
 
     <div class="container-fluid banner-section">
@@ -32,39 +31,29 @@ $_GLOBALS["pageTitle"] = "At-home Dog Boarding Course";
                     <img src="/images/course/flower.png">
                 </div>
                 <div class="login-btn">
-                    <button type="button" class="btn">Sign Up</button>
+                    <a href="/ebook.php" class="btn btn-outline-secondary p-3 px-4 rounded-5">
+                        Download free e-book
+                    </a>
                 </div>
             </div>
         </div>
 
-        <!-- Cards Section -->
         <section class="banner">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="banner-left-section">
 
-                            <h5 class="title">Turn your love for dogs into a <span
-                                    class="text-success">profitable</span>, flexible
-                                career!</h5>
+                            <h5 class="title">Turn your love for dogs into a <span class="text-success">profitable</span>, flexible career!</h5>
                             <div class="btn-content-desc">
-                                <button type="button" class="btn">Enroll Now</button>
-                                <p class="desc">Ready to turn your love for dogs into a thriving business? Our online
-                                    course
-                                    will tell you everything you need to know to run your own at-home dog boarding
-                                    business!</p>
+                                <a href="/enroll.php" class="btn">Enroll Now</a>
+                                <p class="desc">Ready to turn your love for dogs into a thriving business? Our online course will tell you everything you need to know to run your own at-home dog boarding business!</p>
                             </div>
                             <img class="arrow-vector" src="/images/course/arrowvector.png">
 
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <!-- <div class="banner-right-section">
-                                          <img class="banervideoimg" src="/images/course/bannervideoimg.png">
-                                          <div class="play-icon">
-                                            <img src="/images/course/playicon.png">
-                                          </div>
-                                      </div> -->
                         <script>
                             function playVideo() {
                                 var video = document.getElementById("banner-video");
@@ -82,15 +71,12 @@ $_GLOBALS["pageTitle"] = "At-home Dog Boarding Course";
 
                         </script>
                         <div class="banner-right-section">
-                            <!-- The image that is displayed initially -->
                             <img class="banervideoimg" src="/images/course/bannervideoimg.png" id="banner-image">
 
-                            <!-- Play icon -->
                             <div class="play-icon" onclick="playVideo()">
                                 <img src="/images/course/playicon.png">
                             </div>
 
-                            <!-- Hidden iframe that will replace the image -->
                             <iframe id="banner-video" class="banner-video"
                                 src="https://www.youtube.com/embed/D0UnqGm_miA?enablejsapi=1" frameborder="0"
                                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
