@@ -31,7 +31,7 @@ $_GLOBALS["pageTitle"] = "Download our Free E-book";
             <div class="row mb-5">
                 <div class="col-md-3"></div>
                 <div class="col-md-6">
-                    <form method="post" action="ebook-request.php" id="ebook-form">
+                    <form method="post" action="contact-capture.php?redirect=ebook" id="ebook-form">
                         <div class="input-group input-group-lg mb-3">
                             <input class="form-control" type="text" placeholder="Your name" name="name"
                                 aria-label="Your name" required />

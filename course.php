@@ -37,6 +37,12 @@ HTML;
                 <img src="images/logo-horizontal.png" alt="Hound Away From Home" style="max-height:32px;" />
             </a>
         </div>
+        <?php
+            if (isset($_SESSION['notice'])) {
+                echo '<div class="alert alert-info">' . $_SESSION['notice'] . '</div>';
+                unset($_SESSION['notice']);
+            }
+        ?>
     </section>
 
     <section class="container-fluid header-bg">
