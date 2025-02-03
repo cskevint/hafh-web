@@ -5,14 +5,19 @@ session_start();
 include_once "vendor/autoload.php";
 require_once "includes/utility.php";
 
+if (!isset($_REQUEST['redirect'])) {
+    header("Location: /500");
+    exit();
+}
+
 $subscriberName = $_REQUEST['name'];
 $subscriberEmail = $_REQUEST['email'];
 
 $hubspot = \HubSpot\Factory::createWithAccessToken($HUBSPOT_API_TOKEN);
 
-function contactExists($hubspot, $subscriberEmail)
+function hubspotContactExists()
 {
-    global $HUBSPOT_API_TOKEN;
+    global $HUBSPOT_API_TOKEN, $hubspot, $subscriberEmail;
     if ($HUBSPOT_API_TOKEN == "") {
         return true;
     }
@@ -33,9 +38,9 @@ function contactExists($hubspot, $subscriberEmail)
     return count($response->getResults()) > 0;
 }
 
-function addContact($hubspot, $subscriberName, $subscriberEmail)
+function addContactToHubspot()
 {
-    global $HUBSPOT_API_TOKEN;
+    global $HUBSPOT_API_TOKEN, $hubspot, $subscriberName, $subscriberEmail;
     if ($HUBSPOT_API_TOKEN == "") {
         return "";
     }
@@ -47,31 +52,36 @@ function addContact($hubspot, $subscriberName, $subscriberEmail)
     return $hubspot->crm()->contacts()->basicApi()->create($contactInput);
 }
 
-if (strlen(trim($subscriberEmail)) > 0) {
+if (!strlen(trim($subscriberEmail)) > 0) {
+    header("Location: {$redirectTo}");
+    exit();
+}
+
+if ($_REQUEST['redirect'] == "ebook") {
     $fromEmail = "k@doopr.com";
     $fromName = "E-book Request";
     $subject = "[HAFH] E-book Request";
     $messageBody = "<p>{$subscriberEmail}</p>";
 
-    if ($_REQUEST['redirect'] != "quiz") {
-        if (sendMail($fromEmail, $fromName, $subject, $messageBody)) {
-            $_SESSION['notice'] = "Your e-book download link is on its way.";
-        } else {
-            $_SESSION['notice'] = 'There was an error. Please email us: <a href="mailto:selena@houndawayfromhome.com">selena@houndawayfromhome.com</a>';
-        }
-
-        file_put_contents($EBOOK_CSV, $subscriberEmail . "\n", FILE_APPEND | LOCK_EX);
+    if (sendMail($fromEmail, $fromName, $subject, $messageBody)) {
+        $_SESSION['notice'] = "Your e-book download link is on its way.";
+    } else {
+        $_SESSION['notice'] = 'There was an error. Please email us: <a href="mailto:selena@houndawayfromhome.com">selena@houndawayfromhome.com</a>';
     }
 
-    if (!contactExists($hubspot, $subscriberEmail)) {
-        $response = addContact($hubspot, $subscriberName, $subscriberEmail);
-    }
+    file_put_contents($EBOOK_CSV, $subscriberEmail . "\n", FILE_APPEND | LOCK_EX);
+
+    $redirectTo = "/course";
+} else if ($_REQUEST['redirect'] == "quiz") {
+    $redirectTo = setUrlParam($_SERVER['HTTP_REFERER'], ['question' => 'DONE']);
+} else if ($_REQUEST['redirect'] == "guide") {
+    $redirectTo = "/introductory-guide";
 }
 
-$redirectTo = $_SERVER['HTTP_REFERER'];
-if ($_REQUEST['redirect'] == "quiz") {
-    $redirectTo = setUrlParam($redirectTo, ['question' => 'DONE']);
+// Store contact in HubSpot.
+if (!hubspotContactExists()) {
+    addContactToHubspot();
 }
+
 header("Location: {$redirectTo}");
-
 ?>

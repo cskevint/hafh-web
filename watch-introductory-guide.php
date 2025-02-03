@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once("redirect.php");
-$_GLOBALS["pageTitle"] = "Download our Free E-book";
+$_GLOBALS["pageTitle"] = "Watch an Introductory Guide";
 ?>
 <!doctype html>
 <html lang="en" class="bg-secondary">
@@ -25,13 +25,13 @@ $_GLOBALS["pageTitle"] = "Download our Free E-book";
 
     <section class="container-fluid bg-light">
         <div class="container p-4 p-md-4 p-lg-5 text-center">
-            <h1 class="px-0 px-md-2 px-lg-5">Learn the basics of setting up your own at-home dog-boarding business</h1>
-            <h3 class="py-2 text-muted">by getting your own free copy of our e-book!</h3>
+            <h1 class="px-0 px-md-2 px-lg-5">Learn all about the at-home dog-boarding and doggy daycare business</h1>
+            <h3 class="py-2 text-muted">and how you can get started in just 9 days!</h3>
             <hr class="m-3 m-md-4 m-lg-5" />
             <div class="row mb-5">
                 <div class="col-md-3"></div>
                 <div class="col-md-6">
-                    <form method="post" action="contact-capture.php?redirect=ebook" id="ebook-form">
+                    <form method="post" action="contact-capture.php?redirect=guide" id="ebook-form">
                         <div class="input-group input-group-lg mb-3">
                             <input class="form-control" type="text" placeholder="Your name" name="name"
                                 aria-label="Your name" required />
@@ -42,7 +42,7 @@ $_GLOBALS["pageTitle"] = "Download our Free E-book";
                         </div>
                         <div class="d-grid gap-2">
                             <button type="submit" class="btn btn-lg btn-primary">
-                                Send me the PDF!
+                                Take me to the introductory guide!
                             </button>
                         </div>
                     </form>
