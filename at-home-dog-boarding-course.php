@@ -56,7 +56,6 @@ $_GLOBALS["pageTitle"] = "At-home Dog Boarding Course";
                                 </div>
                             </div>
                             <img class="arrow-vector" src="/images/course/arrowvector.png">
-
                         </div>
                     </div>
                     <div class="col-md-6">
