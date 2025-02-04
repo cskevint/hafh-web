@@ -25,14 +25,16 @@ $_GLOBALS["pageTitle"] = "At-home Dog Boarding Course";
         <div class="container">
             <div class="d-flex justify-content-between align-items-center">
                 <div class="logo">
-                    <img src="/images/course/headerlogo.png">
+                    <a href="/">
+                        <img src="/images/course/headerlogo.png">
+                    </a>
                 </div>
                 <div class="flowerimage">
                     <img src="/images/course/flower.png">
                 </div>
                 <div class="login-btn">
-                    <a href="/ebook.php" class="btn btn-outline-secondary p-3 px-4 rounded-5">
-                        Download free e-book
+                    <a href="/ebook.php" class="btn btn-outline-secondary p-3 px-4 rounded-pill text-nowrap">
+                        Download Free E-book
                     </a>
                 </div>
             </div>
@@ -45,9 +47,13 @@ $_GLOBALS["pageTitle"] = "At-home Dog Boarding Course";
                         <div class="banner-left-section">
 
                             <h5 class="title">Turn your love for dogs into a <span class="text-success">profitable</span>, flexible career!</h5>
-                            <div class="btn-content-desc">
-                                <a href="/enroll.php" class="btn">Enroll Now</a>
-                                <p class="desc">Ready to turn your love for dogs into a thriving business? Our online course will tell you everything you need to know to run your own at-home dog boarding business!</p>
+                            <div class="row">
+                                <div class="col-md-5 col-lg-4 text-center">
+                                    <a href="/enroll.php" class="btn btn-secondary text-nowrap px-4 my-3 rounded-pill">Enroll Now</a>
+                                </div>
+                                <div class="col-md-7 col-lg-8">
+                                    <p class="desc">Ready to turn your love for dogs into a thriving business? Our online course will tell you everything you need to know to run your own at-home dog boarding business!</p>
+                                </div>
                             </div>
                             <img class="arrow-vector" src="/images/course/arrowvector.png">
 
@@ -68,7 +74,6 @@ $_GLOBALS["pageTitle"] = "At-home Dog Boarding Course";
                                 video.style.display = "block";
                                 video.play();
                             }
-
                         </script>
                         <div class="banner-right-section">
                             <img class="banervideoimg" src="/images/course/bannervideoimg.png" id="banner-image">
@@ -596,11 +601,11 @@ $_GLOBALS["pageTitle"] = "At-home Dog Boarding Course";
                 </div>
             </div>
             <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                    document.querySelector(".toggle-accordion").addEventListener("click", function (event) {
+                document.addEventListener("DOMContentLoaded", function() {
+                    document.querySelector(".toggle-accordion").addEventListener("click", function(event) {
                         var accordionId = event.target.getAttribute("accordion-id");
                         var accordionElem = document.querySelector(accordionId);
-                        accordionElem.querySelectorAll(".collapse").forEach(function (collapseElem) {
+                        accordionElem.querySelectorAll(".collapse").forEach(function(collapseElem) {
                             var accordionButton = collapseElem.parentElement.querySelector(".accordion-button");
                             if (event.target.classList.contains("active")) {
                                 collapseElem.classList.remove("show");

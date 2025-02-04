@@ -115,31 +115,11 @@ h5.title {
     color: #350D09;
 }
 
-.btn-content-desc {
-    display: flex;
-    gap: 70px;
-    padding-top: 24px;
-}
-
-.btn-content-desc a.btn {
-    width: 160px;
-    line-height: 10px;
-    height: 53px;
-    background: #AD733A;
-    color: #fff;
-    border: 1px solid #AD733A;
-    padding: 0;
-}
-
 iframe#banner-video {
     width: 500px;
     height: 470px !important;
     margin-left: 45px;
     border-radius: 20px;
-}
-
-p.desc {
-    width: 70%;
 }
 
 .play-icon {
@@ -1111,11 +1091,6 @@ section.disclaimer p {
         margin-left: 0;
     }
 
-    .btn-content-desc {
-        display: flex;
-        gap: 30px;
-    }
-
     .pre-launch-content h3 {
         font-size: 16px;
         line-height: 20px;
@@ -1394,15 +1369,6 @@ section.disclaimer p {
     h5.title {
         font-size: 36px;
         line-height: 40px;
-    }
-
-    .btn-content-desc {
-        display: block;
-    }
-
-    p.desc {
-        width: 100%;
-        padding-top: 20px;
     }
 
     .customer-section {
