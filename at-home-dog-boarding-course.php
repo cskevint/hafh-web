@@ -21,16 +21,16 @@ $_GLOBALS["pageTitle"] = "At-home Dog Boarding Course";
 
     <?php include "includes/debug.php"; ?>
 
-    <div class="container-fluid banner-section">
-        <div class="container">
+    <div class="container-fluid" style="background: linear-gradient(180deg, #FFFBF9 16.31%, #FFE6D2 89.83%);">
+        <header class="container">
             <div class="d-flex justify-content-between align-items-center">
                 <div class="logo">
                     <a href="/">
-                        <img src="/images/course/headerlogo.png">
+                        <img alt="Hound Away From Home" src="/images/course/headerlogo.png" />
                     </a>
                 </div>
-                <div class="flowerimage">
-                    <img src="/images/course/flower.png">
+                <div>
+                    <img src="/images/course/paws.png" style="width: 110px;margin-bottom: -100px;margin-left: -52px;" />
                 </div>
                 <div class="login-btn">
                     <a href="/ebook.php" class="btn btn-outline-secondary p-3 px-4 rounded-pill text-nowrap">
@@ -38,93 +38,71 @@ $_GLOBALS["pageTitle"] = "At-home Dog Boarding Course";
                     </a>
                 </div>
             </div>
-        </div>
+        </header>
 
-        <section class="banner">
+        <section class="p-3 p-md-4">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="banner-left-section">
-
-                            <h5 class="title">Turn your love for dogs into a <span class="text-success">profitable</span>, flexible career!</h5>
-                            <div class="row">
-                                <div class="col-md-5 col-lg-4 text-center">
-                                    <a href="/enroll.php" class="btn btn-secondary text-nowrap px-4 my-3 rounded-pill">Enroll Now</a>
+                    <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                        <div>
+                            <h1 class="text-center text-lg-start">
+                                Turn your love for dogs into a <span class="text-success">profitable</span>, flexible
+                                career!
+                            </h1>
+                            <div class="row pt-xl-4">
+                                <div class="col-xl-4 text-center d-flex align-items-center justify-content-center">
+                                    <a href="/enroll.php"
+                                        class="btn btn-lg btn-secondary text-nowrap px-4 my-3 rounded-pill shadow">
+                                        Enroll Now
+                                    </a>
                                 </div>
-                                <div class="col-md-7 col-lg-8">
-                                    <p class="desc">Ready to turn your love for dogs into a thriving business? Our online course will tell you everything you need to know to run your own at-home dog boarding business!</p>
+                                <div class="col-xl-8">
+                                    <p class="fs-5 text-center text-lg-start">Ready to turn your love for dogs into a
+                                        thriving business? Our online course will tell you everything you need to know
+                                        to run your own at-home dog boarding business!</p>
                                 </div>
                             </div>
-                            <img class="arrow-vector" src="/images/course/arrowvector.png">
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <script>
-                            function playVideo() {
-                                var video = document.getElementById("banner-video");
-                                var image = document.getElementById("banner-image");
-                                var playIcon = document.querySelector(".play-icon");
-
-                                // Hide the image and play icon
-                                image.style.display = "none";
-                                playIcon.style.display = "none";
-
-                                // Show the video and start playing it
-                                video.style.display = "block";
-                                video.play();
-                            }
-                        </script>
-                        <div class="banner-right-section">
-                            <img class="banervideoimg" src="/images/course/bannervideoimg.png" id="banner-image">
-
-                            <div class="play-icon" onclick="playVideo()">
-                                <img src="/images/course/playicon.png">
-                            </div>
-
-                            <iframe id="banner-video" class="banner-video"
-                                src="https://www.youtube.com/embed/D0UnqGm_miA?enablejsapi=1" frameborder="0"
-                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen style="display:none; width:100%; height:100%;"></iframe>
-                        </div>
-
-                        <div class="customer-section">
-                            <div class="enrolled">
-                                <h4>200+</h4>
-                                <p>Already Enrolled</p>
-                            </div>
-                            <div class="enrolled two">
-                                <h4>100+</h4>
-                                <p>Happy Customs</p>
-                            </div>
-                            <div class="enrolled">
-                                <h4>4.7</h4>
-                                <p>Based on 150 Reviews</p>
-                            </div>
-                        </div>
+                    <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                        <iframe class="youtube-video" src="https://www.youtube.com/embed/mK9lg1l1KkU?enablejsapi=1"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
         </section>
     </div>
 
-    <section class="pre-launch-sale">
+    <section class="py-3 py-lg-1 pt-xl-3"
+        style="background: linear-gradient(180deg, rgba(255,230,210,1) 0%, rgba(255,230,210,1) 47%, rgba(255,255,255,1) 48%);">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
-                    <div class="pre-launch-image"><img src="/images/course/prelaunch.png"></div>
-                </div>
-                <div class="col-md-4">
-                    <div class="pre-launch-content">
-                        <h2>Pre-launch Sale!</h2>
-                        <p>Includes</p>
-                        <h3>75% Off<span> Lifetime Access</span></h3>
-                        <h3>Early Access<span> to the Course</span></h3>
-                        <h3>Free DogBoarders<span> Community Access</span></h3>
-                        <h3>Daily Answers<span> to Your Questions</span></h3>
+                <div class="col-lg-3 col-xl-3">
+                    <div class="text-end">
+                        <img class="d-none d-lg-inline-block" src="/images/course/vectorright.png" alt="Arrow" />
+                    </div>
+                    <div class="text-center">
+                        <img class="d-none d-lg-inline-block" src="/images/course/frenchbulldog.png"
+                            alt="French Bulldog" />
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="prelaunch-btn"> <button type="button" class="btn">Grab Your Discount</button></div>
+                <div class="col-lg-7 col-xl-7 px-5">
+                    <div class="shadow-lg rounded-4 p-3 p-xl-4 px-xl-5 bg-secondary text-white"
+                        style="background-image: url(/images/course/prelaunch-box.png);background-position: top right;background-repeat: no-repeat;background-size: cover;">
+                        <h2>Pre-launch Sale!</h2>
+                        <p class="fs-5 fw-light">Includes</p>
+                        <p class="fs-4">75% Off<span class="fw-light"> Lifetime Access</span></p>
+                        <p class="fs-4">Early Access<span class="fw-light"> to the Course</span></p>
+                        <p class="fs-4">Free DogBoarders<span class="fw-light"> Community Access</span></p>
+                        <p class="fs-4 mb-0">Daily Answers<span class="fw-light"> to Your Questions</span></h4>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xl-2 d-flex align-items-center justify-content-center">
+                    <a href="/enroll.php" class="btn btn-lg btn-primary text-nowrap px-4 my-3 rounded-pill shadow">
+                        Grab Your Discount!
+                    </a>
                 </div>
             </div>
         </div>
@@ -172,7 +150,11 @@ $_GLOBALS["pageTitle"] = "At-home Dog Boarding Course";
                     </div>
                 </div>
             </div>
-            <div class="course-btn text-center"> <button type="button" class="btn">Unlock Your Course</button>
+            <div class="text-center">
+                <img class="" src="/images/course/vectorright.png" alt="Arrow">
+                <a href="/enroll.php" class="btn btn-lg btn-secondary text-nowrap px-4 my-3 rounded-pill shadow">
+                    Unlock Your Course
+                </a>
             </div>
     </section>
 
@@ -224,9 +206,11 @@ $_GLOBALS["pageTitle"] = "At-home Dog Boarding Course";
                     </ul>
                 </div>
             </div>
-            <div class="course-btn btns btn-hightlight text-center">
-                <button type="button" class="btn">Enroll & Learn Today</button><img class="arrow-vector course"
-                    src="/images/course/vectorleft.png">
+            <div class="text-center">
+                <a href="/enroll.php" class="btn btn-lg btn-secondary text-nowrap px-4 my-3 rounded-pill shadow">
+                    Enroll & Learn Today
+                </a>
+                <img class="" src="/images/course/vectorleft.png" alt="Arrow">
             </div>
         </div>
     </section>
@@ -600,11 +584,11 @@ $_GLOBALS["pageTitle"] = "At-home Dog Boarding Course";
                 </div>
             </div>
             <script>
-                document.addEventListener("DOMContentLoaded", function() {
-                    document.querySelector(".toggle-accordion").addEventListener("click", function(event) {
+                document.addEventListener("DOMContentLoaded", function () {
+                    document.querySelector(".toggle-accordion").addEventListener("click", function (event) {
                         var accordionId = event.target.getAttribute("accordion-id");
                         var accordionElem = document.querySelector(accordionId);
-                        accordionElem.querySelectorAll(".collapse").forEach(function(collapseElem) {
+                        accordionElem.querySelectorAll(".collapse").forEach(function (collapseElem) {
                             var accordionButton = collapseElem.parentElement.querySelector(".accordion-button");
                             if (event.target.classList.contains("active")) {
                                 collapseElem.classList.remove("show");

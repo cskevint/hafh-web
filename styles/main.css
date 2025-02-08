@@ -4,7 +4,7 @@
     }
 }
 
-.redbox {
+.redbox, .rb {
     border: 1px solid red !important;
 }
 
