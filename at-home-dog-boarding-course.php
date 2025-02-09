@@ -31,8 +31,8 @@ function enrollButton($text, $primary = false)
     <div class="container-fluid" style="background: linear-gradient(180deg, #FFFBF9 16.31%, #FFE6D2 89.83%);">
         <nav class="navbar navbar-expand-lg" aria-label="Page navigation">
             <div class="container">
-                <a class="navbar-brand" href="/">
-                    <img alt="Hound Away From Home" src="/images/course/headerlogo.png" style="max-height:50px;" />
+                <a class="navbar-brand" href="/course">
+                    <img src="/images/course/headerlogo.png" style="max-height:50px;" alt="Hound Away From Home" />
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation"
@@ -206,7 +206,8 @@ function enrollButton($text, $primary = false)
             <h1 class="mb-5 text-center">What you'll learn in this course</h1>
             <div class="row mb-5">
                 <div class="col-lg-5 text-center">
-                    <img class="rounded-5 img-fluid" src="/images/course/learn_success.png">
+                    <img class="rounded-5 img-fluid" src="/images/course/learn_success.png"
+                        alt="<?= $whatYoullLearn[0][0] ?>">
                 </div>
                 <div class="col-lg-7 d-flex align-items-center">
                     <div>
@@ -221,7 +222,8 @@ function enrollButton($text, $primary = false)
             </div>
             <div class="row mb-5">
                 <div class="col-lg-5 order-1 order-lg-2 text-center">
-                    <img class="rounded-5 img-fluid" src="/images/course/learn_business.png">
+                    <img class="rounded-5 img-fluid" src="/images/course/learn_business.png"
+                        alt="<?= $whatYoullLearn[1][0] ?>">
                 </div>
                 <div class="col-lg-7 d-flex align-items-center order-2 order-lg-1">
                     <div>
@@ -237,7 +239,8 @@ function enrollButton($text, $primary = false)
             </div>
             <div class="row mb-5">
                 <div class="col-lg-5 text-center">
-                    <img class="rounded-5 img-fluid" src="/images/course/learn_situations.png">
+                    <img class="rounded-5 img-fluid" src="/images/course/learn_situations.png"
+                        alt="<?= $whatYoullLearn[2][0] ?>">
                 </div>
                 <div class="col-lg-7 d-flex align-items-center">
                     <div>
@@ -415,7 +418,7 @@ function enrollButton($text, $primary = false)
     <?php
     $testimonialHeader = <<<HTML
         <div class="row">
-            <div class="col"><img src="/images/course/quote.png" /></div>
+            <div class="col"><img src="/images/course/quote.png" alt="Quote" /></div>
             <div class="col d-flex align-items-center justify-content-end">
                 <ul class="list-unstyled d-flex justify-content-right text-warning mb-0">
                     <li>
