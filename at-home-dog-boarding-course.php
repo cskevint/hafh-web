@@ -29,29 +29,40 @@ function enrollButton($text, $primary = false)
     <?php include "includes/debug.php"; ?>
 
     <div class="container-fluid" style="background: linear-gradient(180deg, #FFFBF9 16.31%, #FFE6D2 89.83%);">
-        <header class="container pt-3 pt-md-4">
-            <div class="d-flex justify-content-between align-items-center">
-                <div class="logo">
-                    <a href="/">
-                        <img alt="Hound Away From Home" src="/images/course/headerlogo.png" />
-                    </a>
-                </div>
-                <div>
-                    <img src="/images/course/paws.png" style="width: 110px;margin-bottom: -100px;margin-left: -52px;" />
-                </div>
-                <div>
-                    <a href="/guide" class="btn p-3 px-4 rounded-pill text-nowrap">
-                        Watch Guide
-                    </a>
-                    <a href="/quiz" class="btn p-3 px-4 rounded-pill text-nowrap">
-                        Take a quiz
-                    </a>
-                    <a href="/ebook" class="btn p-3 px-4 rounded-pill text-nowrap">
-                        Download Free E-book
-                    </a>
+        <nav class="navbar navbar-expand-lg" aria-label="Page navigation">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <img alt="Hound Away From Home" src="/images/course/headerlogo.png" style="max-height:60px;" />
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation"
+                    aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse flex-row-reverse justify-content-between" id="navigation">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="/guide" class="nav-link">
+                                Watch Guide
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/quiz" class="nav-link">
+                                Take a quiz
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/ebook" class="nav-link">
+                                Download Free E-book
+                            </a>
+                        </li>
+                    </ul>
+                    <img src="/images/course/paws.png" class="d-none d-lg-inline-block"
+                        style="width: 110px;margin-bottom: -100px;margin-left: 100px" />
                 </div>
             </div>
-        </header>
+        </nav>
 
         <section class="p-3 p-md-4">
             <div class="container">
