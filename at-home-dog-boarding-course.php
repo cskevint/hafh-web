@@ -480,46 +480,49 @@ $_GLOBALS["pageTitle"] = "At-home Dog Boarding Course";
         </div>
     </section>
 
-    <section class="who-course-section">
+    <section class="py-4 pt-xl-5">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
-                    <h2 class="who-course-heading">Who is this course for</h2>
-                    <ul class="left">
-                        <li>Perfect for dog lovers wanting to earn money from home.</li>
-                        <li>Suitable for stay-at-home parents, remote workers, or retirees.</li>
-                        <li>Learn to turn your passion for dogs into a business.</li>
-                        <li>Tips for creating a safe, dog-friendly home.</li>
-                        <li>Strategies for attracting clients and managing dogs.</li>
-                        <li>Solutions for handling dog fights and cleaning efficiently.</li>
-                        <li>Make dog care enjoyable, stress-free, and profitable.</li>
+                <div class="col-lg-6 p-4 rounded-5">
+                    <h1 class="mb-4">Who this course is for:</h1>
+                    <ul class="blue-checkmark-list">
+                        <li class="fs-5 mb-1">Perfect for dog lovers wanting to earn money from home.</li>
+                        <li class="fs-5 mb-1">Suitable for stay-at-home parents, remote workers, or retirees.</li>
+                        <li class="fs-5 mb-1">Learn to turn your passion for dogs into a business.</li>
+                        <li class="fs-5 mb-1">Tips for creating a safe, dog-friendly home.</li>
+                        <li class="fs-5 mb-1">Strategies for attracting clients and managing dogs.</li>
+                        <li class="fs-5 mb-1">Solutions for handling dog fights and cleaning efficiently.</li>
+                        <li class="fs-5 mb-1">Make dog care enjoyable, stress-free, and profitable.</li>
                     </ul>
                 </div>
-                <div class="col-md-6">
-                    <h2 class="who-course-heading">Who is this course not for</h2>
-                    <ul class="right">
-                        <li>This course requires prior dog care experience.</li>
-                        <li>Dog behavior and needs are essential but not detailed here.</li>
-                        <li>Success requires strong commitment to being present with the dogs.</li>
-                        <li>A support system is needed for managing the business during absences.</li>
-                        <li>Comfort with cleaning and handling behavioral challenges is necessary.</li>
-                        <li>Setting up a space and leaving dogs alone won’t work.</li>
-                        <li>This course will help you succeed in dog care’s joys and challenges.</li>
+                <div class="col-lg-6 p-4 rounded-5 bg-secondary text-light">
+                    <h1 class="mb-4">Who this course is NOT for:</h1>
+                    <ul class="brown-checkmark-list">
+                        <li class="fs-5 mb-1">This course requires prior dog care experience.</li>
+                        <li class="fs-5 mb-1">Dog behavior and needs are essential but not detailed here.</li>
+                        <li class="fs-5 mb-1">Success requires strong commitment to being present with the dogs.</li>
+                        <li class="fs-5 mb-1">A support system is needed for managing the business during absences.</li>
+                        <li class="fs-5 mb-1">Comfort with cleaning and handling behavioral challenges is necessary.
+                        </li>
+                        <li class="fs-5 mb-1">Setting up a space and leaving dogs alone won’t work.</li>
+                        <li class="fs-5 mb-1">This course will help you succeed in dog care’s joys and challenges.</li>
                     </ul>
                 </div>
-
             </div>
     </section>
 
-    <section class="limited-time-section">
-        <div class="container">
+    <section class="py-4 pt-xl-5">
+        <div class="container p-5 rounded-5" 
+            style="background: url('/images/course/limited-time-banner.png');background-repeat: no-repeat;background-size: cover;">
             <div class="row">
                 <h3 class="text-center">Limited Time Pre-Launch Bonuses</h3>
                 <p class="text-center">Ready to turn your love for dogs into a thriving business? Our online course will
-                    tell
-                    you<br>
-                    everything you need to know to run your own at-home dog boarding business!</p>
-                <div class="course-btn btns text-center"> <button type="button" class="btn">Enroll Now</button></div>
+                    tell you everything you need to know to run your own at-home dog boarding business!</p>
+                <div class="text-center">
+                    <a href="/enroll.php" class="btn btn-lg btn-secondary text-nowrap px-4 mt-3 rounded-pill shadow">
+                        Enroll Now
+                    </a>
+                </div>
             </div>
         </div>
     </section>

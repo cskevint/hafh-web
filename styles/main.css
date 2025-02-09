@@ -129,12 +129,16 @@ h1, h2, h3, h4, h5 {
 
 /* Course Landing Page: What you'll learn in this course */
 
-ul.checkmark-list li {
+ul.checkmark-list li,
+ul.blue-checkmark-list li,
+ul.brown-checkmark-list li {
     position: relative;
     list-style: none;
 }
 
-ul.checkmark-list li:before {
+ul.checkmark-list li:before,
+ul.blue-checkmark-list li:before,
+ul.brown-checkmark-list li:before {
     position: absolute;
     content: '';
     width: 20px;
@@ -142,6 +146,14 @@ ul.checkmark-list li:before {
     background: url(/images/course/check.png);
     left: -31px;
     top: 0;
+}
+
+ul.blue-checkmark-list li:before {
+    background: url(/images/course/leftcheck.png);
+}
+
+ul.brown-checkmark-list li:before {
+    background: url(/images/course/rightcheck.png);
 }
 
 /* Course Landing Page: Course Outline */
