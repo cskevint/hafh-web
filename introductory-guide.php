@@ -27,13 +27,15 @@ $_GLOBALS["pageShareImage"] = "/images/share/guide.jpg";
 
     <section class="container-fluid bg-light">
         <div class="container p-1 p-md-4 p-lg-5 text-center">
-            <h1 class="px-0 px-md-2 px-lg-5">Welcome to our introductory guide about your at-home dog-boarding business!</h1>
+            <h1 class="px-0 px-md-2 px-lg-5">Welcome to our introductory guide about your at-home dog-boarding business!
+            </h1>
             <iframe class="youtube-video" src="https://www.youtube.com/embed/mK9lg1l1KkU" title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
             <div class="my-3 text-center">
-                <a href="/course" class="fs-3 link-secondary link-offset-2 link-offset-3-hover link-underline-opacity-50-hover">
+                <a href="/course"
+                    class="fs-3 link-secondary link-offset-2 link-offset-3-hover link-underline-opacity-50-hover">
                     Enroll in our course now!
                 </a>
             </div>
@@ -48,7 +50,8 @@ $_GLOBALS["pageShareImage"] = "/images/share/guide.jpg";
                 trademarks of Amazon.com, Inc. or its affiliates. Publishing.com is not affiliated with or endorsed by
                 Amazon.com, Inc. or its affiliates.
             </p>
-            <p class="fw.light text-light fs-6 text-center">&copy; 2025 HoundAwayFromHome.com. All rights reserved.</p>
+            <p class="fw-light text-light fs-6 text-center">&copy; 2025 <a href="http://www.houndawayfromhome.com"
+                    class="link-light text-decoration-none">HoundAwayFromHome.com</a>. All rights reserved.</p>
         </div>
     </section>
 

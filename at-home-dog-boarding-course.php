@@ -681,6 +681,10 @@ function enrollButton($text, $primary = false)
             }
             ?>
         </div>
+        <div class="my-3 text-center" style="font-size:12px">
+            &copy; 2025 <a href="http://www.houndawayfromhome.com"
+                class="link-info text-decoration-none">HoundAwayFromHome.com</a>. All rights reserved.
+        </div>
     </section>
 
     <script>

@@ -67,7 +67,8 @@ $_GLOBALS["pageShareImage"] = "/images/share/guide.jpg";
                 trademarks of Amazon.com, Inc. or its affiliates. Publishing.com is not affiliated with or endorsed by
                 Amazon.com, Inc. or its affiliates.
             </p>
-            <p class="fw.light text-light fs-6 text-center">&copy; 2025 HoundAwayFromHome.com. All rights reserved.</p>
+            <p class="fw-light text-light fs-6 text-center">&copy; 2025 <a href="http://www.houndawayfromhome.com"
+                    class="link-light text-decoration-none">HoundAwayFromHome.com</a>. All rights reserved.</p>
         </div>
     </section>
 
