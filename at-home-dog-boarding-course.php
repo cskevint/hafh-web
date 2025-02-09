@@ -512,7 +512,7 @@ $_GLOBALS["pageTitle"] = "At-home Dog Boarding Course";
     </section>
 
     <section class="py-4 pt-xl-5">
-        <div class="container p-5 rounded-5" 
+        <div class="container p-5 rounded-5"
             style="background: url('/images/course/limited-time-banner.png');background-repeat: no-repeat;background-size: cover;">
             <div class="row">
                 <h3 class="text-center">Limited Time Pre-Launch Bonuses</h3>
@@ -527,166 +527,53 @@ $_GLOBALS["pageTitle"] = "At-home Dog Boarding Course";
         </div>
     </section>
 
-    <section class="frequently-asked-section">
+    <section class="py-4 pt-xl-5">
         <div class="container">
+            <h1 class="mb-3 text-center">Frequently asked questions</h1>
             <div class="row">
-                <h2 class="frequently-asked-heading text-center">Frequently asked questions</h2>
-                <div class="col-md-6">
-                    <div class="freq-ques">
-                        <h3>Who is this course designed for?</h3>
-                        <p>This course is for people who want to stay home more and love dogs. Whether you're a
-                            stay-at-home parent,
-                            remote worker, retiree, or simply looking for a fulfilling way to earn income, this course
-                            is for you.</p>
+                <?php
+                $questions = [
+                    ["person", "Who is this course designed for?", "This course is for people who want to stay home more and love dogs. Whether you're a stay-at-home parent, remote worker, retiree, or simply looking for a fulfilling way to earn income, this course is for you."],
+                    ["cart-fill", "Do I need to have business experience to take this course?", "No, you don’t need any prior business experience. This course will guide you step-by-step through everything you need to know."],
+                    ["house-door-fill", "Do I need to own my home to start a dog boarding business?", "No, but you’ll need permission from your landlord if you’re renting. If owning isn’t an option, you can still explore related opportunities like dog walking or in-home dog sitting for others."],
+                    ["clock-fill", "How much time do I need to dedicate to running this type of business?", "A few hours a day are needed to play with, clean up after, and feed the dogs. Simply being present with them is essential but doesn’t require extra effort."],
+                    ["tag-fill", "What upfront costs should I expect to get started?", "If you already own a dog, your upfront costs will likely be minimal—maybe a few additional gates, bowls, beds, or cleaning supplies."],
+                    ["book-fill", "Will this course teach me how to handle dog behavior issues?", "The course will help you assess whether a dog is a good fit to avoid behavior issues. It also teaches how to set up your home to minimize potential problems, but it doesn’t cover correcting existing behavioral issues."],
+                    ["display-fill", "Can I run this business if I have a full-time remote job?", "Yes, as long as you’re home and able to supervise and care for the dogs, this business is a great fit for remote workers."],
+                    ["currency-dollar", "How quickly can I start making money after completing the course?", "You can start getting clients even before finishing the course. The early sections focus on setting up your home and attracting clients, so you can begin earning quickly."],
+                    ["tree-fill", "What if I live in a rural area—can I still succeed?", "Yes! While attracting daycare clients might be more challenging, many people are willing to travel for the unique experience of having their dogs cared for in a spacious, natural setting."],
+                    ["person-walking", "Will this course help me get clients?", "Absolutely. The course includes strategies and templates to help you effectively advertise and attract clients."],
+                    ["tools", "What tools or resources are included in the course?", "You’ll get business plan templates, income and expense tracking sheets, advertising templates, and more resources as the course grows."],
+                    ["receipt", "Do I need any certifications or licenses to start a dog boarding business?", "Depending on your location, you may need a business permit. Be sure to check your local requirements."],
+                    ["airplane-fill", "What happens if I need to take a break or go on vacation?", "You can pause your business at any time or find someone to cover for you while you’re away."],
+                    ["wifi", "How is this course delivered?", "The course is delivered through pre-recorded video lessons, so you can learn at your own pace."],
+                    ["person", "What kind of support will I have during and after the course?", "You’ll have access to a supportive community where you can ask questions and connect with me directly."],
+                    ["coin", "Is there a money-back guarantee if I’m not satisfied?", "Yes, we offer a money-back guarantee if you’re not happy with the course."]
+                ];
+                foreach ($questions as $question) {
+                    $icon = $question[0];
+                    $questionTitle = $question[1];
+                    $questionAnswer = $question[2];
+                    echo <<<HTML
+                        <div class="col-md-6 col-lg-6 mb-4">
+                            <div class="rounded-4 p-4 border border-info">
+                                <i class="bi bi-$icon ms-3 float-end text-secondary"></i> 
+                                <h3 class="fs-5 mb-3 text-secondary">
+                                    $questionTitle
+                                </h3>
+                                <p>$questionAnswer</p>
+                            </div>
                     </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="freq-ques">
-                        <h3>Who is this course designed for?</h3>
-                        <p>This course is for people who want to stay home more and love dogs. Whether you're a
-                            stay-at-home parent,
-                            remote worker, retiree, or simply looking for a fulfilling way to earn income, this course
-                            is for you.</p>
-                    </div>
-                </div>
+                    HTML;
+                }
+                ?>
             </div>
-            <div class="row">
-
-                <div class="col-md-6">
-                    <div class="freq-ques">
-                        <h3>Do I need to own my home to start a dog boarding business?</h3>
-                        <p>No, but you’ll need permission from your landlord if you’re renting. If owning isn’t an
-                            option, you can
-                            still explore related opportunities like dog walking or in-home dog sitting for others.</p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="freq-ques">
-                        <h3>How much time do I need to dedicate to running this type of business?</h3>
-                        <p>A few hours a day are needed to play with, clean up after, and feed the dogs. Simply being
-                            present with
-                            them is essential but doesn’t require extra effort.</p>
-                    </div>
-                </div>
+            <div class="text-center">
+                <a href="/enroll.php" class="btn btn-lg btn-secondary text-nowrap px-4 mt-3 rounded-pill shadow">
+                    Unlock Your Course
+                </a>
             </div>
-
-            <div class="row">
-
-                <div class="col-md-6">
-                    <div class="freq-ques">
-                        <h3>What upfront costs should I expect to get started?</h3>
-                        <p>If you already own a dog, your upfront costs will likely be minimal—maybe a few additional
-                            gates, bowls,
-                            beds, or cleaning supplies.</p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="freq-ques">
-                        <h3>Will this course teach me how to handle dog behavior issues?</h3>
-                        <p>The course will help you assess whether a dog is a good fit to avoid behavior issues. It also
-                            teaches how
-                            to set up your home to minimize potential problems, but it doesn’t cover correcting existing
-                            behavioral
-                            issues.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-
-                <div class="col-md-6">
-                    <div class="freq-ques">
-                        <h3>Can I run this business if I have a full-time remote job?</h3>
-                        <p>Yes, as long as you’re home and able to supervise and care for the dogs, this business is a
-                            great fit for
-                            remote workers.</p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="freq-ques">
-                        <h3>How quickly can I start making money after completing the course?</h3>
-                        <p>You can start getting clients even before finishing the course. The early sections focus on
-                            setting up
-                            your home and attracting clients, so you can begin earning quickly.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-
-                <div class="col-md-6">
-                    <div class="freq-ques">
-                        <h3>What if I live in a rural area—can I still succeed?</h3>
-                        <p>Yes! While attracting daycare clients might be more challenging, many people are willing to
-                            travel for
-                            the unique experience of having their dogs cared for in a spacious, natural setting.</p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="freq-ques">
-                        <h3>Will this course help me get clients?</h3>
-                        <p>Absolutely. The course includes strategies and templates to help you effectively advertise
-                            and attract
-                            clients.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-
-                <div class="col-md-6">
-                    <div class="freq-ques">
-                        <h3>What tools or resources are included in the course?</h3>
-                        <p>You’ll get business plan templates, income and expense tracking sheets, advertising
-                            templates, and more
-                            resources as the course grows.</p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="freq-ques">
-                        <h3>Do I need any certifications or licenses to start a dog boarding business?</h3>
-                        <p>Depending on your location, you may need a business permit. Be sure to check your local
-                            requirements.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-
-                <div class="col-md-6">
-                    <div class="freq-ques">
-                        <h3>What happens if I need to take a break or go on vacation?</h3>
-                        <p>You can pause your business at any time or find someone to cover for you while you’re away.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="freq-ques">
-                        <h3>How is this course delivered?</h3>
-                        <p>The course is delivered through pre-recorded video lessons, so you can learn at your own
-                            pace.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="freq-ques">
-                        <h3>What kind of support will I have during and after the course?</h3>
-                        <p>You’ll have access to a supportive community where you can ask questions and connect with me
-                            directly.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="freq-ques">
-                        <h3>Is there a money-back guarantee if I’m not satisfied?</h3>
-                        <p>Yes, we offer a money-back guarantee if you’re not happy with the course.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="course-btn btns text-center"> <button type="button" class="btn">Unlock Your Course</button>
-            </div>
+        </div>
         </div>
     </section>
 
