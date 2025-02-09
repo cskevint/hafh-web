@@ -32,7 +32,7 @@ function enrollButton($text, $primary = false)
         <nav class="navbar navbar-expand-lg" aria-label="Page navigation">
             <div class="container">
                 <a class="navbar-brand" href="/">
-                    <img alt="Hound Away From Home" src="/images/course/headerlogo.png" style="max-height:60px;" />
+                    <img alt="Hound Away From Home" src="/images/course/headerlogo.png" style="max-height:50px;" />
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation"
