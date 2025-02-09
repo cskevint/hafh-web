@@ -8,8 +8,6 @@ $_GLOBALS["pageTitle"] = "At-home Dog Boarding Course";
 
 <head>
     <?php include "includes/head-tag-contents.php"; ?>
-    <link rel="stylesheet" type="text/css" href="/styles/course.css?v=<?= time() ?>" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -577,71 +575,29 @@ $_GLOBALS["pageTitle"] = "At-home Dog Boarding Course";
         </div>
     </section>
 
-    <section class="disclaimer">
+    <section class="py-4 pt-xl-5 bg-dark text-white">
         <div class="container">
-            <div class="row">
-                <h2 class="text-center">Disclaimer</h2>
-            </div>
-            <div class="col-md-12">
-                <div class="disclaimer-details">
-                    <h4>Legal and Financial Disclaimer</h4>
-                    <p>This course does not guarantee financial success or specific income levels. While the course
-                        provides
-                        strategies to help you attract clients, the amount of money you earn will depend on various
-                        factors,
-                        including your location, your home setup, and your prior experience. Results may vary based on
-                        individual
-                        effort and circumstances. Starting a dog boarding business involves inherent risks, as dogs are
-                        animals and
-                        cannot be fully controlled. The course will set you up for success, but it is your
-                        responsibility to avoid
-                        situations that could put you or the dogs in your care at risk.</p>
-                </div>
-                <div class="disclaimer-details">
-                    <h4>Licensing and Legal Requirements</h4>
-                    <p>Participants are solely responsible for ensuring they comply with all local laws, permits, and
-                        regulations
-                        required to operate a dog boarding business in their area. While the course provides general
-                        guidance on
-                        city and county permitting, as well as information on filing taxes and setting up your business,
-                        it does not
-                        constitute legal advice. It is up to you to ensure all necessary legal and regulatory
-                        requirements are met.
-                    </p>
-                </div>
-                <div class="disclaimer-details">
-                    <h4>Health and Safety Disclaimer</h4>
-                    <p>You are fully responsible for ensuring the safety of your home and the dogs in your care. While
-                        the course
-                        offers guidance on assessing dog behavior and creating a safe environment, the final decisions
-                        and
-                        responsibilities lie with you.</p>
-                </div>
-                <div class="disclaimer-details">
-                    <h4>Intellectual Property</h4>
-                    <p>All course content, including templates, resources, and videos, is for personal use only.
-                        Redistribution,
-                        resale, or unauthorized sharing of the materials is strictly prohibited.</p>
-                </div>
-                <div class="disclaimer-details">
-                    <h4>Course Limitations</h4>
-                    <p>This course covers the basics of starting and running a dog boarding business but does not
-                        include advanced
-                        training in dog behavior, medical care, or other specialized areas. If you wish to pursue
-                        further
-                        certifications, additional training may be required. All advice provided is based on personal
-                        experience and
-                        does not constitute professional certification in animal behavior or care.</p>
-                </div>
-                <div class="disclaimer-details">
-                    <h4>Refund Policy</h4>
-                    <p>We stand behind the value of this course. However, if you are unable to secure clients or
-                        determine that
-                        this business is not the right fit for you, we offer a money-back guarantee. Specific details of
-                        the refund
-                        policy will be outlined at the time of purchase.</p>
-                </div>
-            </div>
+            <h1 class="mb-3 text-center">Disclaimer</h1>
+            <?php
+            $disclaimers = [
+                ["Legal and Financial Disclaimer", "This course does not guarantee financial success or specific income levels. While the course provides strategies to help you attract clients, the amount of money you earn will depend on various factors, including your location, your home setup, and your prior experience. Results may vary based on individual effort and circumstances. Starting a dog boarding business involves inherent risks, as dogs are animals and cannot be fully controlled. The course will set you up for success, but it is your responsibility to avoid situations that could put you or the dogs in your care at risk."],
+                ["Licensing and Legal Requirements", "Participants are solely responsible for ensuring they comply with all local laws, permits, and regulations required to operate a dog boarding business in their area. While the course provides general guidance on city and county permitting, as well as information on filing taxes and setting up your business, it does not constitute legal advice. It is up to you to ensure all necessary legal and regulatory requirements are met."],
+                ["Health and Safety Disclaimer", "You are fully responsible for ensuring the safety of your home and the dogs in your care. While the course offers guidance on assessing dog behavior and creating a safe environment, the final decisions and responsibilities lie with you."],
+                ["Intellectual Property", "All course content, including templates, resources, and videos, is for personal use only. Redistribution, resale, or unauthorized sharing of the materials is strictly prohibited."],
+                ["Course Limitations", "This course covers the basics of starting and running a dog boarding business but does not include advanced training in dog behavior, medical care, or other specialized areas. If you wish to pursue further certifications, additional training may be required. All advice provided is based on personal experience and does not constitute professional certification in animal behavior or care."],
+                ["Refund Policy", "We stand behind the value of this course. However, if you are unable to secure clients or determine that this business is not the right fit for you, we offer a money-back guarantee. Specific details of the refund policy will be outlined at the time of purchase."]
+            ];
+            foreach ($disclaimers as $item) {
+                $title = $item[0];
+                $body = $item[1];
+                echo <<<HTML
+                    <div class="rounded-4 p-4 mb-4" style="background: #FFF6EF0D;">
+                        <h2 class="fst-italic fs-5">$title</h2>
+                        <p class="fst-italic text-light">$body</p>
+                    </div>
+                HTML;
+            }
+            ?>
         </div>
     </section>
 

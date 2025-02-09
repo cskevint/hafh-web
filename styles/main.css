@@ -100,20 +100,6 @@ h1, h2, h3, h4, h5 {
     width: 100%;
 }
 
-/* Course Landing Page */
-
-.read-more.hidden .read-more-link {
-    display: inline-block;
-}
-
-.read-more .read-more-link {
-    display: none;
-}
-
-.read-more.hidden .read-more-content {
-    display: none;
-}
-
 /* Course Landing Page: Why Choose Dog Boarding? */
 
 .infobox {
@@ -246,4 +232,18 @@ button.accordion-button::after {
     background-image: url(/images/course/accordion_close.png);
     background-size: inherit;
     background-position: 6px 8px;
+}
+
+/* Course Landing Page: Testimonials */
+
+.read-more.hidden .read-more-link {
+    display: inline-block;
+}
+
+.read-more .read-more-link {
+    display: none;
+}
+
+.read-more.hidden .read-more-content {
+    display: none;
 }
