@@ -57,7 +57,7 @@ function enrollButton($text, $primary = false)
             <div class="container">
                 <?php
                 if (isset($_SESSION['notice'])) {
-                    echo '<div class="alert alert-warning">' . $_SESSION['notice'] . '</div>';
+                    echo '<div class="d-flex align-items-center justify-content-center"><div class="alert alert-danger" style="width:65%"><i class="bi bi-exclamation-circle-fill me-3"></i>' . $_SESSION['notice'] . '</div></div>';
                     unset($_SESSION['notice']);
                 }
                 ?>

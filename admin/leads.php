@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once ("../includes/config.php");
+require_once "../includes/config.php";
 
 if (!in_array($_SERVER['REMOTE_ADDR'], $GLOBALS['DEVELOPMENT_IPS'])) {
     header('Location: /404.php');
