@@ -2,6 +2,17 @@
 session_start();
 require_once("redirect.php");
 $_GLOBALS["pageTitle"] = "At-home Dog Boarding Course";
+
+function enrollButton($text, $primary = false)
+{
+    $color = $primary ? "btn-primary" : "btn-secondary";
+    return <<<HTML
+        <a href="/enroll.php"
+            class="btn btn-lg $color text-nowrap px-4 my-3 rounded-pill shadow">
+            $text
+        </a>
+    HTML;
+}
 ?>
 <!doctype html>
 <html lang="en">
@@ -12,6 +23,7 @@ $_GLOBALS["pageTitle"] = "At-home Dog Boarding Course";
 
 <body>
 
+    <?php include("includes/devserver.php"); ?>
     <?php include "includes/debug.php"; ?>
 
     <div class="container-fluid" style="background: linear-gradient(180deg, #FFFBF9 16.31%, #FFE6D2 89.83%);">
@@ -33,6 +45,12 @@ $_GLOBALS["pageTitle"] = "At-home Dog Boarding Course";
 
         <section class="p-3 p-md-4">
             <div class="container">
+                <?php
+                if (isset($_SESSION['notice'])) {
+                    echo '<div class="alert alert-warning">' . $_SESSION['notice'] . '</div>';
+                    unset($_SESSION['notice']);
+                }
+                ?>
                 <div class="row">
                     <div class="col-lg-6 d-flex align-items-center justify-content-center">
                         <div>
@@ -42,10 +60,7 @@ $_GLOBALS["pageTitle"] = "At-home Dog Boarding Course";
                             </h1>
                             <div class="row pt-xl-4">
                                 <div class="col-xl-4 text-center d-flex align-items-center justify-content-center">
-                                    <a href="/enroll.php"
-                                        class="btn btn-lg btn-secondary text-nowrap px-4 my-3 rounded-pill shadow">
-                                        Enroll Now
-                                    </a>
+                                    <?= enrollButton("Enroll Now") ?>
                                 </div>
                                 <div class="col-xl-8">
                                     <p class="fs-5 text-center text-lg-start">Ready to turn your love for dogs into a
@@ -91,9 +106,7 @@ $_GLOBALS["pageTitle"] = "At-home Dog Boarding Course";
                     </div>
                 </div>
                 <div class="col-lg-2 col-xl-2 d-flex align-items-center justify-content-center">
-                    <a href="/enroll.php" class="btn btn-lg btn-primary text-nowrap px-4 my-3 rounded-pill shadow">
-                        Grab Your Discount!
-                    </a>
+                    <?= enrollButton("Grab Your Discount!", true) ?>
                 </div>
             </div>
         </div>
@@ -135,12 +148,38 @@ $_GLOBALS["pageTitle"] = "At-home Dog Boarding Course";
         </div>
         <div class="my-3 text-center">
             <img class="" src="/images/course/vectorright.png" alt="Arrow">
-            <a href="/enroll.php" class="btn btn-lg btn-secondary text-nowrap px-4 my-3 rounded-pill shadow">
-                Unlock Your Course
-            </a>
+            <?= enrollButton("Unlock Your Course") ?>
         </div>
     </section>
 
+    <?php
+    $whatYoullLearn = [
+        [
+            "Setting Up for Success",
+            [
+                "Learn how to evaluate your space, resources, and legal steps for starting a dog boarding business.",
+                "Create a safe, welcoming environment for dogs while maintaining your home's comfort.",
+                "Access worksheets, sample spreadsheets, and contracts to help plan and organize your business."
+            ]
+        ],
+        [
+            "Running and Growing Your Business",
+            [
+                "Develop a business plan, branding strategies, and methods for attracting clients.",
+                "Master client relations and ensure a peaceful environment for dogs in your care.",
+                "Utilize customizable flyers, contracts, and tools to streamline business operations and scaling."
+            ]
+        ],
+        [
+            "Handling Challenges and Special Situations",
+            [
+                "Gain insights into dog behavior and how to manage emergencies and special care situations.",
+                "Learn techniques to maintain safety and wellbeing for dogs in your care.",
+                "Access practical templates and protocols to handle special situations with confidence."
+            ]
+        ]
+    ];
+    ?>
     <section class="py-3 py-lg-1 pt-xl-3">
         <div class="container rounded-5 bg-light p-3 p-md-4 p-xl-5">
             <h1 class="mb-5 text-center">What you'll learn in this course</h1>
@@ -149,16 +188,11 @@ $_GLOBALS["pageTitle"] = "At-home Dog Boarding Course";
                     <img class="rounded-5 img-fluid" src="/images/course/learn_success.png">
                 </div>
                 <div class="col-lg-7">
-                    <h2 class="text-danger my-4">Setting Up for Success</h2>
+                    <h2 class="text-danger my-4"><?= $whatYoullLearn[0][0] ?></h2>
                     <ul class="checkmark-list">
-                        <li class="fs-5 fw-light">Learn how to evaluate your space, <strong>resources,</strong> and
-                            <strong>legal steps</strong> for starting a dog boarding business.
-                        </li>
-                        <li class="fs-5 fw-light">Create a safe, welcoming environment for dogs while maintaining your
-                            home's comfort.</li>
-                        <li class="fs-5 fw-light">Access worksheets, sample spreadsheets, and contracts to help plan and
-                            organize your
-                            business.</li>
+                        <li class="fs-5 fw-light"><?= $whatYoullLearn[0][1][0] ?></li>
+                        <li class="fs-5 fw-light"><?= $whatYoullLearn[0][1][1] ?></li>
+                        <li class="fs-5 fw-light"><?= $whatYoullLearn[0][1][2] ?></li>
                     </ul>
                 </div>
             </div>
@@ -167,15 +201,11 @@ $_GLOBALS["pageTitle"] = "At-home Dog Boarding Course";
                     <img class="rounded-5 img-fluid" src="/images/course/learn_business.png">
                 </div>
                 <div class="col-lg-7 order-2 order-lg-1">
-                    <h2 class="text-danger my-4">Running and Growing Your Business</h2>
+                    <h2 class="text-danger my-4"><?= $whatYoullLearn[1][0] ?></h2>
                     <ul class="checkmark-list">
-                        <li class="fs-5 fw-light">Develop a business plan, branding strategies, and methods for
-                            attracting clients.</li>
-                        <li class="fs-5 fw-light">Master client relations and ensure a peaceful environment for dogs in
-                            your care.</li>
-                        <li class="fs-5 fw-light">Utilize customizable flyers, contracts, and tools to streamline
-                            business operations and
-                            scaling.</li>
+                        <li class="fs-5 fw-light"><?= $whatYoullLearn[1][1][0] ?></li>
+                        <li class="fs-5 fw-light"><?= $whatYoullLearn[1][1][1] ?></li>
+                        <li class="fs-5 fw-light"><?= $whatYoullLearn[1][1][2] ?></li>
                     </ul>
                 </div>
 
@@ -185,22 +215,16 @@ $_GLOBALS["pageTitle"] = "At-home Dog Boarding Course";
                     <img class="rounded-5 img-fluid" src="/images/course/learn_situations.png">
                 </div>
                 <div class="col-lg-7">
-                    <h2 class="text-danger my-4">Handling Challenges and Special Situations</h2>
+                    <h2 class="text-danger my-4"><?= $whatYoullLearn[2][0] ?></h2>
                     <ul class="checkmark-list">
-                        <li class="fs-5 fw-light">Gain insights into dog behavior and how to manage emergencies and
-                            special care situations.
-                        </li>
-                        <li class="fs-5 fw-light">Learn techniques to maintain safety and wellbeing for dogs in your<br>
-                            care.</li>
-                        <li class="fs-5 fw-light">Access practical templates and protocols to handle special situations
-                            with confidence.</li>
+                        <li class="fs-5 fw-light"><?= $whatYoullLearn[2][1][0] ?></li>
+                        <li class="fs-5 fw-light"><?= $whatYoullLearn[2][1][1] ?></li>
+                        <li class="fs-5 fw-light"><?= $whatYoullLearn[2][1][2] ?></li>
                     </ul>
                 </div>
             </div>
             <div class="text-center">
-                <a href="/enroll.php" class="btn btn-lg btn-secondary text-nowrap px-4 my-3 rounded-pill shadow">
-                    Enroll & Learn Today
-                </a>
+                <?= enrollButton("Enroll & Learn Today") ?>
                 <img class="" src="/images/course/vectorleft.png" alt="Arrow">
             </div>
         </div>
@@ -444,36 +468,30 @@ $_GLOBALS["pageTitle"] = "At-home Dog Boarding Course";
                 </div>
             </div>
             <div class="text-center">
-                <a href="/enroll.php" class="btn btn-lg btn-secondary text-nowrap px-4 my-3 rounded-pill shadow">
-                    Enroll & Learn Today
-                </a>
+                <?= enrollButton("Enroll & Learn Today") ?>
             </div>
         </div>
     </section>
 
+    <?php
+    $coachLines = [
+        "Hi, I’m Selena Trotter, and I’ve been running a successful at-home dog boarding business since 2012. It all started one summer during a break from my high school teaching career when I began looking after dogs. What began as a side hustle quickly became a fulfilling, full-time business that allowed me to stay home -all while earning a great income. Since then, I’ve cared for over 1,000 dogs, creating a safe, loving, and happy environment.",
+        "Running this business has given me the freedom to raise my kids at home and involve them in the work, teaching them responsibility and the value of caring for others. Over the years, I’ve learned the ins and outs of managing a successful dog boarding business, from handling unique challenges to enjoying the incredible rewards.",
+        "With my background in teaching and executive coaching, I bring a wealth of experience in guiding others to success. My practical, supportive approach is designed to help you achieve financial independence, time flexibility, and a deep sense of fulfillment. Whether you’re looking to supplement your income or create a full-time career, I’m here to share everything to help you get started, avoid pitfalls, and find joy in building a business centered around the love of dogs."
+    ];
+    ?>
     <section class="py-4 pt-xl-5">
         <div class="container">
             <h1 class="mb-3 text-center">Meet your coach</h1>
             <img class="d-none d-xl-inline-block mx-3 float-end" src="/images/course/meet-coach.png"
                 alt="Selena Trotter" />
-            <p class="px-3 fs-5">Hi, I’m Selena Trotter, and I’ve been running a successful at-home dog boarding
-                business since 2012. It all started one summer during a break from my high school teaching career when I
-                began looking after dogs. What began as a side hustle quickly became a fulfilling, full-time business
-                that allowed me to stay home -all while earning a great income. Since then, I’ve cared for over 1,000
-                dogs, creating a safe, loving, and happy environment.</p>
+            <p class="px-3 fs-5"><?= $coachLines[0] ?></p>
             <div class="d-block d-xl-none mb-3 text-center">
                 <img class="img-fluid" src="/images/course/meet-coach.png" alt="Selena Trotter" />
             </div>
             <div class="p-3 p-lg-5 m-0 me-xl-5 rounded-5 bg-warning ">
-                <p class="fs-5">Running this business has given me the freedom to raise my kids at home and involve them
-                    in the work, teaching them responsibility and the value of caring for others.</p>
-                <p class="fs-5">Over the years, I’ve learned the ins and outs of managing a successful dog boarding
-                    business, from handling unique challenges to enjoying the incredible rewards.</p>
-                <p class="fs-5">With my background in teaching and executive coaching, I bring a wealth of experience in
-                    guiding others to success. My practical, supportive approach is designed to help you achieve
-                    financial independence, time flexibility, and a deep sense of fulfillment. Whether you’re looking to
-                    supplement your income or create a full-time career, I’m here to share everything to help you get
-                    started, avoid pitfalls, and find joy in building a business centered around the love of dogs.</p>
+                <p class="fs-5"><?= $coachLines[1] ?></p>
+                <p class="fs-5"><?= $coachLines[2] ?></p>
             </div>
         </div>
     </section>
@@ -484,26 +502,43 @@ $_GLOBALS["pageTitle"] = "At-home Dog Boarding Course";
                 <div class="col-lg-6 p-4 rounded-5">
                     <h1 class="mb-4">Who this course is for:</h1>
                     <ul class="blue-checkmark-list">
-                        <li class="fs-5 mb-1">Perfect for dog lovers wanting to earn money from home.</li>
-                        <li class="fs-5 mb-1">Suitable for stay-at-home parents, remote workers, or retirees.</li>
-                        <li class="fs-5 mb-1">Learn to turn your passion for dogs into a business.</li>
-                        <li class="fs-5 mb-1">Tips for creating a safe, dog-friendly home.</li>
-                        <li class="fs-5 mb-1">Strategies for attracting clients and managing dogs.</li>
-                        <li class="fs-5 mb-1">Solutions for handling dog fights and cleaning efficiently.</li>
-                        <li class="fs-5 mb-1">Make dog care enjoyable, stress-free, and profitable.</li>
+                        <?php
+                        $whoForLines = [
+                            "Perfect for dog lovers wanting to earn money from home.",
+                            "Suitable for stay-at-home parents, remote workers, or retirees.",
+                            "Learn to turn your passion for dogs into a business.",
+                            "Tips for creating a safe, dog-friendly home.",
+                            "Strategies for attracting clients and managing dogs.",
+                            "Solutions for handling dog fights and cleaning efficiently.",
+                            "Make dog care enjoyable, stress-free, and profitable."
+                        ];
+                        foreach ($whoForLines as $paragraph) {
+                            echo <<<HTML
+                                <li class="fs-5 mb-1">$paragraph</li>
+                            HTML;
+                        }
+                        ?>
                     </ul>
                 </div>
                 <div class="col-lg-6 p-4 rounded-5 bg-secondary text-light">
                     <h1 class="mb-4">Who this course is NOT for:</h1>
                     <ul class="brown-checkmark-list">
-                        <li class="fs-5 mb-1">This course requires prior dog care experience.</li>
-                        <li class="fs-5 mb-1">Dog behavior and needs are essential but not detailed here.</li>
-                        <li class="fs-5 mb-1">Success requires strong commitment to being present with the dogs.</li>
-                        <li class="fs-5 mb-1">A support system is needed for managing the business during absences.</li>
-                        <li class="fs-5 mb-1">Comfort with cleaning and handling behavioral challenges is necessary.
-                        </li>
-                        <li class="fs-5 mb-1">Setting up a space and leaving dogs alone won’t work.</li>
-                        <li class="fs-5 mb-1">This course will help you succeed in dog care’s joys and challenges.</li>
+                        <?php
+                        $whoNotForLines = [
+                            "This course requires prior dog care experience.",
+                            "Dog behavior and needs are essential but not detailed here.",
+                            "Success requires strong commitment to being present with the dogs.",
+                            "A support system is needed for managing the business during absences.",
+                            "Comfort with cleaning and handling behavioral challenges is neces",
+                            "Setting up a space and leaving dogs alone won’t work.",
+                            "This course will help you succeed in dog care’s joys and challenges.",
+                        ];
+                        foreach ($whoNotForLines as $paragraph) {
+                            echo <<<HTML
+                                <li class="fs-5 mb-1">$paragraph</li>
+                            HTML;
+                        }
+                        ?>
                     </ul>
                 </div>
             </div>
@@ -516,10 +551,17 @@ $_GLOBALS["pageTitle"] = "At-home Dog Boarding Course";
                 <h3 class="text-center">Limited Time Pre-Launch Bonuses</h3>
                 <p class="text-center">Ready to turn your love for dogs into a thriving business? Our online course will
                     tell you everything you need to know to run your own at-home dog boarding business!</p>
+                <ul>
+                    <li><b>Free Community Access</b>: your questions answered daily so you never have to second
+                        guess or waste time!</li>
+                    <li><b>Customized Course</b>: The course will be built around your specific needs as an early
+                        adopter. This is something that late adopters will not get to experience with the finished
+                        course!</li>
+                    <li><b>Early Access to Coaching Program</b>: All of our early adopters will have first
+                        dibs on our limited spaces within our 1:1 coaching programs.</li>
+                </ul>
                 <div class="text-center">
-                    <a href="/enroll.php" class="btn btn-lg btn-secondary text-nowrap px-4 mt-3 rounded-pill shadow">
-                        Enroll Now
-                    </a>
+                    <?= enrollButton("Enroll Now") ?>
                 </div>
             </div>
         </div>
@@ -567,9 +609,7 @@ $_GLOBALS["pageTitle"] = "At-home Dog Boarding Course";
                 ?>
             </div>
             <div class="text-center">
-                <a href="/enroll.php" class="btn btn-lg btn-secondary text-nowrap px-4 mt-3 rounded-pill shadow">
-                    Unlock Your Course
-                </a>
+                <?= enrollButton("Unlock Your Course", true) ?>
             </div>
         </div>
         </div>
