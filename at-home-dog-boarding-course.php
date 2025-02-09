@@ -1,13 +1,13 @@
 <?php
 session_start();
-require_once("redirect.php");
+require_once "redirect.php";
 $_GLOBALS["pageTitle"] = "At-home Dog Boarding Course";
 
 function enrollButton($text, $primary = false)
 {
     $color = $primary ? "btn-primary" : "btn-secondary";
     return <<<HTML
-        <a href="/enroll.php"
+        <a href="/enroll"
             class="btn btn-lg $color text-nowrap px-4 my-3 rounded-pill shadow">
             $text
         </a>
@@ -37,9 +37,17 @@ function enrollButton($text, $primary = false)
                 <div>
                     <img src="/images/course/paws.png" style="width: 110px;margin-bottom: -100px;margin-left: -52px;" />
                 </div>
-                <a href="/ebook.php" class="btn btn-outline-secondary p-3 px-4 rounded-pill text-nowrap">
-                    Download Free E-book
-                </a>
+                <div>
+                    <a href="/guide" class="btn p-3 px-4 rounded-pill text-nowrap">
+                        Watch Guide
+                    </a>
+                    <a href="/quiz" class="btn p-3 px-4 rounded-pill text-nowrap">
+                        Take a quiz
+                    </a>
+                    <a href="/ebook" class="btn p-3 px-4 rounded-pill text-nowrap">
+                        Download Free E-book
+                    </a>
+                </div>
             </div>
         </header>
 
