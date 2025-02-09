@@ -453,48 +453,29 @@ $_GLOBALS["pageTitle"] = "At-home Dog Boarding Course";
         </div>
     </section>
 
-    <section class="meet-your-coach-section">
+    <section class="py-4 pt-xl-5">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h2 class="meet-coach-heading">Meet your coach</h2>
-                    <p class="meet-coach-desc">Hi, I’m Selena Trotter, and I’ve been running a successful at-home dog
-                        boarding
-                        business since 2012. It all started one summer during a break from my high school teaching
-                        career when I
-                        began looking after dogs. What began as a side hustle quickly became a fulfilling, full-time
-                        business that
-                        allowed me to stay home -all while earning a great income. Since then, I’ve cared for over 1,000
-                        dogs,
-                        creating a safe, loving, and happy environment. </p>
-                </div>
-                <div class="col-md-6">
-                    <img class="meet-img" src="/images/course/meet-coach.png">
-                </div>
+            <h1 class="mb-3 text-center">Meet your coach</h1>
+            <img class="d-none d-xl-inline-block mx-3 float-end" src="/images/course/meet-coach.png"
+                alt="Selena Trotter" />
+            <p class="px-3 fs-5">Hi, I’m Selena Trotter, and I’ve been running a successful at-home dog boarding
+                business since 2012. It all started one summer during a break from my high school teaching career when I
+                began looking after dogs. What began as a side hustle quickly became a fulfilling, full-time business
+                that allowed me to stay home -all while earning a great income. Since then, I’ve cared for over 1,000
+                dogs, creating a safe, loving, and happy environment.</p>
+            <div class="d-block d-xl-none mb-3 text-center">
+                <img class="img-fluid" src="/images/course/meet-coach.png" alt="Selena Trotter" />
             </div>
-
-        </div>
-
-    </section>
-
-    <section class="meet-des-sec">
-        <div class="container">
-            <div class="meet-content">
-                <p class="first-con">Running this business has given me the freedom to raise my kids at home and involve
-                    them in
-                    the work, teaching them responsibility and the value of caring for others.</p>
-                <p>Over the years, I’ve learned the ins and outs of managing a successful dog boarding business, from
-                    handling
-                    unique challenges to enjoying the incredible rewards.</p>
-                <p>With my background in teaching and executive coaching, I bring a wealth of experience in guiding
-                    others to
-                    success. My practical, supportive approach is designed to help you achieve financial independence,
-                    time
-                    flexibility, and a deep sense of fulfillment. Whether you’re looking to supplement your income or
-                    create a
-                    full-time career, I’m here to share everything to help you get started, avoid pitfalls, and find joy
-                    in
-                    building a business centered around the love of dogs.</p>
+            <div class="p-3 p-lg-5 m-0 me-xl-5 rounded-5 bg-warning ">
+                <p class="fs-5">Running this business has given me the freedom to raise my kids at home and involve them
+                    in the work, teaching them responsibility and the value of caring for others.</p>
+                <p class="fs-5">Over the years, I’ve learned the ins and outs of managing a successful dog boarding
+                    business, from handling unique challenges to enjoying the incredible rewards.</p>
+                <p class="fs-5">With my background in teaching and executive coaching, I bring a wealth of experience in
+                    guiding others to success. My practical, supportive approach is designed to help you achieve
+                    financial independence, time flexibility, and a deep sense of fulfillment. Whether you’re looking to
+                    supplement your income or create a full-time career, I’m here to share everything to help you get
+                    started, avoid pitfalls, and find joy in building a business centered around the love of dogs.</p>
             </div>
         </div>
     </section>
