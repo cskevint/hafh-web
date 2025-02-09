@@ -18,6 +18,16 @@ if (isset($_REQUEST["previousQuestion"]) && isset($_REQUEST["previousAnswer"])) 
     $_SESSION["quiz"][$_REQUEST["previousQuestion"]] = $_REQUEST["previousAnswer"];
 }
 
+function enrollButton($text) {
+    return <<<HTML
+        <div class="text-center">
+            <a href="/enroll"
+                class="btn btn-lg btn-primary text-nowrap px-4 my-3 rounded-pill shadow">
+                $text
+            </a>
+        </div>
+    HTML;
+}
 function getNextQuestionId()
 {
     global $currentQuestionId, $quiz, $currentQuestion;
@@ -70,7 +80,7 @@ $renderState = getRenderState();
 <html lang="en" class="bg-secondary">
 
 <head>
-    <?php include("includes/head-tag-contents.php"); ?>
+    <?php include "includes/head-tag-contents.php"; ?>
 </head>
 
 <body>
@@ -174,8 +184,7 @@ $renderState = getRenderState();
                                 <li>Techniques to maximize your income from day one.</li>
                             </ul>
                             <p class="fw-bold">Ready to start earning?</p>
-                            <p><a href="/course" class="link-primary text-decoration-none"> &#128073; Join the
-                                    course now and get an exclusive discount for a limited time! </a> </p>
+                            <?= enrollButton("&#128073; Join the course now and get an exclusive discount for a limited time!") ?>
                             <p>The time to build a business you love and control your income is <b> right now</b>.
                                 You’ve got this! &#128588; &#128062; </p>
 
@@ -202,8 +211,7 @@ $renderState = getRenderState();
                                 feel ready to welcome your first clients and start building your dog-care business.
                             </p>
                             <p class="fw-bold">Ready to start your journey?</p>
-                            <p><a href="/course" class="link-primary text-decoration-none"> &#128073; Join now and
-                                    transform your passion into a business in just 9 days! </a> </p>
+                            <?= enrollButton("&#128073; Join now and transform your passion into a business in just 9 days!") ?>
                             <p>You’re closer than ever—let’s make it happen together! &#128054; &#128188; </p>
 
                         </div>
@@ -233,14 +241,13 @@ $renderState = getRenderState();
                                 <li>Start earning and growing your business as you gain experience.</li>
                             </ul>
                             <p class="fw-bold">Your journey starts here:</p>
-                            <p><a href="/course" class="link-primary text-decoration-none"> &#128073; Sign up now
-                                    and let us help you turn your dreams into a reality!</a></p>
+                            <?= enrollButton(" &#128073; Sign up now and let us help you turn your dreams into a reality!") ?>
                             <p>Everyone starts somewhere, and with the right guidance, you can build a business that
                                 grows alongside you. <b> Let’s take that first step together.</b> &#128054; &#10024;
                             </p>
 
                         </div>
-                        <div class="d-flex justify-content-center align-items-center">
+                        <div class="mt-5 d-flex justify-content-center align-items-center">
                             <a href="<?= setUrlParam(getCurrentUrl(), [], true) ?>" class="btn btn-light">
                                 Start over
                             </a>
