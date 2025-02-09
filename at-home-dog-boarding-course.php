@@ -208,6 +208,37 @@ $_GLOBALS["pageTitle"] = "At-home Dog Boarding Course";
         </div>
     </section>
 
+    <?php
+    function renderAccordionItem($accordion, $id, $title, $contents, $show): string
+    {
+        $contentsHtml = "";
+        foreach ($contents as $items) {
+            $contentsHtml .= <<<HTML
+            <h3 class="fs-5 m-0">$items[0]</h3>
+            <p class="fw-normal">$items[1]</p>
+            HTML;
+        }
+        $showClass = $show ? "show" : "";
+        $ariaExpanded = $show ? "true" : "false";
+        $html = <<<HTML
+        <div class="card">
+            <div class="card-header p-3 bg-white" role="tab" id="$id">
+                <button class="accordion-button collapsed" role="button" data-bs-toggle="collapse"
+                    data-parent="#$accordion" href="#$id-button" aria-expanded="$ariaExpanded"
+                    aria-controls="$id-button">
+                    <h2 class="fs-5 m-0">$title</h2>
+                </button>
+            </div>
+            <div class="card-body collapse $showClass p-0" id="$id-button" role="tabpanel" aria-labelledby="$id">
+                <div class="accordion-body p-3">
+                    $contentsHtml
+                </div>
+            </div>
+        </div>
+        HTML;
+        return $html;
+    }
+    ?>
     <section class="py-4 pt-xl-5">
         <div class="container">
             <h1 class="text-center">Course Outline</h1>
@@ -225,36 +256,6 @@ $_GLOBALS["pageTitle"] = "At-home Dog Boarding Course";
             </div>
             <div id="courseOutline">
                 <?php
-                function renderAccordionItem($accordion, $id, $title, $contents, $show): string
-                {
-                    $contentsHtml = "";
-                    foreach ($contents as $items) {
-                        $contentsHtml .= <<<HTML
-                        <h3 class="fs-5 m-0">$items[0]</h3>
-                        <p class="fw-normal">$items[1]</p>
-                        HTML;
-                    }
-                    $showClass = $show ? "show" : "";
-                    $ariaExpanded = $show ? "true" : "false";
-                    $html = <<<HTML
-                    <div class="card">
-                        <div class="card-header p-3 bg-white" role="tab" id="$id">
-                            <button class="accordion-button collapsed" role="button" data-bs-toggle="collapse"
-                                data-parent="#$accordion" href="#$id-button" aria-expanded="$ariaExpanded"
-                                aria-controls="$id-button">
-                                <h2 class="fs-5 m-0">$title</h2>
-                            </button>
-                        </div>
-                        <div class="card-body collapse $showClass p-0" id="$id-button" role="tabpanel" aria-labelledby="$id">
-                            <div class="accordion-body p-3">
-                                $contentsHtml
-                            </div>
-                        </div>
-                    </div>
-                    HTML;
-                    return $html;
-                }
-
                 echo renderAccordionItem("courseOutline", "day1", "Day 1: Assessing Your Situation", [
                     ["Lesson 1 - Introduction", "Welcome to the course! This session will set the foundation for starting your dog-sitting business. Learn what to expect and how to build confidence in your ability to succeed."],
                     ["Lesson 2 - Assessing Your Situation", "Analyze your home, time, family dynamics, and community resources to understand how they align with your dog-sitting goals."],
@@ -362,116 +363,95 @@ $_GLOBALS["pageTitle"] = "At-home Dog Boarding Course";
         </div>
     </section>
 
-    <section class="testimonial-section">
+    <?php
+    $testimonialHeader = <<<HTML
+        <div class="row">
+            <div class="col"><img src="/images/course/quote.png" /></div>
+            <div class="col d-flex align-items-center justify-content-end">
+                <ul class="list-unstyled d-flex justify-content-right text-warning mb-0">
+                    <li>
+                        <i class="bi bi-star-fill"></i>
+                    </li>
+                    <li>
+                        <i class="bi bi-star-fill"></i>
+                    </li>
+                    <li>
+                        <i class="bi bi-star-fill"></i>
+                    </li>
+                    <li>
+                        <i class="bi bi-star-fill"></i>
+                    </li>
+                    <li>
+                        <i class="bi bi-star-fill"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    HTML;
+    ?>
+    <section class="py-4 pt-xl-5" style="background: linear-gradient(140.37deg, #069EE0 24.28%, #0279AD 103.59%);">
         <div class="container">
-            <h2 class="testimonial-heading text-center">Testimonials</h2>
-            <p class="testimonial-desc text-center">Our comprehensive course covers everything you need to know to start
-                and
-                run a
-                successful at-home dog boarding business. Here's a sneak peek at what you'll learn:</p>
-
-            <!-- Carousel wrapper -->
-            <div id="carouselExampleControls" data-mdb-carousel-init class="carousel slide text-center carousel-dark"
-                data-mdb-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="slide-inner">
-                                    <ul class="list-unstyled d-flex justify-content-right text-warning mb-0">
-                                        <li><i class="fas fa-star fa-sm"></i></li>
-                                        <li><i class="fas fa-star fa-sm"></i></li>
-                                        <li><i class="fas fa-star fa-sm"></i></li>
-                                        <li><i class="fas fa-star fa-sm"></i></li>
-                                        <li><i class="fas fa-star fa-sm"></i></li>
-                                    </ul>
-
-                                    <p class="text-muted">
-                                        Selena knows her stuff! With over a decade of experience in the business and a
-                                        lifetime of loving
-                                        dogs, she offers the tools you'll need to start a successful dog business. I’ve
-                                        been working with
-                                        her for over a year since before I got my first guest, to now where I have
-                                        dozens of repeat clients.
-                                        I'm grateful for her mentorship and highly recommend her course!
-                                    </p>
-
-                                    <div class="row justify-content-center align-items-center">
-                                        <div class="col-md-2">
-                                            <img class="rounded-circle shadow-1-strong mb-4 testimonial-image"
-                                                src="/images/course/leila.png" alt="avatar" style="width: 50px;" />
-                                        </div>
-                                        <div class="col-md-10 ">
-                                            <div class="content-left">
-                                                <h5 class="mb-3">Maria Kate</h5>
-                                                <p>Photographer</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
+            <h1 class="text-white text-center">Testimonials</h1>
+            <p class="text-white text-center">Hear from our students who have successfully launched their own dog
+                boarding businesses after taking our course.</p>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card p-4 mb-4 shadow-lg rounded-5 bg-white">
+                        <?= $testimonialHeader ?>
+                        <p class="m-3 fst-italic">
+                            Selena knows her stuff! With over a decade of experience in the business and a lifetime of
+                            loving dogs, she offers the tools you'll need to start a successful dog business. I’ve been
+                            working with her for over a year since before I got my first guest, to now where I have
+                            dozens of repeat clients. I'm grateful for her mentorship and highly recommend her course!
+                        </p>
+                        <div class="d-flex">
+                            <span class="ms-3">
+                                <img class="rounded-circle" src="/images/course/testimonial_leila.png" alt="Leila Gates"
+                                    style="width: 50px;" />
+                            </span>
+                            <div class="ms-3">
+                                <p class="m-0 fs-5">Leila Gates</p>
+                                <p class="text-primary">Teacher</p>
                             </div>
-                            <div class="col-lg-6">
-                                <div class="slide-inner">
-                                    <ul class="list-unstyled d-flex justify-content-right text-warning mb-0">
-                                        <li><i class="fas fa-star fa-sm"></i></li>
-                                        <li><i class="fas fa-star fa-sm"></i></li>
-                                        <li><i class="fas fa-star fa-sm"></i></li>
-                                        <li><i class="fas fa-star fa-sm"></i></li>
-                                        <li><i class="fas fa-star fa-sm"></i></li>
-                                    </ul>
-
-                                    <p class="text-muted">
-                                        Honestly, I thought that doing the dog business would not require much
-                                        knowledge, it could be
-                                        intuitive, but when I started receiving information from Selena, I realized that
-                                        I needed valuable
-                                        information that only she had because of her experience. I felt taken by the
-                                        hand and when we
-                                        received the first dog (only 5 days after starting the course) everything made
-                                        so much sense, when
-                                        you do it... <a href="#">Read More</a>
-                                    </p>
-
-                                    <div class="row justify-content-center align-items-center">
-                                        <div class="col-md-2">
-                                            <img class="rounded-circle shadow-1-strong mb-4 testimonial-image"
-                                                src="/images/course/sara.png" alt="avatar" style="width: 50px;" />
-                                        </div>
-                                        <div class="col-md-10 ">
-                                            <div class="content-left">
-                                                <h5 class="mb-3">Sara Botero</h5>
-                                                <p>UX Designer</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
                         </div>
                     </div>
-
                 </div>
-                <!-- <button data-mdb-button-init class="carousel-control-prev" type="button" data-mdb-target="#carouselExampleControls"
-                              data-mdb-slide="prev">
-                              <span class="carousel-control-prev-icon text-body" aria-hidden="true"></span>
-                              <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button data-mdb-button-init class="carousel-control-next" type="button" data-mdb-target="#carouselExampleControls"
-                              data-mdb-slide="next">
-                              <span class="carousel-control-next-icon text-body" aria-hidden="true"></span>
-                              <span class="visually-hidden">Next</span>
-                            </button> -->
+                <div class="col-lg-6">
+                    <div class="card p-4 mb-4 shadow-lg rounded-5 bg-white">
+                        <?= $testimonialHeader ?>
+                        <p class="m-3 fst-italic">
+                            Honestly, I thought that doing the dog business would not require much knowledge, it could
+                            be intuitive, but when I started receiving information from Selena, I realized that I needed
+                            valuable information that only she had because of her experience. I felt taken by the hand
+                            and when we received the first dog <span class="read-more hidden"><a
+                                    href="javascript:void(0)"
+                                    class="read-more-link text-decoration-none">More...</a><span
+                                    class="read-more-content"> (only 5 days after starting the course) everything made
+                                    so much sense, when you do it, the experience that she has, becomes very evident,
+                                    and you feel with the ability to solve the small challenges. Today I feel very
+                                    happy, I have the size of a business that fits my family and that pays the
+                                    rent.</span></span>
+                        </p>
+                        <div class="d-flex">
+                            <span class="ms-3">
+                                <img class="rounded-circle" src="/images/course/testimonial_sara.png" alt="Sara Botero"
+                                    style="width: 50px;" />
+                            </span>
+                            <div class="ms-3">
+                                <p class="m-0 fs-5">Sara Botero</p>
+                                <p class="text-primary">UX Designer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- Carousel wrapper -->
-
-            <div class="course-btn btns btn-hightlight text-center"> <button type="button" class="btn">Enroll & Learn
-                    Today</button></div>
-
+            <div class="text-center">
+                <a href="/enroll.php" class="btn btn-lg btn-secondary text-nowrap px-4 my-3 rounded-pill shadow">
+                    Enroll & Learn Today
+                </a>
+            </div>
         </div>
     </section>
-
 
     <section class="meet-your-coach-section">
         <div class="container">
@@ -794,6 +774,15 @@ $_GLOBALS["pageTitle"] = "At-home Dog Boarding Course";
         </div>
     </section>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll(".read-more").forEach(function (readMoreElem) {
+                readMoreElem.querySelector(".read-more-link").addEventListener("click", function (event) {
+                    readMoreElem.classList.remove("hidden");
+                });
+            });
+        });
+    </script>
     <?php include "includes/bootstrapjs.php"; ?>
 
 </body>
