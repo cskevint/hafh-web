@@ -30,10 +30,26 @@ $_GLOBALS["pageShareImage"] = "/images/share/guide.jpg";
         <div class="container p-1 p-md-4 p-lg-5 text-center">
             <h1 class="px-0 px-md-2 px-lg-5">Welcome to our introductory guide about your at-home dog-boarding business!
             </h1>
-            <iframe class="youtube-video" src="https://www.youtube.com/embed/mK9lg1l1KkU" title="YouTube video player"
+            <!-- <iframe class="youtube-video" src="https://www.youtube.com/embed/mK9lg1l1KkU" title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
+                allowfullscreen></iframe> -->
+            <div style="padding:56.25% 0 0 0;position:relative;">
+                <iframe
+                    src="https://player.vimeo.com/video/1055048384?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479"
+                    frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                    style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                    title="HAFH Course Informational Video"></iframe>
+            </div>
+            <script src="https://player.vimeo.com/api/player.js"></script>
+            <script>
+                var iframe = document.querySelector('iframe');
+                var player = new Vimeo.Player(iframe);
+                player.on('ended', function () {
+                    window.modalState = "focused";
+                    new bootstrap.Modal('#enrollModal', {}).show();
+                });
+            </script>
             <div class="my-3 text-center">
                 <a href="/course" class="btn btn-primary btn-lg rounded-pill px-5">
                     Enroll in our course now!
@@ -53,7 +69,8 @@ $_GLOBALS["pageShareImage"] = "/images/share/guide.jpg";
         </div>
     </section>
 
-    <div class="modal modal-lg fade enroll-modal" id="enrollModal" tabindex="-1" aria-labelledby="enroll" aria-hidden="true">
+    <div class="modal modal-lg fade enroll-modal" id="enrollModal" tabindex="-1" aria-labelledby="enroll"
+        aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header align-items-start">
@@ -61,8 +78,8 @@ $_GLOBALS["pageShareImage"] = "/images/share/guide.jpg";
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p class="fs-3">You are so close to learning about the full potential of running a dog boarding business from
-                        your own home.</p>
+                    <p class="fs-3">You are so close to learning about the full potential of running a dog boarding
+                        business from your own home.</p>
                 </div>
                 <div class="modal-footer justify-content-center">
                     <a href="/course" class="btn btn-primary btn-lg rounded-pill px-5">
@@ -75,14 +92,13 @@ $_GLOBALS["pageShareImage"] = "/images/share/guide.jpg";
 
     <script type="text/javascript">
         document.addEventListener("DOMContentLoaded", function () {
-            var state = "loaded";
+            window.modalState = "loaded";
             document.addEventListener("visibilitychange", function () {
-                if (state == "loaded") {
-                    state = "blurred";
-                } else if (state == "blurred") {
-                    state = "focused";
-                    const modal = new bootstrap.Modal('#enrollModal', {});
-                    modal.show();
+                if (window.modalState == "loaded") {
+                    window.modalState = "blurred";
+                } else if (window.modalState == "blurred") {
+                    window.modalState = "focused";
+                    new bootstrap.Modal('#enrollModal', {}).show();
                 }
             });
         });
