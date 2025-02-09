@@ -2,6 +2,8 @@
 session_start();
 require_once "redirect.php";
 $_GLOBALS["pageTitle"] = "At-home Dog Boarding Course";
+$_GLOBALS["pageDescription"] = "Turn your love for dogs into a profitable, flexible career -- enroll on our online course today!";
+$_GLOBALS["pageShareImage"] = "/images/courseshareimage.jpg";
 
 function enrollButton($text, $primary = false)
 {

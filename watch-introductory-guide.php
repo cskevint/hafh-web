@@ -2,6 +2,7 @@
 session_start();
 require_once("redirect.php");
 $_GLOBALS["pageTitle"] = "Watch an Introductory Guide";
+$_GLOBALS["pageDescription"] = "Learn all about the at-home dog-boarding and doggy daycare business and how you can get started in just 9 days!";
 ?>
 <!doctype html>
 <html lang="en" class="bg-secondary">
