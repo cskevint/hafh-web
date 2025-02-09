@@ -5,32 +5,47 @@
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
     <loc>https://www.houndawayfromhome.com/</loc>
-    <lastmod>2024-05-06T13:44:42+00:00</lastmod>
+    <lastmod>2025-02-09T18:31:46+00:00/lastmod>
     <priority>1.00</priority>
   </url>
   <url>
     <loc>https://www.houndawayfromhome.com/faqs.php</loc>
-    <lastmod>2024-05-06T13:44:42+00:00</lastmod>
+    <lastmod>2025-02-09T18:31:46+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.houndawayfromhome.com/gallery.php</loc>
-    <lastmod>2024-05-06T13:44:42+00:00</lastmod>
+    <lastmod>2025-02-09T18:31:46+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.houndawayfromhome.com/contactus.php</loc>
-    <lastmod>2024-05-06T13:44:42+00:00</lastmod>
+    <lastmod>2025-02-09T18:31:46+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.houndawayfromhome.com/aboutus.php</loc>
-    <lastmod>2024-05-06T13:44:42+00:00</lastmod>
+    <lastmod>2025-02-09T18:31:46+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://www.houndawayfromhome.com/ebook.php</loc>
-    <lastmod>2024-05-06T13:44:42+00:00</lastmod>
-    <priority>0.80</priority>
+    <loc>https://www.houndawayfromhome.com/at-home-dog-boarding-course</loc>
+    <lastmod>2025-02-09T18:31:46+00:00/lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://www.houndawayfromhome.com/watch-introductory-guide</loc>
+    <lastmod>2025-02-09T18:31:46+00:00/lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://www.houndawayfromhome.com/is-dog-boarding-right-for-me</loc>
+    <lastmod>2025-02-09T18:31:46+00:00/lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://www.houndawayfromhome.com/download-free-ebook</loc>
+    <lastmod>2025-02-09T18:31:46+00:00/lastmod>
+    <priority>1.00</priority>
   </url>
 </urlset>
