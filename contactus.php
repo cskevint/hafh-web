@@ -1,30 +1,30 @@
-<?php 
-session_start(); 
-require_once ("redirect.php");
-require_once ("includes/config.php");
+<?php
+session_start();
+require_once "redirect.php";
+require_once "includes/config.php";
 $_GLOBALS["pageTitle"] = "Contact Us";
 ?>
 <!doctype html>
 <html lang="en" class="bg-info">
 
 <head>
-    <?php include("includes/head-tag-contents.php");?>
+    <?php include "includes/head-tag-contents.php"; ?>
 </head>
 
 <body>
 
-    <?php include("includes/navigation.php");?>
+    <?php include "includes/navigation.php"; ?>
 
     <section class="container-fluid px-0 bg-info">
         <div class="container p-lg-5 p-md-4 p-3 px-0">
             <div class="bg-light rounded-5 p-lg-5 p-md-4 p-3">
-                <h1 class="mb-ms-5 mb-3"><?=$_GLOBALS["pageTitle"]?></h1>
+                <h1 class="mb-ms-5 mb-3"><?= $_GLOBALS["pageTitle"] ?></h1>
 
                 <?php
-                    if (isset($_SESSION['notice'])) {
-                        echo '<div class="alert alert-info">' . $_SESSION['notice'] . '</div>';
-                        unset($_SESSION['notice']);
-                    }
+                if (isset($_SESSION['notice'])) {
+                    echo '<div class="alert alert-info">' . $_SESSION['notice'] . '</div>';
+                    unset($_SESSION['notice']);
+                }
                 ?>
 
                 <section class="bg-light">
@@ -127,7 +127,7 @@ $_GLOBALS["pageTitle"] = "Contact Us";
                                             <div class="col-12">
                                                 <div class="d-grid">
                                                     <button class="btn btn-primary btn-lg g-recaptcha" type="submit"
-                                                        data-sitekey="<?=$RECAPTCHA_SITE_KEY?>"
+                                                        data-sitekey="<?= $RECAPTCHA_SITE_KEY ?>"
                                                         data-callback="onContactUsSubmit"
                                                         data-action="submit">Submit</button>
                                                 </div>
@@ -144,27 +144,27 @@ $_GLOBALS["pageTitle"] = "Contact Us";
         </div>
     </section>
 
-    <?php include("includes/footer.php");?>
+    <?php include "includes/footer.php"; ?>
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <script>
-    function onContactUsSubmit(token) {
-        var form = document.getElementById("contact-us-form");
-        if (form.checkValidity()) {
-            form.submit();
-        } else {
-            event.preventDefault()
-            event.stopPropagation()
+        function onContactUsSubmit(token) {
+            var form = document.getElementById("contact-us-form");
+            if (form.checkValidity()) {
+                form.submit();
+            } else {
+                event.preventDefault()
+                event.stopPropagation()
+            }
         }
-    }
-    function onQuoteChange() {
-        var form = document.getElementById("contact-us-form");
-        var quote = new FormData(form).get('quote');
-        if (quote == "boarding") {
-            document.getElementById('boardingDates').classList.remove('d-none');
-        } else {
-            document.getElementById('boardingDates').classList.add('d-none');
+        function onQuoteChange() {
+            var form = document.getElementById("contact-us-form");
+            var quote = new FormData(form).get('quote');
+            if (quote == "boarding") {
+                document.getElementById('boardingDates').classList.remove('d-none');
+            } else {
+                document.getElementById('boardingDates').classList.add('d-none');
+            }
         }
-    }
     </script>
 </body>
 

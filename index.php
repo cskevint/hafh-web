@@ -1,24 +1,24 @@
 <?php
 session_start();
-require_once ("redirect.php");
+require_once "redirect.php";
 ?>
 <!doctype html>
 <html lang="en" class="bg-info">
 
 <head>
-    <?php include("includes/head-tag-contents.php");?>
+    <?php include "includes/head-tag-contents.php"; ?>
 </head>
 
 <body>
 
-    <?php include("includes/navigation.php");?>
+    <?php include "includes/navigation.php"; ?>
 
     <div class="header-bg">
         <?php
-            if (isset($_SESSION['notice'])) {
-                echo '<div class="container px-5"><div class="alert alert-info text-center">' . $_SESSION['notice'] . '</div></div>';
-                unset($_SESSION['notice']);
-            }
+        if (isset($_SESSION['notice'])) {
+            echo '<div class="container px-5"><div class="alert alert-info text-center">' . $_SESSION['notice'] . '</div></div>';
+            unset($_SESSION['notice']);
+        }
         ?>
         <main class="">
             <div class="container py-4">
@@ -39,7 +39,8 @@ require_once ("redirect.php");
             <p class="fs-5">Hound Away From Home is a home-based dog boarding and daycare service conveniently
                 located in the heart of the Peninsula. You'll love that a family is caring for your dog when you go on
                 vacation! Daily pictures, a large backyard, and other friendly playmates are just some of the perks of
-                your pup’s stay at Hound Away From Home. <a class="text-primary" href="/faqs.php"><strong>Learn more...</strong></a></p>
+                your pup’s stay at Hound Away From Home. <a class="text-primary" href="/faqs.php"><strong>Learn
+                        more...</strong></a></p>
             <div class="row mt-5 justify-content-md-center">
                 <div class="col-md-5 mb-3 mb-md-0">
                     <div class="card border-0 rounded-0 rounded-sm-5">
@@ -74,16 +75,20 @@ require_once ("redirect.php");
             <h1 class="mb-md-5 mb-sm-2">Read our reviews!</h1>
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-xs-12 px-4 py-3 d-flex align-items-center justify-content-center">
-                    <a href="https://www.facebook.com/houndawayfromhome/"><img src="images/logo-facebook.png" class="img-fluid"/></a>
+                    <a href="https://www.facebook.com/houndawayfromhome/"><img src="images/logo-facebook.png"
+                            class="img-fluid" /></a>
                 </div>
                 <div class="col-lg-3 col-md-6 col-xs-12 px-4 py-3 d-flex align-items-center justify-content-center">
-                    <a href="https://www.instagram.com/houndawayfromhomesm/"><img src="images/logo-instagram.png" class="img-fluid"/></a>
+                    <a href="https://www.instagram.com/houndawayfromhomesm/"><img src="images/logo-instagram.png"
+                            class="img-fluid" /></a>
                 </div>
                 <div class="col-lg-3 col-md-6 col-xs-12 px-4 py-3 d-flex align-items-center justify-content-center">
-                    <a href="https://www.yelp.com/biz/hound-away-from-home-san-mateo"><img src="images/logo-yelp.png" class="img-fluid"/></a>
+                    <a href="https://www.yelp.com/biz/hound-away-from-home-san-mateo"><img src="images/logo-yelp.png"
+                            class="img-fluid" /></a>
                 </div>
                 <div class="col-lg-3 col-md-6 col-xs-12 px-4 py-3 d-flex align-items-center justify-content-center">
-                    <a href="https://www.rover.com/members/leila-g-loving-family-at-home-full-time/"><img src="images/logo-rover.png" class="img-fluid"/></a>
+                    <a href="https://www.rover.com/members/leila-g-loving-family-at-home-full-time/"><img
+                            src="images/logo-rover.png" class="img-fluid" /></a>
                 </div>
             </div>
         </div>
@@ -103,14 +108,15 @@ require_once ("redirect.php");
                     <ul>
                         <li>Northern location @ <a href="https://maps.app.goo.gl/MHRQ2CakjJwrXeZR8"
                                 class="text-secondary">Tilton Ave & N Grant St</a></li>
-                        <li>Southern location @ <a href="https://www.instagram.com/houndawayfromhomessm/" class="text-secondary">7th Ave & Humboldt St</a></li>
+                        <li>Southern location @ <a href="https://www.instagram.com/houndawayfromhomessm/"
+                                class="text-secondary">7th Ave & Humboldt St</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <?php include("includes/footer.php");?>
+    <?php include "includes/footer.php"; ?>
 
 </body>
 

@@ -1,6 +1,6 @@
 <?php
 require_once "config.php";
-$webhostUrl = str_replace($_SERVER['SCRIPT_URL'], "", $_SERVER['SCRIPT_URI']);
+$webhostUrl = (isset($_SERVER['SCRIPT_URL']) && isset($_SERVER['SCRIPT_URI'])) ? str_replace($_SERVER['SCRIPT_URL'], "", $_SERVER['SCRIPT_URI']) : "";
 $title = "Hound Away From Home" . (isset($_GLOBALS["pageTitle"]) ? " - " . $_GLOBALS["pageTitle"] : "");
 $defaultDescription = "Welcome to Hound Away from Home, where your beloved canine companion finds a safe haven for boarding and daycare, ensuring they receive the care, attention, and fun they deserve while you're away.";
 $description = $_GLOBALS["pageDescription"] ?? $defaultDescription;

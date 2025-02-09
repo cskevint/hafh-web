@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once("redirect.php");
+require_once "redirect.php";
 $_GLOBALS["pageTitle"] = "Watch an Introductory Guide";
 $_GLOBALS["pageDescription"] = "Learn all about the at-home dog-boarding and doggy daycare business and how you can get started in just 9 days!";
 ?>
@@ -8,13 +8,13 @@ $_GLOBALS["pageDescription"] = "Learn all about the at-home dog-boarding and dog
 <html lang="en" class="bg-secondary">
 
 <head>
-    <?php include("includes/head-tag-contents.php"); ?>
+    <?php include "includes/head-tag-contents.php"; ?>
 </head>
 
 <body>
 
-    <?php include("includes/devserver.php"); ?>
-    <?php include("includes/debug.php"); ?>
+    <?php include "includes/devserver.php"; ?>
+    <?php include "includes/debug.php"; ?>
 
     <section class="container-fluid bg-primary">
         <div class="container p-2 d-flex justify-content-center">
@@ -65,7 +65,7 @@ $_GLOBALS["pageDescription"] = "Learn all about the at-home dog-boarding and dog
         </div>
     </section>
 
-    <?php include("includes/bootstrapjs.php"); ?>
+    <?php include "includes/bootstrapjs.php"; ?>
 </body>
 
 </html>

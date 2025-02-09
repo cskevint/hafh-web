@@ -1,9 +1,9 @@
-<?php include("devserver.php");?>
+<?php include "devserver.php"; ?>
 <nav class="navbar navbar-expand-lg bg-info" aria-label="Page navigation">
     <div class="container">
         <a class="navbar-brand" href="/">
-            <img src="/images/logo-horizontal.png" class="img-fluid d-none d-sm-block" style="max-height:32px;"/>
-            <img src="/images/logo-horizontal-thin.png" class="img-fluid d-block d-sm-none" style="max-height:32px;"/>
+            <img src="/images/logo-horizontal.png" class="img-fluid d-none d-sm-block" style="max-height:32px;" />
+            <img src="/images/logo-horizontal-thin.png" class="img-fluid d-block d-sm-none" style="max-height:32px;" />
         </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
@@ -14,16 +14,20 @@
         <div class="collapse navbar-collapse flex-row-reverse" id="navbar">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link <?= basename($_SERVER['PHP_SELF']) == 'faqs.php' ? 'active':'' ?>" href="faqs.php">FAQs</a>
+                    <a class="nav-link <?= basename($_SERVER['PHP_SELF']) == 'faqs.php' ? 'active' : '' ?>"
+                        href="faqs.php">FAQs</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?= basename($_SERVER['PHP_SELF']) == 'gallery.php' ? 'active':'' ?>" href="gallery.php">Gallery</a>
+                    <a class="nav-link <?= basename($_SERVER['PHP_SELF']) == 'gallery.php' ? 'active' : '' ?>"
+                        href="gallery.php">Gallery</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?= basename($_SERVER['PHP_SELF']) == 'contactus.php' ? 'active':'' ?>" href="contactus.php">Contact Us</a>
+                    <a class="nav-link <?= basename($_SERVER['PHP_SELF']) == 'contactus.php' ? 'active' : '' ?>"
+                        href="contactus.php">Contact Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?= basename($_SERVER['PHP_SELF']) == 'aboutus.php' ? 'active':'' ?>" href="aboutus.php">About Us</a>
+                    <a class="nav-link <?= basename($_SERVER['PHP_SELF']) == 'aboutus.php' ? 'active' : '' ?>"
+                        href="aboutus.php">About Us</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="https://www.facebook.com/houndawayfromhome/">
@@ -53,4 +57,4 @@
         </div>
     </div>
 </nav>
-<?php include("debug.php");?>
+<?php include "debug.php"; ?>

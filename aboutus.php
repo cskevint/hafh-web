@@ -1,23 +1,23 @@
-<?php 
+<?php
 session_start();
-require_once ("redirect.php");
+require_once "redirect.php";
 $_GLOBALS["pageTitle"] = "About Us";
 ?>
 <!doctype html>
 <html lang="en" class="bg-info">
 
 <head>
-    <?php include("includes/head-tag-contents.php");?>
+    <?php include "includes/head-tag-contents.php"; ?>
 </head>
 
 <body>
 
-    <?php include("includes/navigation.php");?>
+    <?php include "includes/navigation.php"; ?>
 
     <section class="container-fluid px-0 bg-info">
         <div class="container p-lg-5 p-md-4 p-3 px-0">
             <div class="bg-light rounded-5 p-lg-5 p-md-4 p-3">
-                <h1 class="mb-ms-5 mb-3"><?=$_GLOBALS["pageTitle"]?></h1>
+                <h1 class="mb-ms-5 mb-3"><?= $_GLOBALS["pageTitle"] ?></h1>
 
                 <div class="card mb-3">
                     <div class="row no-gutters">
@@ -34,7 +34,8 @@ $_GLOBALS["pageTitle"] = "About Us";
                                     She and her husband bought their house in 2009 and have turned into a comfortable
                                     doggy hotel (where people can visit too!). Selena has taken care of her dogs since
                                     her early childhood, and has taken care of other dogs professionally since 2012.</p>
-                                <p>Check out her <a href="https://www.instagram.com/houndawayfromhomesm/" class="text-secondary"><i class="bi bi-instagram mx-1"></i>Instagram</a>!</p>
+                                <p>Check out her <a href="https://www.instagram.com/houndawayfromhomesm/"
+                                        class="text-secondary"><i class="bi bi-instagram mx-1"></i>Instagram</a>!</p>
                             </div>
                         </div>
                     </div>
@@ -54,7 +55,8 @@ $_GLOBALS["pageTitle"] = "About Us";
                                     second location for Hound Away From Home. She has over a decade of experience caring
                                     for dogs. Working from home with her homeschooling teenage daughters, they provide
                                     round-the-clock companionship and personalized care for each dog.</p>
-                                <p>Check out her <a href="https://www.instagram.com/houndawayfromhomessm/" class="text-secondary"><i class="bi bi-instagram mx-1"></i>Instagram</a>!</p>
+                                <p>Check out her <a href="https://www.instagram.com/houndawayfromhomessm/"
+                                        class="text-secondary"><i class="bi bi-instagram mx-1"></i>Instagram</a>!</p>
                             </div>
                         </div>
                     </div>
@@ -63,7 +65,7 @@ $_GLOBALS["pageTitle"] = "About Us";
         </div>
     </section>
 
-    <?php include("includes/footer.php");?>
+    <?php include "includes/footer.php"; ?>
 
 </body>
 

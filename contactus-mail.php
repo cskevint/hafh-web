@@ -2,7 +2,7 @@
 
 session_start();
 
-require_once("includes/utility.php");
+require_once "includes/utility.php";
 
 $captcha = $_POST['g-recaptcha-response'];
 $fromEmail = $_REQUEST['email'];

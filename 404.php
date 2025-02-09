@@ -1,18 +1,18 @@
 <?php
 session_start();
-require_once ("redirect.php");
+require_once "redirect.php";
 $_GLOBALS["pageTitle"] = "Not found";
 ?>
 <!doctype html>
 <html lang="en" class="bg-info">
 
 <head>
-    <?php include("includes/head-tag-contents.php");?>
+    <?php include "includes/head-tag-contents.php"; ?>
 </head>
 
 <body>
 
-    <?php include("includes/navigation.php");?>
+    <?php include "includes/navigation.php"; ?>
 
     <section class="bg-light mb-0">
         <div class="container p-5">
@@ -21,7 +21,7 @@ $_GLOBALS["pageTitle"] = "Not found";
         </div>
     </section>
 
-    <?php include("includes/footer.php");?>
+    <?php include "includes/footer.php"; ?>
 
 </body>
 

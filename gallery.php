@@ -1,34 +1,34 @@
-<?php 
-session_start(); 
-require_once ("redirect.php");
+<?php
+session_start();
+require_once "redirect.php";
 $_GLOBALS["pageTitle"] = "Gallery";
 ?>
 <!doctype html>
 <html lang="en" class="bg-info">
 
 <head>
-    <?php include("includes/head-tag-contents.php");?>
+    <?php include "includes/head-tag-contents.php"; ?>
 </head>
 
 <body>
 
-    <?php include("includes/navigation.php");?>
+    <?php include "includes/navigation.php"; ?>
 
     <section class="container-fluid px-0 bg-info">
         <div class="container p-lg-5 p-md-4 p-3 px-0">
             <div class="bg-light rounded-5 p-lg-5 p-md-4 p-3">
-                <h1 class="mb-ms-5 mb-3"><?=$_GLOBALS["pageTitle"]?></h1>
+                <h1 class="mb-ms-5 mb-3"><?= $_GLOBALS["pageTitle"] ?></h1>
 
                 <div class="row justify-content-md-center">
                     <div class="col-lg-4">
                         <div class="p-2">
-                            <img src="images/gallery2.jpg" class="img-fluid"/>
+                            <img src="images/gallery2.jpg" class="img-fluid" />
                         </div>
                         <div class="p-2">
-                            <img src="images/gallery1.jpg" class="img-fluid"/>
+                            <img src="images/gallery1.jpg" class="img-fluid" />
                         </div>
                         <div class="p-2">
-                            <img src="images/gallery3.jpg" class="img-fluid"/>
+                            <img src="images/gallery3.jpg" class="img-fluid" />
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
@@ -136,7 +136,7 @@ $_GLOBALS["pageTitle"] = "Gallery";
         </div>
     </section>
 
-    <?php include("includes/footer.php");?>
+    <?php include "includes/footer.php"; ?>
 
 </body>
 

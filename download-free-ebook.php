@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once("redirect.php");
+require_once "redirect.php";
 $_GLOBALS["pageTitle"] = "Download our Free E-book";
 $_GLOBALS["pageDescription"] = "Learn the basics of setting up your own at-home dog-boarding business by getting your own free copy of our e-book!";
 ?>
@@ -8,13 +8,13 @@ $_GLOBALS["pageDescription"] = "Learn the basics of setting up your own at-home 
 <html lang="en" class="bg-secondary">
 
 <head>
-    <?php include("includes/head-tag-contents.php"); ?>
+    <?php include "includes/head-tag-contents.php"; ?>
 </head>
 
 <body>
 
-    <?php include("includes/devserver.php"); ?>
-    <?php include("includes/debug.php"); ?>
+    <?php include "includes/devserver.php"; ?>
+    <?php include "includes/debug.php"; ?>
 
     <section class="container-fluid bg-primary">
         <div class="container p-2 d-flex justify-content-center">
@@ -65,7 +65,7 @@ $_GLOBALS["pageDescription"] = "Learn the basics of setting up your own at-home 
         </div>
     </section>
 
-    <?php include("includes/bootstrapjs.php"); ?>
+    <?php include "includes/bootstrapjs.php"; ?>
 </body>
 
 </html>

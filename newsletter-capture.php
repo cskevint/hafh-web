@@ -2,7 +2,7 @@
 
 session_start();
 
-require_once ("includes/utility.php");
+require_once "includes/utility.php";
 
 $subscriberEmail = $_REQUEST['email'];
 

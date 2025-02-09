@@ -1,9 +1,7 @@
 <?php
 session_start();
-include_once "vendor/autoload.php";
 require_once "redirect.php";
-
-$_GLOBALS["pageTitle"] = "FAQs";
+$_GLOBALS["pageTitle"] = "Our Services";
 ?>
 <!doctype html>
 <html lang="en" class="bg-info">
@@ -19,13 +17,8 @@ $_GLOBALS["pageTitle"] = "FAQs";
     <section class="container-fluid px-0 bg-info">
         <div class="container p-lg-5 p-md-4 p-3 px-0">
             <div class="bg-light rounded-5 p-lg-5 p-md-4 p-3">
-                <h1 class="mb-ms-5 mb-3">Frequently Asked Questions</h1>
-
-                <?php
-                $Parsedown = new ParsedownExtra();
-                $faqs = file_get_contents('faqs.md');
-                echo $Parsedown->text($faqs);
-                ?>
+                <h1 class="mb-ms-5 mb-3"><?= $_GLOBALS["pageTitle"] ?></h1>
+                <p>We offer a variety of services for your pets. Contact us for more details.</p>
             </div>
         </div>
     </section>
