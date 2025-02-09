@@ -3,7 +3,7 @@ session_start();
 require_once "redirect.php";
 $_GLOBALS["pageTitle"] = "At-home Dog Boarding Course";
 $_GLOBALS["pageDescription"] = "Turn your love for dogs into a profitable, flexible career -- enroll on our online course today!";
-$_GLOBALS["pageShareImage"] = "/images/courseshareimage.jpg";
+$_GLOBALS["pageShareImage"] = "/images/share/course.jpg";
 
 function enrollButton($text, $primary = false)
 {
@@ -571,13 +571,19 @@ function enrollButton($text, $primary = false)
                     <div class="col-lg-1 col-xl-2"></div>
                     <div class="col-lg-10 col-xl-8">
                         <ul>
-                            <li><b>Free Community Access</b>: your questions answered daily so you never have to second
-                                guess or waste time!</li>
-                            <li><b>Customized Course</b>: The course will be built around your specific needs as an early
-                                adopter. This is something that late adopters will not get to experience with the finished
-                                course!</li>
-                            <li><b>Early Access to Coaching Program</b>: All of our early adopters will have first
-                                dibs on our limited spaces within our 1:1 coaching programs.</li>
+                            <li class="mb-3">
+                                <b>Free Community Access</b>: Your questions answered daily so you never have to second
+                                guess or waste time!
+                            </li>
+                            <li class="mb-3">
+                                <b>Customized Course</b>: The course will be built around your specific needs as an
+                                early adopter. This is something that late adopters will not get to experience with the
+                                finished course!
+                            </li>
+                            <li class="mb-3">
+                                <b>Early Access to Coaching Program</b>: All of our early adopters will have first dibs
+                                on our limited spaces within our 1:1 coaching programs.
+                            </li>
                         </ul>
                     </div>
                     <div class="col-lg-1 col-xl-2"></div>
