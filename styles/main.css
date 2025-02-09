@@ -1,8 +1,67 @@
-@media (max-width:576px) {
-    .rounded-5 {
-        border-radius: 0px !important;
-    }
+@font-face {
+    font-family: 'Gilroy-Black';
+    src: url('/styles/fonts/Gilroy-Black.ttf') format('truetype');
+    font-weight: 900;
+    /* Black weight */
+    font-style: normal;
 }
+
+@font-face {
+    font-family: 'Gilroy-ExtraBold';
+    src: url('/styles/fonts/Gilroy-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    /* ExtraBold weight */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy-Bold';
+    src: url('/styles/fonts/Gilroy-Bold.ttf') format('truetype');
+    font-weight: bold;
+    /* Bold weight */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy-SemiBold';
+    src: url('/styles/fonts/Gilroy-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    /* SemiBold weight */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy-Medium';
+    src: url('/styles/fonts/Gilroy-Medium.ttf') format('truetype');
+    font-weight: 500;
+    /* Medium weight */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy-Regular';
+    src: url('/styles/fonts/Gilroy-Regular.ttf') format('truetype');
+    font-weight: normal;
+    /* Regular weight */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy-Light';
+    src: url('/styles/fonts/Gilroy-Light.ttf') format('truetype');
+    font-weight: 300;
+    /* Light weight */
+    font-style: normal;
+}
+
+body {
+    font-family: "Lato", serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Gilroy-Medium', sans-serif;
+}
+
 
 .redbox, .rb {
     border: 1px solid red !important;
@@ -41,7 +100,7 @@
     width: 100%;
 }
 
-/* course.php */
+/* Course Landing Page */
 
 .read-more.hidden .read-more-link {
     display: inline-block;
@@ -53,4 +112,125 @@
 
 .read-more.hidden .read-more-content {
     display: none;
+}
+
+/* Course Landing Page: Why Choose Dog Boarding? */
+
+.infobox {
+    border: 1px solid var(--bs-info);
+    background: var(--bs-light);
+}
+
+.infobox:hover {
+    background: var(--bs-white);
+    box-shadow: 0px 0px 100px 0px #0000000F;
+    cursor: grab;
+}
+
+/* Course Landing Page: What you'll learn in this course */
+
+ul.checkmark-list li {
+    position: relative;
+    list-style: none;
+}
+
+ul.checkmark-list li:before {
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 24px;
+    background: url(/images/course/check.png);
+    left: -31px;
+    top: 0;
+}
+
+/* Course Landing Page: Course Outline */
+
+#courseOutlineToggle:before {
+    content: "Expand All";
+}
+
+#courseOutlineToggle.active:before {
+    content: "Collapse All";
+}
+
+#courseOutline .card {
+    border-radius: 0;
+    border-bottom-width: 0;
+}
+
+#courseOutline .card .card-header {
+    border-bottom-width: 0;
+}
+
+#courseOutline .card .card-header:has(.accordion-button:not(.collapsed)) {
+    background-color: rgba(238, 250, 255, 0.5) !important;
+    border-bottom-width: 1px;
+}
+
+#courseOutline .card:first-child,
+#courseOutline .card:first-child .card-header {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+#courseOutline .card:last-child,
+#courseOutline .card:last-child .card-header,
+#courseOutline .card:last-child .card-body,
+#courseOutline .card:last-child .card-body .accordion-body {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+#courseOutline .card:last-child .card-header:has(.accordion-button:not(.collapsed)) {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+#courseOutline .card:last-child,
+#courseOutline .card:last-child .card-body {
+    border-bottom-width: 1px;
+}
+
+#courseOutline .card .card-body .accordion-body {
+    background: linear-gradient(180deg, rgba(238, 250, 255, 0.5) 0%, rgba(227, 247, 255, 0.5) 100%);
+}
+
+#courseOutline .card .card-body .accordion-body p {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #DFE5E8;
+}
+
+#courseOutline .card .card-body .accordion-body p:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+button.accordion-button:focus {
+    box-shadow: none;
+}
+
+button.accordion-button:after {
+    border: 1px solid #d7eaf2 !important;
+    padding: 12px !important;
+    border-radius: 100% !important;
+}
+
+button.accordion-button:not(.collapsed):after {
+    background: #0279AD;
+    flex-shrink: 0;
+    width: var(--bs-accordion-btn-icon-width);
+    height: var(--bs-accordion-btn-icon-width);
+    margin-left: auto;
+    content: "";
+    background-image: url(/images/course/accordion_open.png);
+    background-repeat: no-repeat;
+    transition: var(--bs-accordion-btn-icon-transition);
+    background-position: 6px 7px;
+}
+
+button.accordion-button::after {
+    background-image: url(/images/course/accordion_close.png);
+    background-size: inherit;
+    background-position: 6px 8px;
 }

@@ -22,12 +22,12 @@ require_once ("redirect.php");
         ?>
         <main class="">
             <div class="container py-4">
-                <div class="p-sm-5 p-3 border-0 rounded-4 hero-image">
+                <div class="p-sm-5 p-3 border-0 rounded-0 rounded-sm-5 hero-image">
                     <div class="container-fluid py-5">
                         <h1 class="display-5 fw-bold text-white">Safe, Loved, and Pampered</h1>
                         <p class="col-md-8 fs-4 text-white">Dog boarding and daycare reimagined: the ultimate comfort of
                             home for your dog.</p>
-                        <a class="btn btn-primary btn-lg" href="/contactus.php">Book with us now!</a>
+                        <a class="btn btn-primary btn-lg px-4 rounded-pill" href="/contactus.php">Book with us now!</a>
                     </div>
                 </div>
             </div>
@@ -36,14 +36,14 @@ require_once ("redirect.php");
     <section class="bg-light mb-0">
         <div class="container p-lg-5 p-md-4 p-3">
             <h1 class="mb-md-5 mb-sm-2">Services</h1>
-            <p class="lead">Hound Away From Home is a home-based dog boarding and daycare service conveniently
+            <p class="fs-5">Hound Away From Home is a home-based dog boarding and daycare service conveniently
                 located in the heart of the Peninsula. You'll love that a family is caring for your dog when you go on
                 vacation! Daily pictures, a large backyard, and other friendly playmates are just some of the perks of
                 your pup’s stay at Hound Away From Home. <a class="text-primary" href="/faqs.php"><strong>Learn more...</strong></a></p>
             <div class="row mt-5 justify-content-md-center">
-                <div class="col-sm-5 mb-3 mb-sm-0">
-                    <div class="card border-0 rounded-5">
-                        <img src="/images/image2.jpg" class="card-img-top rounded-top-5" alt="...">
+                <div class="col-md-5 mb-3 mb-md-0">
+                    <div class="card border-0 rounded-0 rounded-sm-5">
+                        <img src="/images/image2.jpg" class="card-img-top rounded-top-0 rounded-top-sm-5" alt="...">
                         <div class="card-body">
                             <h3 class="card-title">
                                 Dog boarding
@@ -53,9 +53,9 @@ require_once ("redirect.php");
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-5">
-                    <div class="card border-0 rounded-5">
-                        <img src="/images/image1.jpg" class="card-img-top rounded-top-5" alt="...">
+                <div class="col-md-5">
+                    <div class="card border-0 rounded-0 rounded-sm-5">
+                        <img src="/images/image1.jpg" class="card-img-top rounded-top-0 rounded-top-sm-5" alt="...">
                         <div class="card-body">
                             <h3 class="card-title">
                                 Doggy daycare
@@ -99,7 +99,7 @@ require_once ("redirect.php");
                             style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
-                    <p class="mt-5 lead">Now open in two San Mateo locations!</p>
+                    <p class="mt-5 fs-5">Now open in two San Mateo locations!</p>
                     <ul>
                         <li>Northern location @ <a href="https://maps.app.goo.gl/MHRQ2CakjJwrXeZR8"
                                 class="text-secondary">Tilton Ave & N Grant St</a></li>
