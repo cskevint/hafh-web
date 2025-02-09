@@ -197,26 +197,30 @@ function enrollButton($text, $primary = false)
                 <div class="col-lg-5 text-center">
                     <img class="rounded-5 img-fluid" src="/images/course/learn_success.png">
                 </div>
-                <div class="col-lg-7">
-                    <h2 class="text-danger my-4"><?= $whatYoullLearn[0][0] ?></h2>
-                    <ul class="checkmark-list">
-                        <li class="fs-5 fw-light"><?= $whatYoullLearn[0][1][0] ?></li>
-                        <li class="fs-5 fw-light"><?= $whatYoullLearn[0][1][1] ?></li>
-                        <li class="fs-5 fw-light"><?= $whatYoullLearn[0][1][2] ?></li>
-                    </ul>
+                <div class="col-lg-7 d-flex align-items-center">
+                    <div>
+                        <h2 class="text-danger my-4"><?= $whatYoullLearn[0][0] ?></h2>
+                        <ul class="checkmark-list">
+                            <li class="fs-5 fw-light"><?= $whatYoullLearn[0][1][0] ?></li>
+                            <li class="fs-5 fw-light"><?= $whatYoullLearn[0][1][1] ?></li>
+                            <li class="fs-5 fw-light"><?= $whatYoullLearn[0][1][2] ?></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="row mb-5">
                 <div class="col-lg-5 order-1 order-lg-2 text-center">
                     <img class="rounded-5 img-fluid" src="/images/course/learn_business.png">
                 </div>
-                <div class="col-lg-7 order-2 order-lg-1">
-                    <h2 class="text-danger my-4"><?= $whatYoullLearn[1][0] ?></h2>
-                    <ul class="checkmark-list">
-                        <li class="fs-5 fw-light"><?= $whatYoullLearn[1][1][0] ?></li>
-                        <li class="fs-5 fw-light"><?= $whatYoullLearn[1][1][1] ?></li>
-                        <li class="fs-5 fw-light"><?= $whatYoullLearn[1][1][2] ?></li>
-                    </ul>
+                <div class="col-lg-7 d-flex align-items-center order-2 order-lg-1">
+                    <div>
+                        <h2 class="text-danger my-4"><?= $whatYoullLearn[1][0] ?></h2>
+                        <ul class="checkmark-list">
+                            <li class="fs-5 fw-light"><?= $whatYoullLearn[1][1][0] ?></li>
+                            <li class="fs-5 fw-light"><?= $whatYoullLearn[1][1][1] ?></li>
+                            <li class="fs-5 fw-light"><?= $whatYoullLearn[1][1][2] ?></li>
+                        </ul>
+                    </div>
                 </div>
 
             </div>
@@ -224,13 +228,15 @@ function enrollButton($text, $primary = false)
                 <div class="col-lg-5 text-center">
                     <img class="rounded-5 img-fluid" src="/images/course/learn_situations.png">
                 </div>
-                <div class="col-lg-7">
-                    <h2 class="text-danger my-4"><?= $whatYoullLearn[2][0] ?></h2>
-                    <ul class="checkmark-list">
-                        <li class="fs-5 fw-light"><?= $whatYoullLearn[2][1][0] ?></li>
-                        <li class="fs-5 fw-light"><?= $whatYoullLearn[2][1][1] ?></li>
-                        <li class="fs-5 fw-light"><?= $whatYoullLearn[2][1][2] ?></li>
-                    </ul>
+                <div class="col-lg-7 d-flex align-items-center">
+                    <div>
+                        <h2 class="text-danger my-4"><?= $whatYoullLearn[2][0] ?></h2>
+                        <ul class="checkmark-list">
+                            <li class="fs-5 fw-light"><?= $whatYoullLearn[2][1][0] ?></li>
+                            <li class="fs-5 fw-light"><?= $whatYoullLearn[2][1][1] ?></li>
+                            <li class="fs-5 fw-light"><?= $whatYoullLearn[2][1][2] ?></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="text-center">
