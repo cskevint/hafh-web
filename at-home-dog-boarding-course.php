@@ -444,7 +444,7 @@ function enrollButton($text, $primary = false)
                         </p>
                         <div class="d-flex">
                             <span class="ms-3">
-                                <img class="rounded-circle" src="/images/course/testimonial_leila.png" alt="Leila Gates"
+                                <img class="rounded-circle" src="/images/course/testimonial_leila.jpg" alt="Leila Gates"
                                     style="width: 50px;" />
                             </span>
                             <div class="ms-3">
