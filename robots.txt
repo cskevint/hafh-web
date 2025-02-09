@@ -1,4 +1,5 @@
 User-agent: *
-Disallow: 
+Disallow: /introductory-guide-video
+Disallow: /introductory-guide-video.php
 
 Sitemap: https://www.houndawayfromhome.com/sitemap.xml

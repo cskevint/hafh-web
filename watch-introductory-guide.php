@@ -26,9 +26,11 @@ $_GLOBALS["pageShareImage"] = "/images/share/guide.jpg";
     </section>
 
     <section class="container-fluid bg-light">
-        <div class="container p-4 p-md-4 p-lg-5 text-center">
-            <h1 class="px-0 px-md-2 px-lg-5">Learn all about the at-home dog-boarding and doggy daycare business</h1>
-            <h3 class="py-2 text-muted">and how you can get started in just 9 days!</h3>
+        <div class="container p-4 p-md-4 p-lg-5">
+            <h1 class="px-0 px-md-2 px-lg-5 text-center">Learn all about the at-home dog-boarding and doggy daycare business</h1>
+            <h3 class="py-2 text-muted text-center">and how you can get started in just 9 days!</h3>
+            <h3 class="py-2 text-center text-primary">Work from home, cuddle dogs, make money!</h3>
+            <h4 class="py-2 text-center text-secondary">Access our free getting started video now.</h4>
             <hr class="m-3 m-md-4 m-lg-5" />
             <div class="row mb-5">
                 <div class="col-md-3"></div>
@@ -61,11 +63,9 @@ $_GLOBALS["pageShareImage"] = "/images/share/guide.jpg";
 
     <section class="container-fluid bg-secondary">
         <div class="container p-3">
-            <p class="fw-light text-light" style="font-size:0.8em;">
+            <p class="fw-light text-light">
                 This site is not a part of the Google website or Google Inc., Facebook/Meta website, or Meta, Inc.
-                Additionally, this site is NOT endorsed by Google or Meta in any way. Amazon and all related marks are
-                trademarks of Amazon.com, Inc. or its affiliates. Publishing.com is not affiliated with or endorsed by
-                Amazon.com, Inc. or its affiliates.
+                Additionally, this site is NOT endorsed by Google or Meta in any way.
             </p>
             <p class="fw-light text-light fs-6 text-center">&copy; 2025 <a href="http://www.houndawayfromhome.com"
                     class="link-light text-decoration-none">HoundAwayFromHome.com</a>. All rights reserved.</p>

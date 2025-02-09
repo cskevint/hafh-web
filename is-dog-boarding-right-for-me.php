@@ -269,11 +269,9 @@ $renderState = getRenderState();
 
     <section class="container-fluid bg-secondary">
         <div class="container p-3">
-            <p class="fw-light text-light" style="font-size:0.8em;">
+            <p class="fw-light text-light">
                 This site is not a part of the Google website or Google Inc., Facebook/Meta website, or Meta, Inc.
-                Additionally, this site is NOT endorsed by Google or Meta in any way. Amazon and all related marks are
-                trademarks of Amazon.com, Inc. or its affiliates. Publishing.com is not affiliated with or endorsed by
-                Amazon.com, Inc. or its affiliates. </p>
+                Additionally, this site is NOT endorsed by Google or Meta in any way.</p>
             <p class="fw-light text-light fs-6 text-center">&copy; 2025 <a href="http://www.houndawayfromhome.com"
                     class="link-light text-decoration-none">HoundAwayFromHome.com</a>. All rights reserved.</p>
         </div>

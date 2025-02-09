@@ -69,13 +69,13 @@ if ($_REQUEST['redirect'] == "ebook") {
         $_SESSION['notice'] = 'There was an error. Please email us: <a href="mailto:selena@houndawayfromhome.com">selena@houndawayfromhome.com</a>';
     }
 
-    file_put_contents($EBOOK_CSV, $subscriberEmail . "\n", FILE_APPEND | LOCK_EX);
+    file_put_contents($EBOOK_CSV, "{$subscriberEmail}\n", FILE_APPEND | LOCK_EX);
 
     $redirectTo = "/course";
 } else if ($_REQUEST['redirect'] == "quiz") {
     $redirectTo = setUrlParam($_SERVER['HTTP_REFERER'], ['question' => 'DONE']);
 } else if ($_REQUEST['redirect'] == "guide") {
-    $redirectTo = "/introductory-guide";
+    $redirectTo = "/introductory-guide-video";
 }
 
 // Store contact in HubSpot.
