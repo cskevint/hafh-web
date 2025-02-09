@@ -55,7 +55,7 @@ $_GLOBALS["pageShareImage"] = "/images/share/guide.jpg";
             </div>
             <div class="my-3 text-center">
                 <a href="/course" class="link-secondary link-offset-2 link-offset-3-hover link-underline-opacity-50-hover">
-                    Learn about our online course!
+                    Learn more about our online course!
                 </a>
             </div>
         </div>

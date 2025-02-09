@@ -53,6 +53,40 @@ $_GLOBALS["pageShareImage"] = "/images/share/guide.jpg";
         </div>
     </section>
 
+    <div class="modal modal-lg fade enroll-modal" id="enrollModal" tabindex="-1" aria-labelledby="enroll" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header align-items-start">
+                    <h1 class="modal-title" id="enroll">Don't miss out on this chance!</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="fs-3">You are so close to learning about the full potential of running a dog boarding business from
+                        your own home.</p>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <a href="/course" class="btn btn-primary btn-lg rounded-pill px-5">
+                        Enroll in our course now!
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function () {
+            var state = "loaded";
+            document.addEventListener("visibilitychange", function () {
+                if (state == "loaded") {
+                    state = "blurred";
+                } else if (state == "blurred") {
+                    state = "focused";
+                    const modal = new bootstrap.Modal('#enrollModal', {});
+                    modal.show();
+                }
+            });
+        });
+    </script>
     <?php include "includes/bootstrapjs.php"; ?>
 </body>
 

@@ -58,12 +58,17 @@ body {
     font-family: "Lato", serif;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
     font-family: 'Gilroy-Medium', sans-serif;
 }
 
 
-.redbox, .rb {
+.redbox,
+.rb {
     border: 1px solid red !important;
 }
 
@@ -246,4 +251,12 @@ button.accordion-button::after {
 
 .read-more.hidden .read-more-content {
     display: none;
+}
+
+/* Introductory Guide Video */
+
+.enroll-modal {
+    --bs-modal-header-border-width: 0;
+    --bs-modal-footer-border-width: 0;
+    --bs-modal-border-radius: 2rem;
 }
