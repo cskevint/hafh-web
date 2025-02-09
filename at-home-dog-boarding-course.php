@@ -22,7 +22,7 @@ $_GLOBALS["pageTitle"] = "At-home Dog Boarding Course";
     <?php include "includes/debug.php"; ?>
 
     <div class="container-fluid" style="background: linear-gradient(180deg, #FFFBF9 16.31%, #FFE6D2 89.83%);">
-        <header class="container">
+        <header class="container pt-3 pt-md-4">
             <div class="d-flex justify-content-between align-items-center">
                 <div class="logo">
                     <a href="/">
@@ -32,11 +32,9 @@ $_GLOBALS["pageTitle"] = "At-home Dog Boarding Course";
                 <div>
                     <img src="/images/course/paws.png" style="width: 110px;margin-bottom: -100px;margin-left: -52px;" />
                 </div>
-                <div class="login-btn">
-                    <a href="/ebook.php" class="btn btn-outline-secondary p-3 px-4 rounded-pill text-nowrap">
-                        Download Free E-book
-                    </a>
-                </div>
+                <a href="/ebook.php" class="btn btn-outline-secondary p-3 px-4 rounded-pill text-nowrap">
+                    Download Free E-book
+                </a>
             </div>
         </header>
 
@@ -108,101 +106,100 @@ $_GLOBALS["pageTitle"] = "At-home Dog Boarding Course";
         </div>
     </section>
 
-    <section class="why-choose">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h2 class="why-choose-heaading">Why Choose Dog Boarding?</h2>
-                    <p class="why-choose-desc">Dog boarding offers a flexible, fulfilling opportunity to earn income
-                        while
-                        providing care and companionship to adorable dogs.</p>
-                </div>
-                <div class="col-md-4">
-                    <div class="box-section text-center">
-                        <img src="/images/course/twentyfourhours.png">
-                        <h4 class="box-title">Escape the 9-to-5 grind and enjoy flexibility.</h4>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="box-section text-center">
-                        <img src="/images/course/boss.png">
-                        <h4 class="box-title">Be your own boss while caring for adorable pups.</h4>
-                    </div>
+    <?php
+    function renderInfobox($image, $text): string
+    {
+        return <<<HTML
+        <div class="col-lg-4 p-2 d-flex">
+            <div class="flex-grow-1 w-100 h-100 rounded-5 infobox text-center p-4">
+                <img class="m-2" src="/images/course/box_$image.png" alt="$text" />
+                <h3 class="">$text</h3>
+            </div>
+        </div>
+        HTML;
+    }
+    ?>
+    <section class="container my-3 py-3 py-lg-1 pt-xl-3">
+        <div class="row">
+            <div class="col-lg-4 p-2 d-flex justify-content-center align-items-center">
+                <div>
+                    <h2 class="text-danger">
+                        Why Choose Dog Boarding?
+                    </h2>
+                    <p class="">
+                        Dog boarding offers a flexible, fulfilling opportunity to earn income while providing care and
+                        companionship to adorable dogs.
+                    </p>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="box-section text-center">
-                        <img src="/images/course/parents.png">
-                        <h4 class="box-title">Ideal for parents or aspiring entrepreneurs.</h4>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="box-section text-center">
-                        <img src="/images/course/reward.png">
-                        <h4 class="box-title">Earn with a rewarding<br> business.</h4>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="box-section text-center">
-                        <img src="/images/course/caring.png">
-                        <h4 class="box-title">Find fulfillment caring<br> for dogs.</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center">
-                <img class="" src="/images/course/vectorright.png" alt="Arrow">
-                <a href="/enroll.php" class="btn btn-lg btn-secondary text-nowrap px-4 my-3 rounded-pill shadow">
-                    Unlock Your Course
-                </a>
-            </div>
+            <?= renderInfobox("twentyfourhours", "Escape the 9-to-5 grind and enjoy flexibility.") ?>
+            <?= renderInfobox("boss", "Be your own boss while caring for adorable pups.") ?>
+        </div>
+        <div class="row">
+            <?= renderInfobox("parents", "Ideal for parents or aspiring entrepreneurs.") ?>
+            <?= renderInfobox("reward", "Earn with a rewarding business.") ?>
+            <?= renderInfobox("caring", "Find fulfillment caring for dogs.") ?>
+        </div>
+        <div class="my-3 text-center">
+            <img class="" src="/images/course/vectorright.png" alt="Arrow">
+            <a href="/enroll.php" class="btn btn-lg btn-secondary text-nowrap px-4 my-3 rounded-pill shadow">
+                Unlock Your Course
+            </a>
+        </div>
     </section>
 
-
-    <section class="learn-course">
-        <div class="container">
-            <h2 class="learn-course-heading text-center">What you'll learn in this course</h2>
-            <div class="row">
-                <div class="col-md-5">
-                    <img class="learn-img" src="/images/course/Success.png">
+    <section class="py-3 py-lg-1 pt-xl-3">
+        <div class="container rounded-5 bg-light p-3 p-md-4 p-xl-5">
+            <h1 class="mb-5 text-center">What you'll learn in this course</h1>
+            <div class="row mb-5">
+                <div class="col-lg-5 text-center">
+                    <img class="rounded-5 img-fluid" src="/images/course/Success.png">
                 </div>
-                <div class="col-md-7 line">
-                    <h3 class="learn-course-title">Setting Up for Success</h3>
-                    <ul class="learn-course-description">
-                        <li>Learn how to evaluate your space, <strong>resources,</strong> and <strong>legal
-                                steps</strong> for
-                            starting a dog boarding business.</li>
-                        <li>Create a safe, welcoming environment for dogs while maintaining your home's comfort.</li>
-                        <li>Access worksheets, sample spreadsheets, and contracts to help plan and organize your
+                <div class="col-lg-7">
+                    <h2 class="text-danger my-4">Setting Up for Success</h2>
+                    <ul class="checkmark-list">
+                        <li class="fs-5 fw-light">Learn how to evaluate your space, <strong>resources,</strong> and
+                            <strong>legal steps</strong> for starting a dog boarding business.</li>
+                        <li class="fs-5 fw-light">Create a safe, welcoming environment for dogs while maintaining your
+                            home's comfort.</li>
+                        <li class="fs-5 fw-light">Access worksheets, sample spreadsheets, and contracts to help plan and
+                            organize your
                             business.</li>
                     </ul>
                 </div>
             </div>
-            <div class="row second">
-                <div class="col-md-7 second">
-                    <h3 class="learn-course-title">Running and Growing Your Business</h3>
-                    <ul class="learn-course-description">
-                        <li>Develop a business plan, branding strategies, and methods for attracting clients.</li>
-                        <li>Master client relations and ensure a peaceful environment for dogs in your care.</li>
-                        <li>Utilize customizable flyers, contracts, and tools to streamline business operations and
+            <div class="row mb-5">
+                <div class="col-lg-5 order-1 order-lg-2 text-center">
+                    <img class="rounded-5 img-fluid" src="/images/course/Business.png">
+                </div>
+                <div class="col-lg-7 order-2 order-lg-1">
+                    <h2 class="text-danger my-4">Running and Growing Your Business</h2>
+                    <ul class="checkmark-list">
+                        <li class="fs-5 fw-light">Develop a business plan, branding strategies, and methods for
+                            attracting clients.</li>
+                        <li class="fs-5 fw-light">Master client relations and ensure a peaceful environment for dogs in
+                            your care.</li>
+                        <li class="fs-5 fw-light">Utilize customizable flyers, contracts, and tools to streamline
+                            business operations and
                             scaling.</li>
                     </ul>
                 </div>
-                <div class="col-md-5">
-                    <img class="learn-img" src="/images/course/Business.png">
-                </div>
+
             </div>
-            <div class="row">
-                <div class="col-md-5">
-                    <img class="learn-img" src="/images/course/Situations.png">
+            <div class="row mb-5">
+                <div class="col-lg-5 text-center">
+                    <img class="rounded-5 img-fluid" src="/images/course/Situations.png">
                 </div>
-                <div class="col-md-7 line">
-                    <h3 class="learn-course-title">Handling Challenges and Special Situations</h3>
-                    <ul class="learn-course-description">
-                        <li>Gain insights into dog behavior and how to manage emergencies and special care situations.
+                <div class="col-lg-7">
+                    <h2 class="text-danger my-4">Handling Challenges and Special Situations</h2>
+                    <ul class="checkmark-list">
+                        <li class="fs-5 fw-light">Gain insights into dog behavior and how to manage emergencies and
+                            special care situations.
                         </li>
-                        <li>Learn techniques to maintain safety and wellbeing for dogs in your<br> care.</li>
-                        <li>Access practical templates and protocols to handle special situations with confidence.</li>
+                        <li class="fs-5 fw-light">Learn techniques to maintain safety and wellbeing for dogs in your<br>
+                            care.</li>
+                        <li class="fs-5 fw-light">Access practical templates and protocols to handle special situations
+                            with confidence.</li>
                     </ul>
                 </div>
             </div>
@@ -217,7 +214,7 @@ $_GLOBALS["pageTitle"] = "At-home Dog Boarding Course";
 
     <section class="course-outline container-fluid">
         <div class="container">
-            <h2 class="-outline-course-heading text-center">Course Outline</h2>
+            <h1 class="-outline-course-heading text-center">Course Outline</h1>
             <p class="outline-course-desc text-center">Our comprehensive course covers everything you need to know to
                 start
                 and run a successful at- home dog boarding business. Here's a sneak peek at what you'll learn:</p>

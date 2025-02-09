@@ -58,189 +58,27 @@ h1, h2, h3, h4, h5 {
     font-family: 'Gilroy-Medium', sans-serif;
 }
 
-a, p {
+a, p, li {
     font-family: "Lato", serif;
 }
 
-
-/*********************************************************/
-
-.enrolled.two {
-    position: relative;
+.infobox {
+    border: 1px solid var(--bs-info);
+    background: var(--bs-light);
 }
 
-.enrolled.two:before {
-    content: '';
-    position: absolute;
-    width: 2px;
-    height: 100%;
-    left: -40px;
-    top: 0px;
-    background: url('/images/course/line.png');
-    background-repeat: no-repeat;
-}
-
-.enrolled.two:after {
-    content: '';
-    position: absolute;
-    width: 2px;
-    height: 100%;
-    right: -40px;
-    top: 0px;
-    background: url('/images/course/line.png');
-    background-repeat: no-repeat;
-}
-
-/*2nd section*/
-h2.why-choose-heaading {
-    font-family: 'Gilroy-Medium', sans-serif;
-    font-weight: 500;
-    font-size: 40px;
-    line-height: 47.08px;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-    color: #350D09;
-    padding-top: 50px;
-}
-
-p.why-choose-desc {
-    font-family: "Lato", serif;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 28px;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-    color: #6D6463;
-    padding-right: 10px;
-}
-
-.box-section img {
-    width: 100px;
-}
-
-.box-section:hover {
-    background: #fff;
+.infobox:hover {
+    background: var(--bs-white);
     box-shadow: 0px 0px 100px 0px #0000000F;
+    cursor: grab;
 }
 
-.box-section {
-    border: 1px solid #F5EBEA;
-    border-radius: 20px;
-    padding: 40px;
-    margin-bottom: 40px;
-    background: #ffe8d570;
-}
-
-.box-section h4 {
-    font-family: 'Gilroy-Medium', sans-serif;
-    font-weight: 500;
-    font-size: 22px;
-    line-height: 28px;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-    color: #350D09;
-    padding-top: 26px;
-}
-
-/*3rd why choose section*/
-section.learn-course .container {
-    background: linear-gradient(180deg, #FFF6EF 0%, #FFECDD 100%);
-    border-radius: 24px;
-    padding: 80px 56px;
-    margin-top: 100px;
-}
-
-section.learn-course .col-md-7 {
-    padding-left: 80px;
-    padding-top: 80px;
-}
-
-
-.second {
-    position: relative;
-}
-
-.second:before {
-    position: absolute;
-    content: '';
-    width: 50px;
-    height: 50px;
-    background: url('/images/course/paws1.png');
-    left: 457px;
-    top: 0;
-}
-
-section.learn-course {
-    position: relative;
-}
-
-section.learn-course:before {
-    position: absolute;
-    content: '';
-    width: 120px;
-    height: 80%;
-    background: url('/images/course/fullline.svg');
-    left: 47%;
-    top: 183px;
-    z-index: 9999999999;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.row.second {
-    padding: 32px 0;
-}
-
-.col-md-7.second {
-    padding-left: 0 !important;
-    padding-right: 80px;
-}
-
-h2.learn-course-heading {
-    font-family: 'Gilroy-Medium', sans-serif;
-    font-weight: 500;
-    font-size: 40px;
-    line-height: 47.08px;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-    color: #350D09;
-    padding-bottom: 50px;
-}
-
-h3.learn-course-title {
-    font-family: 'Gilroy-Bold', sans-serif;
-    font-size: 28px;
-    font-weight: bold;
-    line-height: 32px;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-    color: #350D09;
-    padding-bottom: 20px;
-}
-
-ul.learn-course-description li {
-    font-family: "Lato", serif;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 28px;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-    color: #6D6463;
-    padding-bottom: 10px;
-}
-
-img.learn-img {
-    width: 490px;
-    height: auto;
-    border-radius: 20px;
-}
-
-ul.learn-course-description li {
+ul.checkmark-list li {
     position: relative;
     list-style: none;
 }
 
-ul.learn-course-description li:before {
+ul.checkmark-list li:before {
     position: absolute;
     content: '';
     width: 20px;
@@ -250,38 +88,7 @@ ul.learn-course-description li:before {
     top: 0;
 }
 
-.course-btn.btns button.btn {
-    margin-top: 50px;
-    background: #fff;
-}
-
-section.learn-course .container {
-    position: relative;
-}
-
-section.learn-course .container:before {
-    position: absolute;
-    content: '';
-    width: 100px;
-    height: 62px;
-    background: url('/images/course/paws2.png');
-    right: 60px;
-    top: 80px;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-section.learn-course .container:after {
-    position: absolute;
-    content: '';
-    width: 144px;
-    height: 80px;
-    background: url('/images/course/paws3.png');
-    right: 30px;
-    bottom: 22px;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
+/*********************************************************/
 
 h2.-outline-course-heading {
     font-family: 'Gilroy-Medium', sans-serif;
