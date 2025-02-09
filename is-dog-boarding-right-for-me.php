@@ -6,7 +6,8 @@ require_once "includes/utility.php";
 require_once "includes/quiz-data.php";
 
 $_GLOBALS["pageTitle"] = "Take a quiz!";
-$_GLOBALS["pageDescription"] = "Take a quiz to find out if at-home dog-boarding right for you?";
+$_GLOBALS["pageDescription"] = "Take a quiz to find out if at-home dog-boarding right for you!";
+$_GLOBALS["pageShareImage"] = "/images/share/course.jpg";
 
 $quiz = $DOG_BOARDING_QUIZ;
 $currentQuestionId = $_REQUEST["question"] ?? 0;

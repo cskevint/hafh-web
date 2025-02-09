@@ -2,6 +2,8 @@
 session_start();
 require_once "redirect.php";
 $_GLOBALS["pageTitle"] = "Watch an Introductory Guide";
+$_GLOBALS["pageDescription"] = "Welcome to our introductory guide about your at-home dog-boarding business!";
+$_GLOBALS["pageShareImage"] = "/images/share/guide.jpg";
 ?>
 <!doctype html>
 <html lang="en" class="bg-secondary">

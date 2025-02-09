@@ -3,6 +3,7 @@ session_start();
 require_once "redirect.php";
 $_GLOBALS["pageTitle"] = "Download our Free E-book";
 $_GLOBALS["pageDescription"] = "Learn the basics of setting up your own at-home dog-boarding business by getting your own free copy of our e-book!";
+$_GLOBALS["pageShareImage"] = "/images/share/ebook.jpg";
 ?>
 <!doctype html>
 <html lang="en" class="bg-secondary">
