@@ -25,7 +25,7 @@ function enrollButton($text, $primary = false)
 
 <body>
 
-    <?php include("includes/devserver.php"); ?>
+    <?php include "includes/devserver.php"; ?>
     <?php include "includes/debug.php"; ?>
 
     <div class="container-fluid" style="background: linear-gradient(180deg, #FFFBF9 16.31%, #FFE6D2 89.83%);">
@@ -111,7 +111,7 @@ function enrollButton($text, $primary = false)
                         <p class="fs-5 fw-light">Includes</p>
                         <p class="fs-4">75% Off<span class="fw-light"> Lifetime Access</span></p>
                         <p class="fs-4">Early Access<span class="fw-light"> to the Course</span></p>
-                        <p class="fs-4">Free DogBoarders<span class="fw-light"> Community Access</span></p>
+                        <p class="fs-4">Free Dog Boarders<span class="fw-light"> Community Access</span></p>
                         <p class="fs-4 mb-0">Daily Answers<span class="fw-light"> to Your Questions</span></h4>
                     </div>
                 </div>
@@ -561,15 +561,21 @@ function enrollButton($text, $primary = false)
                 <h3 class="text-center">Limited Time Pre-Launch Bonuses</h3>
                 <p class="text-center">Ready to turn your love for dogs into a thriving business? Our online course will
                     tell you everything you need to know to run your own at-home dog boarding business!</p>
-                <ul>
-                    <li><b>Free Community Access</b>: your questions answered daily so you never have to second
-                        guess or waste time!</li>
-                    <li><b>Customized Course</b>: The course will be built around your specific needs as an early
-                        adopter. This is something that late adopters will not get to experience with the finished
-                        course!</li>
-                    <li><b>Early Access to Coaching Program</b>: All of our early adopters will have first
-                        dibs on our limited spaces within our 1:1 coaching programs.</li>
-                </ul>
+                <div class="row">
+                    <div class="col-lg-1 col-xl-2"></div>
+                    <div class="col-lg-10 col-xl-8">
+                        <ul>
+                            <li><b>Free Community Access</b>: your questions answered daily so you never have to second
+                                guess or waste time!</li>
+                            <li><b>Customized Course</b>: The course will be built around your specific needs as an early
+                                adopter. This is something that late adopters will not get to experience with the finished
+                                course!</li>
+                            <li><b>Early Access to Coaching Program</b>: All of our early adopters will have first
+                                dibs on our limited spaces within our 1:1 coaching programs.</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-1 col-xl-2"></div>
+                </div>
                 <div class="text-center">
                     <?= enrollButton("Enroll Now") ?>
                 </div>
