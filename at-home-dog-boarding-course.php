@@ -115,7 +115,7 @@ function enrollButton($text, $primary = false)
                             alt="French Bulldog" />
                     </div>
                 </div>
-                <div class="col-lg-7 col-xl-7 px-5">
+                <div class="col-lg-7 col-xl-7 px-2 px-md-5">
                     <div class="shadow-lg rounded-4 p-3 p-xl-4 px-xl-5 bg-secondary text-white"
                         style="background-image: url(/images/course/prelaunch-box.png);background-position: top right;background-repeat: no-repeat;background-size: cover;">
                         <h2>Pre-launch Sale!</h2>
@@ -202,7 +202,7 @@ function enrollButton($text, $primary = false)
     ];
     ?>
     <section class="py-3 py-lg-1 pt-xl-3">
-        <div class="container rounded-5 bg-light p-3 p-md-4 p-xl-5">
+        <div class="container rounded-sm-5 bg-light p-3 p-md-4 p-xl-5">
             <h1 class="mb-5 text-center">What you'll learn in this course</h1>
             <div class="row mb-5">
                 <div class="col-lg-5 text-center">
@@ -263,7 +263,7 @@ function enrollButton($text, $primary = false)
         $contentsHtml = "";
         foreach ($contents as $items) {
             $contentsHtml .= <<<HTML
-            <h3 class="fs-5 m-0">$items[0]</h3>
+            <h3 class="fs-5 m-0 text-primary">$items[0]</h3>
             <p class="fw-normal">$items[1]</p>
             HTML;
         }
@@ -547,7 +547,7 @@ function enrollButton($text, $primary = false)
                         ?>
                     </ul>
                 </div>
-                <div class="col-lg-6 p-4 rounded-5 bg-secondary text-light">
+                <div class="col-lg-6 p-4 rounded-sm-5 bg-secondary text-light">
                     <h1 class="mb-4">Who this course is NOT for:</h1>
                     <ul class="brown-checkmark-list">
                         <?php
@@ -572,7 +572,7 @@ function enrollButton($text, $primary = false)
     </section>
 
     <section class="py-4 pt-xl-5">
-        <div class="container p-5 rounded-5"
+        <div class="container p-5 rounded-sm-5"
             style="background: url('/images/course/limited-time-banner.png');background-repeat: no-repeat;background-size: cover;">
             <div class="row">
                 <h3 class="text-center">Limited Time Pre-Launch Bonuses</h3>

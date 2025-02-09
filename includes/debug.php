@@ -16,7 +16,7 @@
                 document.getElementById('width').innerHTML = window.innerWidth;
             });
         </script>
-        <div class="bg-white px-3 my-1 ad-none">
+        <div class="bg-white px-3 my-1 d-none">
             <div class="row">
                 <div class="col">
                     <div class="p-1 bg-primary text-white">.bg-primary</div>
