@@ -19,7 +19,8 @@ if (isset($_REQUEST["previousQuestion"]) && isset($_REQUEST["previousAnswer"])) 
     $_SESSION["quiz"][$_REQUEST["previousQuestion"]] = $_REQUEST["previousAnswer"];
 }
 
-function enrollButton($text) {
+function enrollButton($text)
+{
     return <<<HTML
         <div class="text-center">
             <a href="/enroll"
@@ -256,7 +257,11 @@ $renderState = getRenderState();
                     </div>
                 </div>
             </div>
-
+            <div class="my-3 text-center">
+                <a href="/course" class="link-secondary link-offset-2 link-offset-3-hover link-underline-opacity-50-hover">
+                    Learn about our online course!
+                </a>
+            </div>
         </div>
     </section>
 

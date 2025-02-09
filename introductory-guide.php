@@ -25,10 +25,16 @@ $_GLOBALS["pageTitle"] = "Watch an Introductory Guide";
 
     <section class="container-fluid bg-light">
         <div class="container p-1 p-md-4 p-lg-5 text-center">
+            <h1 class="px-0 px-md-2 px-lg-5">Welcome to our introductory guide about your at-home dog-boarding business!</h1>
             <iframe class="youtube-video" src="https://www.youtube.com/embed/mK9lg1l1KkU" title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
+            <div class="my-3 text-center">
+                <a href="/course" class="fs-3 link-secondary link-offset-2 link-offset-3-hover link-underline-opacity-50-hover">
+                    Enroll in our course now!
+                </a>
+            </div>
         </div>
     </section>
 
