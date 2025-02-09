@@ -62,6 +62,8 @@ a, p, li {
     font-family: "Lato", serif;
 }
 
+/* Why Choose Dog Boarding? */
+
 .infobox {
     border: 1px solid var(--bs-info);
     background: var(--bs-light);
@@ -72,6 +74,8 @@ a, p, li {
     box-shadow: 0px 0px 100px 0px #0000000F;
     cursor: grab;
 }
+
+/* What you'll learn in this course */
 
 ul.checkmark-list li {
     position: relative;
@@ -88,36 +92,15 @@ ul.checkmark-list li:before {
     top: 0;
 }
 
-/*********************************************************/
+/* Course Outline */
 
-h2.-outline-course-heading {
-    font-family: 'Gilroy-Medium', sans-serif;
-    font-size: 40px;
-    font-weight: 500;
-    line-height: 47.08px;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-    color: #350D09;
-    padding-bottom: 12px;
+#courseOutlineToggle:before {
+    content: "Expand All";
 }
 
-p.outline-course-desc {
-    font-family: "Lato", serif;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 28px;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-    color: #6D6463;
-    padding-bottom: 50px;
-    width: 60%;
-    margin: 0 auto;
+#courseOutlineToggle.active:before {
+    content: "Collapse All";
 }
-
-section.course-outline {
-    padding-top: 80px;
-}
-
 
 #courseOutline .card {
     border-radius: 0;
@@ -157,99 +140,50 @@ section.course-outline {
     border-bottom-width: 1px;
 }
 
-button.accordion-button {
-    font-family: "Lato", serif;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 28px;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-    color: #393332 !important;
-}
-
-.accordion-body {
+#courseOutline .card .card-body .accordion-body {
     background: linear-gradient(180deg, rgba(238, 250, 255, 0.5) 0%, rgba(227, 247, 255, 0.5) 100%);
 }
 
-.accordion-body h4 {
-    font-family: Lato;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 28px;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-    color: #393332;
-}
-
-.accordion-body p {
-    font-family: "Lato", serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 26px;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-    color: #6D6463;
+#courseOutline .card .card-body .accordion-body p {
     padding-bottom: 15px;
     border-bottom: 1px solid #DFE5E8;
 }
 
-.accordion-button:focus {
+#courseOutline .card .card-body .accordion-body p:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+button.accordion-button:focus {
     box-shadow: none;
 }
 
-button.accordion-button.collapsed:after {
+button.accordion-button:after {
     border: 1px solid #d7eaf2 !important;
     padding: 12px !important;
     border-radius: 100% !important;
 }
 
-.accordion-button:not(.collapsed):after {
+button.accordion-button:not(.collapsed):after {
     background: #0279AD;
     flex-shrink: 0;
     width: var(--bs-accordion-btn-icon-width);
     height: var(--bs-accordion-btn-icon-width);
     margin-left: auto;
     content: "";
-    background-image: url(/images/course/open.png);
+    background-image: url(/images/course/accordion_open.png);
     background-repeat: no-repeat;
     transition: var(--bs-accordion-btn-icon-transition);
-    padding: 12px !important;
-    border-radius: 100%;
     background-position: 6px 7px;
 }
 
-.accordion-button::after {
-    background-image: url(/images/course/close.png);
+button.accordion-button::after {
+    background-image: url(/images/course/accordion_close.png);
     background-size: inherit;
     background-position: 6px 8px;
 }
 
-.accordion-body p:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
-}
-
-.accordion-button:not(.collapsed):after svg {
-    fill: #fff !important;
-    /* New icon color */
-    stroke: red;
-}
-
-/*button.accordion-button.collapsed {
-    --bs-accordion-btn-icon: url('/images/course/line.png') !important;
-}*/
-ul.list-unstyled.d-flex.justify-content-right.text-warning.mb-0 {
-    justify-content: right;
-    margin-top: 8px;
-}
-
-.accordion-option .toggle-accordion:before {
-    content: "Expand All";
-}
-
-.accordion-option .toggle-accordion.active:before {
-    content: "Collapse All";
-}
+/*********************************************************/
 
 section.testimonial-section {
     background: linear-gradient(140.37deg, #069EE0 24.28%, #0279AD 103.59%);

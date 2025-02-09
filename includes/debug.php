@@ -1,6 +1,6 @@
 <?php if ($GLOBALS['DEBUG']) { ?>
-    <div class="redbox">
-        <div class="container-fluid bg-white sticky-top text-center">
+    <div class="redbox bg-white sticky-top">
+        <div class="container-fluid text-center">
             <span class="fw-bold d-inline-block d-sm-none">xs</span>
             <span class="fw-bold d-none d-sm-inline-block d-md-none">sm</span>
             <span class="fw-bold d-none d-md-inline-block d-lg-none">md</span>
@@ -16,7 +16,7 @@
                 document.getElementById('width').innerHTML = window.innerWidth;
             });
         </script>
-        <div class="container my-5">
+        <div class="bg-white px-3 my-1 d-none">
             <div class="row">
                 <div class="col">
                     <div class="p-1 bg-primary text-white">.bg-primary</div>
