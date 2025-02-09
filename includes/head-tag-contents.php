@@ -1,15 +1,20 @@
 <?php
-require_once("config.php");
+require_once "config.php";
+$webhostUrl = str_replace($_SERVER['SCRIPT_URL'], "", $_SERVER['SCRIPT_URI']);
 $title = "Hound Away From Home" . (isset($_GLOBALS["pageTitle"]) ? " - " . $_GLOBALS["pageTitle"] : "");
+$defaultDescription = "Welcome to Hound Away from Home, where your beloved canine companion finds a safe haven for boarding and daycare, ensuring they receive the care, attention, and fun they deserve while you're away.";
+$description = $_GLOBALS["pageDescription"] ?? $defaultDescription;
+$defaultImage = "/images/image-eli.jpg";
+$shareImage = $_GLOBALS["pageShareImage"] ?? $defaultImage;
 ?>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description"
-  content="Welcome to Hound Away from Home, where your beloved canine companion finds a safe haven for boarding and daycare, ensuring they receive the care, attention, and fun they deserve while you're away.">
-<meta name="author" content="Hound Away From Home, LLC">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="<?= $description ?>" />
+<meta name="author" content="Hound Away From Home, LLC" />
 <title><?= $title ?></title>
 <meta property="og:title" content="<?= $title ?>">
-<meta property="og:image" content="/images/image-eli.jpg">
+<meta property="og:description" content="<?= $description ?>" />
+<meta property="og:image" content="<?= $webhostUrl ?><?= $shareImage ?>" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,14 +25,14 @@ $title = "Hound Away From Home" . (isset($_GLOBALS["pageTitle"]) ? " - " . $_GLO
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
 <link rel="stylesheet" type="text/css" href="/styles/main.css?v=<?= time() ?>" />
 
-<link rel="icon" href="favicon.ico">
-<link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="manifest" href="site.webmanifest">
-<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="favicon.ico" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180" />
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+<link rel="manifest" href="site.webmanifest" />
+<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5" />
+<meta name="msapplication-TileColor" content="#da532c" />
+<meta name="theme-color" content="#ffffff" />
 
 <?php if ($GLOBALS['STAGE'] == "production" && !in_array($_SERVER['REMOTE_ADDR'], $GLOBALS['DEVELOPMENT_IPS'])) { ?>
   <!-- Google tag (gtag.js) -->
