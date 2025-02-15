@@ -206,7 +206,7 @@ function enrollButton($text, $primary = false)
             <h1 class="mb-5 text-center">What you'll learn in this course</h1>
             <div class="row mb-5">
                 <div class="col-lg-5 text-center">
-                    <img class="rounded-5 img-fluid" src="/images/course/learn_success.png"
+                    <img class="rounded-1 img-fluid" src="/images/course/learn_success.gif"
                         alt="<?= $whatYoullLearn[0][0] ?>">
                 </div>
                 <div class="col-lg-7 d-flex align-items-center">
@@ -222,7 +222,7 @@ function enrollButton($text, $primary = false)
             </div>
             <div class="row mb-5">
                 <div class="col-lg-5 order-1 order-lg-2 text-center">
-                    <img class="rounded-5 img-fluid" src="/images/course/learn_business.png"
+                    <img class="rounded-1 img-fluid" src="/images/course/learn_business.gif"
                         alt="<?= $whatYoullLearn[1][0] ?>">
                 </div>
                 <div class="col-lg-7 d-flex align-items-center order-2 order-lg-1">
@@ -239,7 +239,7 @@ function enrollButton($text, $primary = false)
             </div>
             <div class="row mb-5">
                 <div class="col-lg-5 text-center">
-                    <img class="rounded-5 img-fluid" src="/images/course/learn_situations.png"
+                    <img class="rounded-1 img-fluid" src="/images/course/learn_situations.gif"
                         alt="<?= $whatYoullLearn[2][0] ?>">
                 </div>
                 <div class="col-lg-7 d-flex align-items-center">
@@ -486,7 +486,7 @@ function enrollButton($text, $primary = false)
                         </p>
                         <div class="d-flex">
                             <span class="ms-3">
-                                <img class="rounded-circle" src="/images/course/testimonial_sara.png" alt="Sara Botero"
+                                <img class="rounded-circle" src="/images/course/testimonial_sara.jpg" alt="Sara Botero"
                                     style="width: 50px;" />
                             </span>
                             <div class="ms-3">
