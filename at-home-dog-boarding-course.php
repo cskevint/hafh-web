@@ -448,7 +448,7 @@ function enrollButton($text, $primary = false)
                 boarding businesses after taking our course.</p>
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="card p-4 mb-4 shadow-lg rounded-5 bg-white">
+                    <div class="card p-4 mb-4 shadow-lg rounded-5 bg-white h-100">
                         <?= $testimonialHeader ?>
                         <p class="m-3 fst-italic">
                             Selena knows her stuff! With over a decade of experience in the business and a lifetime of
@@ -468,8 +468,9 @@ function enrollButton($text, $primary = false)
                         </div>
                     </div>
                 </div>
+                <div class="d-lg-none p-3"></div>
                 <div class="col-lg-6">
-                    <div class="card p-4 mb-4 shadow-lg rounded-5 bg-white">
+                    <div class="card p-4 mb-4 shadow-lg rounded-5 bg-white h-100">
                         <?= $testimonialHeader ?>
                         <p class="m-3 fst-italic">
                             Honestly, I thought that doing the dog business would not require much knowledge, it could
