@@ -1,3 +1,3 @@
 <?php 
-header("Location: /watch-introductory-guide");
+header("Location: /watch-introductory-guide", true, 302);
 ?>

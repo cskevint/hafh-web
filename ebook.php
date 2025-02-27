@@ -1,3 +1,3 @@
 <?php 
-header("Location: /download-free-ebook");
+header("Location: /download-free-ebook", true, 302);
 ?>
