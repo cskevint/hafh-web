@@ -1,8 +1,9 @@
-ErrorDocument 404 /404.php
+ErrorDocument 404 /404
 RedirectMatch 404 /\.git
-Redirect 302 /about/ /aboutus.php
-Redirect 302 /questions/ /faqs.php
-Redirect 302 /contact-us/ /contactus.php
+Redirect 302 /about/ /aboutus
+Redirect 302 /questions/ /faqs
+Redirect 302 /photos/ /gallery
+Redirect 302 /contact-us/ /contactus
 
 <Files updatesite.php>
 FileETag None
