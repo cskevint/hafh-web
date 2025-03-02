@@ -84,6 +84,7 @@ $renderState = getRenderState();
 
 <head>
     <?php include "includes/head-tag-contents.php"; ?>
+    <link rel="canonical" href="https://www.houndawayfromhome.com/is-dog-boarding-right-for-me" />
 </head>
 
 <body>
