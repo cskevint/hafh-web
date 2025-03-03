@@ -1,5 +1,3 @@
 <?php 
-session_start();
-$_SESSION['notice'] = "Checkout page for the online course is coming soon!";
-header("Location: /course");
+header("Location: https://learn.houndawayfromhome.com/offers/Q3ciYazf/", true, 302);
 ?>
