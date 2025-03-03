@@ -148,7 +148,7 @@ function enrollButton($text, $primary = false)
     ?>
     <section class="container my-3 py-3 py-lg-1 pt-xl-3">
         <div class="row">
-            <a name="why-choose"/>
+            <a name="why-choose" />
             <div class="col-lg-4 p-2 d-flex justify-content-center align-items-center">
                 <div>
                     <h2 class="text-danger">
@@ -204,7 +204,7 @@ function enrollButton($text, $primary = false)
     ?>
     <section class="py-3 py-lg-1 pt-xl-3">
         <div class="container rounded-sm-5 bg-light p-3 p-md-4 p-xl-5">
-            <a name="learn"/>
+            <a name="learn" />
             <h1 class="mb-5 text-center">What you'll learn in this course</h1>
             <div class="row mb-5">
                 <div class="col-lg-5 text-center">
@@ -295,7 +295,7 @@ function enrollButton($text, $primary = false)
     ?>
     <section class="py-4 pt-xl-5">
         <div class="container">
-            <a name="outline"/>
+            <a name="outline" />
             <h1 class="text-center">Course Outline</h1>
             <div class="row">
                 <div class="col-lg-2"></div>
@@ -446,7 +446,7 @@ function enrollButton($text, $primary = false)
     ?>
     <section class="py-4 pt-xl-5" style="background: linear-gradient(140.37deg, #069EE0 24.28%, #0279AD 103.59%);">
         <div class="container">
-            <a name="testimonials"/>
+            <a name="testimonials" />
             <h1 class="text-white text-center">Testimonials</h1>
             <p class="text-white text-center">Hear from our students who have successfully launched their own dog
                 boarding businesses after taking our course.</p>
@@ -517,7 +517,7 @@ function enrollButton($text, $primary = false)
     ?>
     <section class="py-4 pt-xl-5">
         <div class="container">
-            <a name="coach"/>
+            <a name="coach" />
             <h1 class="mb-3 text-center">Meet your coach</h1>
             <img class="d-none d-xl-inline-block mx-3 float-end" src="/images/course/meet-coach.png"
                 alt="Selena Trotter" />
@@ -535,7 +535,7 @@ function enrollButton($text, $primary = false)
     <section class="py-4 pt-xl-5">
         <div class="container">
             <div class="row">
-                <a name="audience"/>
+                <a name="audience" />
                 <div class="col-lg-6 p-4 rounded-5">
                     <h1 class="mb-4">Who this course is for:</h1>
                     <ul class="blue-checkmark-list">
@@ -585,7 +585,7 @@ function enrollButton($text, $primary = false)
         <div class="container p-5 rounded-sm-5"
             style="background: url('/images/course/limited-time-banner.png');background-repeat: no-repeat;background-size: cover;">
             <div class="row">
-                <a name="prelaunch"/>
+                <a name="prelaunch" />
                 <h3 class="text-center">Limited Time Pre-Launch Bonuses</h3>
                 <p class="text-center">Ready to turn your love for dogs into a thriving business? Our online course will
                     tell you everything you need to know to run your own at-home dog boarding business!</p>
@@ -619,7 +619,7 @@ function enrollButton($text, $primary = false)
 
     <section class="py-4 pt-xl-5">
         <div class="container">
-            <a name="faqs"/>
+            <a name="faqs" />
             <h1 class="mb-3 text-center">Frequently asked questions</h1>
             <div class="row">
                 <?php
@@ -668,7 +668,7 @@ function enrollButton($text, $primary = false)
 
     <section class="py-4 pt-xl-5 bg-dark text-white">
         <div class="container">
-            <a name="disclaimer"/>
+            <a name="disclaimer" />
             <h1 class="mb-3 text-center">Disclaimer</h1>
             <?php
             $disclaimers = [
