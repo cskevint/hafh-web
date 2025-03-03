@@ -92,7 +92,7 @@ function enrollButton($text, $primary = false)
                         </div>
                     </div>
                     <div class="col-lg-6 d-flex align-items-center justify-content-center">
-                        <iframe class="youtube-video" src="https://www.youtube.com/embed/mK9lg1l1KkU?enablejsapi=1"
+                        <iframe class="youtube-video" src="https://www.youtube.com/embed/TUfeu8w_WXA?enablejsapi=1"
                             title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
