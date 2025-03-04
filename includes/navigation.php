@@ -14,6 +14,10 @@
         <div class="collapse navbar-collapse flex-row-reverse" id="navbar">
             <ul class="navbar-nav">
                 <li class="nav-item">
+                    <a class="nav-link"
+                        href="/course">Online Course<sup class="text-primary fw-bold">NEW!</sup></a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link <?= basename($_SERVER['PHP_SELF']) == 'faqs.php' ? 'active' : '' ?>"
                         href="faqs.php">FAQs</a>
                 </li>

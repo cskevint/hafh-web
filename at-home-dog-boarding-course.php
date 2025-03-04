@@ -92,7 +92,7 @@ function enrollButton($text, $primary = false)
                         </div>
                     </div>
                     <div class="col-lg-6 d-flex align-items-center justify-content-center">
-                        <iframe class="youtube-video" src="https://www.youtube.com/embed/TUfeu8w_WXA?enablejsapi=1"
+                        <iframe class="youtube-video" src="https://www.youtube.com/embed/TUfeu8w_WXA?enablejsapi=1&rel=0"
                             title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
@@ -148,10 +148,9 @@ function enrollButton($text, $primary = false)
     ?>
     <section class="container my-3 py-3 py-lg-1 pt-xl-3">
         <div class="row">
-            <a name="why-choose" />
             <div class="col-lg-4 p-2 d-flex justify-content-center align-items-center">
                 <div>
-                    <h2 class="text-danger">
+                    <h2 id="why-choose" class="text-danger">
                         Why Choose Dog Boarding?
                     </h2>
                     <p class="">
@@ -204,8 +203,7 @@ function enrollButton($text, $primary = false)
     ?>
     <section class="py-3 py-lg-1 pt-xl-3">
         <div class="container rounded-sm-5 bg-light p-3 p-md-4 p-xl-5">
-            <a name="learn" />
-            <h1 class="mb-5 text-center">What you'll learn in this course</h1>
+            <h1 id="learn" class="mb-5 text-center">What you'll learn in this course</h1>
             <div class="row mb-5">
                 <div class="col-lg-5 text-center">
                     <img class="rounded-1 img-fluid" src="/images/course/learn_success.gif"
@@ -295,8 +293,7 @@ function enrollButton($text, $primary = false)
     ?>
     <section class="py-4 pt-xl-5">
         <div class="container">
-            <a name="outline" />
-            <h1 class="text-center">Course Outline</h1>
+            <h1 id="outline" class="text-center">Course Outline</h1>
             <div class="row">
                 <div class="col-lg-2"></div>
                 <div class="col-lg-8">
@@ -446,8 +443,7 @@ function enrollButton($text, $primary = false)
     ?>
     <section class="py-4 pt-xl-5" style="background: linear-gradient(140.37deg, #069EE0 24.28%, #0279AD 103.59%);">
         <div class="container">
-            <a name="testimonials" />
-            <h1 class="text-white text-center">Testimonials</h1>
+            <h1 id="testimonials" class="text-white text-center">Testimonials</h1>
             <p class="text-white text-center">Hear from our students who have successfully launched their own dog
                 boarding businesses after taking our course.</p>
             <div class="row">
@@ -517,8 +513,7 @@ function enrollButton($text, $primary = false)
     ?>
     <section class="py-4 pt-xl-5">
         <div class="container">
-            <a name="coach" />
-            <h1 class="mb-3 text-center">Meet your coach</h1>
+            <h1 id="coach" class="mb-3 text-center">Meet your coach</h1>
             <img class="d-none d-xl-inline-block mx-3 float-end" src="/images/course/meet-coach.png"
                 alt="Selena Trotter" />
             <p class="px-3 fs-5"><?= $coachLines[0] ?></p>
@@ -535,9 +530,8 @@ function enrollButton($text, $primary = false)
     <section class="py-4 pt-xl-5">
         <div class="container">
             <div class="row">
-                <a name="audience" />
                 <div class="col-lg-6 p-4 rounded-5">
-                    <h1 class="mb-4">Who this course is for:</h1>
+                    <h1 id="audience" class="mb-4">Who this course is for:</h1>
                     <ul class="blue-checkmark-list">
                         <?php
                         $whoForLines = [
@@ -585,8 +579,7 @@ function enrollButton($text, $primary = false)
         <div class="container p-5 rounded-sm-5"
             style="background: url('/images/course/limited-time-banner.png');background-repeat: no-repeat;background-size: cover;">
             <div class="row">
-                <a name="prelaunch" />
-                <h3 class="text-center">Limited Time Pre-Launch Bonuses</h3>
+                <h3 id="prelaunch" class="text-center">Limited Time Pre-Launch Bonuses</h3>
                 <p class="text-center">Ready to turn your love for dogs into a thriving business? Our online course will
                     tell you everything you need to know to run your own at-home dog boarding business!</p>
                 <div class="row">
@@ -619,8 +612,7 @@ function enrollButton($text, $primary = false)
 
     <section class="py-4 pt-xl-5">
         <div class="container">
-            <a name="faqs" />
-            <h1 class="mb-3 text-center">Frequently asked questions</h1>
+            <h1 id="faqs" class="mb-3 text-center">Frequently asked questions</h1>
             <div class="row">
                 <?php
                 $questions = [
@@ -668,8 +660,7 @@ function enrollButton($text, $primary = false)
 
     <section class="py-4 pt-xl-5 bg-dark text-white">
         <div class="container">
-            <a name="disclaimer" />
-            <h1 class="mb-3 text-center">Disclaimer</h1>
+            <h1 id="disclaimer" class="mb-3 text-center">Disclaimer</h1>
             <?php
             $disclaimers = [
                 ["Legal and Financial Disclaimer", "This course does not guarantee financial success or specific income levels. While the course provides strategies to help you attract clients, the amount of money you earn will depend on various factors, including your location, your home setup, and your prior experience. Results may vary based on individual effort and circumstances. Starting a dog boarding business involves inherent risks, as dogs are animals and cannot be fully controlled. The course will set you up for success, but it is your responsibility to avoid situations that could put you or the dogs in your care at risk."],

@@ -33,7 +33,7 @@ When our kids come home from school around 3pm, the dogs spend a lot of time snu
 
 ### How do you handle emergencies? {.mt-4}
 
-If the emergency requires medical care, we would take the dog to the vet immediately. Close by, there are several 24-hour emergency vets within a 3-minute car ride. We then call the owner to let them the circumstances. If there is some sort of other emergency, a call to the owners would happen first.
+If the emergency requires medical care, we would take the dog to the vet immediately. Close by, there are several 24-hour emergency vets within a 3-minute car ride. We then call the owner to let them know the circumstances. If there is some sort of other emergency, a call to the owners would happen first.
 
 ### What do I need to bring with my dog for their stay? {.mt-4}
 
