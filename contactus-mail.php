@@ -54,7 +54,9 @@ $messageBody = <<<EOD
 EOD;
 
 // Check if the email is in the disallow list
-if (!in_array($fromEmail, $GLOBALS['EMAIL_DISALLOW_LIST']) && validateCaptcha($captcha) && sendMail($fromEmail, $fromName, $subject, $messageBody)) {
+if (in_array($fromEmail, $GLOBALS['EMAIL_DISALLOW_LIST'])) {
+    $_SESSION['notice'] = 'There was an error sending your note. Please try again.';
+} elseif (validateCaptcha($captcha) && sendMail($fromEmail, $fromName, $subject, $messageBody)) {
     $_SESSION['notice'] = "Successfully sent your note.";
 } else {
     $_SESSION['notice'] = 'There was an error sending your note. Please email us: <a href="mailto:selena@houndawayfromhome.com">selena@houndawayfromhome.com</a>';
