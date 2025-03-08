@@ -13,6 +13,12 @@ if (!isset($_REQUEST['redirect'])) {
 $subscriberName = $_REQUEST['name'];
 $subscriberEmail = $_REQUEST['email'];
 
+// Check if the subscriberName contains a URL
+if (preg_match('/http/', $subscriberName)) {
+    header("Location: /500");
+    exit();
+}
+
 $hubspot = \HubSpot\Factory::createWithAccessToken($HUBSPOT_API_TOKEN);
 
 function hubspotContactExists()
