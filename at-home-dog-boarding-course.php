@@ -8,9 +8,11 @@ $_GLOBALS["pageShareImage"] = "/images/share/course.jpg";
 function enrollButton($text, $primary = false)
 {
     $color = $primary ? "btn-primary" : "btn-secondary";
+    // TEMPORARY: Replace href with "/enroll" when the course is ready.
     return <<<HTML
-        <a href="/enroll"
-            class="btn btn-lg $color text-nowrap px-4 my-3 rounded-pill shadow">
+        <a href="javascript:;"
+            class="btn btn-lg $color text-nowrap px-4 my-3 rounded-pill shadow"
+            data-bs-toggle="modal" data-bs-target="#comingSoonModal">
             $text
         </a>
     HTML;
@@ -687,6 +689,21 @@ function enrollButton($text, $primary = false)
                 class="link-info text-decoration-none">HoundAwayFromHome.com</a>. All rights reserved.
         </div>
     </section>
+
+    <div class="modal modal-lg fade enroll-modal" id="comingSoonModal" tabindex="-1" aria-labelledby="enroll"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header align-items-start">
+                    <h1 class="modal-title" id="enroll">Coming soon!</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="fs-3">Exciting things are happening—our online course is launching soon, so check back often for the big reveal!</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
