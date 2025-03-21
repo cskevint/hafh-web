@@ -40,7 +40,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://www.instagram.com/houndawayfromhomesm/">
+                    <a class="nav-link" href="https://www.instagram.com/houndawayfromhomeinc/">
                         <i class="bi bi-instagram"></i>
                         <span class="d-lg-none d-xl-none">Instagram</span>
                     </a>

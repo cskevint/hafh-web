@@ -79,7 +79,7 @@ require_once "redirect.php";
                             class="img-fluid" /></a>
                 </div>
                 <div class="col-lg-3 col-md-6 col-xs-12 px-4 py-3 d-flex align-items-center justify-content-center">
-                    <a href="https://www.instagram.com/houndawayfromhomesm/"><img src="images/logo-instagram.png"
+                    <a href="https://www.instagram.com/houndawayfromhomeinc/"><img src="images/logo-instagram.png"
                             class="img-fluid" /></a>
                 </div>
                 <div class="col-lg-3 col-md-6 col-xs-12 px-4 py-3 d-flex align-items-center justify-content-center">

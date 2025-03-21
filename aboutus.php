@@ -34,7 +34,7 @@ $_GLOBALS["pageTitle"] = "About Us";
                                     She and her husband bought their house in 2009 and have turned into a comfortable
                                     doggy hotel (where people can visit too!). Selena has taken care of her dogs since
                                     her early childhood, and has taken care of other dogs professionally since 2012.</p>
-                                <p>Check out her <a href="https://www.instagram.com/houndawayfromhomesm/"
+                                <p>Check out her <a href="https://www.instagram.com/houndawayfromhomeinc/"
                                         class="text-secondary"><i class="bi bi-instagram mx-1"></i>Instagram</a>!</p>
                             </div>
                         </div>
