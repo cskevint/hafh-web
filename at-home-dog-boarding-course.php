@@ -48,7 +48,7 @@ function enrollButton($text, $primary = false)
                         </li> -->
                         <li class="nav-item">
                             <a href="/quiz" class="nav-link">
-                                Take a quiz
+                                Is dog-boarding right for you? Take a quiz!
                             </a>
                         </li>
                         <!-- <li class="nav-item">
