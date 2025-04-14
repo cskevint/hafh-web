@@ -1,3 +1,3 @@
 <?php 
-header("Location: https://learn.houndawayfromhome.com/pl/2148650878", true, 302);
+header("Location: https://learn.houndawayfromhome.com/offers/Q3ciYazf", true, 302);
 ?>

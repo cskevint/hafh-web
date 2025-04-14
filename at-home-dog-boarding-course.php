@@ -8,11 +8,8 @@ $_GLOBALS["pageShareImage"] = "/images/share/course.jpg";
 function enrollButton($text, $primary = false)
 {
     $color = $primary ? "btn-primary" : "btn-secondary";
-    // TEMPORARY: Replace href with "/enroll" when the course is ready.
     return <<<HTML
-        <a href="javascript:;"
-            class="btn btn-lg $color text-nowrap px-4 my-3 rounded-pill shadow"
-            data-bs-toggle="modal" data-bs-target="#comingSoonModal">
+        <a href="/enroll" class="btn btn-lg $color text-nowrap px-4 my-3 rounded-pill shadow">
             $text
         </a>
     HTML;
@@ -44,21 +41,21 @@ function enrollButton($text, $primary = false)
 
                 <div class="collapse navbar-collapse flex-row-reverse justify-content-between" id="navigation">
                     <ul class="navbar-nav">
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a href="/guide" class="nav-link">
                                 Watch Guide
                             </a>
-                        </li>
+                        </li> -->
                         <li class="nav-item">
                             <a href="/quiz" class="nav-link">
                                 Take a quiz
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a href="/ebook" class="nav-link">
                                 Download Free E-book
                             </a>
-                        </li>
+                        </li> -->
                     </ul>
                     <img src="/images/course/paws.png" class="d-none d-lg-inline-block"
                         style="width: 110px;margin-bottom: -100px;margin-left: 100px" />
@@ -94,7 +91,7 @@ function enrollButton($text, $primary = false)
                         </div>
                     </div>
                     <div class="col-lg-6 d-flex align-items-center justify-content-center">
-                        <iframe class="youtube-video" src="https://www.youtube.com/embed/TUfeu8w_WXA?enablejsapi=1&rel=0"
+                        <iframe class="youtube-video" src="https://www.youtube.com/embed/tqOzM1y0xxA?enablejsapi=1&rel=0"
                             title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
@@ -122,9 +119,9 @@ function enrollButton($text, $primary = false)
                         style="background-image: url(/images/course/prelaunch-box.png);background-position: top right;background-repeat: no-repeat;background-size: cover;">
                         <h2>Pre-launch Sale!</h2>
                         <p class="fs-5 fw-light">Includes</p>
-                        <p class="fs-4">75% Off<span class="fw-light"> Lifetime Access</span></p>
+                        <p class="fs-4">85% Off<span class="fw-light"> Lifetime Access</span></p>
                         <p class="fs-4">Early Access<span class="fw-light"> to the Course</span></p>
-                        <p class="fs-4">Free Dog Boarders<span class="fw-light"> Community Access</span></p>
+                        <!-- <p class="fs-4">Free Dog Boarders<span class="fw-light"> Community Access</span></p> -->
                         <p class="fs-4 mb-0">Daily Answers<span class="fw-light"> to Your Questions</span></h4>
                     </div>
                 </div>
