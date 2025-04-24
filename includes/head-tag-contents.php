@@ -56,10 +56,10 @@ $shareImage = $_GLOBALS["pageShareImage"] ?? $defaultImage;
       s.parentNode.insertBefore(t, s)
     }(window, document, 'script',
       'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1632278797426371');
+    fbq('init', '1217184416699830');
     fbq('track', 'PageView');
   </script>
   <noscript><img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=1632278797426371&ev=PageView&noscript=1" /></noscript>
+      src="https://www.facebook.com/tr?id=1217184416699830&ev=PageView&noscript=1" /></noscript>
   <!-- End Meta Pixel Code -->
 <?php } ?>
