@@ -67,7 +67,7 @@ function enrollButton($text, $primary = false)
             <div class="container">
                 <?php
                 if (isset($_SESSION['notice'])) {
-                    echo '<div class="d-flex align-items-center justify-content-center"><div class="alert alert-danger" style="width:65%"><i class="bi bi-exclamation-circle-fill me-3"></i>' . $_SESSION['notice'] . '</div></div>';
+                    echo '<div class="row"><div class="col-md-3"></div><div class="alert alert-danger alert-dismissible fade show col-md-6"><i class="bi bi-exclamation-circle-fill me-3"></i>' . $_SESSION['notice'] . '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div></div>';
                     unset($_SESSION['notice']);
                 }
                 ?>
@@ -91,7 +91,8 @@ function enrollButton($text, $primary = false)
                         </div>
                     </div>
                     <div class="col-lg-6 d-flex align-items-center justify-content-center">
-                        <iframe class="youtube-video" src="https://www.youtube.com/embed/tqOzM1y0xxA?enablejsapi=1&rel=0"
+                        <iframe class="youtube-video"
+                            src="https://www.youtube.com/embed/tqOzM1y0xxA?enablejsapi=1&rel=0"
                             title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
@@ -696,7 +697,8 @@ function enrollButton($text, $primary = false)
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p class="fs-3">Exciting things are happening—our online course is launching soon, so check back often for the big reveal!</p>
+                    <p class="fs-3">Exciting things are happening—our online course is launching soon, so check back
+                        often for the big reveal!</p>
                 </div>
             </div>
         </div>
