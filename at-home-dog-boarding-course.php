@@ -9,7 +9,7 @@ function enrollButton($text, $primary = false)
 {
     $color = $primary ? "btn-primary" : "btn-secondary";
     return <<<HTML
-        <a href="/enroll" class="btn btn-lg $color text-nowrap px-4 my-3 rounded-pill shadow">
+        <a href="/enroll" class="btn btn-lg text-nowrap px-4 my-3 rounded-pill shadow" style="background-color: #fc0303; color: #fff; border: none;">
             $text
         </a>
     HTML;
@@ -28,37 +28,39 @@ function enrollButton($text, $primary = false)
     <?php include "includes/debug.php"; ?>
 
     <div class="container-fluid" style="background: linear-gradient(180deg, #FFFBF9 16.31%, #FFE6D2 89.83%);">
-        <nav class="navbar navbar-expand-lg" aria-label="Page navigation">
+        <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container">
                 <a class="navbar-brand" href="/course">
                     <img src="/images/course/headerlogo.png" style="max-height:50px;" alt="Hound Away From Home" />
                 </a>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation"
-                    aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
-                <div class="collapse navbar-collapse flex-row-reverse justify-content-between" id="navigation">
-                    <ul class="navbar-nav">
-                        <!-- <li class="nav-item">
-                            <a href="/guide" class="nav-link">
-                                Watch Guide
-                            </a>
-                        </li> -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a href="/quiz" class="nav-link">
-                                Is dog-boarding right for you? Take a quiz!
-                            </a>
+                            <a class="nav-link" href="#testimonials">Testimonials</a>
                         </li>
-                        <!-- <li class="nav-item">
-                            <a href="/ebook" class="nav-link">
-                                Download Free E-book
-                            </a>
-                        </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#learn">What you'll learn</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#outline">Course Outline</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#coach">Meet your coach</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#audience">Who this course is for</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#faqs">FAQs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#disclaimer">Disclaimer</a>
+                        </li>
                     </ul>
-                    <img src="/images/course/paws.png" class="d-none d-lg-inline-block"
-                        style="width: 110px;margin-bottom: -100px;margin-left: 100px" />
                 </div>
             </div>
         </nav>
@@ -119,7 +121,7 @@ function enrollButton($text, $primary = false)
                     <div class="shadow-lg rounded-4 p-3 p-xl-4 px-xl-5 bg-secondary text-white"
                         style="background-image: url(/images/course/prelaunch-box.png);background-position: top right;background-repeat: no-repeat;background-size: cover;">
                         <h2>Pre-launch Sale!</h2>
-                        <p class="fs-5 fw-light">Includes</p>
+                        <p class="fs-4"><b>First 10 purchases</b> get a 45-min coaching call!</p>
                         <p class="fs-4">85% Off<span class="fw-light"> Lifetime Access</span></p>
                         <p class="fs-4">Early Access<span class="fw-light"> to the Course</span></p>
                         <!-- <p class="fs-4">Free Dog Boarders<span class="fw-light"> Community Access</span></p> -->
@@ -129,6 +131,124 @@ function enrollButton($text, $primary = false)
                 <div class="col-lg-2 col-xl-2 d-flex align-items-center justify-content-center">
                     <?= enrollButton("Grab Your Discount!", true) ?>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <?php
+    $testimonialHeader = <<<HTML
+            <div class="row">
+                <div class="col"><img src="/images/course/quote.png" alt="Quote" /></div>
+                <div class="col d-flex align-items-center justify-content-end">
+                    <ul class="list-unstyled d-flex justify-content-right text-warning mb-0">
+                        <li>
+                            <i class="bi bi-star-fill"></i>
+                        </li>
+                        <li>
+                            <i class="bi bi-star-fill"></i>
+                        </li>
+                        <li>
+                            <i class="bi bi-star-fill"></i>
+                        </li>
+                        <li>
+                            <i class="bi bi-star-fill"></i>
+                        </li>
+                        <li>
+                            <i class="bi bi-star-fill"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        HTML;
+    ?>
+    <section class="py-4 pt-xl-5" style="background: linear-gradient(140.37deg, #069EE0 24.28%, #0279AD 103.59%);">
+        <div class="container">
+            <h1 id="testimonials" class="text-white text-center">Testimonials</h1>
+            <p class="text-white text-center">Hear from our students who have successfully launched their own dog
+                boarding businesses after taking our course.</p>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card p-4 mb-4 shadow-lg rounded-5 bg-white h-100">
+                        <?= $testimonialHeader ?>
+                        <p class="m-3 fst-italic">
+                            Selena knows her stuff! With over a decade of experience in the business and a lifetime of
+                            loving dogs, she offers the tools you'll need to start a successful dog business. I’ve been
+                            working with her for over a year since before I got my first guest, to now where I have
+                            dozens of repeat clients. I'm grateful for her mentorship and highly recommend her course!
+                        </p>
+                        <div class="d-flex">
+                            <span class="ms-3">
+                                <img class="rounded-circle" src="/images/course/testimonial_leila.jpg" alt="Leila Gates"
+                                    style="width: 50px;" />
+                            </span>
+                            <div class="ms-3">
+                                <p class="m-0 fs-5">Leila Gates</p>
+                                <p class="text-primary">Teacher</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-lg-none p-3"></div>
+                <div class="col-lg-4">
+                    <div class="card p-4 mb-4 shadow-lg rounded-5 bg-white h-100">
+                        <?= $testimonialHeader ?>
+                        <p class="m-3 fst-italic">
+                            Honestly, I thought that doing the dog business would not require much knowledge, it could
+                            be intuitive, but when I started receiving information from Selena, I realized that I needed
+                            valuable information that only she had because of her experience. I felt taken by the hand
+                            and when we received the first dog <span class="read-more hidden"><a
+                                    href="javascript:void(0)"
+                                    class="read-more-link text-decoration-none">More...</a><span
+                                    class="read-more-content"> (only 5 days after starting the course) everything made
+                                    so much sense, when you do it, the experience that she has, becomes very evident,
+                                    and you feel with the ability to solve the small challenges. Today I feel very
+                                    happy, I have the size of a business that fits my family and that pays the
+                                    rent.</span></span>
+                        </p>
+                        <div class="d-flex">
+                            <span class="ms-3">
+                                <img class="rounded-circle" src="/images/course/testimonial_sara.jpg" alt="Sara Botero"
+                                    style="width: 50px;" />
+                            </span>
+                            <div class="ms-3">
+                                <p class="m-0 fs-5">Sara Botero</p>
+                                <p class="text-primary">UX Designer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-lg-none p-3"></div>
+                <div class="col-lg-4">
+                    <div class="card p-4 mb-4 shadow-lg rounded-5 bg-white h-100">
+                        <?= $testimonialHeader ?>
+                        <p class="m-3 fst-italic">
+                            Honestly, I thought that doing the dog business would not require much knowledge, it could
+                            be intuitive, but when I started receiving information from Selena, I realized that I needed
+                            valuable information that only she had because of her experience. I felt taken by the hand
+                            and when we received the first dog <span class="read-more hidden"><a
+                                    href="javascript:void(0)"
+                                    class="read-more-link text-decoration-none">More...</a><span
+                                    class="read-more-content"> (only 5 days after starting the course) everything made
+                                    so much sense, when you do it, the experience that she has, becomes very evident,
+                                    and you feel with the ability to solve the small challenges. Today I feel very
+                                    happy, I have the size of a business that fits my family and that pays the
+                                    rent.</span></span>
+                        </p>
+                        <div class="d-flex">
+                            <span class="ms-3">
+                                <img class="rounded-circle" src="/images/course/testimonial_sara.jpg" alt="Sara Botero"
+                                    style="width: 50px;" />
+                            </span>
+                            <div class="ms-3">
+                                <p class="m-0 fs-5">Sara Botero</p>
+                                <p class="text-primary">UX Designer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <?= enrollButton("Enroll & Learn Today") ?>
             </div>
         </div>
     </section>
@@ -412,95 +532,6 @@ function enrollButton($text, $primary = false)
                     });
                 });
             </script>
-        </div>
-    </section>
-
-    <?php
-    $testimonialHeader = <<<HTML
-        <div class="row">
-            <div class="col"><img src="/images/course/quote.png" alt="Quote" /></div>
-            <div class="col d-flex align-items-center justify-content-end">
-                <ul class="list-unstyled d-flex justify-content-right text-warning mb-0">
-                    <li>
-                        <i class="bi bi-star-fill"></i>
-                    </li>
-                    <li>
-                        <i class="bi bi-star-fill"></i>
-                    </li>
-                    <li>
-                        <i class="bi bi-star-fill"></i>
-                    </li>
-                    <li>
-                        <i class="bi bi-star-fill"></i>
-                    </li>
-                    <li>
-                        <i class="bi bi-star-fill"></i>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    HTML;
-    ?>
-    <section class="py-4 pt-xl-5" style="background: linear-gradient(140.37deg, #069EE0 24.28%, #0279AD 103.59%);">
-        <div class="container">
-            <h1 id="testimonials" class="text-white text-center">Testimonials</h1>
-            <p class="text-white text-center">Hear from our students who have successfully launched their own dog
-                boarding businesses after taking our course.</p>
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="card p-4 mb-4 shadow-lg rounded-5 bg-white h-100">
-                        <?= $testimonialHeader ?>
-                        <p class="m-3 fst-italic">
-                            Selena knows her stuff! With over a decade of experience in the business and a lifetime of
-                            loving dogs, she offers the tools you'll need to start a successful dog business. I’ve been
-                            working with her for over a year since before I got my first guest, to now where I have
-                            dozens of repeat clients. I'm grateful for her mentorship and highly recommend her course!
-                        </p>
-                        <div class="d-flex">
-                            <span class="ms-3">
-                                <img class="rounded-circle" src="/images/course/testimonial_leila.jpg" alt="Leila Gates"
-                                    style="width: 50px;" />
-                            </span>
-                            <div class="ms-3">
-                                <p class="m-0 fs-5">Leila Gates</p>
-                                <p class="text-primary">Teacher</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="d-lg-none p-3"></div>
-                <div class="col-lg-6">
-                    <div class="card p-4 mb-4 shadow-lg rounded-5 bg-white h-100">
-                        <?= $testimonialHeader ?>
-                        <p class="m-3 fst-italic">
-                            Honestly, I thought that doing the dog business would not require much knowledge, it could
-                            be intuitive, but when I started receiving information from Selena, I realized that I needed
-                            valuable information that only she had because of her experience. I felt taken by the hand
-                            and when we received the first dog <span class="read-more hidden"><a
-                                    href="javascript:void(0)"
-                                    class="read-more-link text-decoration-none">More...</a><span
-                                    class="read-more-content"> (only 5 days after starting the course) everything made
-                                    so much sense, when you do it, the experience that she has, becomes very evident,
-                                    and you feel with the ability to solve the small challenges. Today I feel very
-                                    happy, I have the size of a business that fits my family and that pays the
-                                    rent.</span></span>
-                        </p>
-                        <div class="d-flex">
-                            <span class="ms-3">
-                                <img class="rounded-circle" src="/images/course/testimonial_sara.jpg" alt="Sara Botero"
-                                    style="width: 50px;" />
-                            </span>
-                            <div class="ms-3">
-                                <p class="m-0 fs-5">Sara Botero</p>
-                                <p class="text-primary">UX Designer</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center">
-                <?= enrollButton("Enroll & Learn Today") ?>
-            </div>
         </div>
     </section>
 
