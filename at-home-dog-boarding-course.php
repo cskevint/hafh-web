@@ -222,26 +222,20 @@ function enrollButton($text, $primary = false)
                     <div class="card p-4 mb-4 shadow-lg rounded-5 bg-white h-100">
                         <?= $testimonialHeader ?>
                         <p class="m-3 fst-italic">
-                            Honestly, I thought that doing the dog business would not require much knowledge, it could
-                            be intuitive, but when I started receiving information from Selena, I realized that I needed
-                            valuable information that only she had because of her experience. I felt taken by the hand
-                            and when we received the first dog <span class="read-more hidden"><a
+                            Selena’s “Hound Away From Home” course is a well organized training that has been instrumental in launching our own dog business. Selena's knowledge, guidance, and well-structured lessons are detailed and practical, covering everything from dog care to business management and setting achievable goals. 
+                            <span class="read-more hidden"><a
                                     href="javascript:void(0)"
                                     class="read-more-link text-decoration-none">More...</a><span
-                                    class="read-more-content"> (only 5 days after starting the course) everything made
-                                    so much sense, when you do it, the experience that she has, becomes very evident,
-                                    and you feel with the ability to solve the small challenges. Today I feel very
-                                    happy, I have the size of a business that fits my family and that pays the
-                                    rent.</span></span>
+                                    class="read-more-content"> Her passion, love for dogs and experience shine through, making the learning engaging. From explaining how to set up a welcoming entryway for furry guests to offering practical tips for creating a safe and fun backyard, the course is comprehensive. The summaries, checklists, and worksheets are ready to be applied to all the activities involved in this business. Highly recommended for anyone serious about launching a successful home dog boarding business – a must-have investment! </span></span>
                         </p>
                         <div class="d-flex">
                             <span class="ms-3">
-                                <img class="rounded-circle" src="/images/course/testimonial_sara.jpg" alt="Sara Botero"
+                                <img class="rounded-circle" src="/images/course/testimonial_cuau.jpg" alt="Sara Botero"
                                     style="width: 50px;" />
                             </span>
                             <div class="ms-3">
-                                <p class="m-0 fs-5">Sara Botero</p>
-                                <p class="text-primary">UX Designer</p>
+                                <p class="m-0 fs-5">Cuau Leyva</p>
+                                <p class="text-primary">Software Engineer</p>
                             </div>
                         </div>
                     </div>
