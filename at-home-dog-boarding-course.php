@@ -8,8 +8,15 @@ $_GLOBALS["pageShareImage"] = "/images/share/course.jpg";
 function enrollButton($text, $primary = false)
 {
     $color = $primary ? "btn-primary" : "btn-secondary";
+    $offer = "kfgaAStf"; // Default is $299.
+    if ($_REQUEST['offer']) {
+        $offer = $_REQUEST['offer'];
+    }
+    $url = "https://learn.houndawayfromhome.com/offers/$offer";
     return <<<HTML
-        <a href="/enroll" class="btn btn-lg text-nowrap px-4 my-3 rounded-pill shadow" style="background-color: #fc0303; color: #fff; border: none;">
+        <a href="$url" 
+           class="btn btn-lg text-nowrap px-4 my-3 rounded-pill shadow" 
+           style="background-color: #BD4D3D; color: #fff; border: none;">
             $text
         </a>
     HTML;
