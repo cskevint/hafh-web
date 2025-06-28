@@ -126,7 +126,7 @@ function enrollButton($text, $primary = false)
                 </div>
                 <div class="col-lg-7 col-xl-7 px-2 px-md-5">
                     <div class="shadow-lg rounded-4 p-3 p-xl-4 px-xl-5 bg-secondary text-white"
-                        style="background-image: url(/images/course/prelaunch-box.png);background-position: top right;background-repeat: no-repeat;background-size: cover;">
+                        style="background-position: top right;background-repeat: no-repeat;background-size: cover;">
                         <h2>Pre-launch Sale!</h2>
                         <p class="fs-4"><b>First 10 purchases</b> get a 45-min coaching call!</p>
                         <p class="fs-4">85% Off<span class="fw-light"> Lifetime Access</span></p>
