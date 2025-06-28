@@ -7,9 +7,9 @@ $_GLOBALS["pageShareImage"] = "/images/share/course.jpg";
 
 function enrollButton($text, $primary = false)
 {
-    $color = $primary ? "btn-primary" : "btn-secondary";
+    // $color = $primary ? "btn-primary" : "btn-secondary";
     $offer = "kfgaAStf"; // Default is $299.
-    if ($_REQUEST['offer']) {
+    if (isset($_REQUEST['offer'])) {
         $offer = $_REQUEST['offer'];
     }
     $url = "https://learn.houndawayfromhome.com/offers/$offer";
@@ -185,7 +185,7 @@ function enrollButton($text, $primary = false)
                         </p>
                         <div class="d-flex">
                             <span class="ms-3">
-                                <img class="rounded-circle" src="/images/course/testimonial_leila.jpg" alt="Leila Gates"
+                                <img class="rounded-circle" data-src="/images/course/testimonial_leila.jpg" alt="Leila Gates"
                                     style="width: 50px;" />
                             </span>
                             <div class="ms-3">
@@ -214,7 +214,7 @@ function enrollButton($text, $primary = false)
                         </p>
                         <div class="d-flex">
                             <span class="ms-3">
-                                <img class="rounded-circle" src="/images/course/testimonial_sara.jpg" alt="Sara Botero"
+                                <img class="rounded-circle" data-src="/images/course/testimonial_sara.jpg" alt="Sara Botero"
                                     style="width: 50px;" />
                             </span>
                             <div class="ms-3">
@@ -229,15 +229,23 @@ function enrollButton($text, $primary = false)
                     <div class="card p-4 mb-4 shadow-lg rounded-5 bg-white h-100">
                         <?= $testimonialHeader ?>
                         <p class="m-3 fst-italic">
-                            Selena’s “Hound Away From Home” course is a well organized training that has been instrumental in launching our own dog business. Selena's knowledge, guidance, and well-structured lessons are detailed and practical, covering everything from dog care to business management and setting achievable goals. 
-                            <span class="read-more hidden"><a
-                                    href="javascript:void(0)"
+                            Selena’s “Hound Away From Home” course is a well organized training that has been
+                            instrumental in launching our own dog business. Selena's knowledge, guidance, and
+                            well-structured lessons are detailed and practical, covering everything from dog care to
+                            business management and setting achievable goals.
+                            <span class="read-more hidden"><a href="javascript:void(0)"
                                     class="read-more-link text-decoration-none">More...</a><span
-                                    class="read-more-content"> Her passion, love for dogs and experience shine through, making the learning engaging. From explaining how to set up a welcoming entryway for furry guests to offering practical tips for creating a safe and fun backyard, the course is comprehensive. The summaries, checklists, and worksheets are ready to be applied to all the activities involved in this business. Highly recommended for anyone serious about launching a successful home dog boarding business – a must-have investment! </span></span>
+                                    class="read-more-content"> Her passion, love for dogs and experience shine through,
+                                    making the learning engaging. From explaining how to set up a welcoming entryway for
+                                    furry guests to offering practical tips for creating a safe and fun backyard, the
+                                    course is comprehensive. The summaries, checklists, and worksheets are ready to be
+                                    applied to all the activities involved in this business. Highly recommended for
+                                    anyone serious about launching a successful home dog boarding business – a must-have
+                                    investment! </span></span>
                         </p>
                         <div class="d-flex">
                             <span class="ms-3">
-                                <img class="rounded-circle" src="/images/course/testimonial_cuau.jpg" alt="Sara Botero"
+                                <img class="rounded-circle" data-src="/images/course/testimonial_cuau.jpg" alt="Sara Botero"
                                     style="width: 50px;" />
                             </span>
                             <div class="ms-3">
@@ -260,7 +268,7 @@ function enrollButton($text, $primary = false)
         return <<<HTML
         <div class="col-lg-4 p-2 d-flex">
             <div class="flex-grow-1 w-100 h-100 rounded-5 infobox text-center p-4">
-                <img class="m-2" src="/images/course/box_$image.png" alt="$text" />
+                <img class="m-2" data-src="/images/course/box_$image.png" alt="$text" />
                 <h3 class="">$text</h3>
             </div>
         </div>
@@ -327,7 +335,7 @@ function enrollButton($text, $primary = false)
             <h1 id="learn" class="mb-5 text-center">What you'll learn in this course</h1>
             <div class="row mb-5">
                 <div class="col-lg-5 text-center">
-                    <img class="rounded-1 img-fluid" src="/images/course/learn_success.gif"
+                    <img class="rounded-1 img-fluid" data-src="/images/course/learn_success.gif"
                         alt="<?= $whatYoullLearn[0][0] ?>">
                 </div>
                 <div class="col-lg-7 d-flex align-items-center">
@@ -343,7 +351,7 @@ function enrollButton($text, $primary = false)
             </div>
             <div class="row mb-5">
                 <div class="col-lg-5 order-1 order-lg-2 text-center">
-                    <img class="rounded-1 img-fluid" src="/images/course/learn_business.gif"
+                    <img class="rounded-1 img-fluid" data-src="/images/course/learn_business.gif"
                         alt="<?= $whatYoullLearn[1][0] ?>">
                 </div>
                 <div class="col-lg-7 d-flex align-items-center order-2 order-lg-1">
@@ -360,7 +368,7 @@ function enrollButton($text, $primary = false)
             </div>
             <div class="row mb-5">
                 <div class="col-lg-5 text-center">
-                    <img class="rounded-1 img-fluid" src="/images/course/learn_situations.gif"
+                    <img class="rounded-1 img-fluid" data-src="/images/course/learn_situations.gif"
                         alt="<?= $whatYoullLearn[2][0] ?>">
                 </div>
                 <div class="col-lg-7 d-flex align-items-center">
@@ -546,11 +554,11 @@ function enrollButton($text, $primary = false)
     <section class="py-4 pt-xl-5">
         <div class="container">
             <h1 id="coach" class="mb-3 text-center">Meet your coach</h1>
-            <img class="d-none d-xl-inline-block mx-3 float-end" src="/images/course/meet-coach.png"
+            <img class="d-none d-xl-inline-block mx-3 float-end" data-src="/images/course/meet-coach.png"
                 alt="Selena Trotter" />
             <p class="px-3 fs-5"><?= $coachLines[0] ?></p>
             <div class="d-block d-xl-none mb-3 text-center">
-                <img class="img-fluid" src="/images/course/meet-coach.png" alt="Selena Trotter" />
+                <img class="img-fluid" data-src="/images/course/meet-coach.png" alt="Selena Trotter" />
             </div>
             <div class="p-3 p-lg-5 m-0 me-xl-5 rounded-5 bg-warning ">
                 <p class="fs-5"><?= $coachLines[1] ?></p>
@@ -742,6 +750,30 @@ function enrollButton($text, $primary = false)
                 readMoreElem.querySelector(".read-more-link").addEventListener("click", function (event) {
                     readMoreElem.classList.remove("hidden");
                 });
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        const dataSrc = img.getAttribute('data-src');
+
+                        if (dataSrc) {
+                            img.src = dataSrc;
+                            img.removeAttribute('data-src');
+                            observer.unobserve(img);
+                        }
+                    }
+                });
+            }, {
+                root: null,
+                rootMargin: '100px 0px',
+                threshold: 0.1 
+            });
+            Array.from(document.querySelectorAll('img[data-src]')).forEach(img => {
+                observer.observe(img);
             });
         });
     </script>
