@@ -62,4 +62,9 @@ $shareImage = $_GLOBALS["pageShareImage"] ?? $defaultImage;
   <noscript><img height="1" width="1" style="display:none"
       src="https://www.facebook.com/tr?id=1217184416699830&ev=PageView&noscript=1" /></noscript>
   <!-- End Meta Pixel Code -->
+<?php } else { ?>
+  <script type="text/javascript">
+    console.log("Meta Pixel Code and Google Analytics are disabled in development mode.");
+    window.fbq = (action, event, args) => { console.log("fbq called with:",action, event, args ?? ''); };
+  </script>
 <?php } ?>

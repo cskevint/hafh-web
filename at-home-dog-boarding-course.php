@@ -5,9 +5,8 @@ $_GLOBALS["pageTitle"] = "At-home Dog Boarding Course";
 $_GLOBALS["pageDescription"] = "Turn your love for dogs into a profitable, flexible career -- enroll on our online course today!";
 $_GLOBALS["pageShareImage"] = "/images/share/course.jpg";
 
-function enrollButton($text, $primary = false)
+function enrollButton($text, $location)
 {
-    // $color = $primary ? "btn-primary" : "btn-secondary";
     $offer = "kfgaAStf"; // Default is $299.
     if (isset($_REQUEST['offer'])) {
         $offer = $_REQUEST['offer'];
@@ -15,7 +14,8 @@ function enrollButton($text, $primary = false)
     $url = "https://learn.houndawayfromhome.com/offers/$offer";
     return <<<HTML
         <a href="$url" 
-           class="btn btn-lg text-nowrap px-4 my-3 rounded-pill shadow" 
+           data-location="$location"
+           class="enroll-button btn btn-lg text-nowrap px-4 my-3 rounded-pill shadow" 
            style="background-color: #BD4D3D; color: #fff; border: none;">
             $text
         </a>
@@ -89,7 +89,7 @@ function enrollButton($text, $primary = false)
                             </h1>
                             <div class="row pt-xl-4">
                                 <div class="col-xl-4 text-center d-flex align-items-center justify-content-center">
-                                    <?= enrollButton("Enroll Now") ?>
+                                    <?= enrollButton("Enroll Now", "header") ?>
                                 </div>
                                 <div class="col-xl-8">
                                     <p class="fs-5 text-center text-lg-start">Ready to turn your love for dogs into a
@@ -100,7 +100,7 @@ function enrollButton($text, $primary = false)
                         </div>
                     </div>
                     <div class="col-lg-6 d-flex align-items-center justify-content-center">
-                        <iframe class="youtube-video"
+                        <iframe id="youtube-video" class="youtube-video"
                             src="https://www.youtube.com/embed/tqOzM1y0xxA?enablejsapi=1&rel=0"
                             title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -136,7 +136,7 @@ function enrollButton($text, $primary = false)
                     </div>
                 </div>
                 <div class="col-lg-2 col-xl-2 d-flex align-items-center justify-content-center">
-                    <?= enrollButton("Grab Your Discount!", true) ?>
+                    <?= enrollButton("Grab Your Discount!", "discount") ?>
                 </div>
             </div>
         </div>
@@ -185,8 +185,8 @@ function enrollButton($text, $primary = false)
                         </p>
                         <div class="d-flex">
                             <span class="ms-3">
-                                <img class="rounded-circle" data-src="/images/course/testimonial_leila.jpg" alt="Leila Gates"
-                                    style="width: 50px;" />
+                                <img class="rounded-circle" data-src="/images/course/testimonial_leila.jpg"
+                                    alt="Leila Gates" style="width: 50px;" />
                             </span>
                             <div class="ms-3">
                                 <p class="m-0 fs-5">Leila Gates</p>
@@ -214,8 +214,8 @@ function enrollButton($text, $primary = false)
                         </p>
                         <div class="d-flex">
                             <span class="ms-3">
-                                <img class="rounded-circle" data-src="/images/course/testimonial_sara.jpg" alt="Sara Botero"
-                                    style="width: 50px;" />
+                                <img class="rounded-circle" data-src="/images/course/testimonial_sara.jpg"
+                                    alt="Sara Botero" style="width: 50px;" />
                             </span>
                             <div class="ms-3">
                                 <p class="m-0 fs-5">Sara Botero</p>
@@ -245,8 +245,8 @@ function enrollButton($text, $primary = false)
                         </p>
                         <div class="d-flex">
                             <span class="ms-3">
-                                <img class="rounded-circle" data-src="/images/course/testimonial_cuau.jpg" alt="Sara Botero"
-                                    style="width: 50px;" />
+                                <img class="rounded-circle" data-src="/images/course/testimonial_cuau.jpg"
+                                    alt="Sara Botero" style="width: 50px;" />
                             </span>
                             <div class="ms-3">
                                 <p class="m-0 fs-5">Cuau Leyva</p>
@@ -257,7 +257,7 @@ function enrollButton($text, $primary = false)
                 </div>
             </div>
             <div class="text-center">
-                <?= enrollButton("Enroll & Learn Today") ?>
+                <?= enrollButton("Enroll & Learn Today", "testimonials") ?>
             </div>
         </div>
     </section>
@@ -298,7 +298,7 @@ function enrollButton($text, $primary = false)
         </div>
         <div class="my-3 text-center">
             <img class="" src="/images/course/vectorright.png" alt="Arrow">
-            <?= enrollButton("Unlock Your Course") ?>
+            <?= enrollButton("Unlock Your Course", "why-choose") ?>
         </div>
     </section>
 
@@ -383,7 +383,7 @@ function enrollButton($text, $primary = false)
                 </div>
             </div>
             <div class="text-center">
-                <?= enrollButton("Enroll & Learn Today") ?>
+                <?= enrollButton("Enroll & Learn Today", "learn") ?>
                 <img class="" src="/images/course/vectorleft.png" alt="Arrow">
             </div>
         </div>
@@ -538,6 +538,12 @@ function enrollButton($text, $primary = false)
                         document.querySelector("#courseOutlineToggle").scrollIntoView({
                             behavior: "smooth"
                         });
+                        if(event.target.classList.contains("active")) {
+                            fbq('track', 'ViewContent', {
+                                content_type: 'section',
+                                content_name: 'course-outline'
+                            });
+                        }
                     });
                 });
             </script>
@@ -644,7 +650,7 @@ function enrollButton($text, $primary = false)
                     <div class="col-lg-1 col-xl-2"></div>
                 </div>
                 <div class="text-center">
-                    <?= enrollButton("Enroll Now") ?>
+                    <?= enrollButton("Enroll Now", "prelaunch") ?>
                 </div>
             </div>
         </div>
@@ -692,7 +698,7 @@ function enrollButton($text, $primary = false)
                 ?>
             </div>
             <div class="text-center">
-                <?= enrollButton("Unlock Your Course", true) ?>
+                <?= enrollButton("Unlock Your Course", "faqs") ?>
             </div>
         </div>
         </div>
@@ -770,15 +776,72 @@ function enrollButton($text, $primary = false)
             }, {
                 root: null,
                 rootMargin: '100px 0px',
-                threshold: 0.1 
+                threshold: 0.1
             });
             Array.from(document.querySelectorAll('img[data-src]')).forEach(img => {
                 observer.observe(img);
             });
         });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.enroll-button').forEach(button => {
+                button.addEventListener('click', () => {
+                    fbq('track', 'Lead', {
+                        content_name: button.getAttribute('data-location'),
+                        content_type: 'button',
+                    });
+                });
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const headings = Array.from(document.querySelectorAll('h1'));
+            const seen = new Set();
+            function checkHeadings() {
+                headings.forEach(h1 => {
+                    if (!seen.has(h1)) {
+                        const rect = h1.getBoundingClientRect();
+                        if (rect.top < window.innerHeight && rect.bottom > 0) {
+                            seen.add(h1);
+                            if (h1.id) {
+                                fbq('track', 'ViewContent', {
+                                    content_name: h1.id,
+                                    content_type: 'heading',
+                                });
+                            }
+                        }
+                    }
+                });
+            }
+            window.addEventListener('scroll', checkHeadings, { passive: true });
+            window.addEventListener('resize', checkHeadings);
+            checkHeadings(); // Initial check
+        });
     </script>
     <?php include "includes/bootstrapjs.php"; ?>
 
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script>
+        var player;
+        // YouTube API will call this function when ready
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('youtube-video', {
+                events: {
+                    'onStateChange': (event) => {
+                        if (event.data == YT.PlayerState.PLAYING) {
+                            fbq('track', 'VideoPlay');
+                        }
+                        if (event.data == YT.PlayerState.PAUSED) {
+                            fbq('track', 'VideoPause');
+                        }
+                        if (event.data == YT.PlayerState.ENDED) {
+                            fbq('track', 'VideoComplete');
+                        }
+                    }
+                }
+            });
+        }
+    </script>
 </body>
 
 </html>
