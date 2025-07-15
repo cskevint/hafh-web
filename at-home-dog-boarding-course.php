@@ -185,7 +185,7 @@ function enrollButton($text, $location)
                         </p>
                         <div class="d-flex">
                             <span class="ms-3">
-                                <img class="rounded-circle" data-src="/images/course/testimonial_leila.jpg"
+                                <img class="rounded-circle" loading="lazy" src="/images/course/testimonial_leila.jpg"
                                     alt="Leila Gates" style="width: 50px;" />
                             </span>
                             <div class="ms-3">
@@ -214,7 +214,7 @@ function enrollButton($text, $location)
                         </p>
                         <div class="d-flex">
                             <span class="ms-3">
-                                <img class="rounded-circle" data-src="/images/course/testimonial_sara.jpg"
+                                <img class="rounded-circle" loading="lazy" src="/images/course/testimonial_sara.jpg"
                                     alt="Sara Botero" style="width: 50px;" />
                             </span>
                             <div class="ms-3">
@@ -245,7 +245,7 @@ function enrollButton($text, $location)
                         </p>
                         <div class="d-flex">
                             <span class="ms-3">
-                                <img class="rounded-circle" data-src="/images/course/testimonial_cuau.jpg"
+                                <img class="rounded-circle" loading="lazy" src="/images/course/testimonial_cuau.jpg"
                                     alt="Sara Botero" style="width: 50px;" />
                             </span>
                             <div class="ms-3">
@@ -268,7 +268,7 @@ function enrollButton($text, $location)
         return <<<HTML
         <div class="col-lg-4 p-2 d-flex">
             <div class="flex-grow-1 w-100 h-100 rounded-5 infobox text-center p-4">
-                <img class="m-2" data-src="/images/course/box_$image.png" alt="$text" />
+                <img class="m-2" loading="lazy" src="/images/course/box_$image.png" alt="$text" />
                 <h3 class="">$text</h3>
             </div>
         </div>
@@ -335,7 +335,7 @@ function enrollButton($text, $location)
             <h1 id="learn" class="mb-5 text-center">What you'll learn in this course</h1>
             <div class="row mb-5">
                 <div class="col-lg-5 text-center">
-                    <img class="rounded-1 img-fluid" data-src="/images/course/learn_success.gif"
+                    <img class="rounded-1 img-fluid" loading="lazy" src="/images/course/learn_success.gif"
                         alt="<?= $whatYoullLearn[0][0] ?>">
                 </div>
                 <div class="col-lg-7 d-flex align-items-center">
@@ -351,7 +351,7 @@ function enrollButton($text, $location)
             </div>
             <div class="row mb-5">
                 <div class="col-lg-5 order-1 order-lg-2 text-center">
-                    <img class="rounded-1 img-fluid" data-src="/images/course/learn_business.gif"
+                    <img class="rounded-1 img-fluid" loading="lazy" src="/images/course/learn_business.gif"
                         alt="<?= $whatYoullLearn[1][0] ?>">
                 </div>
                 <div class="col-lg-7 d-flex align-items-center order-2 order-lg-1">
@@ -368,7 +368,7 @@ function enrollButton($text, $location)
             </div>
             <div class="row mb-5">
                 <div class="col-lg-5 text-center">
-                    <img class="rounded-1 img-fluid" data-src="/images/course/learn_situations.gif"
+                    <img class="rounded-1 img-fluid" loading="lazy" src="/images/course/learn_situations.gif"
                         alt="<?= $whatYoullLearn[2][0] ?>">
                 </div>
                 <div class="col-lg-7 d-flex align-items-center">
@@ -560,11 +560,11 @@ function enrollButton($text, $location)
     <section class="py-4 pt-xl-5">
         <div class="container">
             <h1 id="coach" class="mb-3 text-center">Meet your coach</h1>
-            <img class="d-none d-xl-inline-block mx-3 float-end" data-src="/images/course/meet-coach.png"
+            <img class="d-none d-xl-inline-block mx-3 float-end" loading="lazy" src="/images/course/meet-coach.png"
                 alt="Selena Trotter" />
             <p class="px-3 fs-5"><?= $coachLines[0] ?></p>
             <div class="d-block d-xl-none mb-3 text-center">
-                <img class="img-fluid" data-src="/images/course/meet-coach.png" alt="Selena Trotter" />
+                <img class="img-fluid" loading="lazy" src="/images/course/meet-coach.png" alt="Selena Trotter" />
             </div>
             <div class="p-3 p-lg-5 m-0 me-xl-5 rounded-5 bg-warning ">
                 <p class="fs-5"><?= $coachLines[1] ?></p>
@@ -756,30 +756,6 @@ function enrollButton($text, $location)
                 readMoreElem.querySelector(".read-more-link").addEventListener("click", function (event) {
                     readMoreElem.classList.remove("hidden");
                 });
-            });
-        });
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        const dataSrc = img.getAttribute('data-src');
-
-                        if (dataSrc) {
-                            img.src = dataSrc;
-                            img.removeAttribute('data-src');
-                            observer.unobserve(img);
-                        }
-                    }
-                });
-            }, {
-                root: null,
-                rootMargin: '100px 0px',
-                threshold: 0.1
-            });
-            Array.from(document.querySelectorAll('img[data-src]')).forEach(img => {
-                observer.observe(img);
             });
         });
 

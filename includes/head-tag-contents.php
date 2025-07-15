@@ -65,6 +65,6 @@ $shareImage = $_GLOBALS["pageShareImage"] ?? $defaultImage;
 <?php } else { ?>
   <script type="text/javascript">
     console.log("Meta Pixel Code and Google Analytics are disabled in development mode.");
-    window.fbq = (action, event, args) => { console.log("fbq called with:",action, event, args ?? ''); };
+    window.fbq = (action, event, args) => { console.log("fbq called with:", action, event, args ?? ''); };
   </script>
 <?php } ?>
