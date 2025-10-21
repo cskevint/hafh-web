@@ -23,17 +23,14 @@ $_GLOBALS["pageTitle"] = "About Us";
                     <div class="row no-gutters">
                         <div class="col-md-4">
                             <div class="bg-success rounded" style="height:100%">
-                                <img src="images/image-selena.jpg" class="card-img img-responsive rounded-start-pill-5"
-                                    alt="Selena Trotter and family">
+                                <img src="images/image-nargiz.jpg" class="card-img img-responsive rounded-start-pill-5"
+                                    alt="Nargiz Ermatova and family">
                             </div>
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
                                 <h5 class="card-title">North Location</h5>
-                                <p class="card-text">Selena Trotter has lived in the San Francisco Bay Area since 2008.
-                                    She and her husband bought their house in 2009 and have turned into a comfortable
-                                    doggy hotel (where people can visit too!). Selena has taken care of her dogs since
-                                    her early childhood, and has taken care of other dogs professionally since 2012.</p>
+                                <p class="card-text">Nargiz Ermatova, a dog lover and experienced caregiver based in San Mateo. She has been caring for dogs of all sizes for years and loves giving them attention, playtime, and plenty of cuddles. She also enjoys cooking, painting, and spending time outdoors. Your dog will be treated like part of Nargiz’s family!</p>
                                 <p>Check out her <a href="https://www.instagram.com/houndawayfromhomeinc/"
                                         class="text-secondary"><i class="bi bi-instagram mx-1"></i>Instagram</a>!</p>
                             </div>
@@ -57,6 +54,22 @@ $_GLOBALS["pageTitle"] = "About Us";
                                     round-the-clock companionship and personalized care for each dog.</p>
                                 <p>Check out her <a href="https://www.instagram.com/houndawayfromhomessm/"
                                         class="text-secondary"><i class="bi bi-instagram mx-1"></i>Instagram</a>!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-3">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <div class="bg-success rounded" style="height:100%">
+                                <img src="images/image-selena.jpg" class="card-img img-responsive" alt="Nargiz">
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Owner</h5>
+                                <p class="card-text">Selena Trotter is very passionate about dogs and caring for them, and helps Leila and Nargiz run their businesses so that they can spend their time loving dogs. While not physically close anymore, Selena is in close contact with each of them so that we can ensure the smooth business operations of Hound Away from Home.</p>
                             </div>
                         </div>
                     </div>
