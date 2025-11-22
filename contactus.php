@@ -17,7 +17,7 @@ $_GLOBALS["pageTitle"] = "Contact Us";
 
     <section class="container-fluid px-0 bg-info">
         <div class="container p-lg-5 p-md-4 p-3 px-0">
-            <div class="bg-light rounded-5 p-lg-5 p-md-4 p-3">
+            <div class="bg-light rounded-5 p-lg-5 p-md-4 p-3 contact-container">
                 <h1 class="mb-ms-5 mb-3"><?= $_GLOBALS["pageTitle"] ?></h1>
 
                 <?php
@@ -76,22 +76,15 @@ $_GLOBALS["pageTitle"] = "Contact Us";
                                             <div class="col-12">
                                                 <div class="card">
                                                     <div class="card-body">
-                                                        <h6 class="card-title">Request a quote</h6>
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="radio" name="quote"
-                                                                id="quoteDaycare" value="daycare"
-                                                                onChange="onQuoteChange()">
-                                                            <label class="form-check-label" for="quoteDaycare">
-                                                                Daycare
-                                                            </label>
-                                                        </div>
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="radio" name="quote"
-                                                                id="quoteBoarding" value="boarding"
-                                                                onChange="onQuoteChange()">
-                                                            <label class="form-check-label" for="quoteBoarding">
-                                                                Boarding
-                                                            </label>
+                                                        <div class="mb-3">
+                                                            <label class="form-label d-block">Request a quote</label>
+                                                            <div class="btn-group" role="group">
+                                                                <input type="radio" class="btn-check" name="quote" id="quoteDaycare" value="daycare" autocomplete="off" onChange="onQuoteChange()" checked>
+                                                                <label class="btn btn-outline-primary" for="quoteDaycare">Daycare</label>
+
+                                                                <input type="radio" class="btn-check" name="quote" id="quoteBoarding" value="boarding" autocomplete="off" onChange="onQuoteChange()">
+                                                                <label class="btn btn-outline-primary" for="quoteBoarding">Boarding</label>
+                                                            </div>
                                                         </div>
                                                         <div class="input-group d-none my-3" id="boardingDates">
                                                             <span class="input-group-text">From</span>
@@ -108,12 +101,17 @@ $_GLOBALS["pageTitle"] = "Contact Us";
                                                             <span class="input-group-text">Age</span>
                                                             <input class="form-control" type="text" name="dogAge" />
                                                         </div>
-                                                        <select class="form-select" name="dogState">
-                                                            <option selected>Choose one:</option>
-                                                            <option value="intact">Intact</option>
-                                                            <option value="neutered">Neutered</option>
-                                                        </select>
-                                                        <div class="form-check my-3">
+                                                        <div class="my-3">
+                                                            <label class="form-label d-block">Dog State</label>
+                                                            <div class="btn-group" role="group">
+                                                                <input type="radio" class="btn-check" name="dogState" id="dogStateIntact" value="intact" autocomplete="off">
+                                                                <label class="btn btn-outline-primary" for="dogStateIntact">Intact</label>
+
+                                                                <input type="radio" class="btn-check" name="dogState" id="dogStateNeutered" value="neutered" autocomplete="off">
+                                                                <label class="btn btn-outline-primary" for="dogStateNeutered">Neutered</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-check form-switch ios-switch my-3">
                                                             <input class="form-check-input" type="checkbox" value="yes"
                                                                 id="dogVaccinations" name="dogVaccinations">
                                                             <label class="form-check-label" for="dogVaccinations">

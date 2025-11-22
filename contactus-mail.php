@@ -31,7 +31,7 @@ if ($dogType != "") {
 if ($dogAge != "") {
     $quoteRequested .= "<p><b>Dog Age:</b> $dogAge</p>";
 }
-if ($dogState != "Choose one:") {
+if (!empty($dogState)) {
     $quoteRequested .= "<p><b>Dog State:</b> $dogState</p>";
 }
 if ($dogVaccinations == "yes") {
