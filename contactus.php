@@ -41,6 +41,11 @@ $_GLOBALS["pageTitle"] = "Contact Us";
 
                                     <form method="post" action="/contactus-mail.php" id="contact-us-form">
                                         <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
+                                            <!-- Honeypot field for spam bots -->
+                                            <div class="d-none">
+                                                <label for="fax_number">Fax Number</label>
+                                                <input type="text" name="fax_number" id="fax_number" value="">
+                                            </div>
                                             <div class="col-12">
                                                 <label for="name" class="form-label">Name <span
                                                         class="text-danger">*</span></label>

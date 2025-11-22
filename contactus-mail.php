@@ -54,7 +54,10 @@ $messageBody = <<<EOD
 EOD;
 
 // Check if the email is in the disallow list
-if (in_array($fromEmail, $GLOBALS['EMAIL_DISALLOW_LIST'])) {
+if (!empty($_REQUEST['fax_number'])) {
+    // Honeypot field filled, treat as spam
+    $_SESSION['notice'] = 'There was an error sending your note. Please try again!';
+} elseif (in_array($fromEmail, $GLOBALS['EMAIL_DISALLOW_LIST'])) {
     $_SESSION['notice'] = 'There was an error sending your note. Please try again.';
 } elseif (validateCaptcha($captcha) && sendMail($fromEmail, $fromName, $subject, $messageBody)) {
     $_SESSION['notice'] = "Successfully sent your note.";
