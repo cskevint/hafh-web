@@ -111,8 +111,8 @@ $_GLOBALS["pageTitle"] = "Contact Us";
                                                                 <label class="btn btn-outline-primary" for="dogStateNeutered">Neutered</label>
                                                             </div>
                                                         </div>
-                                                        <div class="form-check form-switch ios-switch my-3">
-                                                            <input class="form-check-input" type="checkbox" value="yes"
+                                                        <div class="form-check form-switch ios-switch my-3 d-flex align-items-center gap-3 ps-0">
+                                                            <input class="form-check-input m-0" type="checkbox" value="yes"
                                                                 id="dogVaccinations" name="dogVaccinations">
                                                             <label class="form-check-label" for="dogVaccinations">
                                                                 Vaccines completed within a year (prepare to show
