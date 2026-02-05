@@ -12,6 +12,8 @@ function enrollButton($text, $location)
         $offer = $_REQUEST['offer'];
     }
     $url = "https://learn.houndawayfromhome.com/offers/$offer";
+    # While we are on the Kajabi Kickstarer plan:
+    $url = "https://hafh.mykajabi.com/offers/$offer/checkout";
     return <<<HTML
         <a href="$url" 
            data-location="$location"
